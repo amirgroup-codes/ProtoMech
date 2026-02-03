@@ -19,7 +19,5 @@ steering/eval_models
 steering/__pycache__
 
 *.csv
-*.json
 *.pt
 *.npz
-*.txt
