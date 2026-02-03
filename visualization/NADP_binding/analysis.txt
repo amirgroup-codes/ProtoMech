@@ -1,0 +1,1282 @@
+=== CLT Sequential Frozen Pass Analysis ===
+Circuit Family: IPR036291
+Input Entry: NAD(P)-binding
+Window Analyzed: Residues 1 to 488
+Sequence Length (Cropped): 488
+Total Circuit Nodes Selected: 18
+-------------------------------------------
+
+--- Rank #1 ---
+Node: Layer 5, Latent 885
+Max Activation: 19.1326
+Peak Location: Trace Idx 328 (AA #328)
+Motif Context: M[S]GEMDKPLI[S]RRLVD[S]DG[S]LAEVPKEAPKVGILG[S]GDFAR[S]LATRLVG[S]GF[S]VVVG[S]RNPKRTAGLFP[S]LAQVTFQEEAV[S][S]PEVIFVAVFREHY[S][S]LC[S]LADQLAGKILVDV[S]NPTEKERLQHRQ[S]NAEYLA[S]LFPACTVVKAFNVI[S]AWALQAGPRDGNRQVLICGDQLEAKHTV[S]EMARAMGFTPLDMG[S]LA[S]AREVEAIPLRLLP[S]WKVPTLLALGLFVCFYAYNFIRDVLQPYIRKDENKFYKMPL[S]VVNTTLPCVAYVLL[S]LVYLPGVLAAALQLRRGTKYQRFPDWLDHWLQHRKQIGLL[S]FFFAMLHALY[S]FCLPLRR[S]HRYDLVNLAVKQVLANK[S]RLWVEEEVWRMEIYL[S]LGVLALGML[S]LLAVT[S]IP[S]IAN[S]LNWKEF[S]FVQ[S]TLGFVALML[S]TMHTLTYGWTRAFEENHYKFYLPPTFTLTLLLPCVIILAKGLFLLPCL[S]HRLTKIRRGWERDGAVKFMLPAGHTQGEKT[S]HV
+Trace Window : [ 0.        12.009857   0.         0.         0.         0.
+  0.         0.         0.         0.        17.253466   0.
+  0.         0.         0.         0.        17.759983   0.
+  0.        18.992119   0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.        11.839323
+  0.         0.         0.         0.         0.         9.6476555
+  0.         0.         0.         0.         0.         0.
+  0.        14.147821   0.         0.        11.018206   0.
+  0.         0.         0.        10.526749   0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.        14.5702     0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.        11.739377  11.597651   0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+ 11.251639  13.487606   0.         0.        14.521453   0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  7.4444385  0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.        15.717964   0.         0.         0.         0.
+  0.         0.        17.617893   0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.        14.554652
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.        15.627664   0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.        16.242273   0.         0.        15.762918   0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+ 16.846182   0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+ 19.026392   0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.        12.863604   0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.        11.992735   0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.        12.170702   0.         0.         0.         0.
+  0.         0.         0.        19.132553   0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.        17.518078   0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.        14.608483   0.         0.         0.         0.
+  0.         0.         0.         0.         0.        15.05142
+  0.         0.         0.         0.         0.        16.739838
+  0.         0.        15.8827915  0.         0.         0.
+ 15.172941   0.         0.         0.         0.         0.
+  0.         9.379892   0.         0.         0.        10.807768
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.        12.62488    0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.        16.799864   0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.        18.655178
+  0.         0.       ]
+
+   [Global Top 10 Reference Entries for L5-885]
+   1. B0C474 (PSAA_ACAM1) - Score: 24.5434 - ...GKPGHFNK[S]L[S]KGPQTTTWIW... - Photosystem I P700 chlorophyll a apoprotein A1 (EC 1.97.1.12) (PsaA)
+   2. Q06J42 (PSAA_BIGNA) - Score: 24.0299 - ...AKPGHF[S]R[S]L[S]KGPLTTTWIW... - Photosystem I P700 chlorophyll a apoprotein A1 (EC 1.97.1.12) (PSI-A) (PsaA)
+   3. Q9LRB0 (LCBK1_ARATH) - Score: 24.0265 - ...VQ[S][S]QVVAPN[S]EHDDGTMDML... - Sphingoid long-chain bases kinase 1 (AtLCBK1) (LCB kinase 1) (EC 2.7.-.-) (Sphingosine kinase 1)
+   4. P56341 (PSAA_CHLVU) - Score: 24.0001 - ...AKPGHF[S]RTL[S]KGPTTTTWIW... - Photosystem I P700 chlorophyll a apoprotein A1 (EC 1.97.1.12) (PSI-A) (PsaA)
+   5. Q9SRT3 (CSLC6_ARATH) - Score: 23.9091 - ...IKLRRIKPVA[S]MEYPTKLVGE... - Probable xyloglucan glycosyltransferase 6 (EC 2.4.1.-) (Cellulose synthase-like protein C6) (AtCslC6)
+   6. O78508 (PSAA_GUITH) - Score: 23.7777 - ...VNVVVDRNPV[S]T[S]FEKWGQPG... - Photosystem I P700 chlorophyll a apoprotein A1 (EC 1.97.1.12) (PSI-A) (PsaA)
+   7. Q1KVY3 (PSAA_TETOB) - Score: 23.7690 - ...AKPGHF[S]RTL[S]KGPNTTTWIW... - Photosystem I P700 chlorophyll a apoprotein A1 (EC 1.97.1.12) (PSI-A) (PsaA)
+   8. B9DFA8 (INVC_ARATH) - Score: 23.7517 - ...Q[S]WEKTVDCH[S]PGPGLMPA[S]F... - Alkaline/neutral invertase C, mitochondrial (A/N-INVC) (EC 3.2.1.26)
+   9. P12154 (PSAA_CHLRE) - Score: 23.7269 - ...AKPGHF[S]RTL[S]KGPNTTTWIW... - Photosystem I P700 chlorophyll a apoprotein A1 (EC 1.97.1.12) (PSI-A) (PsaA)
+   10. Q5NAZ7 (GH33_ORYSJ) - Score: 23.7008 - ...LPLVAAEYGA[S]EGWVGANVEP... - Jasmonoyl--L-amino acid synthetase GH3.3 (EC 6.3.2.52) (Auxin-responsive GH3-like protein 3) (OsGH3-3) (Indole-3-acetic acid-amido synthetase GH3.3) (Jasmonate-amino acid synthetase JAR2) (Jasmonic acid-amido synthetase JAR2) (Protein JASMONATE RESISTANT 2) (OsJAR2)
+
+--- Rank #2 ---
+Node: Layer 5, Latent 3
+Max Activation: 17.3394
+Peak Location: Trace Idx 442 (AA #442)
+Motif Context: KPL[I]SRRLVDSDGSLAEVPKEAPKVG[I]LGSGDFARSLATRLVGSGFSVVVGSRNPKRTAGLFPSLAQVTFQEEAVSSPEV[I]FVAVFREHYSSLCSLADQLAGK[I]LVDVSNPTEKERLQHRQSNAEYLASLFPACTVVKAFNV[I]SAWALQAGPRDGNRQVL[I]CGDQLEAKHTVSEMARAMGFTPLDMGSLASAREVEA[I]PLRLLPSWKVPTLLALGLFVCFYAYNF[I]RDVLQPY[I]RKDENKFYKMPLSVVNTTLPCVAYVLLSLVYLPGVLAAALQLRRGTKYQRFPDWLDHWLQHRKQ[I]GLLSFFFAMLHALYSFCLPLRRSHRYDLVNLAVKQVLANKSRLWVEEEVWRME[I]YLSLGVLALGMLSLLAVTS[I]PS[I]ANSLNWKEFSFVQSTLGFVALMLSTMHTLTYGWTRAFEENHYKFYLPPTFTLTLLLPCV[I][I]LAKGLFLLPCLSHRLTK[I]RRG
+Trace Window : [ 0.         0.         0.        14.612368   0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.        12.197279   0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         5.9271216  0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.        11.088707   0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.        11.420923   0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.        11.904571   0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.        14.64953
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.        16.121817   0.         0.
+  0.         0.         0.         0.         0.        16.105711
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.        10.449131   0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.        12.698221   0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+ 16.523775   0.         0.        16.301983   0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.        17.339434  15.30336    0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.        15.430421   0.
+  0.         0.       ]
+
+   [Global Top 10 Reference Entries for L5-3]
+   1. Q9TVB8 (RPE65_CANLF) - Score: 21.2007 - ...ATATLRSDET[I]WLEPEVLFSG... - Retinoid isomerohydrolase (EC 3.1.1.64) (All-trans-retinyl-palmitate hydrolase) (Lutein isomerase) (Meso-zeaxanthin isomerase) (EC 5.3.3.22) (Retinal pigment epithelium-specific 65 kDa protein) (Retinol isomerase)
+   2. Q16518 (RPE65_HUMAN) - Score: 21.1861 - ...ATA[I]LCSDET[I]WLEPEVLFSG... - Retinoid isomerohydrolase (EC 3.1.1.64) (All-trans-retinyl-palmitate hydrolase) (Lutein isomerase) (Meso-zeaxanthin isomerase) (EC 5.3.3.22) (Retinal pigment epithelium-specific 65 kDa protein) (Retinol isomerase)
+   3. Q28175 (RPE65_BOVIN) - Score: 21.0630 - ...ATA[I]LCSDET[I]WLEPEVLFSG... - Retinoid isomerohydrolase (EC 3.1.1.64) (All-trans-retinyl-palmitate hydrolase) (Lutein isomerase) (Meso-zeaxanthin isomerase) (EC 5.3.3.22) (Retinal pigment epithelium-specific 65 kDa protein) (Retinol isomerase)
+   4. B2S3H7 (SYL_TREPS) - Score: 20.9841 - ...LWEMCGHTHT[I]AYEPWPQVDP... - Leucine--tRNA ligase (EC 6.1.1.4) (Leucyl-tRNA synthetase) (LeuRS)
+   5. O83595 (SYL_TREPA) - Score: 20.9841 - ...LWEMCGHTHT[I]AYEPWPQVDP... - Leucine--tRNA ligase (EC 6.1.1.4) (Leucyl-tRNA synthetase) (LeuRS)
+   6. P0CK59 (BALF1_EBVG) - Score: 20.9539 - ...YT[I]LPRPFYH[I]SLKPVSWPDE... - Apoptosis regulator BALF1
+   7. P0CK58 (BALF1_EBVB9) - Score: 20.9539 - ...YT[I]LPRPFYH[I]SLKPVSWPDE... - Apoptosis regulator BALF1
+   8. O94711 (GYP2_SCHPO) - Score: 20.9434 - ...EYSKSFGNAY[I]CTSFLCFHSD... - GTPase-activating protein gyp2
+   9. P58765 (PSAB_PSINU) - Score: 20.9139 - ...LEPFFSGQWS[I]YAQNPDSTNH... - Photosystem I P700 chlorophyll a apoprotein A2 (EC 1.97.1.12) (PSI-B) (PsaB)
+   10. Q9VGN7 (EXD2_DROME) - Score: 20.8634 - ...WYLNQNLGTH[I]SEEPFTVRLN... - Exonuclease 3'-5' domain-containing protein 2 (dEXD2) (EC 3.1.13.-)
+
+--- Rank #3 ---
+Node: Layer 5, Latent 2417
+Max Activation: 17.1285
+Peak Location: Trace Idx 470 (AA #470)
+Motif Context: GSL[A]EVPKE[A]PKVGILGSGDF[A]RSL[A]TRLVGSGFSVVVGSRNPKRT[A]GLFPSL[A]QVTFQEE[A]VSSPEVIFV[A]VFREHYSSLCSL[A]DQL[A]GKILVDVSNPTEKERLQHRQSN[A]EYL[A]SLFP[A]CTVVK[A]FNVIS[A]W[A]LQ[A]GPRDGNRQVLICGDQLE[A]KHTVSEM[A]R[A]MGFTPLDMGSL[A]S[A]REVE[A]IPLRLLPSWKVPTLL[A]LGLFVCFY[A]YNFIRDVLQPYIRKDENKFYKMPLSVVNTTLPCV[A]YVLLSLVYLPGVL[A][A][A]LQLRRGTKYQRFPDWLDHWLQHRKQIGLLSFFF[A]MLH[A]LYSFCLPLRRSHRYDLVNL[A]VKQVL[A]NKSRLWVEEEVWRMEIYLSLGVL[A]LGMLSLL[A]VTSIPSI[A]NSLNWKEFSFVQSTLGFV[A]LMLSTMHTLTYGWTR[A]FEENHYKFYLPPTFTLTLLLPCVIIL[A]KGLFLLPCLSHRLTKIRRGWERDG[A]VKFMLP[A]GHT
+Trace Window : [ 0.         0.         0.        11.902648   0.         0.
+  0.         0.         0.        10.836563   0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         8.325733   0.         0.
+  0.         8.540886   0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         8.205631   0.
+  0.         0.         0.         0.         0.        11.998848
+  0.         0.         0.         0.         0.         0.
+  0.         8.755125   0.         0.         0.         0.
+  0.         0.         0.         0.         0.         9.422041
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+ 11.762924   0.         0.         0.        12.705912   0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.        12.857414   0.         0.
+  0.        15.839778   0.         0.         0.         0.
+ 11.620812   0.         0.         0.         0.         0.
+ 12.298302   0.         0.         0.         0.         0.
+ 12.206417   0.         9.591821   0.         0.        10.875122
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         9.818609
+  0.         0.         0.         0.         0.         0.
+  0.         7.123165   0.        11.573334   0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.        12.661261   0.        12.986711
+  0.         0.         0.         0.        12.365032   0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.        13.943496   0.         0.         0.
+  0.         0.         0.         0.         0.        14.024877
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.        12.406714   0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+ 12.226921  12.293695  11.730417   0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  6.0017686  0.         0.         0.         8.921452   0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+ 15.061274   0.         0.         0.         0.         0.
+ 11.793917   0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+ 13.004662   0.         0.         0.         0.         0.
+  0.         0.        13.583214   0.         0.         0.
+  0.         0.         0.         0.        14.466127   0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.        11.293224
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.        15.525369   0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+ 15.316706   0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.        17.128452   0.         0.         0.         0.
+  0.         0.        15.275709   0.         0.         0.       ]
+
+   [Global Top 10 Reference Entries for L5-2417]
+   1. Q5R8D8 (DNJC7_PONAB) - Score: 21.9774 - ...HEK[A]CI[A]CRN[A]K[A]LK[A]KKEDG... - DnaJ homolog subfamily C member 7
+   2. Q99615 (DNJC7_HUMAN) - Score: 21.9651 - ...HEK[A]CI[A]CRN[A]K[A]LK[A]KKEDG... - DnaJ homolog subfamily C member 7 (Tetratricopeptide repeat protein 2) (TPR repeat protein 2)
+   3. Q8KEQ0 (TOLB_CHLTE) - Score: 21.8503 - ...LR[A]EEVGEYI[A]IRKEG[A]SRI[A]... - Protein TolB homolog
+   4. Q2U8Y5 (BGLI_ASPOR) - Score: 21.8453 - ...W[A]NKTK[A]LLH[A]WFGGNECGNG... - Probable beta-glucosidase I (EC 3.2.1.21) (Beta-D-glucoside glucohydrolase I) (Cellobiase I) (Gentiobiase I)
+   5. B8NDE2 (BGLI_ASPFN) - Score: 21.8295 - ...W[A]NKTK[A]LLH[A]WFGGNECGNG... - Probable beta-glucosidase I (EC 3.2.1.21) (Beta-D-glucoside glucohydrolase I) (Cellobiase I) (Gentiobiase I)
+   6. Q5BB53 (BGLI_EMENI) - Score: 21.7780 - ...W[A]PK[A]K[A]LLQ[A]WFGGNECGNG... - Probable beta-glucosidase I (EC 3.2.1.21) (Beta-D-glucoside glucohydrolase I) (Cellobiase I) (Gentiobiase I)
+   7. A0A0A2J621 (LYS14_PENEN) - Score: 21.7531 - ...KGGCKGDYYS[A]QGHEDQIVGG... - Secreted LysM effector LysM14 (LysM domain-containing protein 14)
+   8. Q9QYI3 (DNJC7_MOUSE) - Score: 21.6770 - ...HEK[A]CV[A]CRN[A]K[A]LK[A]KKEDG... - DnaJ homolog subfamily C member 7 (Cytoplasmic CAR retention protein) (CCRP) (MDj11) (Tetratricopeptide repeat protein 2) (TPR repeat protein 2)
+   9. P0DOK0 (POLSF_SINDV) - Score: 21.4548 - ...TTPEGTEEWS[A][A]PLVT[A]MCLL... - Frameshifted structural polyprotein (p130) [Cleaved into: Capsid protein (EC 3.4.21.90) (Coat protein) (C); Precursor of protein E3/E2 (p62) (pE2); Assembly protein E3; Spike glycoprotein E2 (E2 envelope glycoprotein); Protein TF]
+   10. Q9WAA1 (NRAM_I97A0) - Score: 21.4485 - ...KSRFESV[A]WS[A]S[A]CHDGISWL... - Neuraminidase (EC 3.2.1.18)
+
+--- Rank #4 ---
+Node: Layer 5, Latent 2197
+Max Activation: 14.4282
+Peak Location: Trace Idx 231 (AA #231)
+Motif Context: SGD[F]ARSLATRLVGSG[F]SVVVGSRNPKRTAGL[F]PSLAQVT[F]QEEAVSSPEVI[F]VAV[F]REHYSSLCSLADQLAGKILVDVSNPTEKERLQHRQSNAEYLASL[F]PACTVVKA[F]NVISAWALQAGPRDGNRQVLICGDQLEAKHTVSEMARAMG[F]TPLDMGSLASAREVEAIPLRLLPSWKVPTLLALGL[F]VC[F]YAYN[F]IRDVLQPYIRKDENK[F]YKMPLSVVNTTLPCVAYVLLSLVYLPGVLAAALQLRRGTKYQR[F]PDWLDHWLQHRKQIGLLS[F][F][F]AMLHALYS[F]CLPLRRSHRYDLVNLAVKQVLANKSRLWVEEEVWRMEIYLSLGVLALGMLSLLAVTSIPSIANSLNWKE[F]S[F]VQSTLG[F]VALMLSTMHTLTYGWTRA[F]EENHYK[F]YLPPT[F]TLTLLLPCVIILAKGL[F]LLPCLSHRLTKIRRGWERDGAVK[F]MLP
+Trace Window : [ 0.         0.         0.        11.627659   0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         9.524079   0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         9.796733   0.         0.         0.
+  0.         0.         0.         0.        12.874034   0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         9.232153   0.
+  0.         0.         9.453622   0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.        12.5573225
+  0.         0.         0.         0.         0.         0.
+  0.         0.         9.524667   0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.        11.229065   0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.        13.186695   0.         0.        12.754389   0.
+  0.         0.         0.        14.428189   0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.        14.03103    0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.        13.896361   0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         8.016218   7.607246
+  8.567272   0.         0.         0.         0.         0.
+  0.         0.         0.        11.9740095  0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.        10.523213   0.        10.656432   0.         0.
+  0.         0.         0.         0.        10.876519   0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.        13.981456
+  0.         0.         0.         0.         0.         0.
+ 12.508931   0.         0.         0.         0.         0.
+ 13.349706   0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.        13.51246
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.        14.372466
+  0.         0.         0.       ]
+
+   [Global Top 10 Reference Entries for L5-2197]
+   1. F1R520 (CSTN1_DANRE) - Score: 20.9990 - ...PKISLSGIDH[F]ARGAAE[F]ESV... - Calsyntenin-1
+   2. Q9EPL2 (CSTN1_MOUSE) - Score: 20.6871 - ...PKISLSGVHH[F]ARAASE[F]ESA... - Calsyntenin-1 (Alcadein-alpha) (Alc-alpha) [Cleaved into: Soluble Alc-alpha (SAlc-alpha); CTF1-alpha (C-terminal fragment 1-alpha)]
+   3. Q6Q473 (CLA4A_MOUSE) - Score: 20.6686 - ...TEATQPVLEN[F]SRTASGGA[F]V... - Calcium-activated chloride channel regulator 4A (EC 3.4.-.-) (Calcium-activated chloride channel regulator 6) (mClca6) [Cleaved into: Calcium-activated chloride channel regulator 4A, 110 kDa form; Calcium-activated chloride channel regulator 4A, 30 kDa form]
+   4. Q61702 (ITIH1_MOUSE) - Score: 20.6506 - ...D[F]LG[F]YVLDS[F]RMSARTKGLL... - Inter-alpha-trypsin inhibitor heavy chain H1 (ITI heavy chain H1) (ITI-HC1) (Inter-alpha-inhibitor heavy chain 1)
+   5. Q6Q0N0 (CSTN1_RAT) - Score: 20.6194 - ...PKISLSGVHH[F]ARAASE[F]ESP... - Calsyntenin-1 [Cleaved into: Soluble Alc-alpha (SAlc-alpha); CTF1-alpha (C-terminal fragment 1-alpha)]
+   6. Q0E666 (BGBP1_GALME) - Score: 20.6141 - ...CKGQLL[F]EDN[F]NKGIDKGNIW... - Beta-1,3-glucan-binding protein 1 (BGBP1) (Beta-1,3-glucan recognition protein)
+   7. O94985 (CSTN1_HUMAN) - Score: 20.5321 - ...PKISLSGVHH[F]ARAASE[F]ESS... - Calsyntenin-1 (Alcadein-alpha) (Alc-alpha) (Alzheimer-related cadherin-like protein) (Non-classical cadherin XB31alpha) [Cleaved into: Soluble Alc-alpha (SAlc-alpha); CTF1-alpha (C-terminal fragment 1-alpha)]
+   8. E0SIS4 (VGRGB_DICD3) - Score: 20.4982 - ...GGEPTTLSNS[F]EVVKATTTWR... - Putative type VI secretion system protein VgrGB
+   9. Q8S8L9 (Y2245_ARATH) - Score: 20.4922 - ...DLAIALQVRA[F]QRVTRLWKCD... - Uncharacterized TPR repeat-containing protein At2g32450
+   10. Q54N73 (7TMK1_DICDI) - Score: 20.4767 - ...RGE[F]LPLLTN[F]QEYTSL[F]GRE... - Seven transmembrane domain-containing tyrosine-protein kinase 1 (EC 2.7.10.1)
+
+--- Rank #5 ---
+Node: Layer 5, Latent 891
+Max Activation: 14.3001
+Peak Location: Trace Idx 190 (AA #190)
+Motif Context: DKP[L]ISRR[L]VDSDGS[L]AEVPKEAPKVGI[L]GSGDFARS[L]ATR[L]VGSGFSVVVGSRNPKRTAG[L]FPS[L]AQVTFQEEAVSSPEVIFVAVFREHYSS[L]CS[L]ADQ[L]AGKI[L]VDVSNPTEKER[L]QHRQSNAEY[L]AS[L]FPACTVVKAFNVISAWA[L]QAGPRDGNRQV[L]ICGDQ[L]EAKHTVSEMARAMGFTP[L]DMGS[L]ASAREVEAIP[L]R[L][L]PSWKVPT[L][L]A[L]G[L]FVCFYAYNFIRDV[L]QPYIRKDENKFYKMP[L]SVVNTT[L]PCVAYV[L][L]S[L]VY[L]PGV[L]AAA[L]Q[L]RRGTKYQRFPDW[L]DHW[L]QHRKQIG[L][L]SFFFAM[L]HA[L]YSFC[L]P[L]RRSHRYD[L]VN[L]AVKQV[L]ANKSR[L]WVEEEVWRMEIY[L]S[L]GV[L]A[L]GM[L]S[L][L]AVTSIPSIANS[L]NWKEFSFVQST[L]GFVA[L]M[L]STMHT[L]TYGWTRAFEENHYKFY[L]PPTFT[L]T[L][L][L]PCVII[L]AKG[L]F[L][L]PC[L]SHR[L]TKIRRGWERDGAVKFM[L]PAG
+Trace Window : [ 0.         0.         0.        10.070228   0.         0.
+  0.         0.         9.428464   0.         0.         0.
+  0.         0.         0.        12.26419    0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         9.882619   0.
+  0.         0.         0.         0.         0.         0.
+  0.         9.313824   0.         0.         0.         6.7851524
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         9.302023   0.         0.         0.         9.8826885
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.        11.435043   0.         0.
+ 10.9580145  0.         0.         0.         9.069526   0.
+  0.         0.         0.         6.6829567  0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         9.09115    0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.        11.665839   0.         0.        13.870126   0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         8.700909   0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         8.875416   0.
+  0.         0.         0.         0.        10.480657   0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.        14.300134   0.
+  0.         0.         0.        12.670358   0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.        12.432937   0.        12.283378  12.186335
+  0.         0.         0.         0.         0.         0.
+  0.        11.226125  10.4612055  0.         9.094837   0.
+ 11.438834   0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.        13.576358   0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  9.395757   0.         0.         0.         0.         0.
+  0.        10.2341175  0.         0.         0.         0.
+  0.         0.         8.617281   5.552594   0.        11.75447
+  0.         0.         9.347665   0.         0.         0.
+ 12.788987   0.         0.         0.         8.330909   0.
+ 10.647684   0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         9.052794   0.         0.         0.         6.2018933
+  0.         0.         0.         0.         0.         0.
+  0.         7.7131276  6.8764267  0.         0.         0.
+  0.         0.         0.         8.328864   0.         0.
+  6.8692193  0.         0.         0.         0.         5.3040195
+  0.         7.3420124  0.         0.         0.         0.
+  0.         0.         0.        12.567536   0.         0.
+ 10.268786   0.         0.         0.         0.         0.
+ 12.278637   0.         0.         0.         0.         0.
+ 10.116879   0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.        11.456261   0.        10.424738   0.         0.
+ 10.005839   0.         8.08864    0.         0.         8.423249
+  0.        10.214751   9.290424   0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.        12.800168   0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         8.948081   0.         0.         0.
+  0.        10.220562   0.         6.515068   0.         0.
+  0.         0.         0.        10.07698    0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.        12.117629   0.         0.         0.
+  0.         0.         9.621634   0.         9.637082  11.223826
+  9.498773   0.         0.         0.         0.         0.
+ 11.307277   0.         0.         0.        10.243663   0.
+ 10.210912  12.051148   0.         0.        12.309739   0.
+  0.         0.        11.201027   0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.        13.578371   0.         0.         0.       ]
+
+   [Global Top 10 Reference Entries for L5-891]
+   1. Q9SMX9 (SPL1_ARATH) - Score: 20.2531 - ...EPKSGPMASA[L]EITQIPCK[L]C... - Squamosa promoter-binding-like protein 1
+   2. Q86H45 (ELP2_DICDI) - Score: 20.2381 - ...VGSQNFVDT[L][L]NISKVQPVND... - Elongator complex protein 2 (ELP2)
+   3. Q700C2 (SPL16_ARATH) - Score: 20.1821 - ...IG[L]SKR[L]SSE[L]KRSCNTCASV... - Squamosa promoter-binding-like protein 16 (SPL1-related protein 3)
+   4. A4H8F7 (TRM5_LEIBR) - Score: 20.1101 - ...[L]YHQRNVRSV[L]DVVAVPTDTG... - tRNA (guanine(37)-N(1))-methyltransferase (EC 2.1.1.228) (M1G-methyltransferase) (tRNA [GM37] methyltransferase) (tRNA methyltransferase 5 homolog)
+   5. Q9UT42 (LSB6_SCHPO) - Score: 20.0709 - ...KGQAYNIVEV[L]KNP[L]MNIYD[L]... - Phosphatidylinositol 4-kinase lsb6 (PI4-kinase) (PtdIns-4-kinase) (EC 2.7.1.67)
+   6. Q06187 (BTK_HUMAN) - Score: 19.9282 - ...EKH[L]FSTIPE[L]INYHQHNSAG... - Tyrosine-protein kinase BTK (EC 2.7.10.2) (Agammaglobulinemia tyrosine kinase) (ATK) (B-cell progenitor kinase) (BPK) (Bruton tyrosine kinase)
+   7. Q8S4P6 (EZ1_MAIZE) - Score: 19.9213 - ...S[L]YV[L]SVIDS[L]KKRITADR[L]T... - Histone-lysine N-methyltransferase EZ1 (EC 2.1.1.356) (Enhancer of zeste protein 1)
+   8. P26328 (VSI3_TRYBB) - Score: 19.9073 - ...EN[L]F[L]D[L]CN[L][L]E[L]GKRAVSK[L]... - Variant surface glycoprotein ILTAT 1.23 (VSG)
+   9. P35991 (BTK_MOUSE) - Score: 19.8929 - ...EKH[L]FSTIPE[L]INYHQHNSAG... - Tyrosine-protein kinase BTK (EC 2.7.10.2) (Agammaglobulinemia tyrosine kinase) (ATK) (B-cell progenitor kinase) (BPK) (Bruton tyrosine kinase) (Kinase EMB)
+   10. Q5FWH7 (S39AC_MOUSE) - Score: 19.8869 - ...SQG[L][L]EV[L]RV[L]SAGDHWS[L]NH... - Zinc transporter ZIP12 (Solute carrier family 39 member 12) (Zrt- and Irt-like protein 12) (ZIP-12)
+
+--- Rank #6 ---
+Node: Layer 4, Latent 1337
+Max Activation: 14.0494
+Peak Location: Trace Idx 37 (AA #37)
+Motif Context: KVG[I][L][G][S][G][D][F][A][R][S][L]ATR
+Trace Window : [ 0.         0.         0.         3.5240636  4.336755   8.631554
+  8.104432  14.0493965 13.267687  11.405531  10.641023  11.157593
+  8.516535   4.683921   0.         0.         0.       ]
+
+   [Global Top 10 Reference Entries for L4-1337]
+   1. P73467 (Y1223_SYNY3) - Score: 16.8708 - MKIIL[T][G][A][T][G][F][V][G][C][S][L][V][P]LL... - Epimerase family protein slr1223
+   2. P52577 (IFRH_ARATH) - Score: 16.8417 - ...KSKILV[I][G][G][T][G][Y][I][G][K][F][L][V][E][A]S... - Isoflavone reductase homolog P3 (EC 1.3.1.-)
+   3. Q8KU07 (AZOB_XENAZ) - Score: 16.7650 - MILV[V][G][G][T][G][T][I][G][S][E][V][V][R]LL... - NAD(P)H azoreductase (EC 1.7.-.-)
+   4. P96995 (GALE_STRMU) - Score: 16.7034 - MAILV[L][G][G][A][G][Y][I][G][S][H][M][V][D]RL... - UDP-glucose 4-epimerase (EC 5.1.3.2) (Galactowaldenase) (UDP-galactose 4-epimerase)
+   5. B9KP40 (DAPB_CERSK) - Score: 16.6797 - ...LPGIVV[T][G][A][S][G][R][M][G][Q][M][L][M][K]TV... - 4-hydroxy-tetrahydrodipicolinate reductase (HTPA reductase) (EC 1.17.1.8)
+   6. Q9SJU9 (GC1_ARATH) - Score: 16.6543 - ...QMTVSV[T][G][A][T][G][F][I][G][R][R][L]V[Q]RL... - Epimerase family protein SDR39U1 homolog, chloroplastic (EC 1.1.1.-) (Protein GIANT CHLOROPLAST 1) (Protein SulA homolog) (AtSulA)
+   7. O32960 (Y860_MYCLE) - Score: 16.6511 - ...KAVVAI[A][G][S][S][G][M][I][G][S][A][L][A][A]AL... - Epimerase family protein ML0860
+   8. P18645 (GALE_RAT) - Score: 16.6470 - ...EEKVLV[T][G][G][A][G][Y][I][G][S][H][T]V[L]EL... - UDP-glucose 4-epimerase (EC 5.1.3.2) (Galactowaldenase) (UDP-N-acetylglucosamine 4-epimerase) (UDP-GlcNAc 4-epimerase) (EC 5.1.3.7) (UDP-galactosamine 4-epimerase) (UDP-GalNAc 4-epimerase) (UDP-galactose 4-epimerase)
+   9. Q9SGE0 (AXS2_ARATH) - Score: 16.6342 - ...PMTICM[I][G][A][G][G][F][I][G][S][H][L][C][E]KL... - UDP-D-apiose/UDP-D-xylose synthase 2 (EC 4.1.1.35)
+   10. P9WGP7 (Y2216_MYCTU) - Score: 16.6341 - ...NAVVAI[A][G][S][S][G][L][I][G][S][A][L][T][A]AL... - Epimerase family protein Rv2216
+
+--- Rank #7 ---
+Node: Layer 0, Latent 2492
+Max Activation: 12.3098
+Peak Location: Trace Idx 476 (AA #476)
+Motif Context: MDK[P]LISRRLVDSDGSLAEV[P]KEA[P]KVGILGSGDFARSLATRLVGSGFSVVVGSRN[P]KRTAGLF[P]SLAQVTFQEEAVSS[P]EVIFVAVFREHYSSLCSLADQLAGKILVDVSN[P]TEKERLQHRQSNAEYLASLF[P]ACTVVKAFNVISAWALQAG[P]RDGNRQVLICGDQLEAKHTVSEMARAMGFT[P]LDMGSLASAREVEAI[P]LRLL[P]SWKV[P]TLLALGLFVCFYAYNFIRDVLQ[P]YIRKDENKFYKM[P]LSVVNTTL[P]CVAYVLLSLVYL[P]GVLAAALQLRRGTKYQRF[P]DWLDHWLQHRKQIGLLSFFFAMLHALYSFCL[P]LRRSHRYDLVNLAVKQVLANKSRLWVEEEVWRMEIYLSLGVLALGMLSLLAVTSI[P]SIANSLNWKEFSFVQSTLGFVALMLSTMHTLTYGWTRAFEENHYKFYL[P][P]TFTLTLLL[P]CVIILAKGLFLL[P]CLSHRLTKIRRGWERDGAVKFML[P]AGHTQ
+Trace Window : [ 0.        0.        0.       11.679578  0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.       11.651539
+  0.        0.        0.       11.415896  0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+ 11.933989  0.        0.        0.        0.        0.        0.
+  0.       11.72126   0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.       11.591287  0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+ 11.675146  0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+ 11.712518  0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.       11.734774
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.       11.48314   0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.       10.974386  0.        0.
+  0.        0.       10.999762  0.        0.        0.        0.
+ 10.639488  0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.       11.258914  0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.       11.308201  0.        0.        0.        0.        0.
+  0.        0.        0.       10.631155  0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.       10.190312  0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+ 11.021124  0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.       10.813086  0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.       10.855912  0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.       11.021261 10.81275   0.
+  0.        0.        0.        0.        0.        0.        0.
+ 10.439283  0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.       11.255139
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.       12.309784  0.        0.        0.        0.
+  0.      ]
+
+   [Global Top 10 Reference Entries for L0-2492]
+   1. Q61450 (LRB4B_MOUSE) - Score: 13.0358 - ...HATFVLDAVA[P]NHNGTFRCYG... - Leukocyte immunoglobulin-like receptor subfamily B member 4B (Mast cell surface glycoprotein Gp49A)
+   2. Q6JVE5 (LCN12_HUMAN) - Score: 13.0096 - ...IVF[P]DVTGWS[P]QASVC - Epididymal-specific lipocalin-12
+   3. Q82TL0 (HEM6_NITEU) - Score: 12.9868 - ...[P]VVKWRYDWS[P]AAGS[P]EAKLY... - Oxygen-dependent coproporphyrinogen-III oxidase (CPO) (Coprogen oxidase) (Coproporphyrinogenase) (EC 1.3.3.3)
+   4. P01659 (KV3A7_MOUSE) - Score: 12.9855 - ...TYFCZZSBZA[P]WTFGSGTKLE... - Ig kappa chain V-III region TEPC 124
+   5. Q0AEP6 (HEM6_NITEC) - Score: 12.9804 - ...[P]IVKWRYDWS[P]AAGS[P]EAKLY... - Oxygen-dependent coproporphyrinogen-III oxidase (CPO) (Coprogen oxidase) (Coproporphyrinogenase) (EC 1.3.3.3)
+   6. P19341 (B2MG_CANLF) - Score: 12.9774 - ...[P][P]KIQVYSRH[P]AZBGK[P]BFLB... - Beta-2-microglobulin
+   7. P01658 (KV3A6_MOUSE) - Score: 12.9754 - ...YRASNLZSGI[P]ARFSGSGSRT... - Ig kappa chain V-III region MOPC 321
+   8. A8EW78 (SYGA_ALIB4) - Score: 12.9644 - ...DI[P]AGAGTFH[P]ATLLRSLDST... - Glycine--tRNA ligase alpha subunit (EC 6.1.1.14) (Glycyl-tRNA synthetase alpha subunit) (GlyRS)
+   9. Q7M7S2 (SYGA_WOLSU) - Score: 12.9600 - ...DI[P]AGAGTFH[P]ATLLRSLDSK... - Glycine--tRNA ligase alpha subunit (EC 6.1.1.14) (Glycyl-tRNA synthetase alpha subunit) (GlyRS)
+   10. A6Q559 (SYGA_NITSB) - Score: 12.9581 - ...DF[P]SGAGTFH[P]ATFLKSLDSK... - Glycine--tRNA ligase alpha subunit (EC 6.1.1.14) (Glycyl-tRNA synthetase alpha subunit) (GlyRS)
+
+--- Rank #8 ---
+Node: Layer 0, Latent 1982
+Max Activation: 12.1942
+Peak Location: Trace Idx 486 (AA #486)
+Motif Context: [M][S][G][E][M][D][K][P][L][I][S][R][R][L][V][D][S][D][G][S][L][A][E][V][P][K][E][A][P][K][V][G][I][L][G][S][G][D][F][A][R][S][L][A][T][R][L][V][G][S][G][F][S][V][V][V][G][S][R][N][P][K][R][T][A][G][L][F][P][S][L][A][Q][V][T][F][Q][E][E][A][V][S][S][P][E][V][I][F][V][A][V][F][R][E][H][Y][S][S][L][C][S][L][A][D][Q][L][A][G][K][I][L][V][D][V][S][N][P][T][E][K][E][R][L][Q][H][R][Q][S][N][A][E][Y][L][A][S][L][F][P][A][C][T][V][V][K][A][F][N][V][I][S][A][W][A][L][Q][A][G][P][R][D][G][N][R][Q][V][L][I][C][G][D][Q][L][E][A][K][H][T][V][S][E][M][A][R][A][M][G][F][T][P][L][D][M][G][S][L][A][S][A][R][E][V][E][A][I][P][L][R][L][L][P][S][W][K][V][P][T][L][L][A][L][G][L][F][V][C][F][Y][A][Y][N][F][I][R][D][V][L][Q][P][Y][I][R][K][D][E][N][K][F][Y][K][M][P][L][S][V][V][N][T][T][L][P][C][V][A][Y][V][L][L][S][L][V][Y][L][P][G][V][L][A][A][A][L][Q][L][R][R][G][T][K][Y][Q][R][F][P][D][W][L][D][H][W][L][Q][H][R][K][Q][I][G][L][L][S][F][F][F][A][M][L][H][A][L][Y][S][F][C][L][P][L][R][R][S][H][R][Y][D][L][V][N][L][A][V][K][Q][V][L][A][N][K][S][R][L][W][V][E][E][E][V][W][R][M][E][I][Y][L][S][L][G][V][L][A][L][G][M][L][S][L][L][A][V][T][S][I][P][S][I][A][N][S][L][N][W][K][E][F][S][F][V][Q][S][T][L][G][F][V][A][L][M][L][S][T][M][H][T][L][T][Y][G][W][T][R][A][F][E][E][N][H][Y][K][F][Y][L][P][P][T][F][T][L][T][L][L][L][P][C][V][I][I][L][A][K][G][L][F][L][L][P][C][L][S][H][R][L][T][K][I][R][R][G][W][E][R][D][G][A][V][K][F][M][L][P][A][G][H][T][Q][G][E][K][T][S][H][V]
+Trace Window : [12.184845  12.083716  11.785165  11.445399  11.66162   11.290239
+ 11.51529   11.52503   11.309375  11.761294  11.864096  11.375793
+ 11.277044  11.048167  11.121661  10.883416  11.642698  10.903734
+ 11.492095  11.731593  11.165545  11.457277  11.165427  11.182844
+ 11.26491   11.451723  11.2930155 11.503623  11.434811  11.484114
+ 11.372702  11.573049  11.614939  11.227002  11.60233   11.800183
+ 11.663996  11.225958  11.510149  11.677541  11.560621  11.9293995
+ 11.472849  11.603754  11.836417  11.520278  11.326735  11.448521
+ 11.75677   12.004569  11.808825  11.517376  12.032996  11.567382
+ 11.402736  11.377426  11.7727585 12.037051  11.598191  12.050075
+ 11.616345  11.691855  11.688551  12.115615  11.815635  12.008384
+ 11.604386  11.5457945 11.681054  12.102598  11.560789  11.778825
+ 12.00767   11.400531  11.808185  11.432385  11.835641  11.356512
+ 11.291367  11.53145   11.505487  12.000083  11.976311  11.518501
+ 11.3538885 11.426346  11.778479  11.311885  11.302046  11.350514
+ 11.15681   11.095532  11.375546  11.335851  11.5923395 11.429267
+ 12.13698   12.110293  11.464427  11.147409  11.89603   11.416093
+ 11.542338  11.179766  11.860398  11.39887   11.531277  11.6707325
+ 11.470863  11.697743  11.249827  11.325844  10.975774  11.192504
+ 11.833943  11.916928  11.402268  11.772368  11.237144  11.46952
+ 11.273104  11.395919  11.376797  11.930559  11.75328   11.465533
+ 11.893496  11.9944725 11.950235  11.664513  11.39365   11.442797
+ 11.461392  11.812042  12.009793  11.434901  11.496479  11.618852
+ 11.6550045 11.006356  11.684189  11.251903  11.207922  11.479463
+ 11.457518  11.363961  11.8744    11.326907  11.67662   11.7576475
+ 11.596018  11.8582735 11.529857  11.47328   12.032359  11.719909
+ 11.812875  11.669763  11.724347  11.379172  11.872281  12.006574
+ 11.558748  11.841837  11.390163  11.3145895 11.590222  10.81096
+ 11.520083  11.059527  11.765999  11.376195  11.279384  11.529734
+ 11.646539  11.8856535 11.856193  11.31904   11.833811  11.329007
+ 11.44826   11.495063  11.491209  11.63027   11.509145  11.81787
+ 11.4429865 11.862049  11.452231  11.497274  11.258942  11.596223
+ 11.868747  11.931315  11.481755  11.616465  11.823145  11.422354
+ 11.364749  11.095618  11.134892  11.13372   11.407512  11.577423
+ 11.30129   11.337554  11.409406  11.333171  11.337436  11.545176
+ 11.898455  11.953764  11.72883   11.460404  11.3638315 11.58598
+ 11.168751  11.191743  11.263595  11.067183  11.355308  11.0861635
+ 11.090052  11.1359005 10.745555  11.093129  11.230227  11.431778
+ 11.301256  11.660479  11.223735  11.625228  11.300018  11.020885
+ 11.262342  11.425183  11.966931  11.595045  11.522552  11.786214
+ 11.477756  11.529482  11.1409855 11.357196  11.915149  11.652433
+ 11.561971  11.568011  11.70614   11.70811   11.634063  11.600623
+ 11.890093  11.41318   11.319614  11.753156  11.615406  11.62577
+ 11.363493  11.331411  10.91705   11.231368  11.3171015 11.133214
+ 11.008358  10.977052  11.026853  11.343291  10.978875  10.98707
+ 11.116153  11.175929  11.2604475 11.490697  11.222987  11.2148
+ 11.370957  11.3618145 11.423238  11.297217  11.74509   11.416276
+ 11.50846   11.550466  11.8022585 11.845246  11.68306   11.605958
+ 11.9925995 11.606221  11.471449  11.614822  11.333007  11.820858
+ 11.382172  11.304136  11.757658  11.829275  11.457899  11.975979
+ 11.588811  11.371244  11.622399  11.823397  11.604653  11.548426
+ 11.178503  11.131394  11.404133  11.094696  11.11839   11.174444
+ 11.3136015 11.207382  11.159551  11.499968  11.441509  11.185261
+ 11.342897  11.579278  11.26357   11.013386  11.44176   11.524886
+ 11.487401  11.502193  11.521136  11.86117   11.731381  11.417819
+ 11.431522  11.085151  11.134536  11.138883  11.4878845 11.094905
+ 11.227056  11.06603   11.349641  11.592916  11.135984  11.185988
+ 11.480489  11.683537  11.491622  11.66487   11.34793   11.233615
+ 11.546583  11.035899  10.860727  10.913285  10.895366  11.031391
+ 11.45566   11.037324  11.0569725 10.824403  11.052782  10.819657
+ 10.903539  11.228645  10.863451  11.03297   10.721162  10.803552
+ 11.026977  10.880035  11.231171  11.022153  10.995151  11.369222
+ 11.052842  11.047174  11.2348995 11.0702305 11.424529  11.559993
+ 11.667267  11.366855  11.798739  11.786647  11.626885  11.944498
+ 11.8558655 11.548837  11.954162  11.896306  11.66504   11.447568
+ 11.39241   11.823306  11.487287  11.360937  11.73052   11.715075
+ 11.6045475 11.286727  11.573579  11.14542   11.071692  11.204975
+ 11.107209  11.252276  11.3470125 11.579581  11.614607  11.527036
+ 11.724856  11.707869  11.3864765 11.706782  11.463854  11.814134
+ 11.903477  11.845902  11.534356  11.570878  11.36532   11.436244
+ 11.46132   11.946212  11.964635  11.684308  11.658405  11.524436
+ 11.594453  11.559567  11.735433  11.736688  11.877519  11.565265
+ 11.808636  11.360106  11.532903  11.202698  11.222124  11.288215
+ 11.294551  10.87662   11.084157  11.303603  11.299075  11.056539
+ 11.2660475 11.34098   11.547666  11.2681    11.366575  11.500961
+ 11.51158   11.588746  11.284305  11.5869    12.059699  11.972949
+ 11.681068  11.501254  11.891378  11.532811  11.697221  11.382817
+ 11.366462  11.595005  11.737982  11.417346  11.433147  11.154418
+ 11.850553  11.6639385 11.448601  11.556439  11.426742  11.469387
+ 11.540049  11.709916  11.682477  12.014832  12.077257  12.157749
+ 12.037341  12.042073  11.623302  11.748114  12.157528  12.194205
+ 11.972735  11.669488 ]
+
+   [Global Top 10 Reference Entries for L0-1982]
+   1. Q9FK05 (PME61_ARATH) - Score: 13.9011 - ...[G][V][S][F][F][S][G][L][S][Q] - Probable pectinesterase/pectinesterase inhibitor 61 [Includes: Pectinesterase inhibitor 61 (Pectin methylesterase inhibitor 61); Pectinesterase 61 (PE 61) (EC 3.1.1.11) (AtPMEpcrF) (Pectin methylesterase 61) (AtPME61)]
+   2. Q4QP67 (TDHA_HAEI8) - Score: 13.8804 - ...[N][I][K][F][S][L][S][Q][K][F] - TonB-dependent heme receptor A
+   3. P44523 (TDHA_HAEIN) - Score: 13.8612 - ...[N][I][K][F][S][L][S][Q][K][F] - TonB-dependent heme receptor A
+   4. P15419 (REP_BPI22) - Score: 13.8572 - ...[I][F][S][S][N][R][V][S][S][F] - Replication-associated protein G2P (Rep) (EC 3.1.21.-) (EC 6.5.1.1) (G2P) (Gene 2 protein)
+   5. Q5UQB2 (YR217_MIMIV) - Score: 13.8499 - ...[N][R][L][R][T][Y][L][M][S][Q] - Uncharacterized protein R217
+   6. Q9STQ2 (SBT3I_ARATH) - Score: 13.8454 - ...[L][S][N][A][G][F][L][A][S][S] - Subtilisin-like protease SBT3.18 (EC 3.4.21.-) (Subtilase subfamily 3 member 18) (AtSBT3.18)
+   7. Q3L1D1 (PDH1_AGABI) - Score: 13.8443 - ...[A][S][V][L][I][A][K][S][Y][S] - Pyranose dehydrogenase (PDH) (EC 1.1.99.29) (Glucose dehydrogenase) (GDH) (Pyranose 2-dehydrogenase) (Pyranose:quinone oxidoreductase)
+   8. Q9Z813 (PMP19_CHLPN) - Score: 13.8430 - ...[N][A][H][A][G][L][S][L][S][F] - Probable outer membrane protein pmp19 (Polymorphic membrane protein 19)
+   9. P81898 (PNAA_PRUDU) - Score: 13.8430 - ...[R][M][N][F][A][G][L][R][F][T] - Peptide-N4-(N-acetyl-beta-glucosaminyl)asparagine amidase A (PNGase A) (EC 3.5.1.52) (Glycopeptide N-glycosidase) (N-glycanase) [Cleaved into: Peptide-N4-(N-acetyl-beta-glucosaminyl)asparagine amidase A light chain (PNGase A small chain) (PNGase A subunit B); Peptide-N4-(N-acetyl-beta-glucosaminyl)asparagine amidase A heavy chain (PNGase A large chain) (PNGase A subunit A)]
+   10. Q9LIB9 (INV5_ARATH) - Score: 13.8302 - ...[L][S][A][W][S][M][K][S][S][L] - Beta-fructofuranosidase, insoluble isoenzyme CWINV5 (EC 3.2.1.26) (Cell wall beta-fructosidase 5) (Cell wall invertase 5) (AtcwINV5) (Sucrose hydrolase 5)
+
+--- Rank #9 ---
+Node: Layer 0, Latent 1581
+Max Activation: 11.2874
+Peak Location: Trace Idx 163 (AA #163)
+Motif Context: LIS[R][R]LVDSDGSLAEVPKEAPKVGILGSGDFA[R]SLAT[R]LVGSGFSVVVGS[R]NPK[R]TAGLFPSLAQVTFQEEAVSSPEVIFVAVF[R]EHYSSLCSLADQLAGKILVDVSNPTEKE[R]LQH[R]QSNAEYLASLFPACTVVKAFNVISAWALQAGP[R]DGN[R]QVLICGDQLEAKHTVSEMA[R]AMGFTPLDMGSLASA[R]EVEAIPL[R]LLPSWKVPTLLALGLFVCFYAYNFI[R]DVLQPYI[R]KDENKFYKMPLSVVNTTLPCVAYVLLSLVYLPGVLAAALQL[R][R]GTKYQ[R]FPDWLDHWLQH[R]KQIGLLSFFFAMLHALYSFCLPL[R][R]SH[R]YDLVNLAVKQVLANKS[R]LWVEEEVW[R]MEIYLSLGVLALGMLSLLAVTSIPSIANSLNWKEFSFVQSTLGFVALMLSTMHTLTYGWT[R]AFEENHYKFYLPPTFTLTLLLPCVIILAKGLFLLPCLSH[R]LTKI[R][R]GWE[R]DGA
+Trace Window : [ 0.         0.         0.        10.328399  10.227847   0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.        10.98878    0.         0.         0.
+  0.        10.627066   0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.        10.85435    0.         0.         0.
+ 10.44041    0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+ 11.253682   0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.        10.731723
+  0.         0.         0.        11.006612   0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+ 11.179544   0.         0.         0.        11.287431   0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+ 11.246493   0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.        11.176282   0.
+  0.         0.         0.         0.         0.         0.
+ 10.427321   0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.        10.472409   0.         0.         0.
+  0.         0.         0.         0.        10.4850855  0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.        10.42468   10.319239
+  0.         0.         0.         0.         0.        10.325744
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.        10.116278
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.        10.141982
+ 10.220785   0.         0.        10.429528   0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.        10.31572    0.         0.         0.
+  0.         0.         0.         0.         0.         9.907056
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+ 10.873012   0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.        10.827487   0.
+  0.         0.         0.        10.817346  10.603742   0.
+  0.         0.        11.008662   0.         0.         0.       ]
+
+   [Global Top 10 Reference Entries for L0-1581]
+   1. Q5E084 (ANMK_ALIF1) - Score: 12.7170 - ...SNEPDVTGAS[R]YASLGVIYPA... - Anhydro-N-acetylmuramic acid kinase (EC 2.7.1.170) (AnhMurNAc kinase)
+   2. Q27677 (ACES_LEPDE) - Score: 12.6277 - ...LSLKIMQAFA[R]FATTGKPVTD... - Acetylcholinesterase (AChE) (EC 3.1.1.7)
+   3. O32449 (PIP_SERMA) - Score: 12.6251 - ...ILHQLMIATD[R]FAGK - Proline iminopeptidase (PIP) (EC 3.4.11.5) (Prolyl aminopeptidase) (PAP)
+   4. Q6LQK3 (SELO_PHOPR) - Score: 12.5848 - ...YICNHSDYSG[R]YAFNQQPSIA... - Protein nucleotidyltransferase YdiU (EC 2.7.7.-) (Protein adenylyltransferase YdiU) (EC 2.7.7.108) (Protein uridylyltransferase YdiU) (EC 2.7.7.-)
+   5. Q2U0K0 (HEPD_ASPOR) - Score: 12.5580 - ...HIPIQYASAY[R]LNS[R]KGDIPY... - Cytochrome P450 monooxygenase hepD (EC 1.-.-.-) (Heptelidic acid biosynthesis cluster protein D)
+   6. Q9S1H0 (SERA_THASE) - Score: 12.5459 - ...IPDAHFLTEA[R]YNGA[R]LVNIS... - Selenate reductase subunit alpha (SER subunit alpha) (EC 1.97.1.9) (Selenate reductase molybdenum subunit)
+   7. P75382 (SYP_MYCPN) - Score: 12.5378 - ...AFVGLKSPNE[R]FAGAQNTWTV... - Proline--tRNA ligase (EC 6.1.1.15) (Prolyl-tRNA synthetase) (ProRS)
+   8. B4T918 (SOPA_SALHS) - Score: 12.5369 - ...TLFCLSTAFA[R]YSSSAIFGTE... - E3 ubiquitin-protein ligase SopA (EC 2.3.2.26) (HECT-type E3 ubiquitin transferase SopA) (Salmonella outer protein A) (Secreted effector protein SopA)
+   9. Q4ZSF5 (XYLA_PSEU2) - Score: 12.5367 - ...WGTANCFSNP[R]FAAGAASNPD... - Xylose isomerase (EC 5.3.1.5)
+   10. Q8ZNR3 (SOPA_SALTY) - Score: 12.5247 - ...TLFCLSTAFA[R]YSSSAIFGTE... - E3 ubiquitin-protein ligase SopA (EC 2.3.2.26) (HECT-type E3 ubiquitin transferase SopA) (Salmonella outer protein A) (Secreted effector protein SopA)
+
+--- Rank #10 ---
+Node: Layer 3, Latent 2162
+Max Activation: 11.0514
+Peak Location: Trace Idx 149 (AA #149)
+Motif Context: EEA[V]SSP[E]VIFVA[V][F][R][E][H][Y][S][S][L][C][S][L][A][D][Q][L][A][G][K][I][L][V][D][V][S][N][P][T][E][K][E][R][L][Q][H][R][Q][S][N][A][E][Y][L][A][S][L][F][P][A][C][T][V][V][K][A][F][N][V][I][S][A][W][A][L][Q][A][G][P][R][D][G][N][R][Q][V][L][I][C][G][D][Q][L][E][A][K][H][T][V][S][E][M][A][R][A][M][G][F][T]PL[D][M]G[S][L]ASA
+Trace Window : [ 0.          0.          0.          0.9359203   0.          0.
+  0.          1.263932    0.          0.          0.          0.
+  0.          3.0569532   3.5977938   3.2697527   2.0754027   4.8412547
+  3.5289807   1.5948868   2.9703782   5.6289935   2.233459    4.505453
+  3.493985    4.1237626   6.1241555   4.2731423   6.7809134   5.578353
+  7.1394615   4.801517    8.248575    6.723881    8.095223    8.376237
+  8.850608    7.306845    9.643035    6.62462     7.217668    8.707172
+  6.9627156   6.494607    8.015128    8.749432    7.029775    9.2899685
+  9.877244    7.6575804   8.870711   10.94303     9.690841    8.343924
+ 10.118607   10.649819    8.592339    9.784504   10.064111   10.25523
+ 10.662421   10.385476    8.761676   10.677014   10.270385   10.006224
+  9.102517   10.517373   10.093068    9.31813     9.996311   11.051368
+  9.809194   11.003715    8.69307     9.7159605   8.132918    7.9266944
+  7.3877883   7.822746    7.2290583   7.3439345   4.2062697   7.850657
+  6.689912    6.149833    3.437159    7.411056    7.0829415   7.2042274
+  5.861235    5.828403    4.2643604   6.4471      3.82178     1.9328262
+  3.792409    2.6964588   1.5427104   4.417745    3.8913624   0.95244735
+  1.541029    3.589035    1.5270448   1.2304847   1.5625256   1.736566
+  5.2578697   0.85572904  1.0673462   0.          0.          1.6534283
+  0.95225745  0.          0.78864497  1.2735969   0.          0.
+  0.        ]
+
+   [Global Top 10 Reference Entries for L3-2162]
+   1. P39696 (COMER_BACSU) - Score: 12.9761 - ...[E][Q][Y][V][P][C][Q][V][A][R][V][I][P][S][I][T][N][R][A][L][A]... - ComE operon protein 4
+   2. A8GIW3 (ASPD_SERP5) - Score: 12.8616 - ...[Q][A][C][R][Q][H][Q][G][Q][L][I][V][L][S][G][A][V][A][G][M][D]... - L-aspartate dehydrogenase (EC 1.4.1.21)
+   3. B2HVA8 (ASPD_ACIBC) - Score: 12.8190 - ...[T][A][E][K][N][D][A][H][L][H][L][L][A][G][A][I][A][G][I][D][G]... - L-aspartate dehydrogenase (EC 1.4.1.21)
+   4. B7GY04 (ASPD_ACIB3) - Score: 12.8190 - ...[T][A][E][K][N][D][A][H][L][H][L][L][A][G][A][I][A][G][I][D][G]... - L-aspartate dehydrogenase (EC 1.4.1.21)
+   5. B7I8C4 (ASPD_ACIB5) - Score: 12.8189 - ...[T][A][E][K][N][D][A][H][L][H][L][L][A][G][A][I][A][G][I][D][G]... - L-aspartate dehydrogenase (EC 1.4.1.21)
+   6. A3M394 (ASPD_ACIBT) - Score: 12.8189 - ...[T][A][E][K][N][D][A][H][L][H][L][L][A][G][A][I][A][G][I][D][G]... - L-aspartate dehydrogenase (EC 1.4.1.21)
+   7. B0V9I9 (ASPD_ACIBY) - Score: 12.8189 - ...[T][A][E][K][N][D][A][H][L][H][L][L][A][G][A][I][A][G][I][D][G]... - L-aspartate dehydrogenase (EC 1.4.1.21)
+   8. Q6FDH0 (ASPD_ACIAD) - Score: 12.7588 - ...[T][A][E][Q][N][G][A][H][L][H][L][L][A][G][A][I][A][G][I][D][G]... - L-aspartate dehydrogenase (EC 1.4.1.21)
+   9. A0A0C1E1C6 (UCDB_ASPUT) - Score: 12.7114 - ...[R][R][L][S][D][R][G][A][F][F][V][A][L][P][V][M][G][G][P][P][L]... - NADH-dependent oxidoreductase ucdB (EC 1.1.1.-) (Uscandidusin biosynthesis cluster protein B)
+   10. Q00777 (P5CR3_BACSU) - Score: 12.6931 - ...[E][A][E][T][E][A][G][I][S][R][V][I][P][A][I][T][S][E][A][E][A]... - Pyrroline-5-carboxylate reductase 3 (P5C reductase 3) (P5CR 3) (EC 1.5.1.2) (PCA reductase 3)
+
+--- Additional Layers (Coverage up to 5 per layer) ---
+
+--- Rank ADDITIONAL (Rank 4 of Layer 0) ---
+Node: Layer 0, Latent 509
+Max Activation: 10.6940
+Peak Location: Trace Idx 104 (AA #104)
+Motif Context: GEM[D]KPLISRRLV[D]S[D]GSLAEVPKEAPKVGILGSG[D]FARSLATRLVGSGFSVVVGSRNPKRTAGLFPSLAQVTFQEEAVSSPEVIFVAVFREHYSSLCSLA[D]QLAGKILV[D]VSNPTEKERLQHRQSNAEYLASLFPACTVVKAFNVISAWALQAGPR[D]GNRQVLICG[D]QLEAKHTVSEMARAMGFTPL[D]MGSLASAREVEAIPLRLLPSWKVPTLLALGLFVCFYAYNFIR[D]VLQPYIRK[D]ENKFYKMPLSVVNTTLPCVAYVLLSLVYLPGVLAAALQLRRGTKYQRFP[D]WL[D]HWLQHRKQIGLLSFFFAMLHALYSFCLPLRRSHRY[D]LVNLAVKQVLANKSRLWVEEEVWRMEIYLSLGVLALGMLSLLAVTSIPSIANSLNWKEFSFVQSTLGFVALMLSTMHTLTYGWTRAFEENHYKFYLPPTFTLTLLLPCVIILAKGLFLLPCLSHRLTKIRRGWER[D]GAV
+Trace Window : [ 0.         0.         0.        10.003353   0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         9.709613   0.         9.693488   0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.        10.349645
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.        10.6939745
+  0.         0.         0.         0.         0.         0.
+  0.         0.        10.204338   0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.        10.057784   0.         0.         0.         0.
+  0.         0.         0.         0.         0.        10.609595
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.        10.020608   0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         9.761568   0.         0.
+  0.         0.         0.         0.         0.         0.
+  9.763911   0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         9.155109   0.         0.         9.501227
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         9.706828
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.        10.213349   0.         0.
+  0.       ]
+
+   [Global Top 10 Reference Entries for L0-509]
+   1. Q85213 (GLYCO_PIRYV) - Score: 11.4780 - ...SYPSEGALVS[D]RFAFHSAYHP... - Glycoprotein
+   2. P0A3M3 (BLO9_KLEPN) - Score: 11.4344 - ...HKLPVSEAAY[D]MAYATIPQYQ... - Beta-lactamase OXA-9 (EC 3.5.2.6) (Oxacillinase) (Penicillinase)
+   3. P0A3M4 (BLO9_KLEAE) - Score: 11.4344 - ...HKLPVSEAAY[D]MAYATIPQYQ... - Beta-lactamase OXA-9 (EC 3.5.2.6) (Oxacillinase) (Penicillinase)
+   4. Q7RYM7 (PBN1_NEUCR) - Score: 11.4271 - ...NPFEKANLGY[D]GLFGPRTVFW... - Protein pbn1
+   5. P77427 (YBEU_ECOLI) - Score: 11.4254 - ...RMFEELAAGS[D]RFYATLPWQP... - Uncharacterized protein YbeU
+   6. P75067 (NAMPT_MYCPN) - Score: 11.4241 - ...NTHLKHLLAC[D]AYKLSHRLMY... - Nicotinamide phosphoribosyltransferase (NAmPRTase) (NMPRT) (Nampt) (EC 2.4.2.12)
+   7. A5DPC0 (SEC24_PICGU) - Score: 11.4188 - ...KESQMLLGAA[D]KFYKSFAVEC... - Protein transport protein SEC24
+   8. Q10916 (ASM1_CAEEL) - Score: 11.4147 - ...SGPWLSEGAK[D]SLLKRGSYST... - Sphingomyelin phosphodiesterase 1 (EC 3.1.4.12) (Acid sphingomyelinase 1) (ASM-1)
+   9. Q9Y5L3 (ENTP2_HUMAN) - Score: 11.4102 - ...RGFSTQVLLG[D]VYQSPCTMAQ... - Ectonucleoside triphosphate diphosphohydrolase 2 (NTPDase 2) (EC 3.6.1.-) (CD39 antigen-like 1) (Ecto-ATP diphosphohydrolase 2) (Ecto-ATPDase 2) (Ecto-ATPase 2)
+   10. Q67ZI9 (GDL48_ARATH) - Score: 11.4096 - ...PTERTNQIVS[D]HFFKHLKNLF... - GDSL esterase/lipase At2g42990 (EC 3.1.1.-) (Extracellular lipase At2g42990)
+
+--- Rank ADDITIONAL (Rank 5 of Layer 0) ---
+Node: Layer 0, Latent 966
+Max Activation: 10.5166
+Peak Location: Trace Idx 39 (AA #39)
+Motif Context: LGSGD[F]ARSLATRLVGSG[F]SVVVGSRNPKRTAGL[F]PSLAQVT[F]QEEAVSSPEVI[F]VAV[F]REHYSSLCSLADQLAGKILVDVSNPTEKERLQHRQSNAEYLASL[F]PACTVVKA[F]NVISAWALQAGPRDGNRQVLICGDQLEAKHTVSEMARAMG[F]TPLDMGSLASAREVEAIPLRLLPSWKVPTLLALGL[F]VC[F]YAYN[F]IRDVLQPYIRKDENK[F]YKMPLSVVNTTLPCVAYVLLSLVYLPGVLAAALQLRRGTKYQR[F]PDWLDHWLQHRKQIGLLS[F][F][F]AMLHALYS[F]CLPLRRSHRYDLVNLAVKQVLANKSRLWVEEEVWRMEIYLSLGVLALGMLSLLAVTSIPSIANSLNWKE[F]S[F]VQSTLG[F]VALMLSTMHTLTYGWTRA[F]EENHYK[F]YLPPT[F]TLTLLLPCVIILAKGL[F]LLPCLSHRLTKIRRGWERDGAVK[F]MLP
+Trace Window : [ 0.        0.        0.        0.        0.       10.516569  0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.       10.403055  0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        9.717026
+  0.        0.        0.        0.        0.        0.        0.
+ 10.092361  0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.       10.241997  0.
+  0.        0.       10.069529  0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.       10.26252   0.
+  0.        0.        0.        0.        0.        0.        0.
+ 10.451763  0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.       10.479004
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  9.254234  0.        0.        9.496239  0.        0.        0.
+  0.        9.595121  0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.       10.171698  0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        9.112351  0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        8.851515  8.721188  8.764133  0.
+  0.        0.        0.        0.        0.        0.        0.
+  9.075672  0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  9.723965  0.        9.865601  0.        0.        0.        0.
+  0.        0.        9.718529  0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  9.904905  0.        0.        0.        0.        0.        0.
+  9.508378  0.        0.        0.        0.        0.        9.214442
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        9.217783  0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        9.986282  0.
+  0.        0.      ]
+
+   [Global Top 10 Reference Entries for L0-966]
+   1. Q8LFJ9 (GLIP7_ARATH) - Score: 11.5148 - ...TANKIIAHNT[F]SKSANYSYPI... - GDSL esterase/lipase 7 (EC 3.1.1.-) (Extracellular lipase 7)
+   2. P21685 (CRTI_PANAN) - Score: 11.4592 - ...DQLNAYHGSA[F]SVEPVLTQSA... - Phytoene desaturase (lycopene-forming) (EC 1.3.99.31) (4-step phytoene desaturase) (Phytoene dehydrogenase)
+   3. Q28110 (FCGR2_BOVIN) - Score: 11.4550 - ...HVTLTCQGTS[F]SAGNLTTW[F]H... - Low affinity immunoglobulin gamma Fc region receptor II (IgG Fc receptor II) (Fc-gamma RII) (FcRII) (CD antigen CD32)
+   4. Q0TWV0 (MDM10_PHANO) - Score: 11.4388 - ...PEQVEPVHGR[F]SAGAELYYGI... - Mitochondrial distribution and morphology protein 10 (Mitochondrial inheritance component MDM10)
+   5. Q9KR33 (CRYD_VIBCH) - Score: 11.4346 - ...QAGLTHCQNY[F]SSLLPSRYKE... - Cryptochrome DASH
+   6. P43465 (RAFR_PEDPE) - Score: 11.4342 - ...IHYIQEGKGT[F]AAANHPATVL... - Raffinose operon transcriptional regulatory protein RafR
+   7. O74802 (HIBCH_SCHPO) - Score: 11.4269 - ...LPSEYNNGIS[F]AAKGRRKTPL... - Small ribosomal subunit protein mS47 (3-hydroxyisobutyryl-CoA hydrolase, mitochondrial) (EC 3.1.2.4) (3-hydroxyisobutyryl-coenzyme A hydrolase) (HIB-CoA hydrolase) (HIBYL-CoA-H)
+   8. O76263 (AMYR_DROWI) - Score: 11.4267 - ...LVTRSGNELE[F]ASMVKRCNDV... - Alpha-amylase-related protein (EC 3.2.1.1)
+   9. P56161 (ACES_ANOST) - Score: 11.4257 - ...HPQVILETRA[F]MH - Acetylcholinesterase (AChE) (EC 3.1.1.7)
+   10. Q64FP0 (RDRP_WCCVB) - Score: 11.4086 - ...PEITMAQAIG[F]AYASCANHNR... - RNA-directed RNA polymerase (EC 2.7.7.48)
+
+--- Rank ADDITIONAL (Rank 2 of Layer 3) ---
+Node: Layer 3, Latent 2226
+Max Activation: 10.1118
+Peak Location: Trace Idx 87 (AA #87)
+Motif Context: GFS[V][V][V]GS[R][N][P][K][R][T][A][G][L][F][P][S][L][A][Q][V][T][F][Q][E][E][A][V][S][S][P][E][V][I][F][V][A][V][F][R][E][H][Y][S][S][L][C][S][L][A][D][Q][L][A][G][K][I][L][V][D][V][S][N][P][T][E][K][E][R][L][Q][H][R][Q][S][N][A][E][Y][L][A][S][L][F][P][A]C[T][V][V][K][A][F][N]V[I]S[A][W][A]LQAGP[R]DGN
+Trace Window : [ 0.          0.          0.          5.0697775   3.4890192   3.3059473
+  0.          0.          2.0637274   4.2342234   2.4338233   3.463792
+  4.019084    3.6716712   2.9641354   2.8369155   2.9905698   4.0128994
+  4.4789944   5.216341    4.708673    5.154252    5.0534115   7.125721
+  6.238551    7.735144    5.3105764   6.249064    6.539091    5.6949964
+  6.066694    5.265827    5.4763794   6.3392706   6.1936493   7.1158867
+ 10.1117525   9.924096    8.550882    7.6642323   7.1067686   6.587687
+  6.776484    6.0856104   6.662021    6.9436407   5.565069    5.5542526
+  6.4369555   5.324668    4.6557436   6.2894635   6.3922625   5.6250544
+  5.619746    5.9404755   5.049655    6.6161723   7.3087826   8.008383
+  8.854273    7.8132772   4.7090197   6.03582     5.9999347   5.5127845
+  6.3690014   3.7606106   5.942206    4.7069287   5.4505167   4.462892
+  4.8169785   3.1666915   3.927323    3.8029344   3.8037803   4.4778347
+  5.3410797   4.4706855   5.1969957   4.8071465   4.1477757   1.8627968
+  3.3198311   3.2441342   3.7835732   3.0663164   4.4803743   0.
+  2.4176621   1.9593159   1.4710294   1.0448879   2.7977483   2.550316
+  1.4634959   0.          1.3219478   0.          1.710873    1.4370474
+  1.6046604   0.          0.          0.          0.          0.
+  0.78719574  0.          0.          0.        ]
+
+   [Global Top 10 Reference Entries for L3-2226]
+   1. P46806 (DHOM_MYCLE) - Score: 11.6835 - ...[L][V][S][R][A][D][V][D][I][V][V][E][V][M][G][P][V][E][L][S][R]... - Homoserine dehydrogenase (HDH) (HSD) (EC 1.1.1.3)
+   2. Q126F5 (ASPD_POLSJ) - Score: 11.5216 - ...[L][A][A][D][D][A][P][D][L][V][V][E][C][A][G][H][G][A][I][A][A]... - L-aspartate dehydrogenase (EC 1.4.1.21)
+   3. A9H5B7 (IOLG_GLUDA) - Score: 11.4694 - ...[R][A][A][Q][E][W][A][P][D][A][V][I][C][D][T][A][R][D][L][V][A]... - Inositol 2-dehydrogenase (EC 1.1.1.18) (Myo-inositol 2-dehydrogenase) (MI 2-dehydrogenase)
+   4. P9WPX1 (DHOM_MYCTU) - Score: 11.4045 - ...[L][V][A][R][E][D][V][D][I][V][V][E][V][M][G][P][V][E][P][S][R]... - Homoserine dehydrogenase (HDH) (HSD) (EC 1.1.1.3)
+   5. P63630 (DHOM_MYCBO) - Score: 11.4045 - ...[L][V][A][R][E][D][V][D][I][V][V][E][V][M][G][P][V][E][P][S][R]... - Homoserine dehydrogenase (HDH) (HSD) (EC 1.1.1.3)
+   6. P9WPX0 (DHOM_MYCTO) - Score: 11.4045 - ...[L][V][A][R][E][D][V][D][I][V][V][E][V][M][G][P][V][E][P][S][R]... - Homoserine dehydrogenase (HDH) (HSD) (EC 1.1.1.3)
+   7. Q5U921 (HADA_CLODI) - Score: 11.3798 - ...[L][H][K][L][L][S][E][A][D][I][F][V][T][N][V][R][V][Q][A][L][E]... - (R)-2-hydroxy-4-methylpentanoate CoA-transferase (EC 2.8.3.24) (2-hydroxyisocaproate-CoA transferase)
+   8. A9N564 (IOLG_SALPB) - Score: 11.3677 - ...[D][L][I][N][D][K][D][V][E][V][V][I][I][T][A][S][N][E][A][H][A]... - Inositol 2-dehydrogenase (EC 1.1.1.18) (Myo-inositol 2-dehydrogenase) (MI 2-dehydrogenase)
+   9. Q8ZK57 (IOLG_SALTY) - Score: 11.3677 - ...[D][L][I][N][D][K][D][V][E][V][V][I][I][T][A][S][N][E][A][H][A]... - Inositol 2-dehydrogenase (EC 1.1.1.18) (Myo-inositol 2-dehydrogenase) (MI 2-dehydrogenase)
+   10. B5F3F4 (IOLG_SALA4) - Score: 11.3677 - ...[D][L][I][N][D][K][D][V][E][V][V][I][I][T][A][S][N][E][A][H][A]... - Inositol 2-dehydrogenase (EC 1.1.1.18) (Myo-inositol 2-dehydrogenase) (MI 2-dehydrogenase)
+
+--- Rank ADDITIONAL (Rank 3 of Layer 3) ---
+Node: Layer 3, Latent 2740
+Max Activation: 9.0203
+Peak Location: Trace Idx 170 (AA #170)
+Motif Context: GDF[A]RSLATRLVGSGFSVVVGSRNPKRTAGLFPSLAQVTFQEEAVSSPEVIFVAVFREHYSSLCSLADQLAGKILVDVSNPTEKERLQHRQSNAEYLASLFPACTVV[K]A[F][N][V][I]S[A][W][A][L][Q][A][G][P][R][D][G][N][R][Q][V][L][I][C][G][D][Q][L][E][A][K][H][T][V][S][E][M][A][R][A][M][G][F][T][P][L][D][M][G][S][L][A][S][A][R][E][V][E][A][I][P][L][R][L][L][P]S[W]KV[P][T]LL[A][L]GLFV[C]FY[A][Y]N[F][I]RDV[L]QPYIRKDENKFYKMPLSVVNTTLPCVAYVLLSLV[Y]LPGVLAAALQLRRGTKYQRFPDWLDHWLQHRKQIGLLSFFFAMLHALYSFCLPLRRSHRYDL[V]N[L]AV[K]QVL
+Trace Window : [0.         0.         0.         2.0376077  0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         1.843406
+ 0.         0.99478066 1.4226353  2.1305995  2.5296645  0.
+ 2.4523935  1.6677588  2.7574136  2.2985659  4.5683346  3.0438495
+ 4.7956176  1.0478313  2.6903708  3.2619252  3.4629483  3.0035672
+ 4.482772   4.5299964  3.704639   6.125574   6.2031355  7.140779
+ 7.315201   9.020298   5.526168   2.9107752  7.5180397  7.2620506
+ 7.1049795  4.0767365  6.9637513  7.8789706  6.588974   6.4044685
+ 8.61668    8.418451   6.437927   6.851509   5.625364   8.183082
+ 7.487238   7.6418743  6.344278   6.739992   8.544928   7.5632696
+ 8.521804   7.188525   8.499242   7.501293   7.5589886  8.656952
+ 5.419739   5.4804354  7.651415   6.3666506  6.1015797  4.3635097
+ 4.342153   2.1890059  2.9919448  3.4177325  2.710689   2.1951568
+ 0.         3.8215547  0.         0.         1.8848555  0.7514652
+ 0.         0.         1.0738821  1.0702543  0.         0.
+ 0.         0.         1.3898505  0.         0.         1.2969795
+ 1.6389056  0.         1.6815243  0.83578956 0.         0.
+ 0.         1.0752497  0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 1.5951738  0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         2.5396993  0.         0.8337994
+ 0.         0.         1.6477685  0.         0.         0.        ]
+
+   [Global Top 10 Reference Entries for L3-2740]
+   1. A6W2K8 (DDDD_MARMS) - Score: 16.2794 - ...[P][S][F][S][P][L][P][L][G][S][S][Y][A][I][S][L][A][A][S][S][I]... - CoA-transferase/lyase DddD (EC 2.-.-.-)
+   2. A9X6P9 (ACOCT_ACEAC) - Score: 16.2439 - ...[L][S][D][L][C][G][G][V][F][M][F][C][G][I][A][S][A][L][Y][A][R]... - Acetyl-CoA:oxalate CoA-transferase (ACOCT) (EC 2.8.3.19) (Acetyl-coenzyme A transferase) (CoA:oxalate CoA-transferase) (CoAT3)
+   3. Q82M40 (FCTA_STRAW) - Score: 16.1130 - ...[I][G][D][S][G][T][G][I][H][A][V][A][G][I][L][A][A][L][Y][Q][R]... - Formyl-CoA:oxalate CoA-transferase (FCOCT) (EC 2.8.3.16) (Formyl-coenzyme A transferase) (Formyl-CoA transferase)
+   4. P76518 (ACOCT_ECOLI) - Score: 16.1127 - ...[L][A][D][L][C][G][G][V][Y][L][F][S][G][I][V][S][A][L][Y][G][R]... - Acetyl-CoA:oxalate CoA-transferase (ACOCT) (EC 2.8.3.19) (Acetyl-coenzyme A transferase) (CoA:oxalate CoA-transferase)
+   5. Q09618 (YS74_CAEEL) - Score: 16.0923 - ...[D][C][S][M][T][E][G][V][A][Y][L][S][S][F][V][Q][H][Y][Y][D][Q]... - CaiB/baiF CoA-transferase family protein ZK892.4 (EC 2.-.-.-)
+   6. O87838 (FCTA_STRCO) - Score: 16.0516 - ...[A][Q][I][G][D][S][G][T][G][V][H][V][V][A][G][I][L][A][A][L][Y]... - Formyl-CoA:oxalate CoA-transferase (FCOCT) (EC 2.8.3.16) (Formyl-coenzyme A transferase) (Formyl-CoA transferase)
+   7. A4YXN2 (FCTA_BRASO) - Score: 16.0236 - ...[I][G][D][S][G][T][G][L][H][L][A][L][G][I][V][T][A][L][Y][Q][R]... - Formyl-CoA:oxalate CoA-transferase (FCOCT) (EC 2.8.3.16) (Formyl-coenzyme A transferase) (Formyl-CoA transferase)
+   8. W7N463 (FDB29_GIBM7) - Score: 16.0195 - ...[S][T][G][I][L][T][A][L][T][I][M][C][G][I][R][D][R][A][K][F][G]... - Acyl-CoA transferase FVEG_12629 (EC 2.8.3.-) (Fusarium detoxification of benzoxazolinone cluster 2 protein FVEG_12629) (FDB2 cluster protein FVEG_12629)
+   9. A5EGD7 (FCTA_BRASB) - Score: 16.0149 - ...[I][G][D][S][G][T][G][L][H][L][A][L][G][I][V][T][A][L][Y][Q][R]... - Formyl-CoA:oxalate CoA-transferase (FCOCT) (EC 2.8.3.16) (Formyl-coenzyme A transferase) (Formyl-CoA transferase)
+   10. O06543 (AMACR_MYCTU) - Score: 16.0070 - ...[G][D][F][G][G][G][S][M][F][L][L][V][G][I][L][A][A][L][W][E][R]... - Alpha-methylacyl-CoA racemase (AMACR) (EC 5.1.99.4) (MtMCR)
+
+--- Rank ADDITIONAL (Rank 4 of Layer 3) ---
+Node: Layer 3, Latent 338
+Max Activation: 7.1835
+Peak Location: Trace Idx 198 (AA #198)
+Motif Context: TVV[K]AF[N][V][I]S[A]W[A]L[Q][A][G]P[R][D][G][N][R][Q][V][L][I][C][G][D][Q][L][E][A][K][H][T][V][S][E][M][A][R][A][M][G][F][T][P][L][D][M][G][S][L][A][S][A][R][E][V][E][A][I][P][L][R][L][L][P][S][W][K][V][P]T[L]LALGLFVCFYAYNFIRDVLQPY[I]RKDENKFYKMPLSVVNTTLPCVAYVLLSLV[Y]LPGVLAAALQLRRGTKYQRFPDWLDHWLQHRKQIGLLSFFFAMLHALYSFCLPLRRSHRYDL[V]NLAVKQVLANKSRLWVEEEVWRMEIYLSLGVLALGMLSLLAVTSIPSIANSLNWKEFSFVQSTLGFVALMLSTMHTLTYGW[T]RAF
+Trace Window : [0.         0.         0.         1.6608531  0.         0.
+ 1.7609481  1.7693429  1.2120491  0.         1.4041809  0.
+ 1.4675179  0.         2.6030605  1.2126032  2.9638107  0.
+ 2.036872   1.984822   2.1224272  2.0794904  3.924835   4.2232122
+ 3.468672   5.3701277  4.2276034  4.7771745  4.7632375  6.225923
+ 3.1991756  1.9590781  5.328386   4.9331937  4.6560802  2.7675521
+ 5.416268   5.576567   4.717946   5.516792   5.3282394  6.020246
+ 5.8908696  5.3475566  4.3357925  6.953992   5.6978183  6.4055767
+ 6.5800214  6.097396   7.1802745  6.0038533  6.3146343  6.355295
+ 6.797605   6.121041   6.588216   7.1834865  5.1214952  5.4455237
+ 6.291414   5.7385526  5.6838117  4.0817266  4.9885902  2.8936439
+ 2.7238758  3.4420822  2.3980756  3.2324643  0.844878   3.1080227
+ 1.2845719  0.73498744 1.2869298  0.         0.80887675 0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.8905634  0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         1.1205153  0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         1.3785658  0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         1.1165183
+ 0.         0.         0.        ]
+
+   [Global Top 10 Reference Entries for L3-338]
+   1. A9BZG3 (IOLG_DELAS) - Score: 11.6860 - ...[A][A][V][A][A][D][A][C][V][L][A][Q][S][S][G][A][V][E][R][M][A]... - Inositol 2-dehydrogenase (EC 1.1.1.18) (Myo-inositol 2-dehydrogenase) (MI 2-dehydrogenase)
+   2. A3Q6N0 (ACDH2_MYCSJ) - Score: 11.6048 - ...[L][P][P][Y][A][G][N][L][D][I][M][T][A][A][A][A][K][V][G][E][E]... - Acetaldehyde dehydrogenase 2 (EC 1.2.1.10) (Acetaldehyde dehydrogenase [acetylating] 2)
+   3. A1UM81 (ACDH1_MYCSK) - Score: 11.6036 - ...[L][P][P][Y][A][G][N][L][D][I][M][T][A][A][A][A][K][V][G][E][E]... - Acetaldehyde dehydrogenase 1 (EC 1.2.1.10) (Acetaldehyde dehydrogenase [acetylating] 1)
+   4. Q1B2X0 (ACDH1_MYCSS) - Score: 11.6036 - ...[L][P][P][Y][A][G][N][L][D][I][M][T][A][A][A][A][K][V][G][E][E]... - Acetaldehyde dehydrogenase 1 (EC 1.2.1.10) (Acetaldehyde dehydrogenase [acetylating] 1)
+   5. A5G0Y2 (IOLG_ACICJ) - Score: 11.4883 - ...[G][P][T][A][W][D][G][Y][V][A][A][V][S][S][D][A][C][V][E][A][Q]... - Inositol 2-dehydrogenase (EC 1.1.1.18) (Myo-inositol 2-dehydrogenase) (MI 2-dehydrogenase)
+   6. A9ABZ7 (IOLG_BURM1) - Score: 11.4272 - ...[A][A][V][A][A][D][A][C][V][R][A][Q][K][S][G][A][V][E][P][I][A]... - Inositol 2-dehydrogenase (EC 1.1.1.18) (Myo-inositol 2-dehydrogenase) (MI 2-dehydrogenase)
+   7. Q8XZZ9 (IOLG_RALN1) - Score: 11.4021 - ...[A][A][V][A][A][D][A][C][V][R][A][Q][K][S][G][A][I][E][R][I][E]... - Inositol 2-dehydrogenase (EC 1.1.1.18) (Myo-inositol 2-dehydrogenase) (MI 2-dehydrogenase)
+   8. Q39H98 (IOLG_BURL3) - Score: 11.3911 - ...[A][A][V][A][A][D][A][C][V][R][A][Q][K][S][G][A][V][E][P][I][A]... - Inositol 2-dehydrogenase (EC 1.1.1.18) (Myo-inositol 2-dehydrogenase) (MI 2-dehydrogenase)
+   9. Q7VGS3 (AROE_HELHP) - Score: 11.3705 - ...[N][K][G][N][L][E][I][Q][R][I][A][S][F][M][N][E][I][L] - Shikimate dehydrogenase (NADP(+)) (SDH) (EC 1.1.1.25)
+   10. B2VJP4 (IOLG_ERWT9) - Score: 11.3553 - ...[A][S][V][A][A][D][A][C][L][K][A][Q][N][S][G][G][V][E][P][I][E]... - Inositol 2-dehydrogenase (EC 1.1.1.18) (Myo-inositol 2-dehydrogenase) (MI 2-dehydrogenase)
+
+--- Rank ADDITIONAL (Rank 5 of Layer 3) ---
+Node: Layer 3, Latent 52
+Max Activation: 4.7964
+Peak Location: Trace Idx 55 (AA #55)
+Motif Context: GSL[A]E[V]PKE[A]PK[V]G[I][L][G][S][G][D][F][A][R][S][L][A][T][R][L][V][G][S][G][F][S][V][V][V][G][S][R][N][P][K][R][T][A][G][L][F]PSL[A]QVT
+Trace Window : [0.        0.        0.        1.2348367 0.        1.1766443 0.
+ 0.        0.        1.8614872 0.        0.        1.7274239 0.
+ 1.9165864 1.8613155 2.0321145 1.6453614 1.6260046 1.3451643 2.0533721
+ 3.029722  1.7914464 1.8961158 3.4622953 3.8001876 2.691733  2.799857
+ 3.2734044 2.9916732 4.0698786 3.4600236 3.2582786 4.532872  4.3420444
+ 4.613111  4.796363  4.3215914 3.99274   3.535735  2.770964  3.774829
+ 3.5416534 2.764665  2.7785332 3.3289626 2.0820372 2.767935  1.4472417
+ 2.084769  0.        0.        0.        1.5806834 0.        0.
+ 0.       ]
+
+   [Global Top 10 Reference Entries for L3-52]
+   1. Q9ZUH5 (SDR2B_ARATH) - Score: 12.7339 - ...[R][Q][L][A][N][K][G][I][R][V][I][L][T][S][R][D][E][K][Q][G][L]... - Short-chain dehydrogenase/reductase 2b (AtSDR2b) (EC 1.1.1.-)
+   2. Q8K3P0 (DR9C7_MOUSE) - Score: 12.6737 - ...[K][Q][L][V][D][R][G][M][K][V][L][A][A][C][L][T][E][E][G][A][Q]... - Short-chain dehydrogenase/reductase family 9C member 7 (SDR9C7) (EC 1.1.1.-) (O-acylceramide dehydrogenase) (Orphan short-chain dehydrogenase/reductase) (SDR-O) (RDH-S)
+   3. Q9M2E2 (SDR1_ARATH) - Score: 12.6302 - ...[R][Q][L][A][S][E][G][I][R][V][V][L][T][S][R][D][E][N][R][G][L]... - (+)-neomenthol dehydrogenase (EC 1.1.1.-) (EC 1.1.1.208) (Menthone:neomenthol reductase) (Short-chain dehydrogenase/reductase 1) (AtSDR1)
+   4. Q6RVV4 (TIC32_PEA) - Score: 12.5610 - ...[R][V][L][A][L][R][G][A][H][V][I][M][G][V][R][N][M][V][A][A][K]... - Short-chain dehydrogenase TIC 32, chloroplastic (EC 1.1.1.-) (Translocon at the inner envelope membrane of chloroplasts 32) (PsTIC32)
+   5. Q6CEE9 (SDR_YARLI) - Score: 12.5399 - ...[E][A][F][A][Q][A][G][A][D][V][A][I][W][Y][N][S][K][P][S][D][E]... - Probable NADP-dependent mannitol dehydrogenase (MtDH) (EC 1.1.1.138) (Mannitol 2-dehydrogenase [NADP(+)]) (Short chain dehydrogenase/reductase) (YlSDR)
+   6. C8V3Y7 (ATND_EMENI) - Score: 12.5269 - ...[H][F][V][R][L][Q][A][A][T][V][I][L][A][V][R][D][L][K][K][G][E]... - Short chain dehydrogenase atnD (EC 1.1.1.-) (Aspercryptin biosynthesis cluster protein D)
+   7. P87219 (SOU1_CANAL) - Score: 12.5220 - ...[E][A][F][A][Q][A][G][A][D][V][A][I][W][Y][N][S][K][P][A][D][A]... - Sorbose reductase SOU1 (EC 1.1.1.289) (Sorbitol utilization protein SOU1)
+   8. A7AZH2 (3BHDP_MEDG7) - Score: 12.4924 - ...[I][R][A][A][K][E][G][A][T][V][V][A][V][G][R][N][E][E][R][G][A]... - 3beta-hydroxysteroid dehydrogenase (3beta-HSDH) (EC 1.1.1.-) (3beta-hydroxycholanate 3-dehydrogenase (NADP(+))) (EC 1.1.1.393) (NADP-dependent bile acid 3beta-dehydrogenase)
+   9. B2X050 (MNR1_CAPAN) - Score: 12.4746 - ...[R][Q][L][A][S][K][G][V][V][V][V][L][T][S][R][D][E][K][K][G][I]... - (+)-neomenthol dehydrogenase (EC 1.1.1.208) (Menthone:neomenthol reductase 1) (CaMNR1)
+   10. G3Y422 (YAND_ASPNA) - Score: 12.4558 - ...[Q][L][L][R][L][R][L][S][T][A][I][L][A][V][R][N][V][T][K][G][E]... - Short chain dehydrogenase yanD (EC 1.1.1.-) (Yanuthone D biosynthesis cluster protein D)
+
+--- Rank ADDITIONAL (Rank 2 of Layer 4) ---
+Node: Layer 4, Latent 1108
+Max Activation: 2.9543
+Peak Location: Trace Idx 153 (AA #153)
+Motif Context: AFN[V][I]SA[W][A]LQAGPRDGNRQVLICGDQLEAKH[T]VSE[M][A]RAMGFTPLDMGSLASAREVEAIPLRLLPSWKVPTLLALGLFVCFYAYNFIRDVLQPYIRKDENKFYKMPLSVVNTTLPCVAYVLLSLVYLPGVLAAALQLRRGTKYQRFPDWLDHWLQHRKQIGLLSFFFAMLHALYSFCLPLRRSHRYDLVNLAVKQVLANKSRLWVEEEVWRMEIYLSLGVLALGMLSLLAVTSIPSIANSLNWKEFSFVQSTLG[F]VAL
+Trace Window : [0.        0.        0.        2.4442692 2.648962  0.        0.
+ 2.9397604 2.9542575 0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        2.5875125 0.        0.
+ 0.        2.3900566 2.2165687 0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        2.19937   0.        0.        0.       ]
+
+   [Global Top 10 Reference Entries for L4-1108]
+   1. Q6GIM7 (TRXB_STAAR) - Score: 12.0030 - ...[I][V][T][A][T][G][D][G][S][I][A][A][Q][S][A][A][E][Y][I]EH... - Thioredoxin reductase (TRXR) (EC 1.8.1.9)
+   2. P66010 (TRXB_STAAM) - Score: 11.9865 - ...[I][V][T][A][T][G][D][G][S][I][A][A][Q][S][A][A][E][Y][I]EH... - Thioredoxin reductase (TRXR) (EC 1.8.1.9)
+   3. Q5HHQ4 (TRXB_STAAC) - Score: 11.9865 - ...[I][V][T][A][T][G][D][G][S][I][A][A][Q][S][A][A][E][Y][I]EH... - Thioredoxin reductase (TRXR) (EC 1.8.1.9)
+   4. Q6GB66 (TRXB_STAAS) - Score: 11.9865 - ...[I][V][T][A][T][G][D][G][S][I][A][A][Q][S][A][A][E][Y][I]EH... - Thioredoxin reductase (TRXR) (EC 1.8.1.9)
+   5. P99101 (TRXB_STAAN) - Score: 11.9865 - ...[I][V][T][A][T][G][D][G][S][I][A][A][Q][S][A][A][E][Y][I]EH... - Thioredoxin reductase (TRXR) (EC 1.8.1.9)
+   6. P66011 (TRXB_STAAW) - Score: 11.9865 - ...[I][V][T][A][T][G][D][G][S][I][A][A][Q][S][A][A][E][Y][I]EH... - Thioredoxin reductase (TRXR) (EC 1.8.1.9)
+   7. Q84PW3 (MDAR5_ORYSJ) - Score: 11.9718 - ...[R][V][E][H][V][D][H][A][R][K][S][A][H][H][C][V][E][A][L][L]T... - Monodehydroascorbate reductase 5, chlorplastic (OsMADR5) (OsMDHAR5) (EC 1.6.5.4)
+   8. P92947 (MDAR_ARATH) - Score: 11.9616 - ...[R][V][E][H][V][D][H][A][R][R][S][A][Q][H][C][V][K][S][L]LT... - Monodehydroascorbate reductase, chloroplastic/mitochondrial (EC 1.6.5.4) (Monodehydroascorbate reductase 5, mitochondrial) (AtMDAR5) (Monodehydroascorbate reductase 6, chloroplastic) (AtMDAR6)
+   9. A0A0M2HFA3 (CGLYO_MICTR) - Score: 11.9504 - ...[T][L][T][G][V][A][L][A][V][R][G][A][R][H][I][A][D][E][I][T]A... - C-glycoside 3-oxidase (EC 1.1.3.50) (MtCarA)
+   10. P23160 (R34K_CLOPA) - Score: 11.9461 - ...[L][T][T][A][V][S][D][G][T][V][A][A][L][M][A][E][K][Y]IGG... - 34.2 kDa protein in rubredoxin operon (EC 1.8.1.-) (ORF A)
+
+--- Rank ADDITIONAL (Rank 3 of Layer 4) ---
+Node: Layer 4, Latent 2210
+Max Activation: 0.0000
+Peak Location: Trace Idx 1 (AA #1)
+Motif Context: MSGEMD
+Trace Window : [0. 0. 0. 0. 0. 0.]
+
+   [Global Top 10 Reference Entries for L4-2210]
+   1. A0QTF8 (RMLD_MYCS2) - Score: 17.9990 - ...[V][D][D][E][T][G][P][V][N][I][Y][G][R][T][K][L][A][G][E][Q][A]... - dTDP-4-dehydrorhamnose reductase (EC 1.1.1.133) (dTDP-4-keto-L-rhamnose reductase) (dTDP-6-deoxy-L-lyxo-4-hexulose reductase) (dTDP-6-deoxy-L-mannose dehydrogenase) (dTDP-L-rhamnose synthase)
+   2. P26392 (RMLD_SALTY) - Score: 17.8785 - ...[E][T][D][A][T][S][P][L][N][V][Y][G][K][T][K][L][A][G][E][K][A]... - dTDP-4-dehydrorhamnose reductase (EC 1.1.1.133) (dTDP-4-keto-L-rhamnose reductase) (dTDP-6-deoxy-L-lyxo-4-hexulose reductase) (dTDP-6-deoxy-L-mannose dehydrogenase) (dTDP-L-rhamnose synthase)
+   3. P29781 (RMLD_STRGR) - Score: 17.8485 - ...[E][D][H][P][T][G][P][R][T][V][Y][G][C][T][K][R][A][G][E][R][A]... - dTDP-4-dehydrorhamnose reductase (EC 1.1.1.133) (dTDP-4-keto-L-rhamnose reductase) (dTDP-6-deoxy-L-lyxo-4-hexulose reductase) (dTDP-6-deoxy-L-mannose dehydrogenase) (dTDP-L-rhamnose synthase)
+   4. Q9RR27 (OLEU_STRAT) - Score: 17.7431 - ...[E][D][H][P][T][A][P][R][S][A][Y][G][R][T][K][R][D][G][E][Q][A]... - Probable dTDP-4,6-dihydroxy-2-methyloxan-3-one 4-ketoreductase (EC 1.1.1.-)
+   5. P55463 (RMLD_SINFN) - Score: 17.7338 - ...[E][E][D][R][T][G][P][I][S][V][Y][G][R][S][K][L][E][G][E][F][A]... - dTDP-4-dehydrorhamnose reductase (EC 1.1.1.133) (dTDP-4-keto-L-rhamnose reductase) (dTDP-6-deoxy-L-lyxo-4-hexulose reductase) (dTDP-6-deoxy-L-mannose dehydrogenase) (dTDP-L-rhamnose synthase)
+   6. P9WH09 (RMLD_MYCTU) - Score: 17.7270 - ...[P][T][D][E][T][A][P][Q][G][V][Y][A][R][S][K][L][A][G][E][Q][A]... - dTDP-4-dehydrorhamnose reductase (EC 1.1.1.133) (dTDP-4-keto-L-rhamnose reductase) (dTDP-6-deoxy-L-lyxo-4-hexulose reductase) (dTDP-6-deoxy-L-mannose dehydrogenase) (dTDP-L-rhamnose synthase)
+   7. P9WH08 (RMLD_MYCTO) - Score: 17.7270 - ...[P][T][D][E][T][A][P][Q][G][V][Y][A][R][S][K][L][A][G][E][Q][A]... - dTDP-4-dehydrorhamnose reductase (EC 1.1.1.133) (dTDP-4-keto-L-rhamnose reductase) (dTDP-6-deoxy-L-lyxo-4-hexulose reductase) (dTDP-6-deoxy-L-mannose dehydrogenase) (dTDP-L-rhamnose synthase)
+   8. Q8P3K4 (FUCDH_XANCP) - Score: 17.7044 - ...[R][F][V][Y][G][V][T][K][A][A][V][I][G][L][S][K][A][I][A][A][D]... - 2-keto-3-deoxy-L-fuconate dehydrogenase (EC 1.1.1.-)
+   9. Q9L9E9 (NOVS_STRNV) - Score: 17.6584 - ...[E][S][A][V][T][S][P][I][N][A][Y][G][R][T][K][Q][A][G][E][Q][A]... - dTDP-4-keto-6-deoxy-D-glucose reductase (EC 1.1.1.-) (Novobiocin biosynthesis protein S)
+   10. P37778 (RMLD_SHIFL) - Score: 17.6538 - ...[E][T][D][A][T][A][P][L][N][V][Y][G][E][T][K][L][A][G][E][K][A]... - dTDP-4-dehydrorhamnose reductase (EC 1.1.1.133) (dTDP-4-keto-L-rhamnose reductase) (dTDP-6-deoxy-L-lyxo-4-hexulose reductase) (dTDP-6-deoxy-L-mannose dehydrogenase) (dTDP-L-rhamnose synthase)
+
