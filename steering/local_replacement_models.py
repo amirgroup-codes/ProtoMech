@@ -113,6 +113,9 @@ class LocalReplacementModel(FullReplacementModel):
 
             resid = x_T1H
             x_ln_T1H = self.layernorm_fixed(resid, l, ln_type="mlp")
+            # Cache variance at input to CLT layernorm (same as MLP LN output)
+            var_clt_1T = x_ln_T1H.detach().var(dim=-1, unbiased=False)  # (T, 1)
+            self.base_variances[('clt', l)] = var_clt_1T.squeeze(0)  # (T,)
 
             with torch.no_grad():
                 mlp_out = layer.fc2(F.gelu(layer.fc1(x_ln_T1H)))
@@ -254,7 +257,7 @@ class LocalReplacementModel(FullReplacementModel):
     def forward_steered(self, seq, circuit, before=False, ablate_nodes=None, alphas=None, **kwargs):
         return super().forward_steered(seq, circuit=circuit, before=before, ablate_nodes=ablate_nodes, alphas=alphas, freeze_attention=False, add_correction=False)
     
-    def layernorm_fixed(self, x_TBH, layer_idx, ln_type='mlp'):
+    def layernorm_fixed(self, x_TBH, layer_idx, token_idx = None, ln_type='mlp'):
         '''
         Apply layernorm with the fixed variance from the base prompt.
         Uses the pre-computed variance vectors stored in self.base_variances.
@@ -263,6 +266,9 @@ class LocalReplacementModel(FullReplacementModel):
             x_TBH: input tensor (T, B, H)
             layer_idx: layer index (int)
             ln_type: 'attn' for self_attn_layer_norm or 'mlp' for final_layer_norm
+            or 'clt' for CLT encoder LN
+            token_idx: token index (int) 
+            if token_idx is given, it is assumed that T = 1, B = 1
 
         Returns:
             ln_result_TBH: layernorm output (T, B, H)
@@ -270,23 +276,29 @@ class LocalReplacementModel(FullReplacementModel):
         # Select the appropriate layernorm
         if ln_type == 'attn':
             ln = self.esm.layers[layer_idx].self_attn_layer_norm
-        else:
+        elif ln_type == 'mlp':
             ln = self.esm.layers[layer_idx].final_layer_norm
+        elif ln_type == 'clt':
+            ln = None
 
-        eps = ln.eps
-        beta = ln.bias  # (H,)
-        gamma = ln.weight  # (H,)
+        if ln is not None:
+            eps = ln.eps
+            beta = ln.bias  # (H,)
+            gamma = ln.weight  # (H,)
+        else:
+            eps = 1e-5
+            beta = 0
+            gamma = 1
 
-        mu_TB1 = x_TBH.mean(dim=-1, keepdim=True)  # (T,B,1)
-
-        T = x_TBH.size(0)
-        # Use pre-computed variance from base prompt
-        var_T = self.base_variances[(ln_type, layer_idx)]  # (T,)
-        fixed_std_T11 = torch.sqrt(var_T.view(T, 1, 1) + eps)  # (T,1,1)
-
-        # manually calculate layernorm
-        y = gamma * ((x_TBH - mu_TB1) / fixed_std_T11) + beta
-
+        var_T = self.base_variances[(ln_type, layer_idx)]
+        if token_idx is not None:
+            mu = x_TBH.mean() 
+            fixed_std = torch.sqrt(var_T[token_idx] + eps)
+            y = gamma * ((x_TBH - mu) / fixed_std) + beta
+        else:
+            mu = x_TBH.mean(dim=-1, keepdim=True)  # (T, B, 1)
+            fixed_std = torch.sqrt(var_T.view(-1, 1, 1) + eps)  # (T, 1, 1)
+            y = gamma * ((x_TBH - mu) / fixed_std) + beta
         return y
     
     def compute_edge_weight(self, source: tuple, target: tuple, rerun_base=False):
@@ -325,7 +337,12 @@ class LocalReplacementModel(FullReplacementModel):
         # target scalar at target node (layer residual stream here)
         # this is essentially the pre-activation feature we are interested in.
         # now we need to backpropagate and find dz_t/da_s
-        pre_act = torch.dot(resid_cache[tgt_layer][tgt_token, 0], target_weight_H)
+        residual_pre_lns = resid_cache[tgt_layer][tgt_token, 0]
+        # then compute the MLP LN
+        residual_pre_lns = self.layernorm_fixed(residual_pre_lns, tgt_layer, token_idx=tgt_token, ln_type="mlp")
+        # then compute the CLT ln
+        residual_pre_lns = self.layernorm_fixed(residual_pre_lns, tgt_layer, token_idx=tgt_token, ln_type="clt")
+        pre_act = torch.dot(residual_pre_lns, target_weight_H)
 
         self.esm.zero_grad(set_to_none=True)
         
@@ -385,7 +402,12 @@ class LocalReplacementModel(FullReplacementModel):
         # target scalar at target node (layer residual stream here)
         # this is essentially the pre-activation feature we are interested in.
         # now we need to backpropagate and find dz_t/da_s
-        pre_act = torch.dot(resid_cache[tgt_layer][tgt_token, 0], target_weight_H)
+        residual_pre_lns = resid_cache[tgt_layer][tgt_token, 0]
+        # then compute the MLP LN
+        residual_pre_lns = self.layernorm_fixed(residual_pre_lns, tgt_layer, token_idx=tgt_token, ln_type="mlp")
+        # then compute the CLT ln
+        residual_pre_lns = self.layernorm_fixed(residual_pre_lns, tgt_layer, token_idx=tgt_token, ln_type="clt")
+        pre_act = torch.dot(residual_pre_lns, target_weight_H)
 
         self.esm.zero_grad(set_to_none=True)
         
