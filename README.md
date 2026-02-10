@@ -1,8 +1,12 @@
 # ProtoMech
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="ProtoMech_Logo_Dark.svg">
+    <img alt="ProtoMech Logo" src="ProtoMech_Logo_Light.svg" width="60%">
+  </picture>
+</p>
 
-![ProtoMech](ProtoMech_Logo.svg)
-
-This is the official code repository for the paper "Protein Circuit Tracing via Cross-layer Transcoders", submitted to ICML 2026. 
+This is the official code repository for the paper "Protein Circuit Tracing via Cross-layer Transcoders", by Darin Tsui, Kunal Talreja, Daniel Saeedi, and Amirali Aghazadeh. A link to the paper can be found [here](https://arxiv.org/abs/XXXX.XXXXX).
 
 ---
 
