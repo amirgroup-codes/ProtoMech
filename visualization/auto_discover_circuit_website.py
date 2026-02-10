@@ -10,10 +10,13 @@ from pathlib import Path
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import f1_score
 
-sys.path.append(os.path.abspath(".."))
-sys.path.append(os.path.abspath("../training"))
-sys.path.append(os.path.abspath("../family_circuit"))
-sys.path.append(os.path.abspath("../function_circuit"))
+script_dir = os.path.dirname(os.path.abspath(__file__)) 
+repo_root = os.path.dirname(script_dir)                 
+sys.path.append(repo_root)
+sys.path.append(os.path.join(repo_root, "training"))
+sys.path.append(os.path.join(repo_root, "family_circuit"))
+sys.path.append(os.path.join(repo_root, "function_circuit"))
+
 try:
     from circuit_utils.esm_activation import ESMInference
     from circuit_utils.clt_circuit import CircuitDiscovererCLT
