@@ -206,3 +206,8 @@ Edge list for graph visualization:
 
 ---
 
+## Website scripts
+
+These scripts are used to facilitate running ProtoMech on [Google Colab](https://colab.research.google.com/drive/13QsDdwgKX-DWbH01qj8ZzlyY-T8MjQIx?usp=sharing).
+- `auto_discover_circuit_website.py`
+- `circuit_analysis_builder_website.py`
