@@ -11,27 +11,22 @@
       }
 
       .cls-3 {
-        font-family: HoeflerText, 'Hoefler Text';
-        stroke: #fff;
-      }
-
-      .cls-3, .cls-4 {
-        fill: #231f20;
-        font-size: 137.44px;
-        stroke-width: 2px;
+        font-family: HoeflerText-Black, 'Hoefler Text';
+        font-weight: 800;
       }
 
       .cls-3, .cls-4, .cls-5 {
         stroke-miterlimit: 10;
       }
 
-      .cls-4 {
-        font-family: HoeflerText-Black, 'Hoefler Text';
-        font-weight: 800;
-        stroke: #f1f1f2;
+      .cls-3, .cls-5 {
+        fill: #231f20;
+        font-size: 137.44px;
+        stroke: #e1e4e8;
+        stroke-width: .5px;
       }
 
-      .cls-6, .cls-5 {
+      .cls-6, .cls-4 {
         fill: none;
       }
 
@@ -43,9 +38,13 @@
         clip-path: url(#clippath-1);
       }
 
-      .cls-5 {
+      .cls-4 {
         stroke: #4788c8;
         stroke-width: 10px;
+      }
+
+      .cls-5 {
+        font-family: HoeflerText, 'Hoefler Text';
       }
 
       .cls-9 {
@@ -91,12 +90,12 @@
   <g class="cls-14">
     <g class="cls-8">
       <g class="cls-13">
-        <text class="cls-4" transform="translate(274.17 155.07)"><tspan class="cls-1" x="0" y="0">P</tspan><tspan class="cls-11" x="98.41" y="0">r</tspan><tspan class="cls-10" x="161.49" y="0">o</tspan><tspan class="cls-12" x="243.27" y="0">t</tspan><tspan x="300.03" y="0">o</tspan></text>
-        <text class="cls-3" transform="translate(655.7 155.07)"><tspan class="cls-7" x="0" y="0">M</tspan><tspan x="129.19" y="0">ech</tspan></text>
-        <path class="cls-5" d="M37.36,76.31q0-56.62,55.66-56.62"/>
-        <path class="cls-5" d="M93.98,200.53q-56.62,0-56.62-55.66"/>
-        <path class="cls-5" d="M187.66,20.02q56.62.29,56.34,55.95"/>
-        <path class="cls-5" d="M244.04,144.39q0,56.62-55.66,56.62"/>
+        <text class="cls-3" transform="translate(274.17 155.07)"><tspan class="cls-1" x="0" y="0">P</tspan><tspan class="cls-11" x="98.41" y="0">r</tspan><tspan class="cls-10" x="161.49" y="0">o</tspan><tspan class="cls-12" x="243.27" y="0">t</tspan><tspan x="300.03" y="0">o</tspan></text>
+        <text class="cls-5" transform="translate(655.7 155.07)"><tspan class="cls-7" x="0" y="0">M</tspan><tspan x="129.19" y="0">ech</tspan></text>
+        <path class="cls-4" d="M37.36,76.31q0-56.62,55.66-56.62"/>
+        <path class="cls-4" d="M93.98,200.53q-56.62,0-56.62-55.66"/>
+        <path class="cls-4" d="M187.66,20.02q56.62.29,56.34,55.95"/>
+        <path class="cls-4" d="M244.04,144.39q0,56.62-55.66,56.62"/>
       </g>
       <g class="cls-9">
         <g class="cls-2">
