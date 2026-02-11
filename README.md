@@ -6,9 +6,24 @@
   </picture>
 </p>
 
-This is the official code repository for the paper "Protein Circuit Tracing via Cross-layer Transcoders", by Darin Tsui, Kunal Talreja, Daniel Saeedi, and Amirali Aghazadeh. A link to the paper can be found [here](https://arxiv.org/abs/XXXX.XXXXX).
+This is the official code repository for the paper "Protein Circuit Tracing via Cross-layer Transcoders", by Darin Tsui, Kunal Talreja, Daniel Saeedi, and Amirali Aghazadeh. A link to the paper can be found [here](https://arxiv.org/abs/XXXX.XXXXX). 
+
+Additionally, one can explore protein circuits through our [web-based visualizer](https://protmech.github.io/)!
 
 ---
+
+## Quick Start
+
+The easiest way to get started with ProtoMech is through our interactive [Google Colab notebook](https://colab.research.google.com/github/amirgroup-codes/ProtoMech/blob/main/ProtoMech.ipynb). No local installation is required.
+
+### Workflow 
+
+1. **Circuit Discovery** (optional): Train a probe on your custom dataset (Binary classification or Regression) to identify circuits.
+2. **Interactive Visualization**: Generate files required for our [website](https://protmech.github.io/) and visualize circuits!
+
+If you skip step 1, you can obtain circuit files in two ways:
+- **Use Our Pre-discovered Library**: If you want to explore circuits from our paper, we provide a curated list of circuits [here](https://github.com/amirgroup-codes/ProtoMech/blob/main/visualization/circuits.md) you can access through our notebook.
+- **Auto-generate Your Own**: Even without a custom dataset, you can still generate a circuit! Just leave the `circuit` option blank. 
 
 ## Environment Setup
 
