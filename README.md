@@ -6,7 +6,7 @@
   </picture>
 </p>
 
-This is the official code repository for the paper "Protein Circuit Tracing via Cross-layer Transcoders", by Darin Tsui, Kunal Talreja, Daniel Saeedi, and Amirali Aghazadeh. A link to the paper can be found [here](https://arxiv.org/abs/XXXX.XXXXX). 
+This is the official code repository for the paper "Protein Circuit Tracing via Cross-layer Transcoders", by Darin Tsui, Kunal Talreja, Daniel Saeedi, and Amirali Aghazadeh. A link to the paper can be found [here](https://arxiv.org/abs/2602.12026). 
 
 Additionally, one can explore protein circuits through our [web-based visualizer](https://protmech.github.io/)!
 
