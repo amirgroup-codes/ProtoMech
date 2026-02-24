@@ -6,9 +6,24 @@
   </picture>
 </p>
 
-This is the official code repository for the paper "Protein Circuit Tracing via Cross-layer Transcoders", by Darin Tsui, Kunal Talreja, Daniel Saeedi, and Amirali Aghazadeh. A link to the paper can be found [here](https://arxiv.org/abs/XXXX.XXXXX).
+This is the official code repository for the paper "Protein Circuit Tracing via Cross-layer Transcoders", by Darin Tsui, Kunal Talreja, Daniel Saeedi, and Amirali Aghazadeh. A link to the paper can be found [here](https://arxiv.org/abs/2602.12026). 
+
+Additionally, one can explore protein circuits through our [web-based visualizer](https://protmech.github.io/)!
 
 ---
+
+## Quick Start
+
+The easiest way to get started with ProtoMech is through our interactive [Google Colab notebook](https://colab.research.google.com/github/amirgroup-codes/ProtoMech/blob/main/ProtoMech.ipynb). No local installation is required.
+
+### Workflow 
+
+1. **Circuit Discovery** (optional): Train a probe on your custom dataset (Binary classification or Regression) to identify circuits.
+2. **Interactive Visualization**: Generate files required for our [website](https://protmech.github.io/) and visualize circuits!
+
+If you skip step 1, you can obtain circuit files in two ways:
+- **Use Our Pre-discovered Library**: If you want to explore circuits from our paper, we provide a curated list of circuits [here](https://github.com/amirgroup-codes/ProtoMech/blob/main/visualization/circuits.md) you can access through our notebook.
+- **Auto-generate Your Own**: Even without a custom dataset, you can still generate a circuit! Just leave the `circuit` option blank. 
 
 ## Environment Setup
 
@@ -64,7 +79,7 @@ cd training && sh main.sh
 cd training_transcoder && sh main_plt.sh
 ```
 
-If you would like to train your own model, download `training_sequences_5m.a2m` from https://huggingface.co/datasets/anonymous-hf-user/ProtoMechData and put it in the `data` folder. 
+If you would like to train your own model, download `training_sequences_5m.a2m` from [https://huggingface.co/datasets/ktalreja/ProtoMechData](https://huggingface.co/datasets/ktalreja/ProtoMechData) and put it in the `data` folder. 
 
 ---
 
@@ -90,7 +105,7 @@ sh main.sh                        # Full run for all families
 sh main.sh --target IPR000724     # Specific family
 ```
 
-You can download our Swiss-Prot data used for our family circuits, `swissprot_seqid30_75k_all_info_with_3di.parquet`, from https://huggingface.co/datasets/anonymous-hf-user/ProtoMechData and put it in the `data` folder. 
+You can download our Swiss-Prot data used for our family circuits, `swissprot_seqid30_75k_all_info_with_3di.parquet`, from [https://huggingface.co/datasets/ktalreja/ProtoMechData](https://huggingface.co/datasets/ktalreja/ProtoMechData) and put it in the `data` folder. 
 
 ### Function Circuit Discovery (`function_circuit/`)
 
@@ -135,10 +150,10 @@ cd esm_steering && sh main_caa_steering.sh
 | `generate_pymol_view.py` | PyMOL visualization scripts |
 | `compute_activations.py` | Computes top-10 sequences per act |
 
-If you want to use `compute_activations.py` instead of using the pre-saved top activation results found in `top10_activations.pt` (which can be found [here](https://huggingface.co/datasets/anonymous-hf-user/ProtoMechData/blob/main/top10_activations.pt)), download `swissprot_full.parquet` from https://huggingface.co/datasets/anonymous-hf-user/ProtoMechData and put it in the `data` folder.
+If you want to use `compute_activations.py` instead of using the pre-saved top activation results found in `top10_activations.pt` (which can be found [here](https://huggingface.co/datasets/ktalreja/ProtoMechData/blob/main/top10_activations.pt)), download `swissprot_full.parquet` from [https://huggingface.co/datasets/ktalreja/ProtoMechData](https://huggingface.co/datasets/ktalreja/ProtoMechData) and put it in the `data` folder.
 
 ---
 
 ## Previous Data
 
-You can find the models at https://huggingface.co/anonymous-hf-user/ProtoMechModels and the data used in this paper at https://huggingface.co/datasets/anonymous-hf-user/ProtoMechData.
+You can find the models at [https://huggingface.co/ktalreja/ProtoMechModels](https://huggingface.co/ktalreja/ProtoMechModels) and the data used in this paper at [https://huggingface.co/datasets/ktalreja/ProtoMechData](https://huggingface.co/datasets/ktalreja/ProtoMechData).
