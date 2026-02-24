@@ -163,14 +163,14 @@ def print_result_block(f, rank_label, item, sequence, ref_storage):
     trace_window = trace[t_start:t_end]
     
     f.write(f"--- {rank_label} ---\n")
-    f.write(f"Node: Layer {layer}, Latent {latent}\n")
+    f.write(f"Node: Layer {layer + 1}, Latent {latent + 1}\n")
     f.write(f"Max Activation: {score:.4f}\n")
     f.write(f"Peak Location: Trace Idx {peak_idx} (AA #{peak_idx})\n")
     f.write(f"Motif Context: {motif_str}\n")
     f.write(f"Trace Window : {trace_window}\n")
     f.write("\n")
     
-    f.write(f"   [Global Top 10 Reference Entries for L{layer}-{latent}]\n")
+    f.write(f"   [Global Top 10 Reference Entries for L{layer + 1}-{latent + 1}]\n")
     if ref_storage and layer < len(ref_storage) and latent < len(ref_storage[layer]):
         top_hits = ref_storage[layer][latent]
         if top_hits:
@@ -192,7 +192,7 @@ def print_differential_result_block(f, rank_label, item, seqA, seqB, ref_storage
     sB_data = item['seqB_data']
     
     f.write(f"--- {rank_label} (Diff: {diff:.4f}) ---\n")
-    f.write(f"Node: Layer {layer}, Latent {latent}\n")
+    f.write(f"Node: Layer {layer + 1}, Latent {latent + 1}\n")
     
     # Seq A Info
     sA_motif, sA_start, sA_end = get_adaptive_motif_window(seqA, sA_data['trace'], sA_data['peak_idx'], min_radius=5)
@@ -213,7 +213,7 @@ def print_differential_result_block(f, rank_label, item, seqA, seqB, ref_storage
     f.write(f"Seq2 Trace  : {sB_data['trace'][tB_start:tB_end]}\n\n")
     
     # Global References
-    f.write(f"   [Global Top 10 Reference Entries for L{layer}-{latent}]\n")
+    f.write(f"   [Global Top 10 Reference Entries for L{layer + 1}-{latent + 1}]\n")
     if ref_storage and layer < len(ref_storage) and latent < len(ref_storage[layer]):
         top_hits = ref_storage[layer][latent]
         if top_hits:
