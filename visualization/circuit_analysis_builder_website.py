@@ -43,6 +43,19 @@ except ImportError:
         LocalCLTReplacementModel = None
 
 try:
+    from function_circuit.function_utils import CNNProbe
+except ImportError:
+    try:
+        sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "function_circuit"))
+        from function_circuit.function_utils import CNNProbe
+    except ImportError:
+        try:
+            from steering.scoring_utils import CNNProbe
+        except ImportError:
+            print("Warning: CNNProbe import failed. Ensure 'function_circuit' or 'steering' folder is in path.")
+            CNNProbe = None
+
+try:
     from circuit_utils.circuit_utils import compute_attribution
 except ImportError:
     from circuit_utils import compute_attribution
