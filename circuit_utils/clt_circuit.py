@@ -3,11 +3,17 @@ import torch.nn as nn
 import torch.nn.functional as F
 import os
 import sys
+import hashlib
 try:
     sys.path.append('../training')
     from clt_module import CLTLightningModule
 except ImportError:
     CLTLightningModule = None
+try:
+    sys.path.append('../training_block')
+    from block_clt_module import CLTLightningModule as BlockCLTLightningModule
+except ImportError:
+    BlockCLTLightningModule = None
 try:
     from .esm_activation import ESM2ActivationCollector
 except ImportError:
@@ -28,21 +34,27 @@ except ImportError:
 # ──────────────────────────────────────────────────────────────────────────────
 
 class CircuitDiscovererCLT:
-    def __init__(self, device, ckpt_path=None, esm_weights_path=None):
-        if CLTLightningModule is None:
-            raise ImportError("Could not import CLTLightningModule. Check sys.path.")
+    def __init__(self, device, ckpt_path=None, esm_weights_path=None, model_type="clt"):
         self.device = device
         self.ckpt_path = ckpt_path or os.environ.get("CLT_CHECKPOINT")
         self.esm_weights = esm_weights_path or os.environ.get("ESM_WEIGHTS")
-        if not self.ckpt_path or not self.esm_weights: 
+        if not self.ckpt_path or not self.esm_weights:
             raise ValueError("CLT_CHECKPOINT or ESM_WEIGHTS not set.")
-        print(f"Loading CLT from {self.ckpt_path}...")
+        if model_type == "block_clt":
+            if BlockCLTLightningModule is None:
+                raise ImportError("Could not import BlockCLTLightningModule. Check sys.path.")
+            ModuleClass = BlockCLTLightningModule
+        else:
+            if CLTLightningModule is None:
+                raise ImportError("Could not import CLTLightningModule. Check sys.path.")
+            ModuleClass = CLTLightningModule
+        print(f"Loading {model_type} from {self.ckpt_path}...")
         try:
-            self.pl_module = CLTLightningModule.load_from_checkpoint(
-                self.ckpt_path, map_location=device, esm2_weight=self.esm_weights
+            self.pl_module = ModuleClass.load_from_checkpoint(
+                self.ckpt_path, map_location=device, esm2_weight=self.esm_weights, weights_only=False
             )
         except Exception as e:
-            raise ValueError(f"Could not load CLT from {self.ckpt_path}")
+            raise ValueError(f"Could not load {model_type} from {self.ckpt_path}")
         self.pl_module.to(device)
         self.pl_module.eval()
         self.clt = self.pl_module.clt
@@ -53,7 +65,11 @@ class CircuitDiscovererCLT:
         self.collector = ESM2ActivationCollector(self.esm, self.pl_module.alphabet)
         self.collector.register_hooks()
 
-    def _run_clt_sequential(self, x_stack, active_nodes=None, retain_grad=False, freeze_attention=True):
+    def clear_cache(self):
+        """Public method to clear the collector's cache."""
+        self.collector.clear_cache()
+
+    def _run_clt_sequential(self, x_stack, active_nodes=None, retain_grad=False, freeze_attention=True, padding_mask=None):
         """
         CLT Sequential Forward Pass.
         x_stack: (B, L+1, T, H) - Contains embeddings through all layers
@@ -69,11 +85,20 @@ class CircuitDiscovererCLT:
         self.clt.eval()
         latents_list_L = []
 
+        # Pre-calculate which latents influence each layer
+        node_masks = None
+        if active_nodes is not None:
+            node_masks = []
+            for l in range(self.num_layers):
+                m = torch.zeros(self.clt.d_hidden, device=self.device)
+                if l in active_nodes and len(active_nodes[l]) > 0:
+                    m[list(active_nodes[l])] = 1.0
+                node_masks.append(m.view(1, 1, -1))
+
         # CLT starts with Layer 0 (embeddings)
         x_curr_BTH = x_stack[:, 0, :, :]  # (B, T, H)
         # 1. Transpose for CLT: (B, T, H) -> (T, B, H)
         x_curr_TBH = x_curr_BTH.transpose(0, 1)
-        padding_mask = None 
         last_recon_TBH = None
         
         for l in range(self.num_layers):
@@ -110,18 +135,9 @@ class CircuitDiscovererCLT:
                 latents_TBD.retain_grad()
 
             # 4. Apply Sparse Mask (Ablation)
-            if active_nodes is not None:
-                if l in active_nodes:
-                    # Expand mask for T, B dims
-                    node_indices = list(active_nodes[l])
-                    if len(node_indices) > 0:
-                        mask = torch.zeros(latents_TBD.shape[-1], device=self.device)
-                        mask[node_indices] = 1.0
-                        latents_TBD = latents_TBD * mask.view(1, 1, -1)
-                    else:
-                        latents_TBD = torch.zeros_like(latents_TBD)
-                else:
-                    latents_TBD = torch.zeros_like(latents_TBD)
+            if node_masks is not None:
+                latents_TBD = latents_TBD * node_masks[l]
+
             latents_list_L.append(latents_TBD)
 
             # 5. Decode and denormalize (reconstruct the MLP output at layer 'l' using latents from 0...l)
@@ -152,6 +168,16 @@ class CircuitDiscovererCLT:
         latents_list_L = []
         mu_list_L, std_list_L = [], []
 
+        # Pre-calculate which latents influence each layer
+        node_masks = None
+        if active_nodes is not None:
+            node_masks = []
+            for l in range(self.num_layers):
+                m = torch.zeros(self.clt.d_hidden, device=self.device)
+                if l in active_nodes and len(active_nodes[l]) > 0:
+                    m[list(active_nodes[l])] = 1.0
+                node_masks.append(m.view(1, 1, -1))
+
         for l in range(L):
             x_in_SH = x_clt_input_flat[:, l, :]
             x_norm_SH, mu, std = self.clt.LN(x_in_SH)
@@ -160,26 +186,19 @@ class CircuitDiscovererCLT:
             x_norm_SH = x_norm_SH - self.clt.b_pre[l]
             enc_SD = self.clt.encoders[l](x_norm_SH) + self.clt.b_enc[l]
             latents_SD = self.clt.topK_activation(enc_SD, k=self.clt.k)
-            if active_nodes is not None:
-                if l in active_nodes:
-                    node_indices = list(active_nodes[l])
-                    if len(node_indices) > 0:
-                        mask = torch.zeros(latents_SD.shape[-1], device=self.device)
-                        mask[node_indices] = 1.0
-                        latents_SD = latents_SD * mask
-                    else:
-                        latents_SD = torch.zeros_like(latents_SD)
-                elif active_nodes is not None: 
-                     latents_SD = torch.zeros_like(latents_SD)
-
             if retain_grad: latents_SD.retain_grad()
+
+            if node_masks is not None:
+                latents_SD = latents_SD * node_masks[l]
+                
             latents_list_L.append(latents_SD)
 
         target_layer = self.num_layers - 1
         recon_accum_SH = torch.zeros_like(x_clt_input_flat[:, 0, :])
         for src in range(target_layer + 1):
-            w_dec_DH = self.clt.decoders[f"{src}_{target_layer}"]
-            recon_accum_SH = recon_accum_SH + (latents_list_L[src] @ w_dec_DH)
+            key = f"{src}_{target_layer}"
+            if key in self.clt.decoders:
+                recon_accum_SH = recon_accum_SH + (latents_list_L[src] @ self.clt.decoders[key])
             
         recon_accum_SH = recon_accum_SH + self.clt.b_pre[target_layer]
         recon_accum_SH = recon_accum_SH * std_list_L[target_layer] + mu_list_L[target_layer]
@@ -199,8 +218,13 @@ class CircuitDiscovererCLT:
             modified_emb_BTH: (B, T, H) - Modified embeddings after CLT reconstruction
             latents_list_L: List[Tensor] - List of latents for each layer
         """
+        # 0. Generate cache key
+        token_bytes = tokens.cpu().numpy().tobytes()
+        cache_key = hashlib.md5(token_bytes).hexdigest()
+
         # 1. Collect activations
-        x_stack_SLH, _, x_mlp_out_SLH, x_clt_in_SLH, _ = self.collector.collect(tokens)
+        x_stack_SLH, _, x_mlp_out_SLH, x_clt_in_SLH, _ = self.collector.collect(tokens, cache_key=cache_key)
+        self.collector.remove_hooks()
         
         if retain_grad:
             x_stack_SLH = x_stack_SLH.detach()
@@ -209,6 +233,7 @@ class CircuitDiscovererCLT:
 
         B, T = tokens.shape
         H = x_stack_SLH.shape[-1]
+        padding_mask = (tokens == self.pl_module.alphabet.padding_idx) # (B, T)
 
         # 2. Run CLT
         if sequential:
@@ -220,7 +245,8 @@ class CircuitDiscovererCLT:
                 x_stack_reshaped_BLTH,
                 active_nodes=active_nodes,
                 retain_grad=retain_grad,
-                freeze_attention=freeze_attention
+                freeze_attention=freeze_attention,
+                padding_mask=padding_mask
             )
         else:
             # Use Direct Runner 
@@ -244,6 +270,7 @@ class CircuitDiscovererCLT:
                 modified_stream_BTH = orig_layer_out_BTH - orig_mlp_BTH + recon_mlp_BTH
             else:
                 modified_stream_BTH = None
+        self.collector.register_hooks()
                     
         # 3. Determine source
         if source == "mlp_output":
@@ -298,6 +325,7 @@ class CircuitDiscovererCLT:
         modified_emb_BTH, latents_list_L = self._get_reconstruction_with_layer_embedding(
             tokens, active_nodes=None, retain_grad=True, sequential=sequential, freeze_attention=freeze_attention, source=source
         )
+        self.collector.remove_hooks()
             
         # 2. Probe Forward/Backward
         mask_BT = (tokens != self.pl_module.alphabet.cls_idx) & \
@@ -308,7 +336,7 @@ class CircuitDiscovererCLT:
             masked_emb = modified_emb_BTH * mask_BT1
             probe_input = masked_emb[:, 1:-1, :]
         else:
-            probe_input = (modified_emb_BTH * mask_BT1).sum(dim=1) / mask_BT1.sum(dim=1).clamp(min=1e-9)     
+            probe_input = (modified_emb_BTH * mask_BT1).sum(dim=1) / mask_BT1.sum(dim=1).clamp(min=1e-9)
         output = torch_probe(probe_input)
         loss = output.sum()
         loss.backward()
@@ -331,6 +359,9 @@ class CircuitDiscovererCLT:
                     score = attr.sum()
                     
                 results[l] = score.detach().cpu().numpy()
+        del latents_list_L
+        del modified_emb_BTH
+        self.collector.register_hooks()
                 
         return results
     
@@ -340,6 +371,7 @@ class CircuitDiscovererCLT:
         """
         with torch.no_grad():
             tokens = self.pl_module.tokenize(batch_seqs)
+            self.collector.remove_hooks()
             modified_emb_BTH, _ = self._get_reconstruction_with_layer_embedding(
                 tokens, active_nodes=active_nodes, sequential=sequential, freeze_attention=freeze_attention, source=source
             )
@@ -353,5 +385,6 @@ class CircuitDiscovererCLT:
                 probe_input = masked_emb[:, 1:-1, :]
             else:
                 probe_input = (modified_emb_BTH * mask_BT1).sum(dim=1) / mask_BT1.sum(dim=1).clamp(min=1e-9)
+            self.collector.register_hooks()
             
             return torch_probe(probe_input)

@@ -17,7 +17,7 @@ except ImportError:
     print("Warning: Could not import SparseAutoencoder from ../training_sae")
     SparseAutoencoder = None
 
-def load_esm_model(weights_path, device):
+def load_esm_model(weights_path, device, num_layers=6, d_model=320):
     """Load ESM2 model from checkpoint weights. Matches CLT/PLT/SAE training modules.
     Wraps model in DataParallel if multiple GPUs are available."""
     import os
@@ -32,8 +32,8 @@ def load_esm_model(weights_path, device):
     print(f"Loading ESM weights from {weights_path}...")
     alphabet = esm.data.Alphabet.from_architecture("ESM-1b")
     model = ESM2(
-        num_layers=6,
-        embed_dim=320,
+        num_layers=num_layers,
+        embed_dim=d_model,
         attention_heads=20,
         alphabet=alphabet,
         token_dropout=False

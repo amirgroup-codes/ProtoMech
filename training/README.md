@@ -1,6 +1,6 @@
 # Training
 
-This folder contains the training code for the Cross-Layer Transcoder (CLT) model, a sparse autoencoder that replaces ESM-2 MLP blocks with cross-layer reconstruction capabilities.
+This folder contains the training code for the Cross-Layer Transcoder (CLT) model, a replacement model that replaces ESM2 MLP blocks with cross-layer reconstruction capabilities.
 
 ## Key Components
 
@@ -18,5 +18,6 @@ Run training with default settings:
 ./main.sh
 ```
 
-Or customize parameters by changing variables in main.sh. You can also find the trained CLT
-at: https://huggingface.co/anonymous-hf-user/ProtoMechModels/tree/main/CLT_L6_D3200
+Or customize parameters by changing variables in main.sh. You can also find the trained CLT for ESM2-8M
+at https://huggingface.co/ktalreja/ProtoMechModels/tree/main/CLT_L6_D3200/checkpoints and trained CLT for ESM2-35M
+at https://huggingface.co/ktalreja/ProtoMechModels/tree/main/CLT_L12_D4800.

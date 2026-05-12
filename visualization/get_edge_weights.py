@@ -11,14 +11,16 @@ from local_replacement_models import LocalCLTReplacementModel
 sys.path.append(os.path.join(os.path.dirname(__file__), "../training"))
 from clt_module import CLTLightningModule
 
-parser = argparse.ArgumentParser(description="Get edge weights from CLT model")
-parser.add_argument("--base_folder", type=str, required=True, help="Base folder path")
-args = parser.parse_args()
-
 BATCH_SIZE = 32
 EPSILON = 1e-10
-CLT_CKPT = "../models/CLT_L6_D3200/checkpoints/last.ckpt"
-ESM_PATH = "../models/esm2_t6_8M_UR50D.pt"
+CLT_CKPT = "../models/CLT_L12_D4800/checkpoints/last.ckpt"
+ESM_PATH = "../models/esm2_t12_35M_UR50D.pt"
+
+parser = argparse.ArgumentParser(description="Get edge weights from CLT model")
+parser.add_argument("--base_folder", type=str, required=True, help="Base folder path")
+parser.add_argument("--clt_ckpt", type=str, default=CLT_CKPT, help="Path to CLT checkpoint")
+parser.add_argument("--esm_path", type=str, default=ESM_PATH, help="Path to ESM model")
+args = parser.parse_args()
 
 
 def print_edge_stats(edges_list, label):
@@ -47,7 +49,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Using device: {device}")
 
 clt_pl = CLTLightningModule.load_from_checkpoint(
-    CLT_CKPT, map_location=device, esm2_weight=ESM_PATH, strict=False
+    args.clt_ckpt, map_location=device, esm2_weight=args.esm_path, strict=False, weights_only=False
 )
 clt_pl.to(device).eval()
 clt_local = LocalCLTReplacementModel(clt_pl, device, base_prompt=seq)

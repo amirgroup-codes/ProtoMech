@@ -1,6 +1,6 @@
 # Training
 
-This folder contains the training code for the Per-Layer Transcoder (PLT) model, a sparse autoencoder that replaces ESM-2 MLP blocks with cross-layer reconstruction capabilities.
+This folder contains the training code for the Per-Layer Transcoder (PLT) model, a replacement model that replaces ESM2 MLP blocks with cross-layer reconstruction capabilities.
 
 ## Key Components
 
@@ -18,4 +18,6 @@ Run training with default settings:
 ```
 
 Or customize parameters by changing variables in main_plt.sh. You can also find the trained PLT
-at: https://huggingface.co/anonymous-hf-user/ProtoMechModels/tree/main/PLT_L6_D3200
+for ESM2-8M
+at https://huggingface.co/ktalreja/ProtoMechModels/tree/main/PLT_L6_D3200 and trained PLT for ESM2-35M
+at https://huggingface.co/ktalreja/ProtoMechModels/tree/main/PLT_L12_D4800.

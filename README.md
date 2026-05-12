@@ -6,7 +6,7 @@
   </picture>
 </p>
 
-This is the official code repository for the paper "Protein Circuit Tracing via Cross-layer Transcoders", by Darin Tsui, Kunal Talreja, Daniel Saeedi, and Amirali Aghazadeh. A link to the paper can be found [here](https://arxiv.org/abs/2602.12026). 
+This is the official code repository for the paper "Protein Circuit Tracing via Cross-layer Transcoders", by Darin Tsui, Kunal Talreja, Daniel Saeedi, and Amirali Aghazadeh, accepted into **ICML 2026**. A link to the paper can be found [here](https://arxiv.org/abs/2602.12026). 
 
 Additionally, one can explore protein circuits through our [web-based visualizer](https://protmech.github.io/)!
 
@@ -18,10 +18,11 @@ The easiest way to get started with ProtoMech is through our interactive [Google
 
 ### Workflow 
 
-1. **Circuit Discovery** (optional): Train a probe on your custom dataset (Binary classification or Regression) to identify circuits.
-2. **Interactive Visualization**: Generate files required for our [website](https://protmech.github.io/) and visualize circuits!
+1. **Models**: ProtoMech currently supports running on ESM2-8M and ESM2-35M!
+2. **Circuit Discovery** (optional): Train a probe on your custom dataset (Binary classification or Regression) to identify circuits.
+3. **Interactive Visualization**: Generate files required for our [website](https://protmech.github.io/) and visualize circuits!
 
-If you skip step 1, you can obtain circuit files in two ways:
+If you skip step 2, you can obtain circuit files in two ways:
 - **Use Our Pre-discovered Library**: If you want to explore circuits from our paper, we provide a curated list of circuits [here](https://github.com/amirgroup-codes/ProtoMech/blob/main/visualization/circuits.md) you can access through our notebook.
 - **Auto-generate Your Own**: Even without a custom dataset, you can still generate a circuit! Just leave the `circuit` option blank. 
 
@@ -39,6 +40,7 @@ conda activate clt
 ```
 ProtoMech/
 ├── training/              # CLT training code
+├── training_block/        # Windowed CLT training code
 ├── training_transcoder/   # PLT training code
 ├── circuit_utils/         # Core circuit discovery utilities
 ├── family_circuit/        # Protein family-based circuit discovery
@@ -57,10 +59,16 @@ ProtoMech/
 ### Cross-Layer Transcoder (CLT)
 **Location**: `training/clt_model.py`
 
-Replaces ESM-2 MLP blocks with a sparse transcoder using information from *all* preceding layers:
+Replaces ESM2 MLP blocks with a sparse transcoder using information from *all* preceding layers:
 - **Top-K Activation**: Only top-k latents are active (enforces sparsity)
 - **Cross-Layer Decoding**: Layer *l* reconstructs using latents from layers 0 to *l*
 - **AuxK Loss**: Encourages rarely-used latents to activate
+
+### Windowed cross-Layer Transcoder (CLT)
+**Location**: `training_block/clt_model.py`
+
+Variant of CLTs that restricts cross-layer connectictivity to localized windows. A fair tradeoff between capturing cross-layer dependencies and compute time.
+- **Block size**: Sets the window size for cross-layer connectivity.
 
 ### Per-Layer Transcoder (PLT)
 **Location**: `training_transcoder/plt_model.py`
@@ -74,6 +82,9 @@ Baseline where each layer has independent encoder/decoder pairs. Layer *l* only 
 ```bash
 # Train CLT
 cd training && sh main.sh
+
+# Train Windowed CLT
+cd training_block && sh main.sh
 
 # Train PLT
 cd training_transcoder && sh main_plt.sh
@@ -157,3 +168,17 @@ If you want to use `compute_activations.py` instead of using the pre-saved top a
 ## Previous Data
 
 You can find the models at [https://huggingface.co/ktalreja/ProtoMechModels](https://huggingface.co/ktalreja/ProtoMechModels) and the data used in this paper at [https://huggingface.co/datasets/ktalreja/ProtoMechData](https://huggingface.co/datasets/ktalreja/ProtoMechData).
+
+
+## Citation
+
+If you use ProtoMech and enjoy it, please consider citing our [paper](https://arxiv.org/abs/2602.12026)!
+
+```bibtex
+@inproceedings{tsui2026protomech,
+  title={Protein Circuit Tracing via Cross-layer Transcoders},
+  author={Tsui,  Darin and Talreja,  Kunal and Saeedi,  Daniel and Aghazadeh,  Amirali},
+  booktitle={Proceedings of the 43rd International Conference on Machine Learning},
+  year={2026}
+}
+```

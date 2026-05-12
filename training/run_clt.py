@@ -12,6 +12,7 @@ np.random.seed(42)
 random.seed(42)
 torch.manual_seed(42)
 torch.cuda.manual_seed_all(42)
+torch.set_float32_matmul_precision('medium')
 
 def main():
     parser = argparse.ArgumentParser()
@@ -38,7 +39,7 @@ def main():
     args = parser.parse_args()
     
     # Create output directory
-    run_name = f"CLT_L{args.num_layers}_H{args.d_hidden}"
+    run_name = f"CLT_L{args.num_layers}_D{args.d_hidden}"
     run_output_dir = os.path.join(args.output_dir, run_name)
     os.makedirs(run_output_dir, exist_ok=True)
     
@@ -48,12 +49,18 @@ def main():
         name=run_name,
         save_dir=os.path.join(run_output_dir, "wandb")
     )
+
+    ckpt_path = None
+    last_ckpt_path = os.path.join(run_output_dir, "checkpoints", "last.ckpt")
+    if os.path.exists(last_ckpt_path):
+        print(f"Found existing checkpoint at {last_ckpt_path}. Resuming...")
+        ckpt_path = last_ckpt_path
     
     # Model
     model = CLTLightningModule(args)
     
     # Data
-    data_module = SequenceDataModule(args.data_dir, args.batch_size)
+    data_module = SequenceDataModule(args.data_dir, args.batch_size, num_workers=4)
     
     # Checkpointing
     checkpoint_callback = ModelCheckpoint(
@@ -72,13 +79,14 @@ def main():
         logger=wandb_logger,
         callbacks=[checkpoint_callback],
         gradient_clip_val=1.0,
-        val_check_interval=1000, 
+        val_check_interval=2500, 
         limit_val_batches=10,
-        log_every_n_steps=1 
+        log_every_n_steps=1,
+        strategy="ddp"
     )
     
-    trainer.validate(model, data_module)
-    trainer.fit(model, data_module)
+    trainer.validate(model, data_module, ckpt_path=ckpt_path)
+    trainer.fit(model, data_module, ckpt_path=ckpt_path)
 
 if __name__ == "__main__":
     main()

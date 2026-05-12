@@ -294,7 +294,9 @@ def get_scoring_model_path(circuit_json):
     Circuit: .../function_circuit/functions/{model_type}/{mode}/{dms_name}/{fold}.json
     Probe:   .../function_circuit/probe/{mode}/{dms_name}/{fold}_cnn.pt
     """
-    if "/functions/" in circuit_json:
+    if "/functions_35M/" in circuit_json:
+        probe_path = re.sub(r'/functions_35M/[^/]+/', '/probe_35M/', circuit_json)
+    elif "/functions/" in circuit_json:
         probe_path = re.sub(r'/functions/[^/]+/', '/probe/', circuit_json)
     else:
         probe_path = circuit_json.replace("/functions/", "/probe/")
@@ -344,15 +346,15 @@ def run_circuit_attribution(circuit_json, config_map, config_name, wildtype, sup
 def get_full_model(model_type, ckpt, device, esm_weights_path):
     """Load the appropriate full replacement model."""
     if model_type == "clt":
-        pl_module = CLTLightningModule.load_from_checkpoint(ckpt, map_location=device, esm2_weight=esm_weights_path)
+        pl_module = CLTLightningModule.load_from_checkpoint(ckpt, map_location=device, esm2_weight=esm_weights_path, weights_only=False)
         pl_module.eval().to(device)
         return FullCLTReplacementModel(pl_module, device)
     elif model_type == "plt":
-        pl_module = PLTLightningModule.load_from_checkpoint(ckpt, map_location=device, esm2_weight=esm_weights_path)
+        pl_module = PLTLightningModule.load_from_checkpoint(ckpt, map_location=device, esm2_weight=esm_weights_path, weights_only=False)
         pl_module.eval().to(device)
         return FullPLTReplacementModel(pl_module, device)
     elif model_type == "clt_direct":
-        pl_module = CLTLightningModule.load_from_checkpoint(ckpt, map_location=device, esm2_weight=esm_weights_path)
+        pl_module = CLTLightningModule.load_from_checkpoint(ckpt, map_location=device, esm2_weight=esm_weights_path, weights_only=False)
         pl_module.eval().to(device)
         return FullCLTDirectReplacementModel(pl_module, device)
     else:

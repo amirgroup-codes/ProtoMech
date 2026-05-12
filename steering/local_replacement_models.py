@@ -273,6 +273,9 @@ class LocalReplacementModel(FullReplacementModel):
         Returns:
             ln_result_TBH: layernorm output (T, B, H)
         '''
+        if ln_type == 'clt' and getattr(self.model, 'skip_ln', False):
+            return x_TBH
+
         # Select the appropriate layernorm
         if ln_type == 'attn':
             ln = self.esm.layers[layer_idx].self_attn_layer_norm

@@ -1,0 +1,1794 @@
+=== Top Activations: Seq1 ===
+Total Nodes: 60
+-------------------------------------
+
+--- Rank #1 (In Circuit JSON) ---
+Node: Layer 12, Latent 1154
+Max Activation: 29.9763
+Peak Location: Trace Idx 249 (AA #249)
+Motif Context: LMECC[M]DINPE
+Trace Window : [ 0.        0.        0.        0.        0.       29.976305  0.
+  0.        0.        0.        0.      ]
+
+   [Global Top 10 Reference Entries for L12-1154]
+   1. P54743 (PKNA_MYCLE) - Score: 34.0668 - ...PNVRELIEIT[L]VKNPGMRYPS... - Serine/threonine-protein kinase PknA (EC 2.7.11.1)
+   2. Q8NU97 (PKN2_CORGL) - Score: 33.9708 - ...AQTRELIGIA[L]RKDPGRRFPD... - Serine/threonine-protein kinases PknA (EC 2.7.11.1)
+   3. Q9FAB3 (SPKA_SYNY3) - Score: 33.8382 - ...ASLEALVMNC[L]AKSPKGRPQS... - Serine/threonine-protein kinase A (EC 2.7.11.1)
+   4. Q8FUI4 (PKN2_COREF) - Score: 33.8369 - ...AQARELIGIA[L]RKDPARRFAD... - Serine/threonine-protein kinases drp72 (EC 2.7.11.1)
+   5. O34507 (PRKC_BACSU) - Score: 33.4519 - ...QSVENIILKA[T]AKDPFHRYET... - Serine/threonine-protein kinase PrkC (Ser/Thr-protein kinase PrkC) (EC 2.7.11.1)
+   6. Q9XA16 (PKNX_STRCO) - Score: 33.3197 - ...PEMDAIVLKA[L]VKDPDYRYQS... - Probable serine/threonine-protein kinase SCO3848 (EC 2.7.11.1)
+   7. Q54XY6 (Y0019_DICDI) - Score: 33.2292 - ...HRWSNLIQIC[W]DQNPNNRPSF... - Probable serine/threonine-protein kinase DDB_G0278521 (EC 2.7.11.1)
+   8. A5TY85 (PKNA_MYCTA) - Score: 33.1704 - ...PNVRELIEIT[L]VKNPAMRYRS... - Serine/threonine-protein kinase PknA (EC 2.7.11.1)
+   9. P9WI83 (PKNA_MYCTU) - Score: 33.1704 - ...PNVRELIEIT[L]VKNPAMRYRS... - Serine/threonine-protein kinase PknA (EC 2.7.11.1)
+   10. P65727 (PKNA_MYCBO) - Score: 33.1704 - ...PNVRELIEIT[L]VKNPAMRYRS... - Serine/threonine-protein kinase PknA (EC 2.7.11.1)
+
+--- Rank #2 (Backfill) ---
+Node: Layer 11, Latent 2014
+Max Activation: 25.4825
+Peak Location: Trace Idx 198 (AA #198)
+Motif Context: GIMLW[E][L][M][T]RQL
+Trace Window : [ 0.         0.         0.         0.         0.        25.48247
+ 14.010634   2.5601404  2.3843567  0.         0.         0.       ]
+
+   [Global Top 10 Reference Entries for L11-2014]
+   1. Q8GX23 (PERK5_ARATH) - Score: 26.8046 - ...DVFSFGVMLL[E][L][I][T]GRPPLDL... - Proline-rich receptor-like protein kinase PERK5 (EC 2.7.11.1) (Proline-rich extensin-like receptor kinase 5) (AtPERK5)
+   2. Q9C8I6 (IOS1_ARATH) - Score: 26.7791 - ...DVFSFGVVL[L][E][L][V][T]NQPVIDM... - LRR receptor-like serine/threonine-protein kinase IOS1 (EC 2.7.11.-) (Protein IMPAIRED OOMYCETE SUSCEPTIBILITY 1)
+   3. Q9LFG1 (Y3359_ARATH) - Score: 26.5986 - ...DVYSFGVVLL[E][L][L][T]GMHPFFE... - Putative leucine-rich repeat receptor-like serine/threonine-protein kinase At3g53590 (EC 2.7.11.1)
+   4. Q9NWZ3 (IRAK4_HUMAN) - Score: 26.5708 - ...DIYSFGVVL[L][E][I][I][T]GLPAVDE... - Interleukin-1 receptor-associated kinase 4 (IRAK-4) (EC 2.7.11.1) (Renal carcinoma antigen NY-REN-64)
+   5. Q1RMT8 (IRAK4_BOVIN) - Score: 26.5580 - ...DIYSFGVVL[L][E][I][I][T]GLPAVDE... - Interleukin-1 receptor-associated kinase 4 (IRAK-4) (EC 2.7.11.1)
+   6. Q9LK03 (PERK2_ARATH) - Score: 26.5068 - ...DVFSFGVVLL[E][L][I][T]GRRPIDV... - Proline-rich receptor-like protein kinase PERK2 (EC 2.7.11.1) (Proline-rich extensin-like receptor kinase 2) (AtPERK2) (Somatic embryogenesis receptor kinase-like protein)
+   7. Q9LS95 (PERK6_ARATH) - Score: 26.5018 - ...DVFSFGVMLL[E][L][V][T]GRRPVDL... - Putative proline-rich receptor-like protein kinase PERK6 (EC 2.7.11.1) (Proline-rich extensin-like receptor kinase 6) (AtPERK6)
+   8. C0LGR6 (Y4291_ARATH) - Score: 26.4791 - ...DVYSFGIVL[L][E][L][I][T]GKRSIMK... - Probable LRR receptor-like serine/threonine-protein kinase At4g29180 (EC 2.7.11.1)
+   9. Q9XI96 (PERK7_ARATH) - Score: 26.4556 - ...DVFSFGVMLL[E][L][I][T]GRGPVDL... - Proline-rich receptor-like protein kinase PERK7 (EC 2.7.11.1) (Proline-rich extensin-like receptor kinase 7) (AtPERK7)
+   10. C0LGL4 (Y2289_ARATH) - Score: 26.4454 - ...DVYSFGIVL[L][E][I][I][T]SRPVIQQ... - Probable LRR receptor-like serine/threonine-protein kinase At2g28960 (EC 2.7.11.1)
+
+--- Rank #3 (Backfill) ---
+Node: Layer 11, Latent 3415
+Max Activation: 24.6740
+Peak Location: Trace Idx 135 (AA #135)
+Motif Context: VHRD[I][K][P]QNML
+Trace Window : [ 0.         0.         0.         0.         4.1324506 24.673985
+  8.310665   0.         0.         0.         0.       ]
+
+   [Global Top 10 Reference Entries for L11-3415]
+   1. Q2MHE4 (HT1_ARATH) - Score: 25.5798 - ...HSQGVIHRD[L][K][S]NNLLLNDEM... - Serine/threonine/tyrosine-protein kinase HT1 (EC 2.7.10.1) (EC 2.7.11.1) (High leaf temperature protein 1)
+   2. Q55BA0 (Y9866_DICDI) - Score: 25.5542 - ...HSRNVIHRD[L][K][S]TNLLVGDNW... - Probable serine/threonine-protein kinase DDB_G0271402 (EC 2.7.11.1)
+   3. Q9ZQ31 (STY13_ARATH) - Score: 25.5303 - ...HGRNFIHRD[L][K][S]DNLLISADK... - Serine/threonine-protein kinase STY13 (EC 2.7.11.1) (AtSTYPK) (Serine/threonine/tyrosine-protein kinase 13)
+   4. Q54TH6 (Y9863_DICDI) - Score: 25.5130 - ...HARGILHRD[L][K][S]QNILLSTNR... - Probable serine/threonine-protein kinase DDB_G0281745 (EC 2.7.11.1)
+   5. O08678 (MARK1_RAT) - Score: 25.5125 - ...HQKCIVHRD[L][K][A]ENLLLDADM... - Serine/threonine-protein kinase MARK1 (EC 2.7.11.1) (EC 2.7.11.26) (MAP/microtubule affinity-regulating kinase 1)
+   6. Q8VHJ5 (MARK1_MOUSE) - Score: 25.5122 - ...HQKCIVHRD[L][K][A]ENLLLDADM... - Serine/threonine-protein kinase MARK1 (EC 2.7.11.1) (EC 2.7.11.26) (ELKL motif serine/threonine-protein kinase 3) (MAP/microtubule affinity-regulating kinase 1) (PAR1 homolog c) (Par-1c) (mPar-1c)
+   7. O01700 (DLK1_CAEEL) - Score: 25.4651 - ...HQNKVIHRD[L][K][S]PNILISAED... - Mitogen-activated protein kinase kinase kinase dlk-1 (EC 2.7.11.25) (DAP kinase-like kinase) (Death-associated protein kinase-like kinase)
+   8. F4JTP5 (STY46_ARATH) - Score: 25.4423 - ...HQNNIIHRD[L][K][A]ANLLMDENE... - Serine/threonine-protein kinase STY46 (EC 2.7.11.1) (Serine/threonine/tyrosine-protein kinase 46)
+   9. Q12852 (M3K12_HUMAN) - Score: 25.4368 - ...HLHKIIHRD[L][K][S]PNMLITYDD... - Mitogen-activated protein kinase kinase kinase 12 (EC 2.7.11.25) (Dual leucine zipper bearing kinase) (DLK) (Leucine-zipper protein kinase) (ZPK) (MAPK-upstream kinase) (MUK) (Mixed lineage kinase)
+   10. Q9P0L2 (MARK1_HUMAN) - Score: 25.4356 - ...HQKYIVHRD[L][K][A]ENLLLDGDM... - Serine/threonine-protein kinase MARK1 (EC 2.7.11.1) (EC 2.7.11.26) (MAP/microtubule affinity-regulating kinase 1) (PAR1 homolog c) (Par-1c) (Par1c)
+
+--- Rank #4 (Backfill) ---
+Node: Layer 12, Latent 1777
+Max Activation: 24.3546
+Peak Location: Trace Idx 187 (AA #187)
+Motif Context: KYTAK[C]DVYSF
+Trace Window : [ 0.        0.        0.        0.        0.       24.354614  0.
+  0.        0.        0.        0.      ]
+
+   [Global Top 10 Reference Entries for L12-1777]
+   1. D2IYS2 (TORSO_BOMMO) - Score: 28.7397 - ...SLTRRVYTTQ[S][D]VWSFGVVIW... - Tyrosine-protein kinase receptor torso (EC 2.7.10.1)
+   2. P29321 (EPHA8_RAT) - Score: 28.3907 - ...AIAFRTFSSA[S][D]VWSFGVVMW... - Ephrin type-A receptor 8 (EC 2.7.10.1) (EPH- and ELK-related kinase) (Tyrosine-protein kinase receptor EEK)
+   3. P29317 (EPHA2_HUMAN) - Score: 28.2749 - ...AISYRKFTSA[S][D]VWSFGIVMW... - Ephrin type-A receptor 2 (EC 2.7.10.1) (Epithelial cell kinase) (Tyrosine-protein kinase receptor ECK)
+   4. P42687 (SPK1_GIRTI) - Score: 28.2057 - ...AAKSKVFTSK[S][D]VWSYGIVMF... - Tyrosine-protein kinase SPK-1 (EC 2.7.10.2)
+   5. Q1KL86 (EPHA2_MACFA) - Score: 28.1837 - ...AISYRKFTSA[S][D]VWSFGIVMW... - Ephrin type-A receptor 2 (EC 2.7.10.1)
+   6. P34892 (KIN16_CAEEL) - Score: 28.1220 - ...AFDTMKFTEK[S][D]VWSFGICLY... - Receptor-like tyrosine-protein kinase kin-16 (EC 2.7.10.1)
+   7. G5EGT9 (RYK_CAEEL) - Score: 28.0812 - ...AIANELYSSA[A][D]VWSLGVLLW... - Inactive tyrosine-protein kinase RYK (Abnormal cell lineage protein 18)
+   8. O73792 (TIE1_DANRE) - Score: 28.0351 - ...SLNYSVYTTK[S][D]VWSFGVLLW... - Tyrosine-protein kinase receptor Tie-1 (EC 2.7.10.1)
+   9. Q64434 (PTK6_MOUSE) - Score: 28.0203 - ...ALSRGHYSIK[S][D]VWSFGVLLH... - Protein-tyrosine kinase 6 (EC 2.7.10.2) (SRC-related intestinal kinase)
+   10. P00521 (ABL_MLVAB) - Score: 27.9911 - ...SLAYNKFSIK[S][D]VWAFGVLLW... - Tyrosine-protein kinase transforming protein Abl (EC 2.7.10.2) (V-abl)
+
+--- Rank #5 (Backfill) ---
+Node: Layer 10, Latent 4219
+Max Activation: 23.6695
+Peak Location: Trace Idx 172 (AA #172)
+Motif Context: QGTLR[Y][M]APEA
+Trace Window : [ 0.         0.         0.         0.         0.        23.66945
+  5.2835793  0.         0.         0.         0.       ]
+
+   [Global Top 10 Reference Entries for L10-4219]
+   1. Q8TD19 (NEK9_HUMAN) - Score: 24.7282 - ...MAETLVGTPY[Y][M]SPELCQGVK... - Serine/threonine-protein kinase Nek9 (EC 2.7.11.1) (Nercc1 kinase) (Never in mitosis A-related kinase 9) (NimA-related protein kinase 9) (NimA-related kinase 8) (Nek8)
+   2. Q8K1R7 (NEK9_MOUSE) - Score: 24.7042 - ...MAETLVGTPY[Y][M]SPELCQGVK... - Serine/threonine-protein kinase Nek9 (EC 2.7.11.1) (Nercc1 kinase) (Never in mitosis A-related kinase 9) (NimA-related protein kinase 9)
+   3. Q7ZZC8 (NEK9_XENLA) - Score: 24.5727 - ...MAETCVGTLY[Y][M]SPEICQGVK... - Serine/threonine-protein kinase Nek9 (xNek9) (EC 2.7.11.1) (Nercc1 kinase) (Never in mitosis A-related kinase 9) (NimA-related protein kinase 9)
+   4. Q9Z1J2 (NEK4_MOUSE) - Score: 24.4805 - ...MASTLIGTPY[Y][M]SPELFSNKP... - Serine/threonine-protein kinase Nek4 (EC 2.7.11.1) (Never in mitosis A-related kinase 4) (NimA-related protein kinase 4) (Serine/threonine-protein kinase 2)
+   5. P51957 (NEK4_HUMAN) - Score: 24.4474 - ...MASTLIGTPY[Y][M]SPELFSNKP... - Serine/threonine-protein kinase Nek4 (EC 2.7.11.1) (Never in mitosis A-related kinase 4) (NimA-related protein kinase 4) (Serine/threonine-protein kinase 2) (Serine/threonine-protein kinase NRK2)
+   6. Q6YY75 (NEK6_ORYSJ) - Score: 24.4285 - ...LASTIVGTPN[Y][M]CPEILADIP... - Serine/threonine-protein kinase Nek6 (EC 2.7.11.34) (NimA-related protein kinase 6) (OsNek6)
+   7. O01775 (NEKL2_CAEEL) - Score: 24.4047 - ...AASTVIGTPN[Y][L]SPEICESRP... - Serine/threonine-protein kinase nekl-2 (EC 2.7.11.1) (Never in mitosis A kinase-like 2) (NimA-kinase-like 2)
+   8. Q8C0Q4 (NEK11_MOUSE) - Score: 24.3931 - ...LATTLTGTPH[Y][M]SPEALKHQG... - Serine/threonine-protein kinase Nek11 (EC 2.7.11.1) (Never in mitosis A-related kinase 11) (NimA-related protein kinase 11)
+   9. Q64702 (PLK4_MOUSE) - Score: 24.3823 - ...KHYTLCGTPN[Y][I]SPEIATRSA... - Serine/threonine-protein kinase PLK4 (EC 2.7.11.21) (Polo-like kinase 4) (PLK-4) (Serine/threonine-protein kinase 18) (Serine/threonine-protein kinase Sak)
+   10. Q9NYY3 (PLK2_HUMAN) - Score: 24.3797 - ...RRRTICGTPN[Y][L]SPEVLNKQG... - Serine/threonine-protein kinase PLK2 (EC 2.7.11.21) (Polo-like kinase 2) (PLK-2) (hPlk2) (Serine/threonine-protein kinase SNK) (hSNK) (Serum-inducible kinase)
+
+--- Rank #6 (Backfill) ---
+Node: Layer 11, Latent 131
+Max Activation: 23.0482
+Peak Location: Trace Idx 156 (AA #156)
+Motif Context: CDFGL[A]TDMSN
+Trace Window : [ 0.        0.        0.        0.        0.       23.048191  0.
+  0.        0.        0.        0.      ]
+
+   [Global Top 10 Reference Entries for L11-131]
+   1. A9RVK2 (M3K1B_PHYPA) - Score: 28.4727 - ...GVVKLADFGM[A][K]QVDKLGLLK... - Mitogen-activated protein kinase kinase kinase 1b (PpMEKK1b) (EC 2.7.11.25) (MAP kinase kinase kinase 1b)
+   2. A9SY39 (M3K1A_PHYPA) - Score: 28.2456 - ...GVVKLADFGM[A][K]QVEKFGFAK... - Mitogen-activated protein kinase kinase kinase 1a (PpMEKK1a) (EC 2.7.11.25) (MAP kinase kinase kinase 1a)
+   3. Q9CAD5 (YODA_ARATH) - Score: 28.1375 - ...GRVKVADFGM[A]KHITAQSGPL... - Mitogen-activated protein kinase kinase kinase YODA (EC 2.7.11.25) (YODA MAPKK kinase)
+   4. F4HRJ4 (M3K3A_ARATH) - Score: 28.0860 - ...GEIKLADFGM[A]KHVTAFSTML... - Mitogen-activated protein kinase kinase kinase 3 (EC 2.7.11.25) (MAP3K alpha protein kinase) (AtMAP3Kalpha)
+   5. Q9C5H5 (M3K5G_ARATH) - Score: 27.8376 - ...GVVKLADFGM[A]KHLTGQRADL... - Mitogen-activated protein kinase kinase kinase 5 (EC 2.7.11.25) (MAP3K gamma protein kinase) (AtMAP3Kgamma)
+   6. Q39008 (M3K1_ARATH) - Score: 27.5596 - ...GAVKLADFGL[A]KVSKFNDIKS... - Mitogen-activated protein kinase kinase kinase 1 (ARAKIN) (AtMEKK1) (MAP kinase kinase kinase 1) (EC 2.7.11.25)
+   7. O81472 (MP3K2_ARATH) - Score: 27.4136 - ...GTVKLADFGL[A]KVSKLNDIKS... - Mitogen-activated protein kinase kinase kinase 9 (MAP kinase kinase kinase 9) (EC 2.7.11.24) (MAPK/ERK kinase kinase 2) (AtMEKK2) (Protein SUPPRESSOR OF MKK1 MKK2 1)
+   8. Q8K1R7 (NEK9_MOUSE) - Score: 27.3130 - ...NLIKLGDYGL[A][K]KLNSEYSMA... - Serine/threonine-protein kinase Nek9 (EC 2.7.11.1) (Nercc1 kinase) (Never in mitosis A-related kinase 9) (NimA-related protein kinase 9)
+   9. P46549 (SULU_CAEEL) - Score: 27.3035 - ...AIVKLADFG[S][A][S]LVDPAQTFI... - Serine/threonine-protein kinase SULU (EC 2.7.11.1) (Protein kinase 18)
+   10. P34331 (PLK1_CAEEL) - Score: 27.2999 - ...LVVKIGDFGL[A]TTVNGDERKK... - Serine/threonine-protein kinase plk-1 (EC 2.7.11.21) (Polo-like kinase 1)
+
+--- Rank #7 (Backfill) ---
+Node: Layer 11, Latent 3661
+Max Activation: 22.8925
+Peak Location: Trace Idx 188 (AA #188)
+Motif Context: YTAKC[D][V]YSFG
+Trace Window : [ 0.         0.         0.         0.         0.        22.8925
+  4.6511626  0.         0.         0.         0.       ]
+
+   [Global Top 10 Reference Entries for L11-3661]
+   1. Q97IC2 (PKN2_CLOAB) - Score: 26.4471 - ...AQGIPVDCRT[D]IYSFGIVLYE... - Probable serine/threonine-protein kinase CA_C1728 (EC 2.7.11.1)
+   2. Q8R9T6 (PKN1_CALS4) - Score: 25.9261 - ...AKGSIVDERT[D]IYSLGIVLFE... - Probable serine/threonine-protein kinase Sps1 (EC 2.7.11.1)
+   3. O34507 (PRKC_BACSU) - Score: 25.8290 - ...ARGGLATKKS[D][I]YALGIVLFE... - Serine/threonine-protein kinase PrkC (Ser/Thr-protein kinase PrkC) (EC 2.7.11.1)
+   4. A0QNG1 (PKNB_MYCS2) - Score: 25.7041 - ...ARGETVDARS[D]VYSLGCVLYE... - Serine/threonine-protein kinase PknB (EC 2.7.11.1)
+   5. P9WI81 (PKNB_MYCTU) - Score: 25.6897 - ...ARGDSVDARS[D]VYSLGCVLYE... - Serine/threonine-protein kinase PknB (EC 2.7.11.1)
+   6. P0A5S5 (PKNB_MYCBO) - Score: 25.6897 - ...ARGDSVDARS[D]VYSLGCVLYE... - Serine/threonine-protein kinase PknB (EC 2.7.11.1)
+   7. P9WI80 (PKNB_MYCTO) - Score: 25.6897 - ...ARGDSVDARS[D]VYSLGCVLYE... - Serine/threonine-protein kinase PknB (EC 2.7.11.1)
+   8. A5TY84 (PKNB_MYCTA) - Score: 25.6897 - ...ARGDSVDARS[D]VYSLGCVLYE... - Serine/threonine-protein kinase PknB (EC 2.7.11.1)
+   9. Q81WH6 (PRKC_BACAN) - Score: 25.6540 - ...ARGGIANKQS[D]IYSLGIVMFE... - Serine/threonine-protein kinase PrkC (Ser/Thr-protein kinase PrkC) (EC 2.7.11.1)
+   10. P54744 (PKNB_MYCLE) - Score: 25.6266 - ...ARGDSVDARS[D]VYSLGCVLYE... - Serine/threonine-protein kinase PknB (EC 2.7.11.1)
+
+--- Rank #8 (In Circuit JSON) ---
+Node: Layer 11, Latent 1777
+Max Activation: 22.3380
+Peak Location: Trace Idx 65 (AA #65)
+Motif Context: EID[H][E][N]VIRVI
+Trace Window : [ 0.        0.        0.        5.326928  8.025086 22.338017  0.
+  0.        0.        0.        0.      ]
+
+   [Global Top 10 Reference Entries for L11-1777]
+   1. A9SY39 (M3K1A_PHYPA) - Score: 23.8156 - ...IALLSDIQ[H][P][N]I[V]QYLGTERT... - Mitogen-activated protein kinase kinase kinase 1a (PpMEKK1a) (EC 2.7.11.25) (MAP kinase kinase kinase 1a)
+   2. Q7RZD3 (STE20_NEUCR) - Score: 23.7338 - ...ILVMKESS[H][P][N]IVNFIDSYLC... - Serine/threonine-protein kinase ste20 (EC 2.7.11.1) (Serine/threonine protein kinase 4)
+   3. Q7Z8E9 (STE20_PYRO7) - Score: 23.7309 - ...ILVMKDSS[H][P][N]IVNFIDSYLC... - Serine/threonine-protein kinase MST20 (EC 2.7.11.1)
+   4. Q869X3 (Y9851_DICDI) - Score: 23.7163 - ...IYTLKMLS[H][P][N]VIKFYGIAEK... - Probable serine/threonine-protein kinase DDB_G0275165 (EC 2.7.11.1)
+   5. A9RVK2 (M3K1B_PHYPA) - Score: 23.7084 - ...IALLSDIQ[H][P][N]IVQYLGTERD... - Mitogen-activated protein kinase kinase kinase 1b (PpMEKK1b) (EC 2.7.11.25) (MAP kinase kinase kinase 1b)
+   6. Q03497 (STE20_YEAST) - Score: 23.4992 - ...ILVMKGSK[H][P][N]IVNFIDSYVL... - Serine/threonine-protein kinase STE20 (EC 2.7.11.1)
+   7. G5EFU0 (PK2_CAEEL) - Score: 23.4374 - ...VSILRQYQ[H][P][N]IVRFFSSHLV... - Serine/threonine-protein kinase pak-2 (EC 2.7.11.1) (p21-activated kinase 2)
+   8. Q9ZQ31 (STY13_ARATH) - Score: 23.3938 - ...VSMLANLK[H][P][N]IVRFIGACRK... - Serine/threonine-protein kinase STY13 (EC 2.7.11.1) (AtSTYPK) (Serine/threonine/tyrosine-protein kinase 13)
+   9. Q40541 (NPK1_TOBAC) - Score: 23.3861 - ...VNLLKNLS[H][P][N]I[V]RYLGTARE... - Mitogen-activated protein kinase kinase kinase NPK1 (EC 2.7.11.25) (Nicotiana protein kinase 1)
+   10. Q93Z30 (BHP_ARATH) - Score: 23.3454 - ...LALLQRLR[H][P][N]IVQFLGAVTQ... - Serine/threonine-protein kinase 12 (EC 2.7.11.1) (Protein BLUE LIGHT-DEPENDENT H(+)-ATPASE PHOSPHORYLATION)
+
+--- Rank #9 (In Circuit JSON) ---
+Node: Layer 12, Latent 1038
+Max Activation: 22.3160
+Peak Location: Trace Idx 151 (AA #151)
+Motif Context: EDLKI[C]DFGLATDMSNNKTDMQGTLRYMA[P]EAI
+Trace Window : [ 0.        0.        0.        0.        0.       22.316021  0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.        0.        0.        0.        0.        0.        0.
+  0.       16.038242  0.        0.        0.      ]
+
+   [Global Top 10 Reference Entries for L12-1038]
+   1. Q99078 (FUZ7_MYCMD) - Score: 22.8905 - ...LV[N]GAGQIKI[C]DFGVSGELIN... - Dual specificity protein kinase FUZ7 (EC 2.7.12.2)
+   2. G4NEB8 (MST7_PYRO7) - Score: 22.5404 - ...LVNSRGSIKL[C]DFGVSGELIN... - Mitogen-activated protein kinase kinae MST7 (MAPKK MST7) (EC 2.7.11.24) (MEK MST7)
+   3. Q55A55 (Y9848_DICDI) - Score: 22.4858 - ...LV[T]ENWTVKI[C]DFGLSRFDTG... - Probable serine/threonine-protein kinase DDB_G0272092 (EC 2.7.11.1)
+   4. Q24324 (DSOR1_DROME) - Score: 22.4716 - ...LV[N]SSGEIKI[C]DFGVSGQLID... - Dual specificity mitogen-activated protein kinase kinase dSOR1 (Downstream of RAF) (MAPKK) (EC 2.7.12.2)
+   5. Q5RFL3 (M3K7_PONAB) - Score: 22.4485 - ...LVAGGTVLKI[C]DFGTACDIQT... - Mitogen-activated protein kinase kinase kinase 7 (EC 2.7.11.25)
+   6. O43318 (M3K7_HUMAN) - Score: 22.4481 - ...LVAGGTVLKI[C]DFGTACDIQT... - Mitogen-activated protein kinase kinase kinase 7 (EC 2.7.11.25) (Transforming growth factor-beta-activated kinase 1) (TGF-beta-activated kinase 1)
+   7. P0C8E4 (M3K7_RAT) - Score: 22.4284 - ...LVAGGTVLKI[C]DFGTACDIQT... - Mitogen-activated protein kinase kinase kinase 7 (EC 2.7.11.25)
+   8. A2VDU3 (M3K7_BOVIN) - Score: 22.4151 - ...LVAGGTVLKI[C]DFGTACDIQT... - Mitogen-activated protein kinase kinase kinase 7 (EC 2.7.11.25)
+   9. Q62073 (M3K7_MOUSE) - Score: 22.4034 - ...LVAGGTVLKI[C]DFGTACDIQT... - Mitogen-activated protein kinase kinase kinase 7 (EC 2.7.11.25) (Transforming growth factor-beta-activated kinase 1) (TGF-beta-activated kinase 1)
+   10. Q0D541 (WNK5_ORYSJ) - Score: 22.3459 - ...INGNTGQVKI[G]DLGLAAIVDK... - Probable serine/threonine-protein kinase WNK5 (OsWNK5) (EC 2.7.11.1) (Protein kinase with no lysine 5)
+
+--- Rank #10 (Backfill) ---
+Node: Layer 12, Latent 1628
+Max Activation: 22.1832
+Peak Location: Trace Idx 174 (AA #174)
+Motif Context: TLRYM[A]PEAIK
+Trace Window : [ 0.        0.        0.        0.        0.       22.183212  0.
+  0.        0.        0.        0.      ]
+
+   [Global Top 10 Reference Entries for L12-1628]
+   1. P35426 (CDK4_RAT) - Score: 23.4067 - ...TPVVVTLWYR[A]PEVLLQSTYA... - Cyclin-dependent kinase 4 (EC 2.7.11.22) (Cell division protein kinase 4) (PSK-J3)
+   2. P30285 (CDK4_MOUSE) - Score: 23.3068 - ...TPVVVTLWYR[A]PEVLLQSTYA... - Cyclin-dependent kinase 4 (EC 2.7.11.22) (CRK3) (Cell division protein kinase 4) (PSK-J3)
+   3. P11802 (CDK4_HUMAN) - Score: 23.2910 - ...TPVVVTLWYR[A]PEVLLQSTYA... - Cyclin-dependent kinase 4 (EC 2.7.11.22) (Cell division protein kinase 4) (PSK-J3)
+   4. B2MVY4 (CDK4_SHEEP) - Score: 23.2809 - ...TPVVVTLWYR[A]PEVLLQSTYA... - Cyclin-dependent kinase 4 (EC 2.7.11.22) (Cell division protein kinase 4)
+   5. Q32KY4 (CDK4_BOVIN) - Score: 23.2809 - ...TPVVVTLWYR[A]PEVLLQSTYA... - Cyclin-dependent kinase 4 (EC 2.7.11.22) (Cell division protein kinase 4)
+   6. Q9ZQ31 (STY13_ARATH) - Score: 23.2809 - ...TPETGTYRWM[A]PEMIQHRAYN... - Serine/threonine-protein kinase STY13 (EC 2.7.11.1) (AtSTYPK) (Serine/threonine/tyrosine-protein kinase 13)
+   7. P79432 (CDK4_PIG) - Score: 23.2748 - ...TPVVVTLWYR[A]PEVLLQSTYA... - Cyclin-dependent kinase 4 (EC 2.7.11.22) (Cell division protein kinase 4)
+   8. Q2MHE4 (HT1_ARATH) - Score: 23.2201 - ...KGNMGTYRWM[A]PEMIKEKPYT... - Serine/threonine/tyrosine-protein kinase HT1 (EC 2.7.10.1) (EC 2.7.11.1) (High leaf temperature protein 1)
+   9. Q9FPR3 (EDR1_ARATH) - Score: 23.2073 - ...KSTAGTPEWM[A]PEVLRNEPSN... - Serine/threonine-protein kinase EDR1 (EC 2.7.11.1) (MAPKK kinase EDR1) (Protein ENHANCED DISEASE RESISTANCE 1) (AtEDR1) (Serine/threonine/tyrosine-protein kinase 10)
+   10. Q91727 (CDK4_XENLA) - Score: 23.1401 - ...TPVVVTLWYR[A]PEVLLQSTYA... - Cyclin-dependent kinase 4 (EC 2.7.11.22) (Cell division protein kinase 4)
+
+--- Rank #11 (In Circuit JSON) ---
+Node: Layer 1, Latent 1634
+Max Activation: 8.2856
+Peak Location: Trace Idx 6 (AA #6)
+Motif Context: [M][V][K][Q][V][D][F][A][E][V][K][L][S][E][K][F][L][G][A][G][S][G][G][A][V][R][K][A][T][F][Q][N][Q][E][I][A][V][K][I][F][D][F][L][E][E][T][I][K][K][N][A][E][R][E][I][T][H][L][S][E][I][D][H][E][N][V][I][R][V][I][G][R][A][S][N][G][K][K][D][Y][L][L][M][E][Y][L][E][E][G][S][L][H][N][Y][L][Y][G][D][D][K][W][E][Y][T][V][E][Q][A][V][R][W][A][L][Q][C][A][K][A][L][A][Y][L][H][S][L][D][R][P][I][V][H][R][D][I][K][P][Q][N][M][L][L][Y][N][Q][H][E][D][L][K][I][C][D][F][G][L][A][T][D][M][S][N][N][K][T][D][M][Q][G][T][L][R][Y][M][A][P][E][A][I][K][H][L][K][Y][T][A][K][C][D][V][Y][S][F][G][I][M][L][W][E][L][M][T][R][Q][L][P][Y][S][H][L][E][N][P][N][S][Q][Y][A][I][M][K][A][I][S][S][G][E][K][L][P][M][E][A][V][R][S][D][C][P][E][G][I][K][Q][L][M][E][C][C][M][D][I][N][P][E][K][R][P][S][M][K][E][I][E][K][F][L][G][E][Q][Y][E][S][G][T][D][E][D][F][I][K][P][L][D][E][D][T][V][A][V][V][T][Y][H][V][D][S][S][G][S][R][I][M][R][V][D][F][W][R][H][Q][L][P][S][I][R][M][T][F][P][I][V][K][R][E][A][E][R][L][G][K][T][V][V][R][E][M][A][K][A][A][A][D][G][D][R][E][V][R][R][A][E][K][D][T][E][R][E][T][S][R][A][A][H][N][G][E][R][E][T][R][R][A][G][Q][D][V][G][R][E][T][V][R][A][V][K][K][I][G][K][K][L][R][F]
+Trace Window : [4.749904  4.4327383 5.329479  5.050584  4.284222  8.285641  4.1501617
+ 4.6343555 6.165192  4.1830573 5.0631967 3.1818328 4.9417014 6.091474
+ 5.055774  3.9584246 3.0107067 4.637173  4.2695246 4.5939956 4.571933
+ 4.5469213 4.516919  4.122521  3.8039393 4.8160834 4.850738  4.3594418
+ 4.7021785 3.7942612 4.622934  5.868322  4.761912  6.0503116 4.0740123
+ 4.588602  4.2313147 5.262959  4.293364  4.1937094 8.266381  4.0430756
+ 3.1388118 6.019138  5.9464927 4.725688  3.737983  4.645222  4.590667
+ 5.480726  4.0439944 5.498673  4.5265217 5.549415  3.6202793 4.5054293
+ 4.663174  2.7879267 4.4258823 5.5461335 3.593843  7.7154946 4.6700187
+ 5.6515203 5.6458106 3.7662191 3.752752  4.808337  3.8332307 3.7758424
+ 4.587002  4.656709  3.9966335 4.2645106 5.362699  4.2302237 4.4521313
+ 4.5261254 7.7563815 4.262843  2.798637  2.883428  4.0689697 5.815535
+ 4.3864217 2.8677654 5.6428914 5.5992303 4.4687757 4.354016  2.6876826
+ 4.6050124 5.4958053 4.174991  2.6359835 4.0557833 4.273784  7.545993
+ 7.551122  4.409636  3.9886937 5.523334  4.1933703 4.554662  3.7411652
+ 5.751736  4.5849843 4.334286  3.8908494 4.915169  4.38751   4.4462953
+ 3.0875843 4.809498  4.3346133 4.5540814 5.0622144 4.539972  3.1292675
+ 4.5259    4.572293  3.0312686 4.856682  4.6238213 2.8785949 7.897485
+ 4.676658  4.294611  3.5733733 3.6268487 4.6225634 4.6311207 7.732139
+ 3.5022497 4.4760633 4.227905  4.3340845 5.5674663 3.8853712 2.6313899
+ 2.5996666 4.1091285 5.4457707 4.2638717 4.507958  5.409699  7.596383
+ 2.5352228 4.4623246 3.5498276 4.0082097 7.7896905 3.5623689 4.405252
+ 2.5114691 3.8732157 4.2897673 7.5448527 3.5473833 3.9892068 5.1187406
+ 5.106093  4.153957  4.0384407 7.403031  3.5316691 4.0733356 4.304666
+ 4.3878546 2.5733194 4.6296406 4.2393365 3.898827  4.1503797 4.426282
+ 5.7368155 4.221396  3.7462072 4.8335414 4.875815  2.9033256 4.9135213
+ 4.4714756 4.8172984 4.406623  4.987617  4.316483  8.226556  4.079494
+ 4.692871  5.0910497 4.2304487 5.2420287 4.304618  4.531732  3.414679
+ 4.7503324 6.2965264 3.258169  4.344302  4.93292   5.012872  4.6785192
+ 2.8629239 4.4532976 4.262415  4.473737  4.585894  2.589287  5.428026
+ 5.35953   4.034218  5.3813233 4.313909  4.3056846 4.204379  4.137355
+ 3.7023122 3.9789932 4.856508  4.2222533 3.5955858 4.4076343 4.3881707
+ 4.437225  5.4910254 4.4494796 2.4552948 4.1633544 3.6905727 5.46939
+ 3.9224124 3.4011197 4.3355713 4.1486363 7.475908  3.6603851 3.9708374
+ 5.336742  4.310789  3.4603567 4.5250325 4.346665  2.6555037 3.8341699
+ 5.6083217 3.9949884 3.9321105 3.7428198 7.486132  3.3328032 5.216369
+ 3.9559238 5.215525  4.2464166 4.23516   3.9421678 4.0807953 3.5998921
+ 4.379532  5.433681  3.5006332 5.5051684 4.493143  3.4452586 2.509016
+ 4.2827334 5.3512654 4.104796  3.9102032 5.173924  3.98384   4.0128884
+ 4.058644  7.322269  5.19586   7.416822  3.3401937 3.3650112 4.37258
+ 4.193693  2.539617  7.6669908 5.5223393 7.827145  4.5943727 3.7455988
+ 4.2775154 3.8972027 3.9596374 4.909179  4.524383  4.9042487 3.771676
+ 7.93075   4.4950237 4.4992976 4.608248  4.553244  4.826113  3.7830095
+ 4.106633  5.0119977 4.0030174 8.114124  3.892921  4.446408  5.0621324
+ 5.0421405 4.8309836 3.0865695 4.772031  4.920547  4.0957546 5.2893443
+ 4.413308  5.1765738 4.0938797 4.8875175 3.9957645 4.024083  5.0439906
+ 5.037669  5.9115844 4.3389525 5.7692695 4.799517  2.8638926 4.6929507
+ 4.833858  4.7381396 3.8158476 3.8043387 4.853396  5.7584457 3.9286032
+ 4.1009355 4.4862943 3.8293314 3.7301397 3.6613367 7.1280227 3.9848962
+ 7.0430417 4.061029  4.9503007 3.183691  4.069262  4.0688586 3.5648317
+ 4.8884125 3.958344  6.837726  3.8568275 4.8166575 3.9722013 4.830769
+ 3.8892858 3.7968407 3.9856014 3.4747252 3.4621253 3.9913106 4.7994328
+ 3.8410654 4.8107977 3.9558387 4.861316  3.9206443 4.0140586 4.0363965
+ 3.584357  3.9967866 3.9290428 7.1493387 3.2924156 4.148995  4.3929687
+ 5.420054  4.501901  3.6948016 4.7337403 4.283012  3.9025736 4.8660808
+ 4.870498  3.9102292 4.815272  4.9281926 4.978641  3.2210042 5.0748086
+ 4.081375 ]
+
+   [Global Top 10 Reference Entries for L1-1634]
+   1. A6LSR9 (RNY_CLOB8) - Score: 9.6057 - [M][V][T][A][V][M][I][L][I][D][V][I][V][L][L][I][L][G][I][V]... - Ribonuclease Y (RNase Y) (EC 3.1.-.-)
+   2. Q8EQR7 (RNY_OCEIH) - Score: 9.4475 - [M][D][I][V][I][V][V][I][S][I][L][L]... - Ribonuclease Y (RNase Y) (EC 3.1.-.-)
+   3. Q9CEE2 (RNY_LACLA) - Score: 9.3930 - [M][D][I][I][S][I][V][L][L][V][L][L]... - Ribonuclease Y (RNase Y) (EC 3.1.-.-)
+   4. Q02WP0 (RNY_LACLS) - Score: 9.3930 - [M][D][I][I][S][I][V][L][L][V][L][L]... - Ribonuclease Y (RNase Y) (EC 3.1.-.-)
+   5. A2RN36 (RNY_LACLM) - Score: 9.3908 - [M][D][I][I][S][I][V][L][L][V][L][L]... - Ribonuclease Y (RNase Y) (EC 3.1.-.-)
+   6. Q31GE9 (LON1_HYDCU) - Score: 9.3833 - ...[K][T][N][V][F][V][L][A][L][R][D][V][V][V][F][P][G][M][V][V][P]... - Lon protease 1 (EC 3.4.21.53) (ATP-dependent protease La 1)
+   7. B8BDV1 (LONP2_ORYSI) - Score: 9.3564 - ...[L][E][T][V][P][V][Y][R][L][A][D][I][F][V][A][S][F][E][I][S][F]... - Lon protease homolog 2, peroxisomal (EC 3.4.21.53)
+   8. Q0J032 (LONP2_ORYSJ) - Score: 9.3543 - ...[L][E][T][V][P][V][Y][R][L][A][D][I][F][V][A][S][F][E][I][G][F]... - Lon protease homolog 2, peroxisomal (EC 3.4.21.53)
+   9. B3E7K2 (LON_TRIL1) - Score: 9.3511 - ...[P][E][L][L][P][L][L][P][I][R][D][V][V][V][Y][P][F][M][I][I][P]... - Lon protease (EC 3.4.21.53) (ATP-dependent protease La)
+   10. P33338 (SLA2_YEAST) - Score: 9.3470 - ...[P][L][L][S][L][A][L][M][I][I][D][A][V][V][A][L][V][K][A][A][I]... - Protein SLA2 (Transmembrane protein MOP2)
+
+--- Rank #12 (In Circuit JSON) ---
+Node: Layer 1, Latent 1968
+Max Activation: 5.7806
+Peak Location: Trace Idx 282 (AA #282)
+Motif Context: [M][V][K][Q][V][D][F][A][E][V][K][L][S][E][K][F][L][G][A][G][S][G][G][A][V][R][K][A][T][F][Q][N][Q][E][I][A][V][K][I][F][D][F][L][E][E][T][I][K][K][N][A][E][R][E][I][T][H][L][S][E][I][D][H][E][N][V][I][R][V][I][G][R][A][S][N][G][K][K][D][Y][L][L][M][E][Y][L][E][E][G][S][L][H][N][Y][L][Y][G][D][D][K][W][E][Y][T][V][E][Q][A][V][R][W][A][L][Q][C][A][K][A][L][A][Y][L][H][S][L][D][R][P][I][V][H][R][D][I][K][P][Q][N][M][L][L][Y][N][Q][H][E][D][L][K][I][C][D][F][G][L][A][T][D][M][S][N][N][K][T][D][M][Q][G][T][L][R][Y][M][A][P][E][A][I][K][H][L][K][Y][T][A][K][C][D][V][Y][S][F][G][I][M][L][W][E][L][M][T][R][Q][L][P][Y][S][H][L][E][N][P][N][S][Q][Y][A][I][M][K][A][I][S][S][G][E][K][L][P][M][E][A][V][R][S][D][C][P][E][G][I][K][Q][L][M][E][C][C][M][D][I][N][P][E][K][R][P][S][M][K][E][I][E][K][F][L][G][E][Q][Y][E][S][G][T][D][E][D][F][I][K][P][L][D][E][D][T][V][A][V][V][T][Y][H][V][D][S][S][G][S][R][I][M][R][V][D][F][W][R][H][Q][L][P][S][I][R][M][T][F][P][I][V][K][R][E][A][E][R][L][G][K][T][V][V][R][E][M][A][K][A][A][A][D][G][D][R][E][V][R][R][A][E][K][D][T][E][R][E][T][S][R][A][A][H][N][G][E][R][E][T][R][R][A][G][Q][D][V][G][R][E][T][V][R][A][V][K][K][I][G][K][K][L][R][F]
+Trace Window : [3.5227575 3.6024451 2.9969275 2.847205  3.6894841 2.6442335 4.0513034
+ 2.3705013 1.9769577 3.6348374 3.1003523 4.6211047 2.2123306 1.781833
+ 2.8024685 3.7061365 4.3320336 2.8346457 1.8678148 2.6665401 1.773592
+ 2.7244189 2.8334734 2.0784671 3.4277773 3.0917609 2.9315603 2.284876
+ 2.5371587 4.1852326 3.043174  2.976815  3.0296652 2.1876614 4.117441
+ 2.5606253 3.8636153 3.2434585 4.121808  4.299233  2.9274046 4.495022
+ 5.175989  2.5950499 2.6465163 3.116236  4.660348  3.902671  3.9434583
+ 3.7271287 3.2406914 2.9386032 4.16757   2.925808  4.7582054 3.310723
+ 4.332513  5.438596  3.2299798 2.9664385 4.778859  3.522529  4.356512
+ 2.8951008 3.593619  4.3339868 4.545532  3.8258703 4.140627  4.363289
+ 3.6258745 3.706534  2.8234608 2.9185867 3.466209  3.9050672 3.6805866
+ 3.677181  3.2023332 4.212424  5.2685814 5.196918  4.228989  2.583212
+ 4.1041617 5.148173  2.6431675 2.6511614 3.788432  3.0287268 5.2251387
+ 4.0779624 3.405406  4.1971483 5.318429  4.384142  4.0801487 3.4415426
+ 3.459398  3.9653518 4.4614334 2.9299405 4.396888  3.140744  4.21774
+ 2.575918  3.2905154 2.7031856 3.9222176 3.4191997 3.741535  2.3662932
+ 4.617284  2.7517798 3.2704585 2.1486392 2.8098915 2.144141  4.535168
+ 2.2508695 3.6769893 4.7820225 3.811195  2.7438576 5.0947022 3.1747258
+ 3.9824927 3.1810122 4.740324  4.4771967 4.39252   4.1600475 3.503897
+ 4.8223352 4.0471525 3.2920358 3.7182124 3.5861819 4.412816  5.3617096
+ 5.3725724 4.3653383 3.5961444 3.6537027 4.3058934 2.9500973 3.4626231
+ 5.507207  3.9018395 4.6411314 4.0204425 3.1598794 4.5961637 3.8164728
+ 5.339114  3.0127409 3.0570402 3.3126433 4.4835863 3.254192  3.7395313
+ 3.7407882 3.9150112 3.2886794 3.4129708 4.4886312 3.5879464 3.8793147
+ 2.9662378 5.217755  3.7321818 4.162055  4.2770953 2.9475615 2.8566766
+ 2.5825994 2.834151  4.413525  3.4850495 3.9327455 5.077719  3.3341281
+ 3.9765236 2.6709592 2.6153872 3.2274814 3.5428169 2.6236935 3.687531
+ 3.6543272 2.2229297 3.911649  2.9997516 3.7413895 3.6050718 4.519351
+ 3.5597627 1.9779707 4.7422013 3.8973465 2.6840656 3.5683553 3.236207
+ 5.132212  2.8885784 4.20648   2.9743614 4.0834846 5.284373  2.808309
+ 3.5537298 3.1382709 3.4912915 2.9348686 3.3508925 4.041707  2.6775346
+ 4.2282076 3.9953833 3.1773703 2.5363307 4.312453  2.7846992 2.8204372
+ 3.707387  2.5943382 3.7048607 5.484664  3.1326663 4.536014  2.825525
+ 3.1114182 4.457686  4.147334  3.278053  3.4866354 4.297021  3.2768517
+ 2.887512  3.971823  4.611678  3.6981003 3.4704115 5.250693  4.294588
+ 2.6040537 3.873133  3.9312482 4.489495  3.503513  4.9221992 3.9254766
+ 3.5536568 3.3432503 4.314144  4.573338  3.663676  3.6707995 4.841988
+ 4.2036304 3.135976  4.8531566 3.0264723 4.031248  4.9402866 5.595105
+ 4.159645  3.0020125 3.8133638 4.520076  3.1402395 3.5376904 4.3963113
+ 3.661997  3.804392  3.3240683 3.8191457 5.185735  5.118468  4.3319817
+ 3.5704124 5.780613  3.6776178 3.1459825 3.483384  3.2620947 4.368284
+ 2.946181  4.091398  3.9940128 2.69961   3.9580905 3.8246744 4.0147347
+ 2.8889322 2.7150226 2.7074285 3.4972627 2.6238897 3.512146  4.1988716
+ 3.996662  3.5249236 3.8798354 2.8469336 4.311169  3.9136405 3.539906
+ 3.7460306 3.127867  4.8670907 2.5459194 2.5531764 4.020686  3.3322446
+ 3.8311832 2.5160277 4.189975  2.5492368 4.174032  3.931102  3.3886285
+ 3.5887487 2.3728335 2.6362655 2.3695073 3.6069324 4.8879724 3.4333532
+ 3.2477634 2.5624323 3.7877624 3.7830932 3.3851378 2.1635268 3.8578212
+ 2.521586  3.3032672 2.692248  2.7874422 2.892403  3.2080624 3.8776515
+ 3.3438232 4.0457664 2.9511828 4.405554  4.1587524 4.182183  3.3226757
+ 3.1187804 4.064117  3.6383321 3.491875  3.1528308 4.191344  3.002413
+ 3.2189791 3.1381314 3.923909  2.9881465 2.9774818 4.060232  3.4588401
+ 3.8312    2.785628  3.9183538 2.7747982 3.068677  3.8913045 3.8602765
+ 2.9085028 3.6922262 3.3080106 3.0460565 4.004203  3.581969  3.5767043
+ 2.3122268 2.5822737 3.7565591 3.394409  2.4272287 3.5756233 2.9977481
+ 3.0020564 3.788895  3.1257994 2.9086597 2.8733976 4.306971  3.0454333
+ 3.7243788]
+
+   [Global Top 10 Reference Entries for L1-1968]
+   1. A1A1R2 (SYL_BIFAA) - Score: 7.5495 - ...[E][D][A][E][S][D][P][E][A][P][L][S][R][N][E][D][W][V][K][V][E]... - Leucine--tRNA ligase (EC 6.1.1.4) (Leucyl-tRNA synthetase) (LeuRS)
+   2. Q9Z930 (SYL_CHLPN) - Score: 7.5040 - ...[I][H][F][E][D][G][T][H][R][P][L][E][D][D][E][L][P][L][L][P][P]... - Leucine--tRNA ligase (EC 6.1.1.4) (Leucyl-tRNA synthetase) (LeuRS)
+   3. Q9RDL5 (SYL_STRCO) - Score: 7.5036 - ...[D][D][A][D][T][K][P][E][T][P][L][S][R][N][E][D][W][V][H][V][T]... - Leucine--tRNA ligase (EC 6.1.1.4) (Leucyl-tRNA synthetase) (LeuRS)
+   4. Q8J130 (TYRO_ASPFU) - Score: 7.5013 - ...[H][P][S][D][A][K][P][D][D][P][L][K][P][F][H][V][S][K][D][K][Y]... - Tyrosinase (EC 1.14.18.1) (Monophenol monooxygenase)
+   5. Q8G4D8 (SYL_BIFLO) - Score: 7.4675 - ...[M][D][A][E][S][N][P][E][A][P][L][S][R][N][E][D][W][V][K][V][E]... - Leucine--tRNA ligase (EC 6.1.1.4) (Leucyl-tRNA synthetase) (LeuRS)
+   6. B3DRD0 (SYL_BIFLD) - Score: 7.4670 - ...[M][D][A][E][S][N][P][E][A][P][L][S][R][N][E][D][W][V][K][V][E]... - Leucine--tRNA ligase (EC 6.1.1.4) (Leucyl-tRNA synthetase) (LeuRS)
+   7. P31382 (PMT2_YEAST) - Score: 7.4358 - ...[W][N][I][E][T][H][E][N][E][R][L][P][P][R][P][E][D][F][Q][Y][P]... - Dolichyl-phosphate-mannose--protein mannosyltransferase 2 (EC 2.4.1.109)
+   8. D4AMT2 (GTAA_ARTBC) - Score: 7.4283 - ...[G][T][E][Y][D][T][H][P][R][T][L][D][D][Q][E][P][I][A][P][P][P]... - Probable glutaminase ARB_05535/05536 (EC 3.5.1.2)
+   9. D4B0X3 (AGD1_ARTBC) - Score: 7.4283 - ...[D][P][E][G][W][E][R][D][H][D][L][P][P][A][P][P][P][V][R][P][I]... - Probable alpha/beta-glucosidase ARB_02101 (EC 3.2.1.20) (EC 3.2.1.21)
+   10. A3Q8Q1 (SYL_MYCSJ) - Score: 7.4278 - ...[D][D][A][D][S][E][P][N][P][P][L][N][K][A][T][D][W][V][H][V][E]... - Leucine--tRNA ligase (EC 6.1.1.4) (Leucyl-tRNA synthetase) (LeuRS)
+
+--- Rank #13 (In Circuit JSON) ---
+Node: Layer 1, Latent 1814
+Max Activation: 5.2432
+Peak Location: Trace Idx 24 (AA #24)
+Motif Context: [M][V][K][Q][V][D][F][A][E][V][K][L][S][E][K][F][L][G][A][G][S][G][G][A][V][R][K][A][T][F][Q][N][Q][E][I][A][V][K][I][F][D][F][L][E][E][T][I][K][K][N][A][E][R][E][I][T][H][L][S][E][I][D][H][E][N][V][I][R][V][I][G][R][A][S][N][G][K][K][D][Y][L][L][M][E][Y][L][E][E][G][S][L][H][N][Y][L][Y][G][D][D][K][W][E][Y][T][V][E][Q][A][V][R][W][A][L][Q][C][A][K][A][L][A][Y][L][H][S][L][D][R][P][I][V][H][R][D][I][K][P][Q][N][M][L][L][Y][N][Q][H][E][D][L][K][I][C][D][F][G][L][A][T][D][M][S][N][N][K][T][D][M][Q][G][T][L][R][Y][M][A][P][E][A][I][K][H][L][K][Y][T][A][K][C][D][V][Y][S][F][G][I][M][L][W][E][L][M][T][R][Q][L][P][Y][S][H][L][E][N][P][N][S][Q][Y][A][I][M][K][A][I][S][S][G][E][K][L][P][M][E][A][V][R][S][D][C][P][E][G][I][K][Q][L][M][E][C][C][M][D][I][N][P][E][K][R][P][S][M][K][E][I][E][K][F][L][G][E][Q][Y][E][S][G][T][D][E][D][F][I][K][P][L][D][E][D][T][V][A][V][V][T][Y][H][V][D][S][S][G][S][R][I][M][R][V][D][F][W][R][H][Q][L][P][S][I][R][M][T][F][P][I][V][K][R][E][A][E][R][L][G][K][T][V][V][R][E][M][A][K][A][A][A][D][G][D][R][E][V][R][R][A][E][K][D][T][E][R][E][T][S][R][A][A][H][N][G][E][R][E][T][R][R][A][G][Q][D][V][G][R][E][T][V][R][A][V][K][K][I][G][K][K][L][R][F]
+Trace Window : [3.3346355  3.2215338  3.0425682  3.1380563  3.2607775  1.1395357
+ 3.1573772  4.5845513  2.0825675  3.3827457  3.1568074  3.2355852
+ 4.1626077  2.2902     3.3646193  3.5403233  3.5440812  3.777504
+ 5.1941733  3.8939185  4.687204   3.911438   3.897839   5.243199
+ 3.874372   3.1970248  3.5065389  5.011782   4.2034445  3.473671
+ 3.436317   2.8691874  3.3176522  2.1184757  3.1328156  4.5865717
+ 3.2394967  2.9212592  2.9051065  2.9984097  0.9793294  2.9889734
+ 2.9303555  1.8371227  1.8771288  3.739204   3.0408492  3.0267992
+ 3.0480447  2.6721964  4.5901527  2.0937088  2.7529986  2.0385005
+ 3.0628104  3.77852    2.7450883  3.0460284  3.9378986  1.9823041
+ 3.0439265  1.0461962  2.711681   1.926801   2.5816932  3.2897499
+ 3.0576959  2.7072115  3.3694146  3.174274   3.3655243  2.9216018
+ 4.9023814  4.315131   2.9430246  3.5015397  3.333572   3.26901
+ 1.2548788  3.0549188  3.1749268  3.1468325  3.3353233  2.035682
+ 2.9988716  3.1719947  2.1179273  2.1447601  3.3315845  4.105323
+ 3.2609801  2.9374912  2.8117394  3.10726    3.2490175  3.0684521
+ 3.2712255  1.1976981  1.181752   3.1073017  2.9427428  2.0206277
+ 2.9626372  3.844306   3.4268975  2.1017876  3.298425   4.7161946
+ 3.538515   2.964703   3.2022114  4.887765   3.4523408  3.5426502
+ 3.4798224  4.943081   3.494389   4.961905   3.4672918  4.9001284
+ 3.2067277  3.3416338  2.9668393  4.142829   3.2306018  1.1595185
+ 2.7093735  2.628055   3.0831718  3.3176186  2.7163615  2.63766
+ 1.0692146  3.1060503  3.0586424  2.628674   3.1995327  2.690547
+ 3.402896   3.2764943  3.2991552  3.1073296  2.8087113  3.3316193
+ 2.9240973  2.1642785  1.230619   3.2153478  3.1671739  3.1567125
+ 3.1593273  1.2288797  3.3108997  3.3493056  3.3110008  4.83588
+ 4.120737   1.3648167  3.6252508  4.317876   2.9744267  2.9858875
+ 3.4592943  4.220667   1.4358499  3.6339414  3.5170214  3.4432878
+ 4.1299314  3.388681   2.9378695  3.0990534  3.4494696  4.656209
+ 2.7323346  2.082357   4.717319   3.1945958  3.178312   2.8829265
+ 3.224266   3.23936    3.0728235  4.00669    4.726792   3.2224395
+ 3.2447007  1.2618911  3.485015   3.0506659  4.046713   3.209571
+ 3.2065487  3.138205   3.3353415  3.1333485  2.945757   2.0848405
+ 3.1335645  3.3164997  3.8408277  2.7180135  3.219978   3.172913
+ 2.6909318  3.0240293  4.046154   2.9757426  3.2973912  2.1776989
+ 2.8337846  2.8546357  2.8610923  4.229041   3.4636414  3.2253308
+ 4.9078956  3.3492906  3.581954   3.3313365  4.9048157  3.356647
+ 4.240323   4.2166743  3.3912613  2.217298   3.2138715  3.1958418
+ 2.6877048  3.3573294  2.0715559  4.6836653  3.4497085  2.7951531
+ 4.0401654  1.1860023  3.081572   2.7444744  2.1271243  3.2795844
+ 3.2047112  3.1674018  3.2765467  3.236637   3.4591565  2.2089477
+ 3.2305026  3.2336707  3.3718662  1.1924536  3.094264   2.6246696
+ 2.6074853  1.921329   2.9463472  2.5656056  2.5519454  3.821681
+ 3.2479286  2.9535809  1.9290848  3.0115178  1.9295142  2.9517827
+ 3.1017976  3.078057   3.1622036  2.0303562  3.162657   3.023137
+ 2.0714278  3.953548   3.1899981  3.7385201  1.0420034  1.9085352
+ 0.96019536 2.9775658  2.8584816  2.7741146  2.3340166  2.88177
+ 0.8629051  1.7618763  0.8729921  3.5976992  3.1771424  4.4665055
+ 3.2670841  3.2862506  3.7857108  2.9487152  2.862184   3.475628
+ 1.3330436  4.257008   4.265386   3.4813159  4.299515   2.9552689
+ 3.324973   3.525505   2.8051655  3.454755   1.2682168  3.3129926
+ 3.020866   2.7539022  2.8935137  3.1977186  3.217217   2.7308502
+ 4.0359983  3.1715522  2.6740267  3.3452878  3.7600284  3.1750753
+ 2.5947485  3.141755   3.3752215  3.0847218  2.7276797  2.1814291
+ 4.805141   2.31432    2.9399238  3.4142454  3.487591   3.3773768
+ 4.1443934  3.686201   3.7044933  3.0505672  2.4790804  3.7783923
+ 5.0615034  3.63054    5.1458235  5.147523   5.1171746  1.7731113
+ 3.708499   1.7394445  3.1825984  2.5802484  3.7585516  3.1170835
+ 3.1032825  4.8903704  2.5449748  3.5037742  1.7161164  4.1759987
+ 2.5775204  3.1788356  2.6725647  4.364966   4.561708   3.366821
+ 5.2227197  5.235707   3.556359   3.4119248  3.8934531  2.8185167
+ 3.3716946  2.7838962  4.4170737  3.3275757  3.3181577  5.1231494
+ 3.8025408  3.7407029  1.8010025  3.8813007  3.7234554  3.165052
+ 2.5450273  4.233247   3.7511637  3.0570827  4.885566   3.7070794
+ 3.4672804  3.4608006  3.4710047  3.5103283  3.4521656  3.4205356
+ 3.4460728  2.9472291  3.425294  ]
+
+   [Global Top 10 Reference Entries for L1-1814]
+   1. P80033 (DEFA_ZOPAT) - Score: 6.9560 - ...[E][I][A][G][T][K][L][N][S][A][A][C][G][A][H][C][L][A][L][G][R]... - Defensin, isoforms B and C
+   2. P81244 (CYC6_PROHO) - Score: 6.9168 - [A][A][S][G][A][S][I][F][S][A][K][C]... - Cytochrome c6 (Cytochrome c-553) (Cytochrome c553) (Soluble cytochrome f)
+   3. C0HJX7 (DEFI_CALVI) - Score: 6.8937 - [A][T][C][D][L][L][S][G][T][G][A][N][H][S][A][C][A][A][H][C][L]... - Defensin
+   4. P81462 (DEFI_BOMPA) - Score: 6.8854 - ...[K][G][V][A][E][H][S][A][C][A][A][N][C][L][S][M][G][K][A][G][G]... - Defensin
+   5. H9N3R7 (CA112_CONLI) - Score: 6.8829 - [A][G][N][A][K][M][S][A][L][M][A][L][T][I]... - Alpha-conotoxin Li1.12 (Livi_23)
+   6. Q29119 (IAPP_PIG) - Score: 6.8785 - [N][M][A][T][C][A][T][Q][H][L][A][N][F]... - Islet amyloid polypeptide (IAPP) (Amylin)
+   7. P0C7I2 (IGIP_BOVIN) - Score: 6.8743 - ...[I][L][A][V][V][F][S][H][L][S][A][G][N][S][P][C][G][N][Q][A][N]... - IgA-inducing protein
+   8. P0C8T0 (BR2B_ODOHO) - Score: 6.8547 - ...[K][N][M][A][I][N][A][A][K][G][A][G][Q][S][V][L][N][T][L][S][C]... - Brevinin-2HSb
+   9. P40837 (BR2A_PELLE) - Score: 6.8436 - ...[K][N][L][A][I][S][A][A][K][G][A][A][Q][G][L][V][N][K][A][S][C]... - Brevinin-2Ea
+   10. Q7M426 (DEF1_HOLDI) - Score: 6.8430 - ...[K][G][I][A][I][N][D][S][A][C][A][A][H][C][L][A][M][R][R][K][G]... - Holotricin-1
+
+--- Rank #14 (In Circuit JSON) ---
+Node: Layer 1, Latent 4291
+Max Activation: 3.5885
+Peak Location: Trace Idx 212 (AA #212)
+Motif Context: LDR[P]IVHRDIK[P]QNMLLYNQHEDLKICDFGLATDMSNNKTDMQGTLRYMA[P]EAIKHLKYTAKCDVYSFGIMLWELMTRQL[P]YSHLEN[P]NSQYAIMKAISSGEKL[P]MEAVRSDC[P]EGIKQLMECCMDIN[P]EKR[P]SMKEIEKFLGEQYESGTDEDFIK[P]LDEDTVAVVTYHVDSSGSRIMRVDFWRHQL[P]SIRMTF[P]IVK
+Trace Window : [0.        0.        0.        3.4664528 0.        0.        0.
+ 0.        0.        0.        0.        3.504686  0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        3.5714815 0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        3.5234315 0.        0.        0.
+ 0.        0.        0.        3.5884821 0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        3.554598
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        3.5526512 0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        3.492653  0.        0.        0.        3.4685562
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        3.515775  0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        3.4837193 0.
+ 0.        0.        0.        0.        0.        3.5036314 0.
+ 0.        0.       ]
+
+   [Global Top 10 Reference Entries for L1-4291]
+   1. P01659 (KV3A7_MOUSE) - Score: 5.1551 - ...SRTBFTLTIB[P]VZABDVATYF... - Ig kappa chain V-III region TEPC 124
+   2. P01658 (KV3A6_MOUSE) - Score: 5.0132 - ...SRTBFTLTIB[P]VZABDVATYF... - Ig kappa chain V-III region MOPC 321
+   3. P19341 (B2MG_CANLF) - Score: 4.8856 - ...YSRH[P]AZBGK[P]BFLBCYVSGF... - Beta-2-microglobulin
+   4. P02080 (HBBN_AMMLE) - Score: 4.8295 - ...LARHFGKZFB[P]ZLZAZFZKVV... - Hemoglobin subunit beta-C(NA) (Beta-C(NA)-globin) (Hemoglobin beta C(NA) chain)
+   5. P00659 (RNAS1_DAMKO) - Score: 4.7620 - ...SRNLTQDRCK[P]VBTFVHZSLA... - Ribonuclease pancreatic (EC 4.6.1.18) (RNase 1) (RNase A)
+   6. P01972 (HBA_ODOVI) - Score: 4.6193 - ...TKAVGHLBBL[P]GTLSBLSBLH... - Hemoglobin subunit alpha-1/2 (Alpha-1/2-globin) (Hemoglobin alpha-1/2 chain)
+   7. P00658 (RNAS1_TRAOR) - Score: 4.5916 - ...BCRZTGSSKY[P]BCAYKTTZAZ... - Ribonuclease pancreatic (EC 4.6.1.18) (RNase 1) (RNase A)
+   8. P00066 (CYC_NIGDA) - Score: 4.5598 - ASFBZA[P]AGBSASGEKI... - Cytochrome c
+   9. P07849 (RNAS1_BOSTR) - Score: 4.5155 - ...BCRZTGSSKY[P]BCAYTTTZAK... - Ribonuclease pancreatic (EC 4.6.1.18) (RNase 1) (RNase A)
+   10. P29090 (BGL3_ASPWE) - Score: 4.4732 - ...ALAGLBMGSM[P]GBVBYBSGTS... - Beta-glucosidase A-3 (EC 3.2.1.21) (Beta-D-glucoside glucohydrolase) (Cellobiase) (Gentiobiase)
+
+--- Rank #15 (In Circuit JSON) ---
+Node: Layer 1, Latent 141
+Max Activation: 3.5277
+Peak Location: Trace Idx 293 (AA #293)
+Motif Context: EIT[H]LSEID[H]ENVIRVIGRASNGKKDYLLMEYLEEGSL[H]NYLYGDDKWEYTVEQAVRWALQCAKALAYL[H]SLDRPIV[H]RDIKPQNMLLYNQ[H]EDLKICDFGLATDMSNNKTDMQGTLRYMAPEAIK[H]LKYTAKCDVYSFGIMLWELMTRQLPYS[H]LENPNSQYAIMKAISSGEKLPMEAVRSDCPEGIKQLMECCMDINPEKRPSMKEIEKFLGEQYESGTDEDFIKPLDEDTVAVVTY[H]VDSSGSRIMRVDFWR[H]QLPSIRMTFPIVKREAERLGKTVVREMAKAAADGDREVRRAEKDTERETSRAA[H]NGE
+Trace Window : [0.        0.        0.        3.4019742 0.        0.        0.
+ 0.        0.        3.4072237 0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        3.3580086 0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        3.3820758
+ 0.        0.        0.        0.        0.        0.        0.
+ 3.3817775 0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 3.363956  0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 3.4176927 0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 3.4042585 0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        3.5276885 0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        3.340297  0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        3.3950882 0.        0.        0.       ]
+
+   [Global Top 10 Reference Entries for L1-141]
+   1. P00659 (RNAS1_DAMKO) - Score: 5.3624 - ...DRCKPVBTFV[H]ZSLABVZAVC... - Ribonuclease pancreatic (EC 4.6.1.18) (RNase 1) (RNase A)
+   2. P19341 (B2MG_CANLF) - Score: 5.0620 - ...BFLBCYVSGF[H]PXZIZIBLLK... - Beta-2-microglobulin
+   3. P00658 (RNAS1_TRAOR) - Score: 5.0080 - ...DRCKPVNTFV[H]ZSLABVZAVC... - Ribonuclease pancreatic (EC 4.6.1.18) (RNase 1) (RNase A)
+   4. P02080 (HBBN_AMMLE) - Score: 5.0039 - ...VLBSFSBGLK[H]LBBLKGAFAS... - Hemoglobin subunit beta-C(NA) (Beta-C(NA)-globin) (Hemoglobin beta C(NA) chain)
+   5. P07849 (RNAS1_BOSTR) - Score: 4.9317 - ...NRCKPVBTFV[H]ZSLABVQAVC... - Ribonuclease pancreatic (EC 4.6.1.18) (RNase 1) (RNase A)
+   6. P01972 (HBA_ODOVI) - Score: 4.9007 - ...LS[H]GSAZVKA[H]GZKVABALTK... - Hemoglobin subunit alpha-1/2 (Alpha-1/2-globin) (Hemoglobin alpha-1/2 chain)
+   7. P17734 (IBB_VIGUN) - Score: 4.7350 - SG[H][H]ZBSTBZASZS... - Bowman-Birk type seed trypsin and chymotrypsin inhibitor (BTCI)
+   8. P00066 (CYC_NIGDA) - Score: 4.7146 - ...KIFKTKCAZC[H]TVBZGAG[H]KZ... - Cytochrome c
+   9. P00075 (CYC_ULVIN) - Score: 4.6213 - ...KIFKAKCAZC[H]TVBAGAG[H]KQ... - Cytochrome c
+   10. P02092 (HBB_MICXA) - Score: 4.4051 - ...VYPWTZRFFZ[H]FGBLSSASAV... - Hemoglobin subunit beta (Beta-globin) (Hemoglobin beta chain)
+
+--- Rank #16 (In Circuit JSON) ---
+Node: Layer 2, Latent 3557
+Max Activation: 3.9993
+Peak Location: Trace Idx 6 (AA #6)
+Motif Context: MVKQV[D]FAEVKLSEKFLGAGSGGAVRKATFQNQEIAVKIF[D]FLEETIKKNAEREITHLSEI[D]HENVIRVIGRASNGKK[D]YLLMEYLEEGSLHNYLYG[D][D]KWEYTVEQAVRWALQCAKALAYLHSL[D]RPIVHR[D]IKPQNMLLYNQHE[D]LKIC[D]FGLAT[D]MSNNKT[D]MQGTLRYMAPEAIKHLKYTAKC[D]VYSFGIMLWELMTRQLPYSHLENPNSQYAIMKAISSGEKLPMEAVRS[D]CPEGIKQLMECCM[D]INPEKRPSMKEIEKFLGEQYESGT[D]E[D]FIKPL[D]E[D]TVAVVTYHV[D]SSGSRIMRV[D]FWRHQLPSIRMTFPIVKREAERLGKTVVREMAKAAA[D]G[D]REVRRAEK[D]TERETSRAAHNGERETRRAGQ[D]VGR
+Trace Window : [0.        0.        0.        0.        0.        3.99931   0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        3.64755   0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        3.5610933 0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        3.909873  0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        3.1478138
+ 3.168979  0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        3.4183865
+ 0.        0.        0.        0.        0.        0.        3.5854387
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        3.6015265
+ 0.        0.        0.        0.        3.649187  0.        0.
+ 0.        0.        0.        3.4985127 0.        0.        0.
+ 0.        0.        0.        3.7202365 0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        3.769957  0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        3.634618  0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        3.630475  0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        3.3786094 0.        3.5007696 0.        0.        0.
+ 0.        0.        3.3539157 0.        3.5013938 0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 3.468338  0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        3.857739  0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        3.6967044 0.
+ 3.7565007 0.        0.        0.        0.        0.        0.
+ 0.        0.        3.8475552 0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        3.903746  0.        0.        0.       ]
+
+   [Global Top 10 Reference Entries for L2-3557]
+   1. O74438 (MCP2_SCHPO) - Score: 4.7364 - MQSI[D]LRLPSTSANH... - Meiotic coiled-coil protein 2
+   2. Q9UTR8 (RED1_SCHPO) - Score: 4.7235 - ...KPYRSPTSAA[D]MKLPSVPVAA... - NURS complex subunit red1
+   3. Q700C2 (SPL16_ARATH) - Score: 4.7215 - ...MNGASSPSTM[D]LLAALSASLG... - Squamosa promoter-binding-like protein 16 (SPL1-related protein 3)
+   4. O06081 (MMPL3_MYCLE) - Score: 4.7110 - ...RATGGGISAQ[D]LLRREGRL - Probable trehalose monomycolate exporter MmpL3 (TMM exporter MmpL3) (MmpL3 transporter) (Mycobacterial membrane protein large 3)
+   5. P20134 (SFL1_YEAST) - Score: 4.7103 - ...STSSA[D]PKTE[D]KAAPALKKVK... - Flocculation suppression protein (Protein SFL1)
+   6. Q54DV3 (Y2016_DICDI) - Score: 4.6906 - ...ECKKK[D]SSKV[D]LKVKPSKVPL... - von Willebrand factor A domain-containing protein DDB_G0292016
+   7. A9XMT5 (CCLOP_ORYSJ) - Score: 4.6816 - ...NAAEKGMQAS[D]LLLAKAWFHS... - Protein CYCLOPS (OsCYCLOPS) (Protein IPD3 homolog) (OsIPD3)
+   8. Q8BYK6 (YTHD3_MOUSE) - Score: 4.6805 - MSATSV[D]QRPKGQGNKV... - YTH domain-containing family protein 3
+   9. Q01974 (ROR2_HUMAN) - Score: 4.6766 - ...TTAPSNTSMA[D]RAALLSEGA[D]... - Tyrosine-protein kinase transmembrane receptor ROR2 (EC 2.7.10.1) (Neurotrophic tyrosine kinase, receptor-related 2)
+   10. Q20471 (KIN20_CAEEL) - Score: 4.6748 - MATMSN[D]AAAAATWHNN... - Casein kinase I isoform delta (EC 2.7.11.1) (Protein kinase 20)
+
+--- Rank #17 (In Circuit JSON) ---
+Node: Layer 2, Latent 1239
+Max Activation: 3.9975
+Peak Location: Trace Idx 359 (AA #359)
+Motif Context: VKL[S]EKFLGAG[S]GGAVRKATFQNQEIAVKIFDFLEETIKKNAEREITHL[S]EIDHENVIRVIGRA[S]NGKKDYLLMEYLEEG[S]LHNYLYGDDKWEYTVEQAVRWALQCAKALAYLH[S]LDRPIVHRDIKPQNMLLYNQHEDLKICDFGLATDM[S]NNKTDMQGTLRYMAPEAIKHLKYTAKCDVY[S]FGIMLWELMTRQLPY[S]HLENPN[S]QYAIMKAI[S][S]GEKLPMEAVR[S]DCPEGIKQLMECCMDINPEKRP[S]MKEIEKFLGEQYE[S]GTDEDFIKPLDEDTVAVVTYHVD[S][S]G[S]RIMRVDFWRHQLP[S]IRMTFPIVKREAERLGKTVVREMAKAAADGDREVRRAEKDTERET[S]RAAHNGERETRRAGQDVGRETVRAVKKIGKKLRF
+Trace Window : [0.        0.        0.        3.2644708 0.        0.        0.
+ 0.        0.        0.        0.        3.0629654 0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 3.1417348 0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        2.9228992 0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        2.907695  0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        2.926283  0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        3.0418034 0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        2.9422216
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        3.0016031 0.        0.        0.        0.        0.
+ 0.        3.2715948 0.        0.        0.        0.        0.
+ 0.        0.        0.        3.1901147 3.2300954 0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        3.3778677 0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        3.471468  0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        3.4407523 0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        3.0710044
+ 2.971121  0.        3.1940665 0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        3.2413983 0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        3.9975414
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.       ]
+
+   [Global Top 10 Reference Entries for L2-1239]
+   1. B4QIS3 (UBP36_DROSI) - Score: 4.5703 - ...AGGGF[S]RRQP[S]AQQQQQT - Ubiquitin carboxyl-terminal hydrolase 36 (EC 3.4.19.12) (Deubiquitinating enzyme 36) (Protein scrawny) (Ubiquitin thioesterase 36) (Ubiquitin-specific-processing protease 36)
+   2. B0X6P7 (EIF3D_CULQU) - Score: 4.5477 - ...EEAPKTTTPT[S]AAAAVAQK - Eukaryotic translation initiation factor 3 subunit D (eIF3d) (Eukaryotic translation initiation factor 3 subunit 7)
+   3. Q9EQJ4 (ZN384_RAT) - Score: 4.5318 - ...QAQAQAQAQA[S]QA[S]QQQQQQQ... - Zinc finger protein 384 (Cas-associated zinc finger protein) (Nuclear matrix transcription factor 4) (Nuclear matrix protein 4)
+   4. Q8TDI7 (TMC2_HUMAN) - Score: 4.5134 - ...EGRRKR[D]ERA[S]FQERTAAPKR... - Transmembrane channel-like protein 2 (Transmembrane cochlear-expressed protein 2)
+   5. Q8TF68 (ZN384_HUMAN) - Score: 4.5029 - ...QAQAQAQAQA[S]QA[S]QQQQQQQ... - Zinc finger protein 384 (CAG repeat protein 1) (CAS-interacting zinc finger protein) (Nuclear matrix transcription factor 4) (Nuclear matrix protein 4) (Trinucleotide repeat-containing gene 1 protein)
+   6. Q5F267 (P5I13_MOUSE) - Score: 4.5013 - ...HGGCACPGQV[S]PAPRAAGPPR... - Tumor protein p53-inducible protein 13
+   7. Q9BGX9 (CK087_MACFA) - Score: 4.4954 - ...AQEEYERDHC[S]G[S]RGGGGLPR... - Uncharacterized protein C11orf87 homolog
+   8. Q6NUJ2 (CK087_HUMAN) - Score: 4.4933 - ...AQEEYERDHC[S]G[S]RGGGGLPR... - Uncharacterized protein C11orf87
+   9. Q80TS7 (DEND_MOUSE) - Score: 4.4931 - ...KRRKAGGARR[S]PLGQPRPEPR... - Dendrin
+   10. Q5RCL0 (CK087_PONAB) - Score: 4.4918 - ...AQEEYERDHC[S]G[S]RGGGGLPR... - Uncharacterized protein C11orf87 homolog
+
+--- Rank #18 (In Circuit JSON) ---
+Node: Layer 2, Latent 1818
+Max Activation: 3.6345
+Peak Location: Trace Idx 346 (AA #346)
+Motif Context: DFA[E]VKLS[E]KFLGAGSGGAVRKATFQNQ[E]IAVKIFDFL[E][E]TIKKNA[E]R[E]ITHLS[E]IDH[E]NVIRVIGRASNGKKDYLLM[E]YL[E][E]GSLHNYLYGDDKW[E]YTV[E]QAVRWALQCAKALAYLHSLDRPIVHRDIKPQNMLLYNQH[E]DLKICDFGLATDMSNNKTDMQGTLRYMAP[E]AIKHLKYTAKCDVYSFGIMLW[E]LMTRQLPYSHL[E]NPNSQYAIMKAISSG[E]KLPM[E]AVRSDCP[E]GIKQLM[E]CCMDINP[E]KRPSMK[E]I[E]KFLG[E]QY[E]SGTD[E]DFIKPLD[E]DTVAVVTYHVDSSGSRIMRVDFWRHQLPSIRMTFPIVKR[E]A[E]RLGKTVVR[E]MAKAAADGDR[E]VRRA[E]KDT[E]R[E]TSRAAHNG[E]R[E]TRRAGQDVGR[E]TVR
+Trace Window : [0.        0.        0.        3.0333328 0.        0.        0.
+ 0.        2.912024  0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 2.9619794 0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        2.4176626 2.6497512 0.        0.
+ 0.        0.        0.        0.        2.5755162 0.        2.8727472
+ 0.        0.        0.        0.        0.        2.5275493 0.
+ 0.        0.        2.675551  0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        2.313777  0.        0.        2.134352  2.2586055 0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        2.2668219 0.
+ 0.        0.        2.4842439 0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 2.7314935 0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        2.8380842 0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        2.771791  0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        2.9612324 0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        3.1822217 0.        0.        0.
+ 0.        3.122734  0.        0.        0.        0.        0.
+ 0.        0.        2.9626374 0.        0.        0.        0.
+ 0.        0.        2.7491255 0.        0.        0.        0.
+ 0.        0.        0.        2.9365826 0.        0.        0.
+ 0.        0.        0.        3.0424237 0.        3.0163665 0.
+ 0.        0.        0.        2.658883  0.        0.        2.4898045
+ 0.        0.        0.        0.        2.784215  0.        0.
+ 0.        0.        0.        0.        0.        2.778253  0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        3.081421  0.        3.4673297 0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 3.533669  0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        3.6345296 0.        0.
+ 0.        0.        3.299655  0.        0.        0.        3.2776728
+ 0.        3.5799367 0.        0.        0.        0.        0.
+ 0.        0.        0.        3.3387375 0.        3.6042533 0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        3.4166875 0.        0.        0.       ]
+
+   [Global Top 10 Reference Entries for L2-1818]
+   1. Q5TF21 (MTCL3_HUMAN) - Score: 4.7727 - ...AAASPAAAAT[E]ARLHP[E]GSSR... - Microtubule cross-linking factor 3
+   2. Q8R4A3 (DACT1_MOUSE) - Score: 4.7723 - ...VPKAAKAASQ[E]LTRCQAGLG[E]... - Dapper homolog 1 (Dapper antagonist of catenin 1) (Frodo homolog) (MDpr1) (Thymus-expressed novel gene 3 protein)
+   3. Q6NZL0 (MTCL3_MOUSE) - Score: 4.7488 - ...TSASAAAAAT[E]ARMHP[E]GCSR... - Microtubule cross-linking factor 3
+   4. Q7Z2K8 (GRIN1_HUMAN) - Score: 4.7049 - ...TGGKG[D]PLSS[E]KAGL[V]ASGKA... - G protein-regulated inducer of neurite outgrowth 1 (GRIN1)
+   5. Q3KQU3 (MA7D1_HUMAN) - Score: 4.6721 - M[E]SGPRA[E]LGAGAPPAVV... - MAP7 domain-containing protein 1 (Arginine/proline-rich coiled-coil domain-containing protein 1) (Proline/arginine-rich coiled-coil domain-containing protein 1)
+   6. A3LPY4 (IRS4_PICST) - Score: 4.6445 - ...PSSYKIPTSA[E]SAKIRSPTPL... - Increased rDNA silencing protein 4
+   7. Q9NYF0 (DACT1_HUMAN) - Score: 4.6430 - ...LPKTAKPASQ[E]HARCSAIGTG... - Dapper homolog 1 (hDPR1) (Dapper antagonist of catenin 1) (Hepatocellular carcinoma novel gene 3 protein)
+   8. Q9NYZ3 (GTSE1_HUMAN) - Score: 4.6359 - ...SPAVGKAKSS[E]FASIPANSSR... - G2 and S phase-expressed protein 1 (GTSE-1) (Protein B99 homolog)
+   9. A6NNJ1 (F90A9_HUMAN) - Score: 4.6070 - ...DPVLA[D]RSAA[E]MSGRGSVLAS... - Protein FAM90A9
+   10. Q7SB65 (IRS4_NEUCR) - Score: 4.6006 - ...VGSAGRTNRQ[E]LHGQATGGSS... - Increased rDNA silencing protein 4
+
+--- Rank #19 (In Circuit JSON) ---
+Node: Layer 2, Latent 436
+Max Activation: 1.8729
+Peak Location: Trace Idx 328 (AA #328)
+Motif Context: EVK[L]SEKF[L]GAGSGGAVRKATFQNQEIAVKIFDF[L]EETIKKNAEREITH[L]SEIDHENVIRVIGRASNGKKDY[L][L]MEY[L]EEGS[L]HNY[L]YGDDKWEYTVEQAVRWA[L]QCAKA[L]AY[L]HS[L]DRPIVHRDIKPQNM[L][L]YNQHED[L]KICDFG[L]ATDMSNNKTDMQGT[L]RYMAPEAIKH[L]KYTAKCDVYSFGIM[L]WE[L]MTRQ[L]PYSH[L]ENPNSQYAIMKAISSGEK[L]PMEAVRSDCPEGIKQ[L]MECCMDINPEKRPSMKEIEKF[L]GEQYESGTDEDFIKP[L]DEDTVAVVTYHVDSSGSRIMRVDFWRHQ[L]PSIRMTFPIVKREAER[L]GKTVVREMAKAAADGDREVRRAEKDTERETSRAAHNGERETRRAGQDVGRETVRAVKKIGKK[L]RF
+Trace Window : [0.        0.        0.        1.5643902 0.        0.        0.
+ 0.        1.4618912 0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        1.2748392
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 1.3505459 0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        1.1520226 1.13128   0.        0.        0.
+ 1.1569419 0.        0.        0.        0.        1.2953235 0.
+ 0.        0.        0.9737366 0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        1.0980297
+ 0.        0.        0.        0.        0.        1.0200195 0.
+ 0.        1.0634952 0.        0.        1.0815046 0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        1.1655778 1.1587775
+ 0.        0.        0.        0.        0.        0.        1.1592748
+ 0.        0.        0.        0.        0.        0.        1.162055
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 1.0266911 0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        1.1325629 0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        1.0895354 0.
+ 0.        0.9758442 0.        0.        0.        0.        1.1658053
+ 0.        0.        0.        0.        1.399913  0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        1.5629799 0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        1.4671642 0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        1.4239233 0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 1.5205055 0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        1.3837601 0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        1.8728827 0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        1.5480729 0.        0.       ]
+
+   [Global Top 10 Reference Entries for L2-436]
+   1. C4YHS3 (DEF1_CANAW) - Score: 2.7782 - ...GQYSKQQQQQ[L]QQQNTSQPTQ... - RNA polymerase II degradation factor 1
+   2. P48590 (FTZ_DROHY) - Score: 2.7520 - ...SYQQQQQQQE[L]NTSNQA[L]YH[L]... - Segmentation protein fushi tarazu
+   3. Q8J1U9 (PACC_FUSFU) - Score: 2.7419 - ...SPPAPEQKPQ[L]QQQQQQQGSS... - pH-response transcription factor pacC/RIM101
+   4. Q873X0 (PACC_GIBMO) - Score: 2.7416 - ...SPSAPEQKPQ[L]QQQQQQQQQG... - pH-response transcription factor pacC/RIM101
+   5. Q9LYU3 (EF113_ARATH) - Score: 2.7384 - ...SSSQQTQQQQ[L]QQQQQQREEE... - Ethylene-responsive transcription factor ERF113 (Protein RELATED TO AP2 6L)
+   6. Q68Y48 (TLP9_ORYSJ) - Score: 2.7230 - MA[L]WRCSSSW[L]SSVSRSSGGV... - Tubby-like F-box protein 9 (OsTLP9) (Tubby-like F-box protein 10) (OsTLP10)
+   7. Q870A3 (PACC_FUSO4) - Score: 2.7196 - ...SPPAPEQKPQ[L]QQQQQQGSSS... - pH-response transcription factor pacC/RIM101
+   8. Q9VML9 (TRISR_DROME) - Score: 2.7171 - ...HHHHHHQHHQ[L]QSAASSAGVV... - Trissin receptor
+   9. Q9Y115 (UN93L_DROME) - Score: 2.7107 - ...EAAAAAAAAA[L]AAAEAGADGV... - UNC93-like protein
+   10. Q7M3M8 (CAS_DROME) - Score: 2.7093 - ...QQQQQQQPTS[L]SQSQSSSSVC... - Transcription factor castor (Protein ming)
+
+--- Rank #20 (Backfill) ---
+Node: Layer 2, Latent 189
+Max Activation: 1.7388
+Peak Location: Trace Idx 393 (AA #393)
+Motif Context: GKKLR[F]
+Trace Window : [0.        0.        0.        0.        0.        1.7388461]
+
+   [Global Top 10 Reference Entries for L2-189]
+   1. P0C8E0 (CKP1_CONPI) - Score: 5.6464 - GEDEYAEGIR... - Conantokin-Pr1 (Con-Pr1)
+   2. P0C8E1 (CKP2_CONPI) - Score: 5.3743 - DEPEYAEAIR... - Conantokin-Pr2 (Con-Pr2)
+   3. P24925 (ITRA_ALBJU) - Score: 5.3610 - KELLDADGDI... - Trypsin inhibitor A chain
+   4. P19663 (TYPH_LACRH) - Score: 5.2870 - MVKIGINEFG... - Thymidine phosphorylase (EC 2.4.2.4) (TdRPase)
+   5. P22949 (MCRB_METTE) - Score: 5.2731 - SDTVDIYDAG... - Methyl-coenzyme M reductase subunit beta (EC 2.8.4.1) (Coenzyme-B sulfoethylthiotransferase beta)
+   6. P14539 (FIBB_TAPTE) - Score: 5.2389 - LSDYDEEEDE... - Fibrinogen beta chain [Cleaved into: Fibrinopeptide B]
+   7. P85984 (PROF_BETVU) - Score: 5.2201 - YMVIQGEPGA... - Profilin (Pollen allergen Beta v 2) (allergen Beta v 2)
+   8. P37155 (LYSC_FELCA) - Score: 5.2030 - ...RKLRAEGMDG[F] - Lysozyme C (EC 3.2.1.17) (1,4-beta-N-acetylmuramidase C)
+   9. Q09124 (SCRK_LACLL) - Score: 5.1931 - SVYYGSIEAG... - Fructokinase-1 (EC 2.7.1.4) (Fructokinase I)
+   10. P32441 (HMD_METWO) - Score: 5.1639 - MKLAILGAGC... - 5,10-methenyltetrahydromethanopterin hydrogenase (EC 1.12.98.2) (H(2)-dependent methylene-H(4)MPT dehydrogenase) (H(2)-forming N(5),N(10)-methylenetetrahydromethanopterin dehydrogenase) (N(5),N(10)-methenyltetrahydromethanopterin hydrogenase)
+
+--- Rank #21 (Backfill) ---
+Node: Layer 3, Latent 1764
+Max Activation: 6.9907
+Peak Location: Trace Idx 132 (AA #132)
+Motif Context: RPIVH[R]DIKPQ
+Trace Window : [0.       0.       0.       0.       0.       6.990683 0.       0.
+ 0.       0.       0.      ]
+
+   [Global Top 10 Reference Entries for L3-1764]
+   1. O59853 (HOG2_ZYGRO) - Score: 8.0756 - ...KYVHSAGVIH[R]DLKPSNILIN... - Mitogen-activated protein kinase HOG2 (MAP kinase HOG2) (EC 2.7.11.24) (ZrHOG2)
+   2. Q9P419 (HOG1_EMENI) - Score: 8.0755 - ...KYVHSAGVVH[R]DLKPSNILIN... - Mitogen-activated protein kinase hog1 (MAP kinase hog1) (EC 2.7.11.24)
+   3. Q1DUU8 (HOG1_COCIM) - Score: 8.0554 - ...KYVHSAGVVH[R]DLKPSNILIN... - Mitogen-activated protein kinase HOG1 (MAP kinase HOG1) (EC 2.7.11.24)
+   4. A1D2C9 (HOG1_NEOFI) - Score: 8.0447 - ...KYVHSAGVVH[R]DLKPSNILIN... - Mitogen-activated protein kinase hog1 (MAP kinase hog1) (EC 2.7.11.24)
+   5. Q750A9 (HOG1_EREGS) - Score: 8.0434 - ...KYVHSAGVIH[R]DLKPSNILIN... - Mitogen-activated protein kinase HOG1 (MAP kinase HOG1) (EC 2.7.11.24)
+   6. A2QRF6 (HOG1_ASPNC) - Score: 8.0420 - ...KYVHSAGVVH[R]DLKPSNILIN... - Mitogen-activated protein kinase hog1 (MAP kinase hog1) (EC 2.7.11.24)
+   7. Q4WSF6 (HOG1_ASPFU) - Score: 8.0369 - ...KYVHSAGVVH[R]DLKPSNILIN... - Mitogen-activated protein kinase sakA (MAP kinase hog1) (EC 2.7.11.24)
+   8. B0XR80 (SAKA_ASPFC) - Score: 8.0369 - ...KYVHSAGVVH[R]DLKPSNILIN... - Mitogen-activated protein kinase sakA (MAPK sakA) (EC 2.7.11.24)
+   9. Q1L5Z8 (HOG1_TORDE) - Score: 8.0343 - ...KYVHSAGVIH[R]DLKPSNILIN... - Mitogen-activated protein kinase HOG1 (MAP kinase HOG1) (EC 2.7.11.24)
+   10. A1CPG7 (HOG1_ASPCL) - Score: 8.0249 - ...KYVHSAGVVH[R]DLKPSNILIN... - Mitogen-activated protein kinase hog1 (MAP kinase hog1) (EC 2.7.11.24)
+
+--- Rank #22 (Backfill) ---
+Node: Layer 3, Latent 1756
+Max Activation: 6.7243
+Peak Location: Trace Idx 133 (AA #133)
+Motif Context: LDR[P]IV[H][R][D][I][K]PQNMLLYNQHE[D]LKI
+Trace Window : [0.         0.         0.         0.71034276 0.         0.
+ 0.7606114  0.82643026 6.724306   1.2383499  0.36381653 0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.29487562 0.
+ 0.         0.        ]
+
+   [Global Top 10 Reference Entries for L3-1756]
+   1. Q03306 (PKH3_YEAST) - Score: 8.9993 - ...[F]IHS[H][G][I]I[H][R][D][L][K]PEN[V]LLDR... - Serine/threonine-protein kinase PKH3 (EC 2.7.11.1) (Pkb-activating kinase homolog 3)
+   2. Q54QI2 (Y9877_DICDI) - Score: 8.9505 - ...YLHE[K]GVI[H][R][D][I]KSDNILITK... - Serine/threonine-protein kinase DDB_G0283821 (EC 2.7.11.1)
+   3. Q8C015 (PAK5_MOUSE) - Score: 8.8920 - ...YLH[N][Q][G][V]I[H][R][D][I][K]SDSILLTS... - Serine/threonine-protein kinase PAK 5 (EC 2.7.11.1) (p21-activated kinase 5) (PAK-5) (p21-activated kinase 7) (PAK-7)
+   4. D4A280 (PAK5_RAT) - Score: 8.8900 - ...YLH[N][Q][G][V]I[H][R][D][I][K]SDSILLTS... - Serine/threonine-protein kinase PAK 5 (EC 2.7.11.1) (p21-activated kinase 5) (PAK-5) (p21-activated kinase 7) (PAK-7)
+   5. Q4WJJ0 (MKK2_ASPFU) - Score: 8.8872 - ...[Y]LHSR[K]II[H][R][D][I]KPSNILLCR... - Mitogen-activated protein kinase kinae mkk2 (MAPKK mkk2) (EC 2.7.11.24) (MEK mkk2)
+   6. B0XPE4 (MKK2_ASPFC) - Score: 8.8872 - ...[Y]LHSR[K]II[H][R][D][I]KPSNILLCR... - Mitogen-activated protein kinase kinae mkk2 (MAPKK mkk2) (EC 2.7.11.24)
+   7. P50527 (STE20_SCHPO) - Score: 8.8665 - ...HLHE[N][G][I]V[H][R][D][I]KS[D]NILLSL... - Serine/threonine-protein kinase shk1/pak1 (EC 2.7.11.1)
+   8. Q9P286 (PAK5_HUMAN) - Score: 8.8485 - ...YLHN[Q][G][V]I[H][R][D][I][K]SDSILLTS... - Serine/threonine-protein kinase PAK 5 (EC 2.7.11.1) (p21-activated kinase 5) (PAK-5) (p21-activated kinase 7) (PAK-7)
+   9. Q5APR8 (CLA4_CANAL) - Score: 8.8481 - ...HLHK[K][H]II[H][R][D][I]KSDNVLLDA... - Serine/threonine-protein kinase CLA4 (EC 2.7.11.1)
+   10. O14427 (CLA4_CANAX) - Score: 8.8368 - ...HLHK[K][H]II[H][R][D][I]KSDNVLLDA... - Serine/threonine-protein kinase CLA4 (EC 2.7.11.1)
+
+--- Rank #23 (Backfill) ---
+Node: Layer 3, Latent 1283
+Max Activation: 6.6482
+Peak Location: Trace Idx 131 (AA #131)
+Motif Context: DRPIV[H]RDIKP
+Trace Window : [0.       0.       0.       0.       0.       6.648204 0.       0.
+ 0.       0.       0.      ]
+
+   [Global Top 10 Reference Entries for L3-1283]
+   1. O80397 (M2K4_ARATH) - Score: 8.3836 - ...LAYLHSRHIV[H]RDIKPSNLLI... - Mitogen-activated protein kinase kinase 4 (AtMKK4) (MAP kinase kinase 4) (EC 2.7.12.2)
+   2. Q4WJJ0 (MKK2_ASPFU) - Score: 8.2802 - ...LTYLHSRKII[H]RDIKPSNILL... - Mitogen-activated protein kinase kinae mkk2 (MAPKK mkk2) (EC 2.7.11.24) (MEK mkk2)
+   3. B0XPE4 (MKK2_ASPFC) - Score: 8.2802 - ...LTYLHSRKII[H]RDIKPSNILL... - Mitogen-activated protein kinase kinae mkk2 (MAPKK mkk2) (EC 2.7.11.24)
+   4. Q7RZD3 (STE20_NEUCR) - Score: 8.2054 - ...LQHLHSKGVI[H]RDIKSDNILL... - Serine/threonine-protein kinase ste20 (EC 2.7.11.1) (Serine/threonine protein kinase 4)
+   5. Q5BBL3 (STE20_EMENI) - Score: 8.1780 - ...LQHLHSKGVI[H]RDIKSDNILL... - Serine/threonine-protein kinase ste20 (EC 2.7.11.1)
+   6. Q7Z8E9 (STE20_PYRO7) - Score: 8.1283 - ...[L]QHLHSKGVI[H]RDIKSDNILL... - Serine/threonine-protein kinase MST20 (EC 2.7.11.1)
+   7. Q9P286 (PAK5_HUMAN) - Score: 8.0808 - ...LSYLHNQGVI[H][R]DIKSDSILL... - Serine/threonine-protein kinase PAK 5 (EC 2.7.11.1) (p21-activated kinase 5) (PAK-5) (p21-activated kinase 7) (PAK-7)
+   8. Q8RXG3 (M2K5_ARATH) - Score: 8.0475 - ...LAYLHRRHIV[H]RDIKPSNLLI... - Mitogen-activated protein kinase kinase 5 (AtMAP2Kalpha) (AtMEK5) (AtMKK5) (MAP kinase kinase 5) (EC 2.7.12.2)
+   9. Q8C015 (PAK5_MOUSE) - Score: 8.0223 - ...LSYLHNQGVI[H][R]DIKSDSILL... - Serine/threonine-protein kinase PAK 5 (EC 2.7.11.1) (p21-activated kinase 5) (PAK-5) (p21-activated kinase 7) (PAK-7)
+   10. Q4WHP3 (STE20_ASPFU) - Score: 8.0200 - ...LQHLHSKGVI[H]RDIKSDNILL... - Serine/threonine-protein kinase ste20 (EC 2.7.11.1)
+
+--- Rank #24 (Backfill) ---
+Node: Layer 3, Latent 983
+Max Activation: 6.0558
+Peak Location: Trace Idx 129 (AA #129)
+Motif Context: SLDRP[I]VHRDI
+Trace Window : [0.       0.       0.       0.       0.       6.055781 0.       0.
+ 0.       0.       0.      ]
+
+   [Global Top 10 Reference Entries for L3-983]
+   1. O80397 (M2K4_ARATH) - Score: 8.0056 - ...SGLAYLHSRH[I]VHRDIKPSNL... - Mitogen-activated protein kinase kinase 4 (AtMKK4) (MAP kinase kinase 4) (EC 2.7.12.2)
+   2. O61661 (CHK1_DROME) - Score: 7.7727 - ...SGLNYLHQRG[I]AHRDLKPENL... - Serine/threonine-protein kinase grp (EC 2.7.11.1) (Chk1 homolog) (Protein grapes)
+   3. Q6NU21 (TAO1A_XENLA) - Score: 7.7708 - ...QGLAYLHSHN[L]IHRDIKAGNI... - Serine/threonine-protein kinase TAO1-A (EC 2.7.11.1) (Thousand and one amino acid protein 1-A)
+   4. Q54W86 (MYLKF_DICDI) - Score: 7.7672 - ...QAVGFLHSNK[I]VHRDLKPEN[I]... - Probable myosin light chain kinase DDB_G0279831 (EC 2.7.11.18)
+   5. Q4WJJ0 (MKK2_ASPFU) - Score: 7.7416 - ...NGLTYLHSRK[I]IHRDIKPSNI... - Mitogen-activated protein kinase kinae mkk2 (MAPKK mkk2) (EC 2.7.11.24) (MEK mkk2)
+   6. B0XPE4 (MKK2_ASPFC) - Score: 7.7416 - ...NGLTYLHSRK[I]IHRDIKPSNI... - Mitogen-activated protein kinase kinae mkk2 (MAPKK mkk2) (EC 2.7.11.24)
+   7. Q9XUJ7 (DKF1_CAEEL) - Score: 7.7292 - ...CALKYLHDQG[I]AHCDLKPEN[V]... - Serine/threonine-protein kinase dkf-1 (EC 2.7.11.13)
+   8. Q7ZYJ0 (TAO1B_XENLA) - Score: 7.7208 - ...QGLAYLHSHN[L]IHRDIKAGNI... - Serine/threonine-protein kinase TAO1-B (EC 2.7.11.1) (Thousand and one amino acid protein 1-B)
+   9. Q6DD27 (TAOK3_XENLA) - Score: 7.7205 - ...QGLAYLHSHN[M]IHRDIKAGNI... - Serine/threonine-protein kinase TAO3 (EC 2.7.11.1) (Thousand and one amino acid protein 3)
+   10. Q8RXG3 (M2K5_ARATH) - Score: 7.6306 - ...SGLAYLHRRH[I]VHRDIKPSNL... - Mitogen-activated protein kinase kinase 5 (AtMAP2Kalpha) (AtMEK5) (AtMKK5) (MAP kinase kinase 5) (EC 2.7.12.2)
+
+--- Rank #25 (Backfill) ---
+Node: Layer 3, Latent 2943
+Max Activation: 5.8614
+Peak Location: Trace Idx 130 (AA #130)
+Motif Context: LDRPI[V]HRDIK
+Trace Window : [0.      0.      0.      0.      0.      5.86144 0.      0.      0.
+ 0.      0.     ]
+
+   [Global Top 10 Reference Entries for L3-2943]
+   1. O80397 (M2K4_ARATH) - Score: 7.6811 - ...GLAYLHSRHI[V]HRDIKPSNLL... - Mitogen-activated protein kinase kinase 4 (AtMKK4) (MAP kinase kinase 4) (EC 2.7.12.2)
+   2. Q4WJJ0 (MKK2_ASPFU) - Score: 7.6681 - ...GLTYLHSRKI[I]HRDIKPSNIL... - Mitogen-activated protein kinase kinae mkk2 (MAPKK mkk2) (EC 2.7.11.24) (MEK mkk2)
+   3. B0XPE4 (MKK2_ASPFC) - Score: 7.6681 - ...GLTYLHSRKI[I]HRDIKPSNIL... - Mitogen-activated protein kinase kinae mkk2 (MAPKK mkk2) (EC 2.7.11.24)
+   4. O59853 (HOG2_ZYGRO) - Score: 7.5715 - ...GLKYVHSAGV[I]HRDLKPSNIL... - Mitogen-activated protein kinase HOG2 (MAP kinase HOG2) (EC 2.7.11.24) (ZrHOG2)
+   5. Q1L5Z8 (HOG1_TORDE) - Score: 7.5288 - ...GLKYVHSAGV[I]HRDLKPSNIL... - Mitogen-activated protein kinase HOG1 (MAP kinase HOG1) (EC 2.7.11.24)
+   6. P32485 (HOG1_YEAST) - Score: 7.5281 - ...GLKYVHSAGV[I]HRDLKPSNIL... - Mitogen-activated protein kinase HOG1 (MAP kinase HOG1) (EC 2.7.11.24) (High osmolarity glycerol response protein 1)
+   7. Q750A9 (HOG1_EREGS) - Score: 7.5273 - ...GLKYVHSAGV[I]HRDLKPSNIL... - Mitogen-activated protein kinase HOG1 (MAP kinase HOG1) (EC 2.7.11.24)
+   8. Q6CJA8 (HOG1_KLULA) - Score: 7.4721 - ...GLKYVHSAGV[I]HRDLKPSNIL... - Mitogen-activated protein kinase HOG1 (MAP kinase HOG1) (EC 2.7.11.24)
+   9. O93982 (HOG1_ZYGRC) - Score: 7.4426 - ...GLKYVHSAGV[I]HRDLKPSNIL... - Mitogen-activated protein kinase HOG1 (MAP kinase HOG1) (EC 2.7.11.24)
+   10. Q8RXG3 (M2K5_ARATH) - Score: 7.4114 - ...GLAYLHRRHI[V]HRDIKPSNLL... - Mitogen-activated protein kinase kinase 5 (AtMAP2Kalpha) (AtMEK5) (AtMKK5) (MAP kinase kinase 5) (EC 2.7.12.2)
+
+--- Rank #26 (Backfill) ---
+Node: Layer 4, Latent 1530
+Max Activation: 9.7799
+Peak Location: Trace Idx 133 (AA #133)
+Motif Context: PIVHR[D]IKPQN
+Trace Window : [0.       0.       0.       0.       0.       9.779924 0.       0.
+ 0.       0.       0.      ]
+
+   [Global Top 10 Reference Entries for L4-1530]
+   1. Q9XA16 (PKNX_STRCO) - Score: 11.5771 - ...YSHRAGIVHR[D]IKPANVMLTR... - Probable serine/threonine-protein kinase SCO3848 (EC 2.7.11.1)
+   2. Q8C0X8 (SMKX_MOUSE) - Score: 11.5049 - ...YCHEKGIVHR[D]LKPENILLDH... - Sperm motility kinase X (EC 2.7.11.1)
+   3. O34507 (PRKC_BACSU) - Score: 11.4536 - ...HAHQNQIVHR[D]IKPHNILIDH... - Serine/threonine-protein kinase PrkC (Ser/Thr-protein kinase PrkC) (EC 2.7.11.1)
+   4. A1A5Q6 (SMK_RAT) - Score: 11.3662 - ...YCHQRGIIHR[D]IKPENILLDH... - Sperm motility kinase (EC 2.7.11.1)
+   5. P54739 (PKAA_STRCO) - Score: 11.2438 - ...ASHADGVVHR[D]LKPANVLLKQ... - Serine/threonine-protein kinase PkaA (EC 2.7.11.1)
+   6. Q8G4G1 (PKNA2_BIFLO) - Score: 11.1985 - ...SAHRAGVVHR[D]IKPENILIND... - Probable serine/threonine-protein kinase pknA2 (EC 2.7.11.1)
+   7. O01775 (NEKL2_CAEEL) - Score: 11.1519 - ...HMHQKNIVHR[D]LKPQNILMNR... - Serine/threonine-protein kinase nekl-2 (EC 2.7.11.1) (Never in mitosis A kinase-like 2) (NimA-kinase-like 2)
+   8. A0QNG1 (PKNB_MYCS2) - Score: 11.1332 - ...FSHQHGIIHR[D]VKPANIMISK... - Serine/threonine-protein kinase PknB (EC 2.7.11.1)
+   9. Q81WH6 (PRKC_BACAN) - Score: 11.1224 - ...HAHHFEIVHR[D]IKPHNILIRA... - Serine/threonine-protein kinase PrkC (Ser/Thr-protein kinase PrkC) (EC 2.7.11.1)
+   10. Q97IC2 (PKN2_CLOAB) - Score: 11.1028 - ...FAHKNGIVHR[D]IKPHNIMVTD... - Probable serine/threonine-protein kinase CA_C1728 (EC 2.7.11.1)
+
+--- Rank #27 (Backfill) ---
+Node: Layer 4, Latent 1449
+Max Activation: 7.6252
+Peak Location: Trace Idx 193 (AA #193)
+Motif Context: DVYSF[G][I][M]L[W][E]L[M]TRQLPYSHLENPNSQ[Y]AIM
+Trace Window : [0.         0.         0.         0.         0.         7.6252103
+ 0.94738334 1.3100832  0.         0.3228558  0.47611728 0.
+ 0.76430434 0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.49882194 0.
+ 0.         0.        ]
+
+   [Global Top 10 Reference Entries for L4-1449]
+   1. Q9SFT7 (PBL26_ARATH) - Score: 8.5360 - ...[L]TTKSDV[Y]SF[G][V][V]L[L][E][L][I]TGR... - Probable serine/threonine-protein kinase PBL26 (EC 2.7.11.1) (PBS1-like protein 26)
+   2. Q9LRY1 (PBL25_ARATH) - Score: 8.4961 - ...[L]TNKSDV[Y]S[F][G][V][V][L][L][E][L][I]SGR... - Probable serine/threonine-protein kinase PBL25 (EC 2.7.11.1) (PBS1-like protein 25)
+   3. Q1PE89 (PBL24_ARATH) - Score: 8.4686 - ...[L]TVKSD[V][Y]SF[G][V][V][L][L][E][L][I]TGK... - Probable serine/threonine-protein kinase PBL24 (EC 2.7.11.1) (PBS1-like protein 24)
+   4. Q9FPR3 (EDR1_ARATH) - Score: 8.4622 - ...SNEKC[D][V][Y]S[F][G][V][I]L[W][E][L][A]T[L]R... - Serine/threonine-protein kinase EDR1 (EC 2.7.11.1) (MAPKK kinase EDR1) (Protein ENHANCED DISEASE RESISTANCE 1) (AtEDR1) (Serine/threonine/tyrosine-protein kinase 10)
+   5. F4JTP5 (STY46_ARATH) - Score: 8.4584 - ...YDHKA[D][V]FS[Y][G][I][V]L[W][E][L][L]T[G]K... - Serine/threonine-protein kinase STY46 (EC 2.7.11.1) (Serine/threonine/tyrosine-protein kinase 46)
+   6. O49339 (PTI12_ARATH) - Score: 8.4441 - ...LTQKSDV[Y]SF[G][V][V][L][L][E][L][L]TGR... - PTI1-like tyrosine-protein kinase 2 (PTI1-2) (EC 2.7.10.2)
+   7. Q54U31 (SHKD_DICDI) - Score: 8.4209 - ...YNEKADVYSF[G][I][I]L[W][E]I[L]TKE... - Dual specificity protein kinase shkD (EC 2.7.11.1) (SH2 domain-containing protein 4) (SH2 domain-containing protein D)
+   8. Q9ZQ31 (STY13_ARATH) - Score: 8.4170 - ...YNQKVDVYSF[G][I][V]L[W][E][L][I]T[G]L... - Serine/threonine-protein kinase STY13 (EC 2.7.11.1) (AtSTYPK) (Serine/threonine/tyrosine-protein kinase 13)
+   9. Q8H1G6 (PTI11_ARATH) - Score: 8.4072 - ...LTQKSDV[Y]SF[G][V][V][L][L][E][L][L]TGR... - PTI1-like tyrosine-protein kinase 1 (PTI1-1) (EC 2.7.10.2)
+   10. Q3EDL4 (Y1154_ARATH) - Score: 8.4066 - ...LNEKS[D][I][Y]S[F][G][I][L][I][M][E][I][I]TGR... - Probable serine/threonine-protein kinase At1g01540 (EC 2.7.11.1)
+
+--- Rank #28 (Backfill) ---
+Node: Layer 4, Latent 919
+Max Activation: 7.3957
+Peak Location: Trace Idx 193 (AA #193)
+Motif Context: DVYSF[G]IMLWE
+Trace Window : [0.       0.       0.       0.       0.       7.395744 0.       0.
+ 0.       0.       0.      ]
+
+   [Global Top 10 Reference Entries for L4-919]
+   1. Q1PE89 (PBL24_ARATH) - Score: 8.9071 - ...LTVKSDVYSF[G]VVLLELITGK... - Probable serine/threonine-protein kinase PBL24 (EC 2.7.11.1) (PBS1-like protein 24)
+   2. P93749 (Y2197_ARATH) - Score: 8.9026 - ...ITQKSDVYSF[G]VVLLELLTGR... - Probable protein kinase At2g41970 (EC 2.7.11.-)
+   3. Q9SFT7 (PBL26_ARATH) - Score: 8.7926 - ...LTTKSDVYSF[G]VVLLELITGR... - Probable serine/threonine-protein kinase PBL26 (EC 2.7.11.1) (PBS1-like protein 26)
+   4. Q9M8T0 (Y3288_ARATH) - Score: 8.6052 - ...ISQKADVYSF[G]VLILELLTGK... - Probable inactive receptor kinase At3g02880
+   5. O49339 (PTI12_ARATH) - Score: 8.5517 - ...LTQKSDVYSF[G]VVLLELLTGR... - PTI1-like tyrosine-protein kinase 2 (PTI1-2) (EC 2.7.10.2)
+   6. Q9LVI6 (RLK90_ARATH) - Score: 8.5246 - ...VSQKADVYSF[G]VVLLELLTGK... - Probable inactive receptor kinase RLK902 (Receptor-like kinase 902)
+   7. Q9C823 (Y1523_ARATH) - Score: 8.4787 - ...LTTKSDVYSF[G]VLLLEIVSGR... - C-type lectin receptor-like tyrosine-protein kinase At1g52310 (EC 2.7.10.1)
+   8. Q8H1G6 (PTI11_ARATH) - Score: 8.4765 - ...LTQKSDVYSF[G]VVLLELLTGR... - PTI1-like tyrosine-protein kinase 1 (PTI1-1) (EC 2.7.10.2)
+   9. Q6I5Q6 (RK185_ORYSJ) - Score: 8.4548 - ...LTVKSDVYSF[G]VVFLELITGR... - Receptor-like cytoplasmic kinase 185 (OsRLCK185) (EC 2.7.11.1)
+   10. Q9LP77 (Y1848_ARATH) - Score: 8.4456 - ...VSQKGDVYSF[G]VVLLELITGK... - Probable inactive receptor kinase At1g48480
+
+--- Rank #29 (In Circuit JSON) ---
+Node: Layer 4, Latent 4350
+Max Activation: 7.2793
+Peak Location: Trace Idx 122 (AA #122)
+Motif Context: VRW[A]LQCAK[A][L][A]Y[L][H][S][L][D]R[P][I]VH[R]DIK
+Trace Window : [0.         0.         0.         0.25914386 0.         0.
+ 0.         0.         0.         1.2753453  0.5851246  1.1826403
+ 0.         7.2792773  0.42936286 3.3459954  0.8706374  0.9987606
+ 0.         0.8514073  1.3695508  0.         0.         0.67990935
+ 0.         0.         0.        ]
+
+   [Global Top 10 Reference Entries for L4-4350]
+   1. Q65XV8 (RK176_ORYSJ) - Score: 8.9066 - ...A[L][G]A[A]K[G][L][A][F][L][H][S][D][K]VK[V][I]YR... - Receptor-like cytoplasmic kinase 176 (OsRLCK176) (EC 2.7.11.1)
+   2. C0LGS3 (Y4372_ARATH) - Score: 8.5319 - ...AKGIAR[G]L[A][Y][L]H[E][K][K]H[V]HGN[L]... - Probable LRR receptor-like serine/threonine-protein kinase At4g37250 (EC 2.7.11.1)
+   3. Q54VC0 (Y9865_DICDI) - Score: 8.2511 - ...AKDI[A]E[G]M[E][Y][L]HSK[Q]I[M]HRD[L]... - Probable serine/threonine-protein kinase DDB_G0280461 (EC 2.7.11.1)
+   4. Q0V7T5 (Y1864_ARATH) - Score: 8.2430 - ...AVDI[A]R[G][L][E][Y][L][H][E][H][C]H[P]PVV[H]... - Probable receptor-like protein kinase At1g80640 (EC 2.7.11.1)
+   5. Q9LFP7 (PBL34_ARATH) - Score: 8.2385 - ...ALGA[A]K[G][L][S][F][L][H][E][E][A]LKP[V]I[Y]... - Serine/threonine-protein kinase PBL34 (EC 2.7.11.1) (PBS1-like protein 34) (Receptor-like cytoplasmic kinase PBL34)
+   6. P43293 (PBL11_ARATH) - Score: 8.2280 - ...ALGA[A]R[G][L][A][F][L][H][N][A][Q]PQV[I][Y][R]... - Probable serine/threonine-protein kinase PBL11 (EC 2.7.11.1) (PBS1-like protein 11)
+   7. O43353 (RIPK2_HUMAN) - Score: 8.2160 - ...LHEIAL[G]V[N][Y][L][H][N][M][T]P[P][L][L]HH... - Receptor-interacting serine/threonine-protein kinase 2 (EC 2.7.11.1) (CARD-containing interleukin-1 beta-converting enzyme-associated kinase) (CARD-containing IL-1 beta ICE-kinase) (RIP-like-interacting CLARP kinase) (Receptor-interacting protein 2) (RIP-2) (Tyrosine-protein kinase RIPK2) (EC 2.7.10.2)
+   8. Q9LFV3 (CRLK2_ARATH) - Score: 8.1845 - ...ALDI[S]H[G]I[E][Y][L][H][E][G]AVPPVIH... - Calcium/calmodulin-regulated receptor-like kinase 2 (AtCRLK2) (EC 2.7.11.1)
+   9. Q9SRH7 (PBL35_ARATH) - Score: 8.1151 - ...ALGA[A]K[G][L][S][F][L][H][E][E][A]LKP[V]I[Y]... - Serine/threonine-protein kinase PBL35 (EC 2.7.11.1) (PBS1-like protein 35) (Receptor-like cytoplasmic kinase PBL35)
+   10. P58801 (RIPK2_MOUSE) - Score: 8.1132 - ...LHEIAL[G]V[N][Y][L][H][N][M]NPP[L][L][H]H... - Receptor-interacting serine/threonine-protein kinase 2 (EC 2.7.11.1) (Receptor-interacting protein 2) (Tyrosine-protein kinase RIPK2) (EC 2.7.10.2)
+
+--- Rank #30 (Backfill) ---
+Node: Layer 4, Latent 966
+Max Activation: 5.8935
+Peak Location: Trace Idx 137 (AA #137)
+Motif Context: RDIKP[Q]NMLLY
+Trace Window : [0.        0.        0.        0.        0.        5.8935237 0.
+ 0.        0.        0.        0.       ]
+
+   [Global Top 10 Reference Entries for L4-966]
+   1. Q8W490 (PEPK2_ARATH) - Score: 8.1629 - ...MGVVHRDIKP[E]NILLTAAGKI... - Serine/threonine-protein kinase PEPKR2 (EC 2.7.11.-) (Protein PHOSPHOENOLPYRUVATE CARBOXYLASE-RELATED KINASE 2)
+   2. Q6BVA0 (AURK_DEBHA) - Score: 8.0784 - ...[K]HIIHRDIKP[E]NILLSTDNCI... - Aurora kinase (EC 2.7.11.1) (Spindle assembly checkpoint kinase)
+   3. Q8C0X8 (SMKX_MOUSE) - Score: 8.0079 - ...KGIVHRDLKP[E]NILLDHRGNV... - Sperm motility kinase X (EC 2.7.11.1)
+   4. P48609 (CDK5_DROME) - Score: 8.0038 - ...HNVLHRDLK[P][Q]NLLINKNGEL... - Cyclin-dependent kinase 5 homolog (EC 2.7.11.22) (Cell division protein kinase 5)
+   5. G5ECH7 (CDK5_CAEEL) - Score: 7.9348 - ...HHVLHRDLK[P][Q]NLLINTNGTL... - Cyclin-dependent-like kinase 5 (EC 2.7.11.1) (Cell division protein kinase 5)
+   6. Q06309 (CRK1_LEIME) - Score: 7.9127 - ...RSVLHRDLKP[Q]NLLISREKEL... - Cell division protein kinase 2 homolog CRK1 (EC 2.7.11.23)
+   7. Q54PK9 (PDPKB_DICDI) - Score: 7.8744 - ...KGIAHRDLKP[E]NILLGKNQHL... - 3-phosphoinositide-dependent protein kinase B (EC 2.7.11.1) (Pdk-class protein kinase b)
+   8. Q2PQN9 (CDK5_GLOMM) - Score: 7.8717 - ...HNVLHRDLK[P][Q]NLLINKNGEL... - Cyclin-dependent kinase 5 homolog (EC 2.7.11.22) (Cell division protein kinase 5)
+   9. Q8TDR2 (STK35_HUMAN) - Score: 7.8615 - ...NHIVHRDLK[P][D]NILITERSGT... - Serine/threonine-protein kinase 35 (EC 2.7.11.1) (CLP-36-interacting kinase 1) (CLIK-1) (PDLIM1-interacting kinase 1) (Serine/threonine-protein kinase 35 L1)
+   10. O59790 (AURK_SCHPO) - Score: 7.8392 - ...KHVIHRDIK[P][E]NILLGIDGEI... - Aurora kinase (EC 2.7.11.1) (Serine/threonine-protein kinase ark1)
+
+--- Rank #31 (Backfill) ---
+Node: Layer 5, Latent 1914
+Max Activation: 12.7905
+Peak Location: Trace Idx 193 (AA #193)
+Motif Context: DVYSF[G]IMLWE
+Trace Window : [ 0.       0.       0.       0.       0.      12.79045  0.       0.
+  0.       0.       0.     ]
+
+   [Global Top 10 Reference Entries for L5-1914]
+   1. Q9LVI6 (RLK90_ARATH) - Score: 14.4759 - ...VSQKADVYSF[G]VVLLELLTGK... - Probable inactive receptor kinase RLK902 (Receptor-like kinase 902)
+   2. F4I2N7 (RLK7_ARATH) - Score: 14.4358 - ...VTEKCDVYSF[G]VVLMELVTGK... - Receptor-like protein kinase 7 (EC 2.7.11.1)
+   3. Q9LSL5 (LRK92_ARATH) - Score: 14.4245 - ...ASKESDIYSF[G]IVLLEIVTGR... - L-type lectin-domain containing receptor kinase IX.2 (LecRK-IX.2) (EC 2.7.11.1)
+   4. Q9FMD7 (Y5659_ARATH) - Score: 14.3983 - ...ISQKADVYSF[G]VLILELLTGK... - Probable inactive receptor kinase At5g16590
+   5. Q9M8T0 (Y3288_ARATH) - Score: 14.3831 - ...ISQKADVYSF[G]VLILELLTGK... - Probable inactive receptor kinase At3g02880
+   6. Q9ZUI0 (Y2241_ARATH) - Score: 14.3394 - ...ASTHGDVYSF[G]VLLLEIVSGR... - Putative leucine-rich repeat receptor-like serine/threonine-protein kinase At2g24130 (EC 2.7.11.1)
+   7. Q5Z9N5 (FON1_ORYSJ) - Score: 14.3258 - ...VDEKSDVYSF[G]VVLLELITGR... - Leucine-rich repeat receptor-like kinase protein FLORAL ORGAN NUMBER1 (OsFON1) (EC 2.7.11.1) (CLV1-like LRR receptor kinase)
+   8. O65440 (BAME3_ARATH) - Score: 14.3152 - ...IDEKSDVYSF[G]VVLLELITGR... - Leucine-rich repeat receptor-like serine/threonine-protein kinase BAM3 (EC 2.7.11.1) (Protein BARELY ANY MERISTEM 3)
+   9. Q8H186 (PBL1_ARATH) - Score: 14.3076 - ...LNARSDVYSF[G]VVLLELLCGR... - Probable serine/threonine-protein kinase PBL1 (EC 2.7.11.1) (BIK1-like protein kinase) (PBS1-like protein 1) (Protein CHANGED CALCIUM ELEVATION 5)
+   10. Q9LFG1 (Y3359_ARATH) - Score: 14.3019 - ...LTVRSDVYSF[G]VVLLELLTGM... - Putative leucine-rich repeat receptor-like serine/threonine-protein kinase At3g53590 (EC 2.7.11.1)
+
+--- Rank #32 (Backfill) ---
+Node: Layer 5, Latent 1262
+Max Activation: 11.6996
+Peak Location: Trace Idx 122 (AA #122)
+Motif Context: KALAY[L]H[S]LDR
+Trace Window : [ 0.         0.         0.         0.         0.        11.699567
+  0.         1.3357148  0.         0.         0.       ]
+
+   [Global Top 10 Reference Entries for L5-1262]
+   1. Q8IVT5 (KSR1_HUMAN) - Score: 12.4444 - ...AQEIIKGMGY[L]HAKGIVHKDL... - Kinase suppressor of Ras 1 (EC 2.7.11.1)
+   2. Q61097 (KSR1_MOUSE) - Score: 12.3778 - ...AQEIIKGMGY[L]HAKGIVHKDL... - Kinase suppressor of Ras 1 (mKSR1) (EC 2.7.11.1) (Protein Hb)
+   3. G5EDA5 (KSRB_CAEEL) - Score: 12.3609 - ...SLQICQAMSY[L]HKKKILHRDL... - Kinase suppressor of Ras B
+   4. G5EFD2 (KSRA_CAEEL) - Score: 12.2510 - ...AQQICQAVSY[L]HTKKILHKDL... - Kinase suppressor of Ras A (EC 2.7.11.1)
+   5. A7SNN5 (PLK4_NEMVE) - Score: 12.1728 - ...MLQVVKGVLY[L]HSHGIIHRDL... - Serine/threonine-protein kinase PLK4 (EC 2.7.11.21) (Polo-like kinase 4) (PLK-4)
+   6. Q9I8X3 (FGFR3_DANRE) - Score: 12.0980 - ...AYQVARGMEY[L]ASKKCIHRDP... - Fibroblast growth factor receptor 3 (FGFR-3) (EC 2.7.10.1)
+   7. Q54ZN3 (Y0004_DICDI) - Score: 12.0928 - ...AKQILTGIVY[I]HSLGLVHLDI... - Probable protein kinase DDB_G0277539 (EC 2.7.11.1)
+   8. Q8CFA1 (IRAK2_MOUSE) - Score: 12.0916 - ...CSGLLLAVEH[L]HSLDIIHSNV... - Interleukin-1 receptor-associated kinase-like 2 (IRAK-2) (mu-IRAK-2)
+   9. P36003 (NNK1_YEAST) - Score: 12.0850 - ...SLQL[L]SALKY[M]HSKTIVHGDI... - Nitrogen network kinase 1 (EC 2.7.11.1)
+   10. P53668 (LIMK1_MOUSE) - Score: 12.0787 - ...AKDIASGMAY[L]HSMNIIHRDL... - LIM domain kinase 1 (LIMK-1) (EC 2.7.11.1) (KIZ-1)
+
+--- Rank #33 (Backfill) ---
+Node: Layer 5, Latent 4010
+Max Activation: 10.0842
+Peak Location: Trace Idx 122 (AA #122)
+Motif Context: KALAY[L]H[S]LDRPIVHRDIKPQNMLLYNQHEDLKICDFGLATDMSNNKTDMQGTLRYMAPEAIKHLKYTAKCDVYSF[G]IML
+Trace Window : [ 0.          0.          0.          0.          0.         10.08419
+  0.          0.51299626  0.          0.          0.          0.
+  0.          0.          0.          0.          0.          0.
+  0.          0.          0.          0.          0.          0.
+  0.          0.          0.          0.          0.          0.
+  0.          0.          0.          0.          0.          0.
+  0.          0.          0.          0.          0.          0.
+  0.          0.          0.          0.          0.          0.
+  0.          0.          0.          0.          0.          0.
+  0.          0.          0.          0.          0.          0.
+  0.          0.          0.          0.          0.          0.
+  0.          0.          0.          0.          0.          0.
+  0.          0.          0.          0.          2.5909398   0.
+  0.          0.        ]
+
+   [Global Top 10 Reference Entries for L5-4010]
+   1. O04567 (Y1719_ARATH) - Score: 13.5679 - ...GVGAAKGLAW[L]H[H]GCQPPY[L]H... - Probable inactive receptor kinase At1g27190
+   2. C0LGW6 (ERL1_ARATH) - Score: 13.4182 - ...AVGAAQGL[A]Y[L]HHDCTPRIIH... - LRR receptor-like serine/threonine-protein kinase ERL1 (EC 2.7.11.1) (Protein ERECTA-like kinase 1)
+   3. P33543 (TMKL1_ARATH) - Score: 13.3127 - ...ALGIARGLAY[L]HTGQEVPIIH... - Putative kinase-like protein TMKL1
+   4. Q9M342 (WAKLP_ARATH) - Score: 13.3022 - ...AHQTAQGLDY[L]HSSSSPPIYH... - Wall-associated receptor kinase-like 15 (EC 2.7.11.-)
+   5. C0LGI5 (Y1699_ARATH) - Score: 13.2857 - ...AVGAARGLAW[L]H[H]G[C]QPLYMH... - Probable LRR receptor-like serine/threonine-protein kinase At1g69990 (EC 2.7.11.1)
+   6. Q6R2K2 (SRF4_ARATH) - Score: 13.2739 - ...ALGTAK[A]I[E]Y[L]HETCSPPLVH... - Protein STRUBBELIG-RECEPTOR FAMILY 4 (Leucine-rich repeat receptor kinase-like protein SRF4)
+   7. Q6R2J8 (SRF8_ARATH) - Score: 13.1716 - ...ALGTAK[A]LEY[L]HEVCLPSIV[H]... - Protein STRUBBELIG-RECEPTOR FAMILY 8 (Leucine-rich repeat receptor kinase-like protein SRF8)
+   8. C0LGK9 (Y2242_ARATH) - Score: 13.1517 - ...ALGTAR[A]LAF[L]HHGCSPPIIH... - Probable LRR receptor-like serine/threonine-protein kinase At2g24230 (EC 2.7.11.1)
+   9. Q69SP5 (EREC1_ORYSJ) - Score: 13.1468 - ...ALGAAQGL[A]Y[L]HHDCSPRIIH... - LRR receptor-like serine/threonine-protein kinase ER1 (EC 2.7.11.1) (ERECTA homolog 1) (ER homolog 1) (OsER1) (Receptor-like cytoplasmic kinase 204) (OsRLCK204)
+   10. Q9M0G7 (MIK1_ARATH) - Score: 13.1241 - ...ALGVAH[G]LAY[L]HHD[C]HPPVIH... - MDIS1-interacting receptor like kinase 1 (AtMIK1) (Leucine-rich repeat receptor-like protein kinase PXL2) (EC 2.7.11.1) (Protein PHLOEM INTERCALATED WITH XYLEM-LIKE 2)
+
+--- Rank #34 (Backfill) ---
+Node: Layer 5, Latent 4287
+Max Activation: 8.0869
+Peak Location: Trace Idx 25 (AA #25)
+Motif Context: GSGGA[V]RKATF
+Trace Window : [0.       0.       0.       0.       0.       8.086929 0.       0.
+ 0.       0.       0.      ]
+
+   [Global Top 10 Reference Entries for L5-4287]
+   1. P06782 (SNF1_YEAST) - Score: 12.3785 - ...KTLGEGSFGK[V]KLAYHTTTGQ... - Carbon catabolite-derepressing protein kinase (EC 2.7.11.1) (Sucrose nonfermentating protein 1)
+   2. Q0D4B2 (CIPKL_ORYSJ) - Score: 12.3672 - ...RALGEGHFGK[V]KLARHADTGA... - CBL-interacting protein kinase 21 (EC 2.7.11.1) (OsCIPK21)
+   3. Q54PX0 (Y4251_DICDI) - Score: 12.2690 - ...EKIGRGAFGQ[V]FKGLNGKTGE... - Probable serine/threonine-protein kinase DDB_G0284251 (EC 2.7.11.1)
+   4. P54736 (PKN2_MYXXA) - Score: 12.2127 - ...RPLGSGGMGE[V][Y][L]GEQVSLGR... - Serine/threonine-protein kinase pkn2 (EC 2.7.11.1)
+   5. Q924X7 (STK33_MOUSE) - Score: 12.2110 - ...RILGQGSFGM[V]FEAIDKETGA... - Serine/threonine-protein kinase 33 (EC 2.7.11.1)
+   6. Q00372 (SNF1_CANGA) - Score: 12.1964 - ...KTLGEGSFGK[V]KLAYHVTTGQ... - Carbon catabolite-derepressing protein kinase (EC 2.7.11.1)
+   7. O94168 (SNF1_CANTR) - Score: 12.1871 - ...KTLGEGSFGK[V]KLAQHVGTGQ... - Carbon catabolite-derepressing protein kinase (EC 2.7.11.1)
+   8. Q9XA16 (PKNX_STRCO) - Score: 12.1182 - ...PVLGRGGMAE[V]YHAHDTRLGR... - Probable serine/threonine-protein kinase SCO3848 (EC 2.7.11.1)
+   9. O24527 (SIK1_ARATH) - Score: 12.1155 - ...NELGKGSYGS[V]YKARDLKTSE... - Serine/threonine-protein kinase 1 (EC 2.7.11.1)
+   10. P52497 (SNF1_CANAX) - Score: 12.1116 - ...KTLGEGSFGK[V]KLAQHLGTGQ... - Carbon catabolite-derepressing protein kinase (EC 2.7.11.1)
+
+--- Rank #35 (Backfill) ---
+Node: Layer 5, Latent 3661
+Max Activation: 7.6771
+Peak Location: Trace Idx 256 (AA #256)
+Motif Context: SGE[K][L][P][M]EAV[R]SDCPEGIKQ[L]MECCMDINPEK[R]PSMKE
+Trace Window : [0.         0.         0.         0.28573754 0.26295432 0.73285544
+ 0.35432297 0.         0.         0.         0.545192   0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.24206212 0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         7.677107   0.         0.         0.
+ 0.         0.        ]
+
+   [Global Top 10 Reference Entries for L5-3661]
+   1. O64629 (AUR3_ARATH) - Score: 8.9458 - ...SQLLVKDPSK[R]LSIEKIMQHP... - Serine/threonine-protein kinase Aurora-3 (AtAur3) (EC 2.7.11.1) (Aurora-like kinase 3)
+   2. Q55117 (MENC_SYNY3) - Score: 8.9401 - ...[R][E][N][S][G][P][K][I][Q][Y][L][E][Q]PLPPGEID... - o-succinylbenzoate synthase (OSB synthase) (OSBS) (EC 4.2.1.113) (4-(2'-carboxyphenyl)-4-oxybutyric acid synthase) (o-succinylbenzoic acid synthase)
+   3. C0BK17 (HYEP_FLABM) - Score: 8.8766 - ...QWLADR[K][V][D][Y][I][E][Q][P][L]KEGDEA... - Hydrophobic dipeptide epimerase (EC 5.1.1.-)
+   4. Q8A861 (AEEP_BACTN) - Score: 8.7555 - ...HW[L][K][E]K[G][I][V][M][I][E][Q][P]MP[K]EQLD... - L-Ala-D/L-Glu epimerase (AE epimerase) (AEE) (EC 5.1.1.20)
+   5. Q8ZL58 (TAGAD_SALTY) - Score: 8.7536 - ...RKMEQFNL[I][W][I][E][E][P][L]DAYDIE... - L-talarate/galactarate dehydratase (TalrD/GalrD) (EC 4.2.1.156) (EC 4.2.1.42) (StTGD)
+   6. Q00168 (KCC2A_DROME) - Score: 8.7535 - ...NQMLTVNPNK[R]ITAAEALKHP... - Calcium/calmodulin-dependent protein kinase type II alpha chain (CaM-kinase II alpha chain) (EC 2.7.11.17)
+   7. Q13554 (KCC2B_HUMAN) - Score: 8.7166 - ...NQMLTINPAK[R]ITAHEALKHP... - Calcium/calmodulin-dependent protein kinase type II subunit beta (CaM kinase II subunit beta) (CaMK-II subunit beta) (EC 2.7.11.17)
+   8. Q7ZZC8 (NEK9_XENLA) - Score: 8.6885 - ...HACLEQDPEK[R]PTADEILERP... - Serine/threonine-protein kinase Nek9 (xNek9) (EC 2.7.11.1) (Nercc1 kinase) (Never in mitosis A-related kinase 9) (NimA-related protein kinase 9)
+   9. Q9UQM7 (KCC2A_HUMAN) - Score: 8.6872 - ...NKMLTINPSK[R]ITAAEALKHP... - Calcium/calmodulin-dependent protein kinase type II subunit alpha (CaM kinase II subunit alpha) (CaMK-II subunit alpha) (EC 2.7.11.17)
+   10. Q5RCC4 (KCC2A_PONAB) - Score: 8.6872 - ...NKMLTINPSK[R]ITAAEALKHP... - Calcium/calmodulin-dependent protein kinase type II subunit alpha (CaM kinase II subunit alpha) (CaMK-II subunit alpha) (EC 2.7.11.17)
+
+--- Rank #36 (Backfill) ---
+Node: Layer 6, Latent 3231
+Max Activation: 15.6128
+Peak Location: Trace Idx 25 (AA #25)
+Motif Context: GSGGA[V]RKATF
+Trace Window : [ 0.        0.        0.        0.        0.       15.612846  0.
+  0.        0.        0.        0.      ]
+
+   [Global Top 10 Reference Entries for L6-3231]
+   1. Q8W4G6 (CRK15_ARATH) - Score: 18.2862 - ...NKIGQGGFGE[V]YKGTFSNGTE... - Cysteine-rich receptor-like protein kinase 15 (Cysteine-rich RLK15) (EC 2.7.11.-)
+   2. Q8L7G3 (CRK7_ARATH) - Score: 18.2826 - ...NKIGRGGFGD[V]YKGTFSNGTE... - Cysteine-rich receptor-like protein kinase 7 (Cysteine-rich RLK7) (EC 2.7.11.-)
+   3. O65468 (CRK8_ARATH) - Score: 18.1113 - ...NKIGRGGFGE[V]YKGTFSNGKE... - Cysteine-rich receptor-like protein kinase 8 (Cysteine-rich RLK8) (EC 2.7.11.-)
+   4. O65476 (CRK16_ARATH) - Score: 18.0825 - ...NKLGHGGFGE[V]FKGTFPNGTE... - Putative cysteine-rich receptor-like protein kinase 16 (Cysteine-rich RLK16) (EC 2.7.11.-)
+   5. O65472 (CRK12_ARATH) - Score: 18.0807 - ...NKLGQGGFGE[V]YKGTLVNGTE... - Putative cysteine-rich receptor-like protein kinase 12 (Cysteine-rich RLK12) (EC 2.7.11.-)
+   6. Q3E9X6 (CRK21_ARATH) - Score: 18.0694 - ...NKLGHGGFGA[V]YKGMFPNGTE... - Cysteine-rich receptor-like protein kinase 21 (Cysteine-rich RLK21) (EC 2.7.11.-)
+   7. Q9C5S9 (CRK6_ARATH) - Score: 17.9593 - ...NKIGRGGFGE[V]YKGTFSNGKE... - Cysteine-rich receptor-like protein kinase 6 (Cysteine-rich RLK6) (EC 2.7.11.-) (Receptor-like protein kinase 5)
+   8. O65483 (CRK24_ARATH) - Score: 17.8584 - ...NKLGHGGFGE[V]YKGTFPNGTE... - Cysteine-rich receptor-like protein kinase 24 (Cysteine-rich RLK24) (EC 2.7.11.-)
+   9. O65405 (CRK28_ARATH) - Score: 17.8316 - ...NELGRGGFGS[V]YKGVFSGGQE... - Cysteine-rich receptor-like protein kinase 28 (Cysteine-rich RLK28) (EC 2.7.11.-)
+   10. Q9SYS3 (CRK40_ARATH) - Score: 17.8274 - ...NTLGQGGFGT[V]YKGTFPNGQE... - Cysteine-rich receptor-like protein kinase 40 (Cysteine-rich RLK40) (EC 2.7.11.-)
+
+--- Rank #37 (Backfill) ---
+Node: Layer 6, Latent 659
+Max Activation: 14.0449
+Peak Location: Trace Idx 256 (AA #256)
+Motif Context: INPEK[R]PSMKE
+Trace Window : [ 0.        0.        0.        0.        0.       14.044944  0.
+  0.        0.        0.        0.      ]
+
+   [Global Top 10 Reference Entries for L6-659]
+   1. O14305 (SID1_SCHPO) - Score: 15.8254 - ...SCCLDLNPNM[R]WSAKELLQHP... - Serine/threonine-protein kinase sid1 (EC 2.7.11.1) (STE20-like kinase sid1)
+   2. Q00372 (SNF1_CANGA) - Score: 15.6423 - ...KRMLIVNPLN[R]ISIHEIMQDE... - Carbon catabolite-derepressing protein kinase (EC 2.7.11.1)
+   3. Q5R8Z4 (PAK6_PONAB) - Score: 15.6401 - ...ERMLVRDPQE[R]ATAQELLDHP... - Serine/threonine-protein kinase PAK 6 (EC 2.7.11.1) (p21-activated kinase 6) (PAK-6)
+   4. Q9NQU5 (PAK6_HUMAN) - Score: 15.6363 - ...ERMLVRDPQE[R]ATAQELLDHP... - Serine/threonine-protein kinase PAK 6 (EC 2.7.11.1) (PAK-5) (p21-activated kinase 6) (PAK-6)
+   5. Q6DEH3 (KC2D1_DANRE) - Score: 15.6247 - ...NKMLTINPAK[R]ITAAEALKHP... - Calcium/calmodulin-dependent protein kinase type II delta 1 chain (EC 2.7.11.17) (Calcium/calmodulin-dependent protein kinase type II delta-B chain) (CaM kinase II subunit delta-B) (CaM-kinase II delta-B chain) (CaMK-II subunit delta-B)
+   6. Q5ZKI0 (KCC2D_CHICK) - Score: 15.6058 - ...NKMLTINPAK[R]ITASEALKHP... - Calcium/calmodulin-dependent protein kinase type II delta chain (CaM kinase II subunit delta) (CaM-kinase II delta chain) (CaMK-II subunit delta) (EC 2.7.11.17)
+   7. Q8XJL8 (PKN2_CLOPE) - Score: 15.5952 - ...MKAMEKDPVN[R]YQTAKEIIGD... - Probable serine/threonine-protein kinase CPE1738 (EC 2.7.11.1)
+   8. Q54E34 (Y6398_DICDI) - Score: 15.5823 - ...ILMMNPDHTK[R]ITIQSLLKYD... - Probable protein kinase DDB_G0291842 (EC 2.7.11.1)
+   9. Q13557 (KCC2D_HUMAN) - Score: 15.5748 - ...NKMLTINPAK[R]ITASEALKHP... - Calcium/calmodulin-dependent protein kinase type II subunit delta (CaM kinase II subunit delta) (CaMK-II subunit delta) (EC 2.7.11.17)
+   10. Q6PHZ2 (KCC2D_MOUSE) - Score: 15.5748 - ...NKMLTINPAK[R]ITASEALKHP... - Calcium/calmodulin-dependent protein kinase type II subunit delta (CaM kinase II subunit delta) (CaMK-II subunit delta) (EC 2.7.11.17)
+
+--- Rank #38 (Backfill) ---
+Node: Layer 6, Latent 2396
+Max Activation: 11.9478
+Peak Location: Trace Idx 133 (AA #133)
+Motif Context: PIVHR[D]IKPQN
+Trace Window : [ 0.        0.        0.        0.        0.       11.947817  0.
+  0.        0.        0.        0.      ]
+
+   [Global Top 10 Reference Entries for L6-2396]
+   1. P21095 (VPK2_VACCC) - Score: 14.6941 - ...LPCCD[N][F]L[H]A[D]LKPDNILLFD... - Serine/threonine-protein kinase 2 (EC 2.7.11.1) (Vaccinia protein kinase 2)
+   2. O57177 (VPK2_VACCA) - Score: 14.6920 - ...LPCCD[N][F]L[H]A[D]LKPDNILLFD... - Serine/threonine-protein kinase 2 (EC 2.7.11.1) (Vaccinia protein kinase 2)
+   3. Q89121 (VPK2_VACCW) - Score: 14.6877 - ...LPCCD[N][F]L[H]A[D]LKPDNILLFD... - Serine/threonine-protein kinase 2 (EC 2.7.11.1) (Vaccinia protein kinase 2)
+   4. Q9JFE5 (VPK2_VACCT) - Score: 14.6311 - ...LPCCD[N][F]L[H]A[D]LKPDNILLFD... - Serine/threonine-protein kinase 2 (EC 2.7.11.1) (Vaccinia protein kinase 2)
+   5. P33801 (VPK2_VAR67) - Score: 14.5851 - ...LPRCD[N]FL[H]A[D]LKPDNILLFD... - Serine/threonine-protein kinase 2 (EC 2.7.11.1)
+   6. A0A7H0DN27 (VPK2_MONPV) - Score: 14.5343 - ...LPCCD[N][F]L[H]A[D]LKPDNILLFD... - Serine/threonine-protein kinase 2 (EC 2.7.11.1)
+   7. P29884 (VPK2_VACCP) - Score: 14.4950 - ...LPCCD[N][F]L[H]A[D]LKPDNILLFD... - Serine/threonine-protein kinase 2 (EC 2.7.11.1) (Vaccinia protein kinase 2)
+   8. P32216 (VPK2_SWPVK) - Score: 14.2905 - ...LPCCD[N][F]L[H]V[D]LKPDNILIFN... - Serine/threonine-protein kinase 2 (EC 2.7.11.1)
+   9. Q5T7M9 (DIK1A_HUMAN) - Score: 14.2780 - ...HGPYG[N][F][L][M][C][D][T]SAKNLGYND... - Divergent protein kinase domain 1A (Protein FAM69A)
+   10. Q5R634 (DIK1A_PONAB) - Score: 14.2780 - ...HGPYG[N][F][L][M][C][D][T]SAKNLGYND... - Divergent protein kinase domain 1A (Protein FAM69A)
+
+--- Rank #39 (Backfill) ---
+Node: Layer 6, Latent 1793
+Max Activation: 10.7258
+Peak Location: Trace Idx 66 (AA #66)
+Motif Context: GGA[V]RKATFQNQEIAVKIFDFLEETIKKNAEREITHLSEIDHEN[V]IRVIGRASNGKKDYL[L]MEYLEEGSLHNYLYGDDKWEYTVEQAVRWALQCAKALAY[L]HSL
+Trace Window : [ 0.         0.         0.         0.4042721  0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.        10.725808   0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  1.4804134  0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         2.253885   0.
+  0.         0.       ]
+
+   [Global Top 10 Reference Entries for L6-1793]
+   1. Q8VDG6 (M3K21_MOUSE) - Score: 12.4216 - ...RLFAMLRHPN[I]IQLRGVCLRQ... - Mitogen-activated protein kinase kinase kinase 21 (EC 2.7.11.25) (Mitogen-activated protein kinase kinase kinase MLK4) (Mixed lineage kinase 4)
+   2. Q9Z138 (ROR2_MOUSE) - Score: 12.0865 - ...MLRARLQHPN[I]VCLLGVVTKD... - Tyrosine-protein kinase transmembrane receptor ROR2 (mROR2) (EC 2.7.10.1) (Neurotrophic tyrosine kinase, receptor-related 2)
+   3. Q80YP0 (CDK3_MOUSE) - Score: 12.0728 - ...SLLKELKHPN[I][I]KLLDVVHRE... - Cyclin-dependent kinase 3 (EC 2.7.11.22) (Cell division protein kinase 3)
+   4. A3EZ55 (HOG1A_WALI9) - Score: 12.0540 - ...KLLKHLRHEN[I][I]SLLDVFISP... - Mitogen-activated protein kinase HOG1A (MAP kinase HOG1A) (EC 2.7.11.24) (WiHog1A)
+   5. Q8AXY6 (MUSK_CHICK) - Score: 12.0485 - ...ALMAEFDNPN[I]VKLLGVCAVG... - Muscle, skeletal receptor tyrosine protein kinase (EC 2.7.10.1) (Muscle-specific tyrosine protein kinase receptor) (MuSK) (Muscle-specific kinase receptor)
+   6. O13945 (PPK9_SCHPO) - Score: 11.9709 - ...TILRQLHHPN[I][I]TLYQVFRVP... - Protein kinase domain-containing protein ppk9
+   7. O94547 (SRK1_SCHPO) - Score: 11.9570 - ...QIMRRVKHPN[I][I]QLLEFIQTP... - Serine/threonine-protein kinase srk1 (EC 2.7.11.1) (Sty1-regulated kinase 1)
+   8. O15146 (MUSK_HUMAN) - Score: 11.9474 - ...ALMAEFDNPN[I]VKLLGVCAVG... - Muscle, skeletal receptor tyrosine-protein kinase (EC 2.7.10.1) (Muscle-specific tyrosine-protein kinase receptor) (MuSK) (Muscle-specific kinase receptor)
+   9. A0A2I0BVG8 (CDPK1_PLAFO) - Score: 11.9407 - ...SLLKSLDHPN[I]IKLFDVFEDK... - Calcium-dependent protein kinase 1 (EC 2.7.11.1) (PfCDPK1)
+   10. P62343 (CDPK1_PLAFK) - Score: 11.9407 - ...SLLKSLDHPN[I]IKLFDVFEDK... - Calcium-dependent protein kinase 1 (EC 2.7.11.1) (PfCDPK1) (PfCPK)
+
+--- Rank #40 (Backfill) ---
+Node: Layer 6, Latent 1154
+Max Activation: 8.2288
+Peak Location: Trace Idx 152 (AA #152)
+Motif Context: DLKIC[D]FGLAT
+Trace Window : [0.       0.       0.       0.       0.       8.228776 0.       0.
+ 0.       0.       0.      ]
+
+   [Global Top 10 Reference Entries for L6-1154]
+   1. Q55DK2 (Y9628_DICDI) - Score: 10.2199 - ...ISGSNKLKIG[D]FGLAIQSAHH... - Probable serine/threonine-protein kinase DDB_G0269628 (EC 2.7.11.1)
+   2. Q54WD7 (Y9719_DICDI) - Score: 10.1663 - ...LSESQKIKIG[D]FGLAKKYENS... - Probable serine/threonine-protein kinase DDB_G0279719 (EC 2.7.11.1)
+   3. O70551 (SRPK1_MOUSE) - Score: 10.0747 - ...NAEKLQVKIA[D]LGNACWVHKH... - SRSF protein kinase 1 (EC 2.7.11.1) (SFRS protein kinase 1) (Serine/arginine-rich protein-specific kinase 1) (SR-protein-specific kinase 1)
+   4. Q96SB4 (SRPK1_HUMAN) - Score: 10.0632 - ...NAEKLKVKIA[D]LGNACWVHKH... - SRSF protein kinase 1 (EC 2.7.11.1) (SFRS protein kinase 1) (Serine/arginine-rich protein-specific kinase 1) (SR-protein-specific kinase 1)
+   5. C0LGQ7 (Y4245_ARATH) - Score: 10.0178 - ...LDNNFQAKLG[D]FGLSRSFPVG... - Probable LRR receptor-like serine/threonine-protein kinase At4g20450 (EC 2.7.11.1)
+   6. Q5RD27 (SRPK1_PONAB) - Score: 10.0045 - ...NAEKLKVKIA[D]LGNACWVHKH... - SRSF protein kinase 1 (EC 2.7.11.1) (SFRS protein kinase 1) (Serine/arginine-rich protein-specific kinase 1) (SR-protein-specific kinase 1)
+   7. Q9SND6 (M3K20_ARATH) - Score: 9.9925 - ...LFNDGSVKIA[D]FGLAMRV[D]G[D]... - Mitogen-activated protein kinase kinase kinase 20 (MAPKK kinase 20) (EC 2.7.11.25) (Protein ABA-INSENSITIVE PROTEIN KINASE 1)
+   8. O14132 (PIT1_SCHPO) - Score: 9.9901 - ...DSSSFNVKIA[D]FGLAREINSR... - Sporulation protein kinase pit1 (EC 2.7.11.1)
+   9. P22209 (KIN3_YEAST) - Score: 9.9193 - ...[D]YSQVVVKLG[D]FGLAKSLETS... - Serine/threonine-protein kinase KIN3 (EC 2.7.11.1)
+   10. O54781 (SRPK2_MOUSE) - Score: 9.9166 - ...NADKIRVKIA[D]LGNACWVHKH... - SRSF protein kinase 2 (EC 2.7.11.1) (SFRS protein kinase 2) (Serine/arginine-rich protein-specific kinase 2) (SR-protein-specific kinase 2) [Cleaved into: SRSF protein kinase 2 N-terminal; SRSF protein kinase 2 C-terminal]
+
+--- Rank #41 (Backfill) ---
+Node: Layer 7, Latent 1738
+Max Activation: 13.9588
+Peak Location: Trace Idx 193 (AA #193)
+Motif Context: DVYSF[G]IMLWE
+Trace Window : [ 0.        0.        0.        0.        0.       13.958802  0.
+  0.        0.        0.        0.      ]
+
+   [Global Top 10 Reference Entries for L7-1738]
+   1. P34633 (YOO1_CAEEL) - Score: 18.8001 - ...LGRRDDYESW[F]FMFIDLVDTT... - Putative serine/threonine-protein kinase ZK507.1 (EC 2.7.11.1)
+   2. P34635 (YOO3_CAEEL) - Score: 18.5506 - ...LGRRDDYESW[F]FMFIDLVDTT... - Putative serine/threonine-protein kinase ZK507.3 (EC 2.7.11.1)
+   3. Q38775 (CDC2D_ANTMA) - Score: 18.4058 - ...YSPAVDMWSV[A]CIFAELVTQK... - Cell division control protein 2 homolog D (EC 2.7.11.22) (EC 2.7.11.23)
+   4. Q54DF7 (Y2354_DICDI) - Score: 18.3861 - ...LGRRDDLWSI[F]YVLIEFAEGQ... - Probable serine/threonine-protein kinase DDB_G0292354
+   5. Q8SQR2 (KC12_ENCCU) - Score: 18.3507 - ...QSRRDDLESL[F]YLLILLYKSR... - Probable casein kinase I homolog ECU11_1980 (EC 2.7.11.1)
+   6. A8XSC1 (NLK_CAEBR) - Score: 18.3485 - ...YTGAVDIWSV[G]CIFAELLQRK... - Serine/threonine kinase NLK (EC 2.7.11.24) (Loss of intestine protein 1) (Nemo-like kinase)
+   7. Q8W4J2 (MPK16_ARATH) - Score: 18.3241 - ...YTPAIDIWSI[G]CIFAELLTGK... - Mitogen-activated protein kinase 16 (AtMPK16) (MAP kinase 16) (EC 2.7.11.24)
+   8. Q11179 (MK15_CAEEL) - Score: 18.3179 - ...YTKGVDMWSL[G]CILAEMLIGR... - Mitogen-activated protein kinase 15 (EC 2.7.11.24) (Swimming-induced paralysis protein 13) (SWIP-13)
+   9. Q9LMT0 (CDKD3_ARATH) - Score: 18.3022 - ...YGAAVDVWAV[A]CIFAELLLRR... - Cyclin-dependent kinase D-3 (CDKD;3) (EC 2.7.11.22) (EC 2.7.11.23) (CDK-activating kinase 2-At) (CAK2-At)
+   10. P51568 (AFC3_ARATH) - Score: 18.2999 - ...WSYQCDLWSI[G]CILFELCTGE... - Serine/threonine-protein kinase AFC3 (EC 2.7.12.1)
+
+--- Rank #42 (Backfill) ---
+Node: Layer 7, Latent 2081
+Max Activation: 13.1564
+Peak Location: Trace Idx 82 (AA #82)
+Motif Context: KKDYL[L][M]EYLE
+Trace Window : [ 0.         0.         0.         0.         0.        13.156419
+  4.1714034  0.         0.         0.         0.       ]
+
+   [Global Top 10 Reference Entries for L7-2081]
+   1. Q9K188 (AMGK_NEIMB) - Score: 15.6936 - ...LHADTDLGFV[V]LNDLGNTTFL... - N-acetylmuramate/N-acetylglucosamine kinase (MurNAc/GlcNAc kinase) (EC 2.7.1.221)
+   2. Q5BAB7 (BUD32_EMENI) - Score: 15.4574 - ...PSAGDGSSWL[V]MEWIEGEPVR... - EKC/KEOPS complex subunit bud32 (EC 3.6.-.-) (Atypical serine/threonine protein kinase bud32) (EC 2.7.11.1)
+   3. A1CLD2 (BUD32_ASPCL) - Score: 15.3659 - ...TEKGFGGAWL[M]MEWVEGLVVR... - EKC/KEOPS complex subunit bud32 (EC 3.6.-.-) (Atypical serine/threonine protein kinase bud32) (EC 2.7.11.1)
+   4. Q4WYU4 (BUD32_ASPFU) - Score: 15.2772 - ...GEKGFGGAWL[M]MEWIEGMVVR... - EKC/KEOPS complex subunit bud32 (EC 3.6.-.-) (Atypical serine/threonine protein kinase bud32) (EC 2.7.11.1)
+   5. Q90XV8 (MOS_CICNG) - Score: 15.2558 - ...PASQNSLGTI[V]MEYVGNITLH... - Serine/threonine-protein kinase mos (EC 2.7.11.1) (Oocyte maturation factor mos)
+   6. Q9W3Y1 (CDC7_DROME) - Score: 15.1875 - ...CMRYDASAAF[V][M]PFMAHDRFQ... - non-specific serine/threonine protein kinase Cdc7 (EC 2.7.11.1) (Cell division cycle 7)
+   7. P87347 (MOS_APTAU) - Score: 15.1577 - ...PASQNSLGT[I][I]MEYVGNITLH... - Serine/threonine-protein kinase mos (EC 2.7.11.1) (Oocyte maturation factor mos)
+   8. P10741 (MOS_CHICK) - Score: 15.1476 - ...PASQNSLGT[I][I]MEYVGNVTLH... - Serine/threonine-protein kinase mos (EC 2.7.11.1) (Oocyte maturation factor mos)
+   9. Q90XV6 (MOS_GYMCA) - Score: 15.1438 - ...PASQNSLGT[I][I]MEYVGNITLH... - Serine/threonine-protein kinase mos (EC 2.7.11.1) (Oocyte maturation factor mos)
+   10. Q90XV7 (MOS_VULGR) - Score: 15.1078 - ...PASQNSLGT[I][I]MEYVGNITLH... - Serine/threonine-protein kinase mos (EC 2.7.11.1) (Oocyte maturation factor mos)
+
+--- Rank #43 (Backfill) ---
+Node: Layer 7, Latent 543
+Max Activation: 10.2436
+Peak Location: Trace Idx 37 (AA #37)
+Motif Context: NQEIA[V][K][I]FDF
+Trace Window : [ 0.          0.          0.          0.          0.         10.243631
+  0.37771824  2.7906294   0.          0.          0.        ]
+
+   [Global Top 10 Reference Entries for L7-543]
+   1. Q8NU97 (PKN2_CORGL) - Score: 13.3135 - ...DDVVNDRE[V][A][I][K][V][L]RPEFSDN... - Serine/threonine-protein kinases PknA (EC 2.7.11.1)
+   2. Q8FUI4 (PKN2_COREF) - Score: 13.2728 - ...DDNVNDRE[V][A][V][K][V][L]RPEFSDN... - Serine/threonine-protein kinases drp72 (EC 2.7.11.1)
+   3. Q9XA16 (PKNX_STRCO) - Score: 13.1320 - ...HDTRLGRQ[V][A][V][K][T]LRADLARD... - Probable serine/threonine-protein kinase SCO3848 (EC 2.7.11.1)
+   4. P9WI83 (PKNA_MYCTU) - Score: 13.0868 - ...VDNRLGRRV[A][V][K][V][L]KSEFSSD... - Serine/threonine-protein kinase PknA (EC 2.7.11.1)
+   5. A5TY85 (PKNA_MYCTA) - Score: 13.0868 - ...VDNRLGRRV[A][V][K][V][L]KSEFSSD... - Serine/threonine-protein kinase PknA (EC 2.7.11.1)
+   6. P65727 (PKNA_MYCBO) - Score: 13.0868 - ...VDNRLGRRV[A][V][K][V][L]KSEFSSD... - Serine/threonine-protein kinase PknA (EC 2.7.11.1)
+   7. P9WI82 (PKNA_MYCTO) - Score: 13.0868 - ...VDNRLGRRV[A][V][K][V][L]KSEFSSD... - Serine/threonine-protein kinase PknA (EC 2.7.11.1)
+   8. Q7TYY6 (PKNL_MYCBO) - Score: 13.0544 - ...LDVRLDRP[V][A][L][K][V][M][D]ARYAGD... - Serine/threonine-protein kinase PknL (EC 2.7.11.1)
+   9. P9WI63 (PKNL_MYCTU) - Score: 13.0411 - ...LDVRLDRP[V][A][L][K][V]M[D]SRYAGD... - Serine/threonine-protein kinase PknL (EC 2.7.11.1)
+   10. P9WI62 (PKNL_MYCTO) - Score: 13.0411 - ...LDVRLDRP[V][A][L][K][V]M[D]SRYAGD... - Serine/threonine-protein kinase PknL (EC 2.7.11.1)
+
+--- Rank #44 (Backfill) ---
+Node: Layer 7, Latent 3362
+Max Activation: 10.2083
+Peak Location: Trace Idx 66 (AA #66)
+Motif Context: IDHEN[V]IRVIG
+Trace Window : [ 0.        0.        0.        0.        0.       10.208346  0.
+  0.        0.        0.        0.      ]
+
+   [Global Top 10 Reference Entries for L7-3362]
+   1. A3LQL9 (PAN3_PICST) - Score: 12.1439 - ...KKWRSVKNAN[V]TQLQEAFTSM... - PAN2-PAN3 deadenylation complex subunit PAN3 (PAB1P-dependent poly(A)-specific ribonuclease) (Poly(A)-nuclease deadenylation complex subunit 3) (PAN deadenylation complex subunit 3)
+   2. Q08156 (KIT_CHICK) - Score: 11.8154 - ...VLSYLGNHIN[I]VNLLGACTIG... - Mast/stem cell growth factor receptor Kit (SCFR) (EC 2.7.10.1) (Proto-oncogene c-Kit) (Tyrosine-protein kinase Kit)
+   3. P10721 (KIT_HUMAN) - Score: 11.8067 - ...VLSYLGNHMN[I]VNLLGACTIG... - Mast/stem cell growth factor receptor Kit (SCFR) (EC 2.7.10.1) (Piebald trait protein) (PBT) (Proto-oncogene c-Kit) (Tyrosine-protein kinase Kit) (p145 c-kit) (v-kit Hardy-Zuckerman 4 feline sarcoma viral oncogene homolog) (CD antigen CD117)
+   4. Q28317 (KIT_CAPHI) - Score: 11.7856 - ...VLSYLGNHMN[I]VNLLGACTIG... - Mast/stem cell growth factor receptor Kit (SCFR) (EC 2.7.10.1) (Proto-oncogene c-Kit) (Tyrosine-protein kinase Kit) (CD antigen CD117)
+   5. P43481 (KIT_BOVIN) - Score: 11.7570 - ...VLSYLGNHMN[I]VNLLGACTIG... - Mast/stem cell growth factor receptor Kit (SCFR) (EC 2.7.10.1) (Proto-oncogene c-Kit) (Tyrosine-protein kinase Kit) (CD antigen CD117)
+   6. Q2HWD6 (KIT_PIG) - Score: 11.7552 - ...VLSYLGNHMN[I]VNLLGACTIG... - Mast/stem cell growth factor receptor Kit (SCFR) (EC 2.7.10.1) (Proto-oncogene c-Kit) (Tyrosine-protein kinase Kit) (CD antigen CD117)
+   7. Q76II0 (KIT_CALJA) - Score: 11.7521 - ...VLSYLGNHMN[I]VNLLGACTIG... - Mast/stem cell growth factor receptor Kit (SCFR) (EC 2.7.10.1) (Proto-oncogene c-Kit) (Tyrosine-protein kinase Kit) (CD antigen CD117)
+   8. P05532 (KIT_MOUSE) - Score: 11.7122 - ...VLSYLGNHMN[I]VNLLGACTVG... - Mast/stem cell growth factor receptor Kit (SCFR) (EC 2.7.10.1) (Proto-oncogene c-Kit) (Tyrosine-protein kinase Kit) (CD antigen CD117)
+   9. P10741 (MOS_CHICK) - Score: 11.7120 - ...LNVARLQHDN[V]VRVVAASTCA... - Serine/threonine-protein kinase mos (EC 2.7.11.1) (Oocyte maturation factor mos)
+   10. O97799 (KIT_CANLF) - Score: 11.7087 - ...VLSYLGNHMN[I]VNLLGACTVG... - Mast/stem cell growth factor receptor Kit (SCFR) (EC 2.7.10.1) (Proto-oncogene c-Kit) (Tyrosine-protein kinase Kit) (CD antigen CD117)
+
+--- Rank #45 (Backfill) ---
+Node: Layer 7, Latent 2023
+Max Activation: 9.9582
+Peak Location: Trace Idx 248 (AA #248)
+Motif Context: LAY[L]HSLDRPIVHRDIKPQNMLLYNQHEDLKICDFGLATDMSNNKTDMQGTLRYMAPEAIKHLKYTAKCDVYSFGIMLWELMTRQLPYSHLENPNSQYAI[M]K[A][I]SSGEKLPMEAVRSDCPEG[I][K][Q][L][M][E][C][C][M][D][I]NPE
+Trace Window : [0.         0.         0.         2.213218   0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.1947814  0.
+ 0.407137   0.62301743 0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         1.8911654  1.6848767  2.8376336  4.6138387
+ 4.719374   3.3438184  5.793149   9.958164   4.2029853  2.4816885
+ 1.269898   0.         0.         0.        ]
+
+   [Global Top 10 Reference Entries for L7-2023]
+   1. C0LGW2 (PAM74_ARATH) - Score: 10.8826 - ...[V][W][R][V][L][E][L][A][M][S][C][A][N][P][S][S]VNRPN... - Probable LRR receptor-like serine/threonine-protein kinase PAM74 (EC 2.7.11.1) (Protein PHOTOSYNTHESIS AFFECTED MUTANT 74)
+   2. D2IYS2 (TORSO_BOMMO) - Score: 10.8193 - ...SKP[L]Y[D][I][M][R][A][C][W][N][A][S]PRDRPT... - Tyrosine-protein kinase receptor torso (EC 2.7.10.1)
+   3. C0LGU7 (MDIS1_ARATH) - Score: 10.6130 - ...[L][E][A][I][C][D][V][A][R][H][C][L][K][L][D]E[S]QRPK... - Protein MALE DISCOVERER 1 (AtMDIS1) (Probable LRR receptor-like serine/threonine-protein kinase At5g45840) (EC 2.7.11.1)
+   4. Q9LIG2 (RLK6_ARATH) - Score: 10.5922 - ...[V][W][R][A][V][E][L][A][M][S][C][L][N][P][S][S][A]RRPT... - Receptor-like protein kinase At3g21340 (EC 2.7.10.1) (EC 2.7.11.1) (Leucine-rich repeat receptor-like protein kinase At3g21340)
+   5. C0LGG4 (Y1518_ARATH) - Score: 10.5277 - ...[A][W][K][I][V][E][L][A][L][A][C][V][N][P][S][S]NRRPT... - Probable LRR receptor-like serine/threonine-protein kinase At1g51860 (EC 2.7.11.1)
+   6. Q05609 (CTR1_ARATH) - Score: 10.5250 - ...NPQ[V][A][A][I][I][E][G][C][W][T]NEPWKRPS... - Serine/threonine-protein kinase CTR1 (EC 2.7.11.1) (Protein CONSTITUTIVE TRIPLE RESPONSE1)
+   7. Q13418 (ILK_HUMAN) - Score: 10.5075 - ...SPH[V][C][K][L][M][K][I][C][M][N][E]DPAKRPK... - Scaffold protein ILK (ILK-1) (ILK-2) (Inactive integrin-linked kinase) (p59ILK)
+   8. C0LGG3 (Y5182_ARATH) - Score: 10.5061 - ...[V][W][K][A][V][E][L][A][M][S][C][L][N][H][S][S][A]RRPT... - Probable LRR receptor-like serine/threonine-protein kinase At1g51820 (EC 2.7.11.1)
+   9. Q9FF29 (PR5K_ARATH) - Score: 10.5048 - ...[A][K][K][L][V][L][V][A][L][W][C][I][Q][M][N][P]SDRPP... - PR5-like receptor kinase (EC 2.7.11.1)
+   10. O55222 (ILK_MOUSE) - Score: 10.5027 - ...SPH[V][C][K][L][M][K][I][C][M][N][E]DPAKRPK... - Scaffold protein ILK (ILK-1) (ILK-2) (Inactive integrin-linked kinase) (p59ILK)
+
+--- Rank #46 (Backfill) ---
+Node: Layer 8, Latent 686
+Max Activation: 13.5871
+Peak Location: Trace Idx 248 (AA #248)
+Motif Context: QLMEC[C]MDINP
+Trace Window : [ 0.        0.        0.        0.        0.       13.587073  0.
+  0.        0.        0.        0.      ]
+
+   [Global Top 10 Reference Entries for L8-686]
+   1. Q822K5 (PKND_CHLCV) - Score: 17.0802 - ...PPFLSQVVMR[A]LAADPRERYR... - Serine/threonine-protein kinase PknD (EC 2.7.11.1)
+   2. Q5L5J7 (PKND_CHLAB) - Score: 16.9654 - ...PSFLSQVVMR[A]LATDPKERYT... - Serine/threonine-protein kinase PknD (EC 2.7.11.1)
+   3. Q8R9T6 (PKN1_CALS4) - Score: 16.8608 - ...PEELDKIVLK[A]TQKDPNLRYQ... - Probable serine/threonine-protein kinase Sps1 (EC 2.7.11.1)
+   4. P33973 (PKN1_MYXXA) - Score: 16.8215 - ...SAALEHVILR[A]LAKKPEDRYA... - Serine/threonine-protein kinase Pkn1 (EC 2.7.11.1)
+   5. Q255D2 (PKND_CHLFF) - Score: 16.8214 - ...PPFLSQVAMK[A]LAADPKVRYA... - Serine/threonine-protein kinase PknD (EC 2.7.11.1)
+   6. Q8XJL8 (PKN2_CLOPE) - Score: 16.8211 - ...PNSLNDLIMK[A]MEKDPVNRYQ... - Probable serine/threonine-protein kinase CPE1738 (EC 2.7.11.1)
+   7. Q81WH6 (PRKC_BACAN) - Score: 16.7800 - ...PQSVENIILK[A]TAKDPFHRYQ... - Serine/threonine-protein kinase PrkC (Ser/Thr-protein kinase PrkC) (EC 2.7.11.1)
+   8. O34507 (PRKC_BACSU) - Score: 16.7594 - ...PQSVENIILK[A]TAKDPFHRYE... - Serine/threonine-protein kinase PrkC (Ser/Thr-protein kinase PrkC) (EC 2.7.11.1)
+   9. A5U3A3 (PKNE_MYCTA) - Score: 16.7399 - ...PVAFDAVIAR[G]MAKNPEDRYV... - Serine/threonine-protein kinase PknE (EC 2.7.11.1)
+   10. P9WI76 (PKNE_MYCTO) - Score: 16.7399 - ...PVAFDAVIAR[G]MAKNPEDRYV... - Serine/threonine-protein kinase PknE (EC 2.7.11.1)
+
+--- Rank #47 (Backfill) ---
+Node: Layer 8, Latent 2073
+Max Activation: 12.7787
+Peak Location: Trace Idx 134 (AA #134)
+Motif Context: IVHRD[I]KPQNM
+Trace Window : [ 0.        0.        0.        0.        0.       12.778711  0.
+  0.        0.        0.        0.      ]
+
+   [Global Top 10 Reference Entries for L8-2073]
+   1. Q6GZR8 (057R_FRG3G) - Score: 15.1634 - ...AHSVGVVHSD[L]HTGN[V][M]LCPE... - Putative phosphotransferase 057R
+   2. Q2U3T8 (BUD32_ASPOR) - Score: 14.9038 - ...LHKAGVI[H]GD[L]TTSN[L]ILRTG... - EKC/KEOPS complex subunit bud32 (EC 3.6.-.-) (Atypical serine/threonine protein kinase bud32) (EC 2.7.11.1)
+   3. P0CAJ7 (VF717_ASFP4) - Score: 14.8570 - ...HKKENVI[H]AD[L]HLNN[M]TYYHF... - Uncharacterized protein C717R (pC717R)
+   4. P0CAJ8 (VF717_ASFWA) - Score: 14.8570 - ...HKKENVI[H]AD[L]HLNN[M]TYYHF... - Uncharacterized protein C717R (pC717R)
+   5. Q65156 (VF717_ASFB7) - Score: 14.8359 - ...HKKENVI[H]AD[L]HLNN[M]TYYHF... - Uncharacterized protein C717R (pC717R)
+   6. Q4WYU4 (BUD32_ASPFU) - Score: 14.8030 - ...LHKAGVI[H]GD[L][T]TSN[L]ILRPP... - EKC/KEOPS complex subunit bud32 (EC 3.6.-.-) (Atypical serine/threonine protein kinase bud32) (EC 2.7.11.1)
+   7. A1CLD2 (BUD32_ASPCL) - Score: 14.7929 - ...LHKAGVI[H]GD[L]TTSN[L]ILRPP... - EKC/KEOPS complex subunit bud32 (EC 3.6.-.-) (Atypical serine/threonine protein kinase bud32) (EC 2.7.11.1)
+   8. P0CAJ6 (VF717_ASFM2) - Score: 14.7853 - ...HKKENVI[H]AD[L]HLNN[M]TYYHF... - Uncharacterized protein C717R (pC717R)
+   9. P0CAJ5 (VF717_ASFK5) - Score: 14.7682 - ...HKKENVI[H]AD[L]HLNN[M]TYYHF... - Uncharacterized protein C717R (pC717R)
+   10. O80528 (HASP_ARATH) - Score: 14.7666 - ...EAAFEFE[H]RD[L]HWGNILLSRN... - Serine/threonine-protein kinase haspin homolog (AtHaspin) (EC 2.7.11.1)
+
+--- Rank #48 (Backfill) ---
+Node: Layer 8, Latent 655
+Max Activation: 11.3186
+Peak Location: Trace Idx 174 (AA #174)
+Motif Context: TLRYM[A]PEAIK
+Trace Window : [ 0.        0.        0.        0.        0.       11.318587  0.
+  0.        0.        0.        0.      ]
+
+   [Global Top 10 Reference Entries for L8-655]
+   1. Q54XL6 (FRAY1_DICDI) - Score: 13.1672 - ...KTIVGTPCWM[A]PEIISERGYN... - Serine/threonine-protein kinase fray1 (EC 2.7.11.1) (STE20-like kinase fray1)
+   2. Q2ULU3 (STE20_ASPOR) - Score: 13.0224 - ...NTMVGTPYWM[A]PEVVTRKEYG... - Serine/threonine-protein kinase ste20 (EC 2.7.11.1)
+   3. Q7RZD3 (STE20_NEUCR) - Score: 13.0176 - ...TTMVGTPYWM[A]PEVVTRKEYG... - Serine/threonine-protein kinase ste20 (EC 2.7.11.1) (Serine/threonine protein kinase 4)
+   4. Q5BBL3 (STE20_EMENI) - Score: 13.0140 - ...NTMVGTPYWM[A]PEVVTRKEYG... - Serine/threonine-protein kinase ste20 (EC 2.7.11.1)
+   5. Q4P5N0 (STE20_MYCMD) - Score: 13.0139 - ...TTMVGTPYWM[A]PEVVTRKEYG... - Serine/threonine-protein kinase SMU1 (EC 2.7.11.1)
+   6. Q869N2 (PAKB_DICDI) - Score: 12.9922 - ...VTIVGTPYWM[A]PELIRGQNYD... - Serine/threonine-protein kinase pakB (dPAKb) (EC 2.7.11.1) (Myosin I heavy chain kinase)
+   7. Q4WHP3 (STE20_ASPFU) - Score: 12.9907 - ...NTMVGTPYWM[A]PEVVTRKEYG... - Serine/threonine-protein kinase ste20 (EC 2.7.11.1)
+   8. Q54R82 (MKKA_DICDI) - Score: 12.9568 - ...KSMQGTPYWM[A]PEVIKQTGHG... - Mitogen-activated protein kinase kinase kinase A (EC 2.7.11.25) (MAPK/ERK kinase 1) (MEK kinase 1) (MEKK 1) (MAPK/ERK kinase A) (MEK kinase A) (MEKK A) (MEKKalpha)
+   9. Q7Z8E9 (STE20_PYRO7) - Score: 12.9560 - ...TTMVGTPYWM[A]PEVVTRKEYG... - Serine/threonine-protein kinase MST20 (EC 2.7.11.1)
+   10. Q2VWQ3 (STE20_TALMA) - Score: 12.9398 - ...NTMVGTPYWM[A]PEVVTRKEYG... - Serine/threonine-protein kinase pakA (EC 2.7.11.1)
+
+--- Rank #49 (Backfill) ---
+Node: Layer 8, Latent 3933
+Max Activation: 10.3931
+Peak Location: Trace Idx 248 (AA #248)
+Motif Context: HEN[V]IRVIGRASNGKKDYLLMEYLEEGSLHNYLYGDDKWEYTVEQAVRWALQCAKALAYLHSLDRPIVHRDIKPQNMLLYNQHEDLKICDFGLATDMSNNKTDMQGTLRYMAPEAIKHLKYTAKCDVYSF[G]IMLWELMTRQLPYSHLENPNSQYAIMKAISSGEKLPMEAVRSDCPEGIKQL[M]EC[C]MDINP
+Trace Window : [ 0.         0.         0.         1.0344175  0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.9661551  0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         2.8949983  0.         0.        10.393123
+  0.         0.         0.         0.         0.       ]
+
+   [Global Top 10 Reference Entries for L8-3933]
+   1. Q9SY89 (Y1661_ARATH) - Score: 14.8649 - ...AMRCIH[V][G][M][L][C]TQDSVIHRPN... - Putative G-type lectin S-receptor-like serine/threonine-protein kinase At1g61610 (EC 2.7.11.1)
+   2. Q9LPZ3 (Y1141_ARATH) - Score: 14.7874 - ...VMKCLHI[G][L]L[C]VQENSSDRPD... - G-type lectin S-receptor-like serine/threonine-protein kinase At1g11410 (EC 2.7.11.1)
+   3. Q09092 (SRK6_BRAOV) - Score: 14.7556 - ...VLKCIQ[I][G][L]L[C]VQELAEHRPA... - Putative serine/threonine-protein kinase receptor (EC 2.7.11.1) (S-receptor kinase) (SRK)
+   4. C0LGW2 (PAM74_ARATH) - Score: 14.7537 - ...VWRVLE[L][A][M]S[C]ANPSSVNRPN... - Probable LRR receptor-like serine/threonine-protein kinase PAM74 (EC 2.7.11.1) (Protein PHOTOSYNTHESIS AFFECTED MUTANT 74)
+   5. Q9ZT07 (RKS1_ARATH) - Score: 14.7120 - ...VMKCIQI[G][L]L[C]VQENASDRVD... - G-type lectin S-receptor-like serine/threonine-protein kinase RKS1 (EC 2.7.11.1) (Receptor-like protein kinase 1)
+   6. Q9LY03 (IRK_ARATH) - Score: 14.6871 - ...AVAVIK[L][G][L]I[C]TSQVPSSRPH... - Probable LRR receptor-like serine/threonine-protein kinase IRK (EC 2.7.11.1) (Inflorescence and root apices receptor-like kinase)
+   7. C0LGN2 (Y3148_ARATH) - Score: 14.6774 - ...ALMMI[Q][I][G][M]L[C]TSPAPGDRPS... - Probable leucine-rich repeat receptor-like serine/threonine-protein kinase At3g14840 (EC 2.7.11.1)
+   8. Q9SGP2 (HSL1_ARATH) - Score: 14.6472 - ...ISKILN[V][G]LL[C]TSPLPINRPS... - Receptor-like protein kinase HSL1 (EC 2.7.11.1) (Protein HAESA-LIKE1)
+   9. Q9FK10 (Y5332_ARATH) - Score: 14.5826 - ...MVEMLQ[V][G][M]V[C]T[A]RLPEKRPN... - Probable inactive receptor kinase At5g53320
+   10. P0DH86 (SRK_ARATH) - Score: 14.5453 - ...VLRCIQI[G][L]L[C]VQERAEDRPK... - G-type lectin S-receptor-like serine/threonine-protein kinase SRK (EC 2.7.11.1)
+
+--- Rank #50 (In Circuit JSON) ---
+Node: Layer 8, Latent 114
+Max Activation: 9.6183
+Peak Location: Trace Idx 13 (AA #13)
+Motif Context: M[V][K][Q][V][D][F][A][E][V][K][L][S][E][K][F][L][G]AGS
+Trace Window : [0.         0.22935441 2.6551359  3.6317322  4.275128   5.13967
+ 6.8552113  7.0921845  8.025622   8.585092   8.46983    9.290996
+ 9.618327   9.610709   7.0496135  5.1145267  2.7549787  0.9918783
+ 0.         0.         0.        ]
+
+   [Global Top 10 Reference Entries for L8-114]
+   1. P00529 (ROS_AVISU) - Score: 11.2836 - ...[L][P][A][F][P][R][D][K][L][N][L][H][K][L][L][G][S][G][A][F][G]... - Tyrosine-protein kinase transforming protein ros (EC 2.7.10.1)
+   2. Q9FNE1 (CRK42_ARATH) - Score: 11.2197 - ...[T][L][E][K][A][T][D][Y][F][S][H][K][K][M][L][G]QGGNG... - Cysteine-rich receptor-like protein kinase 42 (Cysteine-rich RLK42) (EC 2.7.11.-)
+   3. Q19238 (YS3J_CAEEL) - Score: 11.2013 - ...[E][I][D][T][K][N][L][L][V][Q][E][D][H][L][L][G][N][G][A][F][A]... - Putative tyrosine-protein kinase F09A5.2 (EC 2.7.10.1)
+   4. O13147 (EPHB3_DANRE) - Score: 11.1913 - ...[A][R][E][I][D][I][S][C][V][K][I][E][E][V][I][G][A][G][E][F][G]... - Ephrin type-B receptor 3 (EC 2.7.10.1) (EPH-like kinase 3) (Tyrosine-protein kinase receptor ZEK3)
+   5. Q9FZB1 (Y5188_ARATH) - Score: 11.1862 - ...[Y][P][E][V][L][K][M][T][N][N][F][E][R][V][L][G]KGGFG... - Probable LRR receptor-like serine/threonine-protein kinase At1g51880 (EC 2.7.11.1)
+   6. Q12866 (MERTK_HUMAN) - Score: 11.1685 - ...[D][V][V][I][D][R][N][L][L][I][L][G][K][I][L][G][E][G][E]F[G]... - Tyrosine-protein kinase Mer (EC 2.7.10.1) (Proto-oncogene c-Mer) (Receptor tyrosine kinase MerTK)
+   7. Q95YD4 (KIN32_CAEEL) - Score: 11.1609 - ...[N][I][R][L][R][R][E][L][I][T][L][K][E][L][I][G][G]GQFG... - Inactive tyrosine-protein kinase kin-32
+   8. Q98949 (TYRO3_CHICK) - Score: 11.1434 - ...[D][V][L][I][Q][E][Q][Q][F][T][L][G][R][M][L][G][K]GEFG... - Tyrosine-protein kinase receptor TYRO3 (EC 2.7.10.1) (Retina-expressed kinase) (Rek)
+   9. P54759 (EPHA7_RAT) - Score: 11.1418 - ...[A][K][E][L][D][A][S][C][I][K][I][E][R][V][I][G][A]G[E]F[G]... - Ephrin type-A receptor 7 (EC 2.7.10.1) (EPH homology kinase 3) (EHK-3)
+   10. Q7T2V3 (M3K10_XENLA) - Score: 11.1378 - ...[P][L][E][I][E][F][D][E][L][N][L][D][E][I][I][G]VGGFG... - Mitogen-activated protein kinase kinase kinase 10 (EC 2.7.11.25) (Mixed lineage kinase 2) (xMLK2)
+
+--- Rank #51 (Backfill) ---
+Node: Layer 9, Latent 3022
+Max Activation: 15.8695
+Peak Location: Trace Idx 115 (AA #115)
+Motif Context: EYT[V]EQ[A][V][R][W][A][L][Q][C][A]K[A][L]AYLHSLDRPIVHRDIKPQNMLLYNQHEDLKICDFGLATDMSNNKTDMQGTLRYMAPEAIKHLKYTAKCDVYSFGIMLWELMTRQLPYSHLENPNSQYAIMKAISSGEKLPMEAVRSDCPEG[I]KQL
+Trace Window : [ 0.          0.          0.          0.73125434  0.          0.
+  9.416013    7.3673105   1.1826081   6.571492   12.509122    2.183799
+  4.08072    15.86947    10.137252    0.          1.212548    2.9314694
+  0.          0.          0.          0.          0.          0.
+  0.          0.          0.          0.          0.          0.
+  0.          0.          0.          0.          0.          0.
+  0.          0.          0.          0.          0.          0.
+  0.          0.          0.          0.          0.          0.
+  0.          0.          0.          0.          0.          0.
+  0.          0.          0.          0.          0.          0.
+  0.          0.          0.          0.          0.          0.
+  0.          0.          0.          0.          0.          0.
+  0.          0.          0.          0.          0.          0.
+  0.          0.          0.          0.          0.          0.
+  0.          0.          0.          0.          0.          0.
+  0.          0.          0.          0.          0.          0.
+  0.          0.          0.          0.          0.          0.
+  0.          0.          0.          0.          0.          0.
+  0.          0.          0.          0.          0.          0.
+  0.          0.          0.          0.          0.          0.
+  0.          0.          0.          0.          0.          0.
+  0.          0.          0.          0.          0.          0.
+  0.          0.          0.          0.          0.          0.
+  0.          1.0513345   0.          0.          0.        ]
+
+   [Global Top 10 Reference Entries for L9-3022]
+   1. Q06BH3 (SRF1_ARATH) - Score: 16.8747 - ...[W]NV[R][V][R][I][A][L][E][A][A][K][A][L]EYLHEI... - Protein STRUBBELIG-RECEPTOR FAMILY 1 (Leucine-rich repeat receptor kinase-like protein SRF1)
+   2. Q9V3Q6 (M3K7_DROME) - Score: 16.6530 - ...[L]AH[A][M][S][W][A][R][Q][C][A][E][G][L]AYLHAM... - Mitogen-activated protein kinase kinase kinase 7 (EC 2.7.11.25) (TGF-beta-activated kinase 1) (dTAK1)
+   3. Q8GYF5 (WAKLR_ARATH) - Score: 16.6479 - ...WQL[R][L][A][I][A][C][Q][T][A][N][A][I]AHLHSS... - Wall-associated receptor kinase-like 21 (EC 2.7.11.-)
+   4. Q8RY67 (WAKLO_ARATH) - Score: 16.6346 - ...WTL[R][L][T][V][A][T][Q][T][A][K][A][I]AYLHSS... - Wall-associated receptor kinase-like 14 (EC 2.7.11.-)
+   5. Q9M8S2 (LIPG2_ARATH) - Score: 16.6044 - ...WT[T][R][M][Q][I][A][Y][A][A][A][Q]G[L]DYLHDK... - Receptor-like kinase LIP2 (EC 2.7.11.-) (Protein LOST IN POLLEN TUBE GUIDANCE 2) (AtLIP2)
+   6. Q6R2J8 (SRF8_ARATH) - Score: 16.5616 - ...WNA[R][V][K][V][A][L][G][T][A][K][A][L]EYLHEV... - Protein STRUBBELIG-RECEPTOR FAMILY 8 (Leucine-rich repeat receptor kinase-like protein SRF8)
+   7. Q05688 (IGF1R_BOVIN) - Score: 16.5360 - ...[L]SK[M][I][Q][M][A][G][E][I][A]DG[M]AYLNAN... - Insulin-like growth factor 1 receptor (EC 2.7.10.1) (Insulin-like growth factor I receptor) (IGF-I receptor) (CD antigen CD221) [Cleaved into: Insulin-like growth factor 1 receptor alpha chain; Insulin-like growth factor 1 receptor beta chain]
+   8. Q9FLV4 (Y5248_ARATH) - Score: 16.5201 - ...WR[T][R][F][E][I][A][V][A][T][A][Q][G][I]AYFHEQ... - G-type lectin S-receptor-like serine/threonine-protein kinase At5g24080 (EC 2.7.11.1)
+   9. F4HQ17 (LRL14_ARATH) - Score: 16.5034 - ...[W]ST[R][L][N][I][A][I][E][T][A]SA[L]SFLHIK... - LEAF RUST 10 DISEASE-RESISTANCE LOCUS RECEPTOR-LIKE PROTEIN KINASE-like 1.4 (EC 2.7.11.1) (Probable receptor-like serine/threonine-protein kinase LRK10L-1.4)
+   10. Q9C823 (Y1523_ARATH) - Score: 16.4999 - ...[W]NM[R][L][N][I][A][T][T][L][A][Q][G][I]AFLHDK... - C-type lectin receptor-like tyrosine-protein kinase At1g52310 (EC 2.7.10.1)
+
+--- Rank #52 (Backfill) ---
+Node: Layer 9, Latent 2572
+Max Activation: 15.6514
+Peak Location: Trace Idx 191 (AA #191)
+Motif Context: KYT[A]KCDVY[S][F]G[I][M]L[W][E]LMT
+Trace Window : [ 0.          0.          0.          1.085568    0.          0.
+  0.          0.          0.         15.651385    7.6328526   0.
+  3.6303923   0.37092358  0.          7.9866953   3.837813    0.
+  0.          0.        ]
+
+   [Global Top 10 Reference Entries for L9-2572]
+   1. Q8AYG3 (TTK_DANRE) - Score: 17.8895 - ...SKIS[A]KGDVW[S][L]G[C][I]L[Y][C]MTY... - Dual specificity protein kinase Ttk (EC 2.7.12.1) (Mitotic checkpoint serine/threonine-protein kinase Mps1) (Monopolar spindle protein 1) (Protein nightcap)
+   2. Q4R945 (TTK_MACFA) - Score: 17.7409 - ...SKIS[P]KSDV[W][S][L]G[C][I]L[Y][Y]MTY... - Dual specificity protein kinase TTK (EC 2.7.12.1)
+   3. P33981 (TTK_HUMAN) - Score: 17.7125 - ...SKIS[P]KSDV[W][S][L]G[C][I]L[Y][Y]MTY... - Dual specificity protein kinase TTK (EC 2.7.12.1) (Phosphotyrosine picked threonine-protein kinase) (PYT)
+   4. P35761 (TTK_MOUSE) - Score: 17.6991 - ...TKVS[P]RSDV[W][S][L]G[C][I]L[Y][Y]MTY... - Dual specificity protein kinase TTK (EC 2.7.12.1) (ESK) (PYT)
+   5. Q60DG4 (NEK4_ORYSJ) - Score: 17.6943 - ...IPYG[F]KSDI[W][S][L]G[C][C]M[Y][E]MAA... - Serine/threonine-protein kinase Nek4 (EC 2.7.11.1) (NimA-related protein kinase 4) (OsNek4)
+   6. Q6P3R8 (NEK5_HUMAN) - Score: 17.6904 - ...KPYN[N]KTDI[W][S][L]G[C][V]L[Y][E]LCT... - Serine/threonine-protein kinase Nek5 (EC 2.7.11.1) (Never in mitosis A-related kinase 5) (NimA-related protein kinase 5)
+   7. Q9LQM8 (M2K10_ARATH) - Score: 17.6793 - ...GEV[G][F]AGDV[W][S][L]G[V][V]V[L][E]CYI... - Mitogen-activated protein kinase kinase 10 (AtMKK10) (MAP kinase kinase 10) (EC 2.7.12.2)
+   8. Q08CW1 (TLK2_XENTR) - Score: 17.6790 - ...PKIS[N]KVDV[W][S][V]G[V][I]F[Y][Q]CLY... - Serine/threonine-protein kinase tousled-like 2 (EC 2.7.11.1) (Tousled-like kinase 2)
+   9. Q94CU5 (NEK5_ORYSJ) - Score: 17.6731 - ...IPYG[F]KSDI[W][S][L]G[C][C]M[Y][E]MAA... - Serine/threonine-protein kinase Nek5 (EC 2.7.11.1) (NimA-related protein kinase 5) (OsNek5)
+   10. Q86UE8 (TLK2_HUMAN) - Score: 17.6666 - ...PKIS[N]KVDV[W][S][V]G[V][I]F[Y][Q]CLY... - Serine/threonine-protein kinase tousled-like 2 (EC 2.7.11.1) (HsHPK) (PKU-alpha) (Tousled-like kinase 2)
+
+--- Rank #53 (Backfill) ---
+Node: Layer 9, Latent 3882
+Max Activation: 15.0570
+Peak Location: Trace Idx 86 (AA #86)
+Motif Context: KAT[F]QNQEIAVKIFD[F]LEETIKKNAEREITHLSEIDHENVIRVIGRASNGKKDYLLM[E][Y][L][E][E]GSL
+Trace Window : [ 0.         0.         0.         1.0634414  0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         1.1589286  0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         7.0178246 11.770427  15.057046
+ 15.007888   7.4814916  0.         0.         0.       ]
+
+   [Global Top 10 Reference Entries for L9-3882]
+   1. Q54B33 (PAKE_DICDI) - Score: 16.5224 - ...TELWILM[D][H][C][A][V]GSINDMMKI... - Serine/threonine-protein kinase pakE (EC 2.7.11.1)
+   2. O94804 (STK10_HUMAN) - Score: 16.5102 - ...DGKLWIMI[E][F][C][P][G]GAVDAIML... - Serine/threonine-protein kinase 10 (EC 2.7.11.1) (Lymphocyte-oriented kinase)
+   3. Q751F5 (SSN3_EREGS) - Score: 16.4774 - ...RKSIYMVS[E][F][A][E][H][D]LLQIIHF... - Serine/threonine-protein kinase SSN3 (EC 2.7.11.22) (EC 2.7.11.23) (Cyclin-dependent kinase 8)
+   4. Q91618 (PMYT1_XENLA) - Score: 16.4596 - ...KRMLYLQT[E][L][C][A][G][S]LQQHSEE... - Membrane-associated tyrosine- and threonine-specific cdc2-inhibitory kinase (EC 2.7.11.1) (Myt1 kinase)
+   5. Q0IHQ8 (STK10_XENTR) - Score: 16.4587 - ...EGKLWIMI[E][F][C][P][G]GAVDAIML... - Serine/threonine-protein kinase 10 (EC 2.7.11.1)
+   6. Q4FCZ5 (SSN3_GIBMO) - Score: 16.4118 - ...DKCIFMVF[E][Y][A][E][H]DLLQIIHH... - Serine/threonine-protein kinase SSN3 (EC 2.7.11.22) (EC 2.7.11.23) (Cyclin-dependent kinase 8)
+   7. Q6CR51 (SSN3_KLULA) - Score: 16.4043 - ...KKSIYMVS[E][F][A][E][H][D]LLQIIHF... - Serine/threonine-protein kinase SSN3 (EC 2.7.11.22) (EC 2.7.11.23) (Cyclin-dependent kinase 8) (KlSRB10)
+   8. Q54G43 (SHKE_DICDI) - Score: 16.3914 - ...PGKVMIVS[E][L][M][Q][T][D]LEKLIHS... - Dual specificity protein kinase shkE (EC 2.7.11.1) (SH2 domain-containing protein 5) (SH2 domain-containing protein E)
+   9. P23647 (FUSED_DROME) - Score: 16.3872 - ...KTDLFVVT[E][F][A][L][M]DLHRYLSY... - Serine/threonine-protein kinase fused (EC 2.7.11.1)
+   10. F1NBT0 (STK10_CHICK) - Score: 16.3813 - ...EGKLWIMI[E][F][C][P][G]GAVDATML... - Serine/threonine-protein kinase 10 (EC 2.7.11.1)
+
+--- Rank #54 (In Circuit JSON) ---
+Node: Layer 9, Latent 3861
+Max Activation: 14.9817
+Peak Location: Trace Idx 196 (AA #196)
+Motif Context: SFGIM[L][W][E]LMT
+Trace Window : [ 0.          0.          0.          0.          0.         14.981692
+  4.544805    0.19781363  0.          0.          0.        ]
+
+   [Global Top 10 Reference Entries for L9-3861]
+   1. P54737 (PKN5_MYXXA) - Score: 17.5862 - ...RADL[Y]SLGV[I][L][Y][E]LLSGRPPF... - Serine/threonine-protein kinase pkn5 (EC 2.7.11.1)
+   2. Q6MAN0 (PKND_PARUW) - Score: 17.5410 - ...QTDIYSLGVI[L][Y][Q]LLTLKSPF... - Serine/threonine-protein kinase PknD (EC 2.7.11.1)
+   3. Q60806 (PLK3_MOUSE) - Score: 17.5376 - ...EADVWSLGCV[M][Y][T]LLCGSPPF... - Serine/threonine-protein kinase PLK3 (EC 2.7.11.21) (Cytokine-inducible serine/threonine-protein kinase) (FGF-inducible kinase) (Polo-like kinase 3) (PLK-3)
+   4. P57760 (STK16_RAT) - Score: 17.5114 - ...RTDV[W]SLGC[V][L][Y][A]MMFGEGPY... - Serine/threonine-protein kinase 16 (EC 2.7.11.1) (Myristoylated and palmitoylated serine/threonine-protein kinase) (MPSK) (Protein kinase PKL12) (TGF-beta-stimulated factor 1) (TSF-1) (Tyrosine-protein kinase STK16) (EC 2.7.10.2)
+   5. O88697 (STK16_MOUSE) - Score: 17.5083 - ...RTDV[W]SLGC[V][L][Y][A]MMFGEGPY... - Serine/threonine-protein kinase 16 (EC 2.7.11.1) (Embryo-derived protein kinase) (Edpk) (Myristoylated and palmitoylated serine/threonine-protein kinase) (MPSK) (Protein kinase Krct) (Protein kinase PKL12) (TGF-beta-stimulated factor 1) (TSF-1) (Tyrosine-protein kinase STK16) (EC 2.7.10.2)
+   6. Q9R011 (PLK3_RAT) - Score: 17.5065 - ...EADVWSLGCV[M][Y][T]LLCGSPPF... - Serine/threonine-protein kinase PLK3 (EC 2.7.11.21) (Cytokine-inducible serine/threonine-protein kinase) (FGF-inducible kinase) (Polo-like kinase 3) (PLK-3)
+   7. Q9H4B4 (PLK3_HUMAN) - Score: 17.4851 - ...EADVWSLGCV[M][Y][T]LLCGSPPF... - Serine/threonine-protein kinase PLK3 (EC 2.7.11.21) (Cytokine-inducible serine/threonine-protein kinase) (FGF-inducible kinase) (Polo-like kinase 3) (PLK-3) (Proliferation-related kinase)
+   8. O75716 (STK16_HUMAN) - Score: 17.4438 - ...RTDV[W]SLGC[V][L][Y][A]MMFGEGPY... - Serine/threonine-protein kinase 16 (EC 2.7.11.1) (Myristoylated and palmitoylated serine/threonine-protein kinase) (MPSK) (Protein kinase PKL12) (TGF-beta-stimulated factor 1) (TSF-1) (Tyrosine-protein kinase STK16) (EC 2.7.10.2) (hPSK)
+   9. A6QGC0 (PRKC_STAAE) - Score: 17.4215 - ...CTDIYSIGIV[L][Y][E]MLVGEPPF... - Serine/threonine-protein kinase PrkC (Ser/Thr-protein kinase PrkC) (EC 2.7.11.1)
+   10. P54199 (MPS1_YEAST) - Score: 17.4027 - ...PSDMWSCGC[I][I][Y][Q]MIYGKPPY... - Serine/threonine-protein kinase MPS1 (EC 2.7.12.2) (Monopolar spindle protein 1) (Regulatory cell proliferation kinase 1)
+
+--- Rank #55 (In Circuit JSON) ---
+Node: Layer 9, Latent 3832
+Max Activation: 13.4903
+Peak Location: Trace Idx 140 (AA #140)
+Motif Context: IVH[R]D[I][K]PQN[M][L][L][Y][N]QHE
+Trace Window : [ 0.          0.          0.          0.285962    0.          0.87319326
+  2.2634015   0.          0.          0.          2.652873   13.49035
+ 12.286572    3.404289    1.8705274   0.          0.          0.        ]
+
+   [Global Top 10 Reference Entries for L9-3832]
+   1. Q9J509 (V226_FOWPN) - Score: 15.3307 - ...SHGD[I][K]P[E][N][I][M][V][D]GRYRSYLI... - Probable serine/threonine-protein kinase FPV226 (EC 2.7.11.1)
+   2. Q8IV63 (VRK3_HUMAN) - Score: 14.9795 - ...HGN[V][T]A[E][N][I][F][V][D][P][E]DQSQVTL... - Serine/threonine-protein kinase VRK3 (EC 2.7.11.22) (Vaccinia-related kinase 3)
+   3. Q09503 (TTBK6_CAEEL) - Score: 14.9436 - ...HRN[V][N]TQ[N][L][F][L][G][N][E][K][D]SERAK... - Inactive tau-tubulin kinase ttbk-6
+   4. Q852L0 (HD16N_ORYSJ) - Score: 14.8679 - ...HGD[V][K]PE[N][F][L][L][G][H][P][G][S]VDEKK... - Casein kinase 1-like protein HD16 (EC 2.7.11.1) (Os03g0793500 protein) (Protein EARLY FLOWERING 1) (Protein HEADING DATE 16)
+   5. Q21307 (MEK1_CAEEL) - Score: 14.8578 - ...MHRD[V][K]PS[N][I][L][L][D]WSGVIKLC... - Dual specificity mitogen-activated protein kinase kinase mek-1 (EC 2.7.12.2)
+   6. Q8SS96 (KC11_ENCCU) - Score: 14.8405 - ...VHRD[I][K]P[D][N][F][V][F][D][V]QGDRLYL... - Probable casein kinase I homolog ECU03_0910 (EC 2.7.11.1)
+   7. Q2TAE3 (DYR1A_XENLA) - Score: 14.8167 - ...H[C]D[L][K]P[E][N][I][L][L][C][N]PKRSAIKI... - Dual specificity tyrosine-phosphorylation-regulated kinase 1A (EC 2.7.11.23) (EC 2.7.12.1) (Protein kinase minibrain homolog)
+   8. P09251 (US03_VZVD) - Score: 14.8067 - ...HRD[I][K]SE[N][I][F][I][N]HPGDVCVGD... - Serine/threonine-protein kinase US3 homolog (Protein kinase ORF66) (EC 2.7.11.1)
+   9. P49657 (MNB_DROME) - Score: 14.8013 - ...H[C]D[L][K]P[E][N][I][L][L][C][N]PKRSAIKI... - Serine/threonine-protein kinase minibrain (EC 2.7.12.1)
+   10. Q0IJ08 (DYR1A_XENTR) - Score: 14.7725 - ...H[C]D[L][K]P[E][N][I][L][L][C][N]PKRSAIKI... - Dual specificity tyrosine-phosphorylation-regulated kinase 1A (EC 2.7.11.23) (EC 2.7.12.1) (Protein kinase minibrain homolog)
+
+--- Rank #56 (Backfill) ---
+Node: Layer 10, Latent 836
+Max Activation: 19.4845
+Peak Location: Trace Idx 119 (AA #119)
+Motif Context: ALQ[C]AKA[L]AYLHS
+Trace Window : [ 0.         0.         0.         1.1786288  0.         0.
+  0.        19.484457   0.         0.         0.         0.
+  0.       ]
+
+   [Global Top 10 Reference Entries for L10-836]
+   1. Q9CAL3 (CRK2_ARATH) - Score: 23.1328 - ...YTIIVG[T][A]EG[L][V]YL[H]EQSSVK... - Cysteine-rich receptor-like protein kinase 2 (Cysteine-rich RLK2) (EC 2.7.11.-)
+   2. Q9FNE1 (CRK42_ARATH) - Score: 23.0017 - ...LNIILG[T][A]EG[L][A]YL[H]GGSPVR... - Cysteine-rich receptor-like protein kinase 42 (Cysteine-rich RLK42) (EC 2.7.11.-)
+   3. Q9FXF2 (RKF1_ARATH) - Score: 22.9961 - ...FKICCG[I][A]KG[L][A]FL[H]EESPLK... - Probable LRR receptor-like serine/threonine-protein kinase RFK1 (EC 2.7.11.1) (Receptor-like kinase in flowers 1)
+   4. Q8LPB4 (PSKR1_DAUCA) - Score: 22.9903 - ...LRIARG[A][A]EG[L][A]YL[H]QSCEPH... - Phytosulfokine receptor 1 (DcPSKR1) (EC 2.7.11.1) (Phytosulfokine LRR receptor kinase 1)
+   5. Q9ASS4 (Y5838_ARATH) - Score: 22.8492 - ...LKIAIG[T][A]KG[L][A]WL[H]HSCNPR... - Probably inactive leucine-rich repeat receptor-like protein kinase At5g48380
+   6. Q0D5R3 (CRK6_ORYSJ) - Score: 22.8488 - ...FKIING[I][A]RG[L][Q]YL[H]EDSQLK... - Cysteine-rich receptor-like protein kinase 6 (Cysteine-rich RLK6) (EC 2.7.11.-)
+   7. C0LGW6 (ERL1_ARATH) - Score: 22.8447 - ...LKIAVG[A][A]QG[L][A]YL[H]HDCTPR... - LRR receptor-like serine/threonine-protein kinase ERL1 (EC 2.7.11.1) (Protein ERECTA-like kinase 1)
+   8. Q09092 (SRK6_BRAOV) - Score: 22.8270 - ...FDITNG[V][A]RG[L][L]YL[H]QDSRFR... - Putative serine/threonine-protein kinase receptor (EC 2.7.11.1) (S-receptor kinase) (SRK)
+   9. Q9ZU46 (ZAR1_ARATH) - Score: 22.7848 - ...LRIMKG[I][A]TG[L][V]YL[H]EFSPKK... - Receptor protein kinase-like protein ZAR1 (EC 2.7.11.1) (Protein ZYGOTIC ARREST 1)
+   10. Q6XAT2 (ERL2_ARATH) - Score: 22.7803 - ...LKIAVG[A][A]QG[L][A]YL[H]HDCTPR... - LRR receptor-like serine/threonine-protein kinase ERL2 (EC 2.7.11.1) (Protein ERECTA-like kinase 2)
+
+--- Rank #57 (In Circuit JSON) ---
+Node: Layer 10, Latent 3205
+Max Activation: 18.9876
+Peak Location: Trace Idx 69 (AA #69)
+Motif Context: ENV[I]R[V][I]GRAS
+Trace Window : [ 0.         0.         0.         1.2626283  0.        18.987572
+  4.618688   0.         0.         0.         0.       ]
+
+   [Global Top 10 Reference Entries for L10-3205]
+   1. A2X6X1 (CDKG1_ORYSI) - Score: 20.2739 - ...LSFHHPSI[V]E[V][K]EVVVGSNDR... - Cyclin-dependent kinase G-1 (CDKG;1) (EC 2.7.11.22) (EC 2.7.11.23)
+   2. Q6K5F8 (CDKG1_ORYSJ) - Score: 20.2655 - ...LSFHHPSI[V]E[V][K]EVVVGSNDR... - Cyclin-dependent kinase G-1 (CDKG;1) (EC 2.7.11.22) (EC 2.7.11.23)
+   3. Q28317 (KIT_CAPHI) - Score: 20.2625 - ...YLGNHMNI[V]N[L][L]GACTIGGPT... - Mast/stem cell growth factor receptor Kit (SCFR) (EC 2.7.10.1) (Proto-oncogene c-Kit) (Tyrosine-protein kinase Kit) (CD antigen CD117)
+   4. P10721 (KIT_HUMAN) - Score: 20.2579 - ...YLGNHMNI[V]N[L][L]GACTIGGPT... - Mast/stem cell growth factor receptor Kit (SCFR) (EC 2.7.10.1) (Piebald trait protein) (PBT) (Proto-oncogene c-Kit) (Tyrosine-protein kinase Kit) (p145 c-kit) (v-kit Hardy-Zuckerman 4 feline sarcoma viral oncogene homolog) (CD antigen CD117)
+   5. Q8AXC6 (KIT_TAKRU) - Score: 20.2436 - ...YLGNHINI[V]N[L][L]GACTVGGPT... - Mast/stem cell growth factor receptor Kit (SCFR) (EC 2.7.10.1) (Tyrosine-protein kinase kit)
+   6. Q2HWD6 (KIT_PIG) - Score: 20.2393 - ...YLGNHMNI[V]N[L][L]GACTIGGPT... - Mast/stem cell growth factor receptor Kit (SCFR) (EC 2.7.10.1) (Proto-oncogene c-Kit) (Tyrosine-protein kinase Kit) (CD antigen CD117)
+   7. P43481 (KIT_BOVIN) - Score: 20.2379 - ...YLGNHMNI[V]N[L][L]GACTIGGPT... - Mast/stem cell growth factor receptor Kit (SCFR) (EC 2.7.10.1) (Proto-oncogene c-Kit) (Tyrosine-protein kinase Kit) (CD antigen CD117)
+   8. O97799 (KIT_CANLF) - Score: 20.2293 - ...YLGNHMNI[V]N[L][L]GACTVGGPT... - Mast/stem cell growth factor receptor Kit (SCFR) (EC 2.7.10.1) (Proto-oncogene c-Kit) (Tyrosine-protein kinase Kit) (CD antigen CD117)
+   9. Q76II0 (KIT_CALJA) - Score: 20.2243 - ...YLGNHMNI[V]N[L][L]GACTIGGPT... - Mast/stem cell growth factor receptor Kit (SCFR) (EC 2.7.10.1) (Proto-oncogene c-Kit) (Tyrosine-protein kinase Kit) (CD antigen CD117)
+   10. P05532 (KIT_MOUSE) - Score: 20.2144 - ...YLGNHMNI[V]N[L][L]GACTVGGPT... - Mast/stem cell growth factor receptor Kit (SCFR) (EC 2.7.10.1) (Proto-oncogene c-Kit) (Tyrosine-protein kinase Kit) (CD antigen CD117)
+
+--- Rank #58 (In Circuit JSON) ---
+Node: Layer 10, Latent 1680
+Max Activation: 17.6797
+Peak Location: Trace Idx 199 (AA #199)
+Motif Context: IMLW[E][L][M][T]RQL[P]YSH
+Trace Window : [ 0.         0.         0.         0.        11.593448  17.679674
+ 12.3624     2.7292662  0.         0.         0.         0.9048437
+  0.         0.         0.       ]
+
+   [Global Top 10 Reference Entries for L10-1680]
+   1. Q12852 (M3K12_HUMAN) - Score: 18.9515 - ...IWSFGVVLW[E][L][L][T]GEIPYKDV... - Mitogen-activated protein kinase kinase kinase 12 (EC 2.7.11.25) (Dual leucine zipper bearing kinase) (DLK) (Leucine-zipper protein kinase) (ZPK) (MAPK-upstream kinase) (MUK) (Mixed lineage kinase)
+   2. Q60700 (M3K12_MOUSE) - Score: 18.9279 - ...IWSFGVVLW[E][L][L][T]GEIPYKDV... - Mitogen-activated protein kinase kinase kinase 12 (EC 2.7.11.25) (Dual leucine zipper bearing kinase) (DLK) (Leucine-zipper protein kinase) (ZPK) (MAPK-upstream kinase) (MUK) (Mixed lineage kinase)
+   3. Q63796 (M3K12_RAT) - Score: 18.9251 - ...IWSFGVVLW[E][L][L][T]GEIPYKDV... - Mitogen-activated protein kinase kinase kinase 12 (EC 2.7.11.25) (Dual leucine zipper bearing kinase) (DLK) (Leucine-zipper protein kinase) (ZPK) (MAPK-upstream kinase) (MUK) (Mixed lineage kinase)
+   4. A7MBB4 (M3K13_BOVIN) - Score: 18.7961 - ...IWSFGVVLW[E][L][L][T]GEI[P]YKDV... - Mitogen-activated protein kinase kinase kinase 13 (EC 2.7.11.25)
+   5. O43283 (M3K13_HUMAN) - Score: 18.7574 - ...IWSFGVVLW[E][L][L][T]GEI[P]YKDV... - Mitogen-activated protein kinase kinase kinase 13 (EC 2.7.11.25) (Leucine zipper-bearing kinase) (Mixed lineage kinase) (MLK)
+   6. Q1HKZ5 (M3K13_MOUSE) - Score: 18.7449 - ...IWSFGVVLW[E][L][L][T]GEI[P]YKDV... - Mitogen-activated protein kinase kinase kinase 13 (EC 2.7.11.25)
+   7. Q5R8X7 (M3K13_PONAB) - Score: 18.7354 - ...IWSFGVVLW[E][L][L][T]GEI[P]YKDV... - Mitogen-activated protein kinase kinase kinase 13 (EC 2.7.11.25)
+   8. A7J1T0 (M313B_XENLA) - Score: 18.7230 - ...IWSFGVLLW[E][L][L][T]GEIPYKDV... - Mitogen-activated protein kinase kinase kinase 13-B (EC 2.7.11.25)
+   9. A7E3S4 (RAF1_BOVIN) - Score: 18.6848 - ...VYSYGIVLY[E][L][M][T]GELPYSHI... - RAF proto-oncogene serine/threonine-protein kinase (EC 2.7.11.1) (Proto-oncogene c-RAF) (cRaf) (Raf-1)
+   10. P05625 (RAF1_CHICK) - Score: 18.6794 - ...VYSYGIVLY[E][L][M][T]GELPYSHI... - RAF proto-oncogene serine/threonine-protein kinase (EC 2.7.11.1) (C-MIL) (C-RAF) (MIL proto-oncogene serine/threonine-protein kinase) (RAF-1)
+
+--- Rank #59 (In Circuit JSON) ---
+Node: Layer 10, Latent 1040
+Max Activation: 17.5825
+Peak Location: Trace Idx 91 (AA #91)
+Motif Context: KDY[L]L[M]EYLEE[G][S][L][H][N][Y][L][Y][G]DDK
+Trace Window : [ 0.         0.         0.         1.1121259  0.         3.83791
+  0.         0.         0.         0.         0.         1.595781
+  4.2117796 17.582523   8.370067   3.8966472  5.4115415 11.421333
+  3.6894324  1.1914234  0.         0.         0.       ]
+
+   [Global Top 10 Reference Entries for L10-1040]
+   1. Q7Z8E9 (STE20_PYRO7) - Score: 19.5170 - ...VV[M]EFMEG[G][S][L][T][D][V][V][T]FNIMT... - Serine/threonine-protein kinase MST20 (EC 2.7.11.1)
+   2. Q4P5N0 (STE20_MYCMD) - Score: 19.4875 - ...VV[M]EYMEG[G][S][L][T][D][V][V][T]CNIMT... - Serine/threonine-protein kinase SMU1 (EC 2.7.11.1)
+   3. Q7RZD3 (STE20_NEUCR) - Score: 19.4291 - ...VV[M]EYMEG[G][S][L][T][D][V][V][T]FNIMT... - Serine/threonine-protein kinase ste20 (EC 2.7.11.1) (Serine/threonine protein kinase 4)
+   4. Q75DK7 (STE20_EREGS) - Score: 19.3706 - ...VI[M]EYMEG[G][S][L][T][D][V][V][T]HCILT... - Serine/threonine-protein kinase STE20 (EC 2.7.11.1)
+   5. Q94A06 (M2K1_ARATH) - Score: 19.2983 - ...II[L]EFMDG[G][S][L][A][D][L][L][K]KVGKV... - Mitogen-activated protein kinase kinase 1 (AtMKK1) (MAP kinase kinase 1) (EC 2.7.12.2) (AtMEK1) (NMAPKK)
+   6. P53671 (LIMK2_HUMAN) - Score: 19.2513 - ...[L]L[T]EYIEG[G][T][L][K][D][F][L][R]SMDPF... - LIM domain kinase 2 (LIMK-2) (EC 2.7.11.1)
+   7. Q64303 (PAK2_RAT) - Score: 19.2412 - ...VV[M]EYLAG[G][S][L][T][D][V][V][T]ETCMD... - Serine/threonine-protein kinase PAK 2 (EC 2.7.11.1) (Gamma-PAK) (p21-activated kinase 2) (PAK-2) [Cleaved into: PAK-2p27; PAK-2p34]
+   8. Q8CIN4 (PAK2_MOUSE) - Score: 19.2411 - ...VV[M]EYLAG[G][S][L][T][D][V][V][T]ETCMD... - Serine/threonine-protein kinase PAK 2 (EC 2.7.11.1) (Gamma-PAK) (p21-activated kinase 2) (PAK-2) [Cleaved into: PAK-2p27; PAK-2p34]
+   9. Q17850 (PK1_CAEEL) - Score: 19.2394 - ...VV[M]EYLAG[G][S][L][T][D][V][V][T]ECQME... - Serine/threonine-protein kinase pak-1 (EC 2.7.11.1) (CePAK) (p21-activated kinase 1) (PAK1)
+   10. O54785 (LIMK2_MOUSE) - Score: 19.2358 - ...LL[T]EYIEG[G][T][L][K][D][F][L][R]SVDPF... - LIM domain kinase 2 (LIMK-2) (EC 2.7.11.1)
+
+--- Rank #60 (In Circuit JSON) ---
+Node: Layer 12, Latent 3189
+Max Activation: 21.5992
+Peak Location: Trace Idx 64 (AA #64)
+Motif Context: SEIDH[E]NVIRV
+Trace Window : [ 0.        0.        0.        0.        0.       21.599203  0.
+  0.        0.        0.        0.      ]
+
+   [Global Top 10 Reference Entries for L12-3189]
+   1. Q99JP0 (M4K3_MOUSE) - Score: 24.8251 - ...EIIMMKDCKH[P]NIVAYFGSYL... - Mitogen-activated protein kinase kinase kinase kinase 3 (EC 2.7.11.1) (Germinal center kinase-related protein kinase) (GLK) (MAPK/ERK kinase kinase kinase 3) (MEK kinase kinase 3) (MEKKK 3)
+   2. Q8IVH8 (M4K3_HUMAN) - Score: 24.8005 - ...EIIMMKDCKH[P]NIVAYFGSYL... - Mitogen-activated protein kinase kinase kinase kinase 3 (EC 2.7.11.1) (Germinal center kinase-related protein kinase) (GLK) (MAPK/ERK kinase kinase kinase 3) (MEK kinase kinase 3) (MEKKK 3)
+   3. Q7Z8E9 (STE20_PYRO7) - Score: 24.7815 - ...EILVMKDSSH[P]NIVNFIDSYL... - Serine/threonine-protein kinase MST20 (EC 2.7.11.1)
+   4. G5ECP4 (PIK1_CAEEL) - Score: 24.6290 - ...ELRTLARFRH[D]NILPIYAYSL... - Pelle-like serine/threonine-protein kinase pik-1 (EC 2.7.11.1)
+   5. Q93Z30 (BHP_ARATH) - Score: 24.6056 - ...ELALLQRLRH[P]NIVQFLGAVT... - Serine/threonine-protein kinase 12 (EC 2.7.11.1) (Protein BLUE LIGHT-DEPENDENT H(+)-ATPASE PHOSPHORYLATION)
+   6. Q9H2K8 (TAOK3_HUMAN) - Score: 24.5021 - ...EVKFLRQLKH[P][N]TIEYKGCYL... - Serine/threonine-protein kinase TAO3 (EC 2.7.11.1) (Cutaneous T-cell lymphoma-associated antigen HD-CL-09) (CTCL-associated antigen HD-CL-09) (Dendritic cell-derived protein kinase) (JNK/SAPK-inhibitory kinase) (Jun kinase-inhibitory kinase) (Kinase from chicken homolog A) (hKFC-A) (Thousand and one amino acid protein 3)
+   7. Q9XI87 (VIK_ARATH) - Score: 24.4807 - ...EVDLLVKLRH[P]NIVQFLGAVT... - Serine/threonine-protein kinase VIK (EC 2.7.11.1) (VH1-interacting kinase)
+   8. Q5R4F3 (TAOK3_PONAB) - Score: 24.4606 - ...EVKFLRQLKH[P][N]TIEYKGCYL... - Serine/threonine-protein kinase TAO3 (EC 2.7.11.1) (Thousand and one amino acid protein 3)
+   9. Q55GU0 (Y9955_DICDI) - Score: 24.4439 - ...ELTILSRLRH[P]NIVLLMAACT... - Probable serine/threonine-protein kinase DDB_G0267514 (EC 2.7.11.1)
+   10. Q53UA7 (TAOK3_RAT) - Score: 24.2742 - ...EVRFLQQLKH[P]NTIEYKGCYL... - Serine/threonine-protein kinase TAO3 (EC 2.7.11.1) (Axotomy-related gene 357 protein) (JNK/SAPK-inhibitory kinase) (Jun kinase-inhibitory kinase) (Thousand and one amino acid protein 3)
+

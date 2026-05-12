@@ -45,6 +45,7 @@ class CrossLayerTranscoder(nn.Module):
         self.auxk = auxk
         self.batch_size = batch_size
         self.dead_steps_threshold = dead_steps_threshold / batch_size
+        self.skip_ln = (num_layers == 12)
 
         # --- Encoders ---
         # Encoder per layer: Linear(H, D)
@@ -86,6 +87,11 @@ class CrossLayerTranscoder(nn.Module):
 
     def LN(self, x: torch.Tensor, eps: float = 1e-5) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
         """Manual LayerNorm to return mean and std for reconstruction."""
+        if self.skip_ln:
+            # Return identity
+            mu = torch.zeros((*x.shape[:-1], 1), device=x.device, dtype=x.dtype)
+            std = torch.ones((*x.shape[:-1], 1), device=x.device, dtype=x.dtype)
+            return x, mu, std
         mu = x.mean(dim=-1, keepdim=True)
         x = x - mu
         std = x.std(dim=-1, keepdim=True)

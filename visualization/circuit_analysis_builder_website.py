@@ -1,4 +1,5 @@
 import torch
+import torch.nn as nn
 import os
 import sys
 import json
@@ -6,34 +7,45 @@ import argparse
 import numpy as np
 
 # --- Adjust Paths to match your environment ---
-sys.path.append(os.path.abspath(".."))
-sys.path.append(os.path.abspath("../training"))
-sys.path.append(os.path.abspath("../circuit_utils"))
-sys.path.append(os.path.abspath("../steering"))
+script_dir = os.path.dirname(os.path.abspath(__file__))
+repo_root = os.path.dirname(script_dir)
+sys.path.append(repo_root)
+sys.path.append(os.path.join(repo_root, "training"))
+sys.path.append(os.path.join(repo_root, "circuit_utils"))
+sys.path.append(os.path.join(repo_root, "steering"))
 
 # Configuration
 TARGET_PER_LAYER_DIFF = 5   # Nodes per layer for Differential Report
 TARGET_PER_LAYER_SINGLE = 5 # Nodes per layer for Single Sequence Reports
 
-# Import ESM2ActivationCollector
-try:
-    from esm_activation import ESM2ActivationCollector
-except ImportError:
-    try:
-        sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "circuit_utils"))
-        from esm_activation import ESM2ActivationCollector
-    except ImportError:
-        ESM2ActivationCollector = None
-        print("Warning: ESM2ActivationCollector not found.")
-
 # Import CLT Module
 try:
     from clt_module import CLTLightningModule
+    from clt_circuit import CircuitDiscovererCLT
 except ImportError:
-    print("Warning: CLTLightningModule import failed. Ensure 'training' folder is in path.")
-    CLTLightningModule = None
+    try:
+        sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "training"))
+        from clt_module import CLTLightningModule
+        from clt_circuit import CircuitDiscovererCLT
+    except ImportError:
+        print("Warning: CLTLightningModule import failed. Ensure 'training' folder is in path.")
+        CLTLightningModule = None
+        CircuitDiscovererCLT = None
 
-from local_replacement_models import LocalCLTReplacementModel
+try:
+    from local_replacement_models import LocalCLTReplacementModel
+except ImportError:
+    try:
+        sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "steering"))
+        from local_replacement_models import LocalCLTReplacementModel
+    except ImportError:
+        print("Warning: LocalCLTReplacementModel import failed. Ensure 'steering' folder is in path.")
+        LocalCLTReplacementModel = None
+
+try:
+    from circuit_utils.circuit_utils import compute_attribution
+except ImportError:
+    from circuit_utils import compute_attribution
 
 # -----------------------------------------------------------------------------
 # Analysis Helper Functions 
@@ -252,6 +264,61 @@ def load_dataset_reference(path):
         print(f"Failed to load reference file: {e}")
         return None
 
+
+def resolve_top10_activations_path(esm_path, requested=None):
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    if requested:
+        requested_path = requested if os.path.isabs(requested) else os.path.join(script_dir, requested)
+        if os.path.exists(requested_path):
+            return requested_path
+        if os.path.exists(requested):
+            return requested
+        print(f"Warning: requested activations_pt {requested} not found. Falling back to model-specific default.")
+    is_35m = "35M" in esm_path or "t12" in esm_path
+    candidates = ["top10_activations_35M.pt", "top10_activations.pt"] if is_35m else ["top10_activations.pt", "top10_activations_35M.pt"]
+    for filename in candidates:
+        candidate = os.path.join(script_dir, filename)
+        if os.path.exists(candidate):
+            return candidate
+    print("Warning: No top10 activation file found in visualization directory. Proceeding without reference data.")
+    return requested or os.path.join(script_dir, "top10_activations.pt")
+
+
+def load_probe(probe_path, device):
+    if probe_path is None:
+        return None
+    if not os.path.exists(probe_path):
+        raise FileNotFoundError(f"Probe file not found: {probe_path}")
+    loaded = torch.load(probe_path, map_location=device)
+    if isinstance(loaded, torch.nn.Module):
+        return loaded.to(device)
+    if isinstance(loaded, dict):
+        # Detect CNNProbe state dict
+        if any(k.startswith("layer_pre_head") or k.startswith("head") for k in loaded.keys()):
+            if "layer_pre_head.0.weight" in loaded:
+                input_dim = loaded["layer_pre_head.0.weight"].shape[1]
+            else:
+                conv_keys = [k for k in loaded.keys() if k.endswith(".weight") and "layer_pre_head" in k]
+                if len(conv_keys) > 0:
+                    input_dim = loaded[conv_keys[0]].shape[1]
+                else:
+                    raise ValueError(f"Could not infer CNNProbe input_dim from probe state dict: {probe_path}")
+            probe = CNNProbe(input_dim).to(device)
+            probe.load_state_dict(loaded)
+            return probe
+        if "weight" in loaded and "bias" in loaded and len(loaded["weight"].shape) == 2:
+            in_features = loaded["weight"].shape[1]
+            out_features = loaded["weight"].shape[0]
+            probe = nn.Linear(in_features, out_features).to(device)
+            probe.load_state_dict(loaded)
+            return probe
+        raise ValueError(f"Unsupported probe state dict format: {probe_path}")
+    if isinstance(loaded, (tuple, list)):
+        for item in loaded:
+            if isinstance(item, torch.nn.Module):
+                return item.to(device)
+    raise ValueError(f"Unsupported probe object type: {type(loaded)}")
+
 def write_top_activations_json(output_path, nodes_set, ref_storage, family_name):
     """Generates a top_activations.json file for a given set of nodes."""
     top_acts = {"family": family_name, "layers": {}}
@@ -317,7 +384,8 @@ def main():
                         help="List of sequences. First sequence is treated as Wildtype/Reference.")
     parser.add_argument("--entry_name", type=str, required=True, help="Entry Name (creates output folder)")
     parser.add_argument("--circuit_json", type=str, required=True, help="Path to circuit discovery JSON")
-    parser.add_argument("--activations_pt", type=str, default="top10_activations.pt", help="Path to global activations.pt")
+    parser.add_argument("--activations_pt", type=str, default=None, help="Path to global activations.pt")
+    parser.add_argument("--probe_path", type=str, default=None, help="Optional probe file for attribution-based latent selection")
     
     # Cropping Arguments
     parser.add_argument("--start_pos", type=int, default=None, help="Start position (1-indexed, inclusive)")
@@ -375,11 +443,23 @@ def main():
         circuit_data = json.load(f)
     
     circuit_nodes_map = {str(k): set(v) for k, v in circuit_data.get("nodes", {}).items()}
+    args.activations_pt = resolve_top10_activations_path(args.esm_path, args.activations_pt)
+    print(f"Using activation reference file: {args.activations_pt}")
     ref_storage = load_dataset_reference(args.activations_pt)
 
     print("Loading Model...")
-    pl_module = CLTLightningModule.load_from_checkpoint(args.clt_ckpt, esm2_weight=args.esm_path, strict=False)
+    pl_module = CLTLightningModule.load_from_checkpoint(args.clt_ckpt, esm2_weight=args.esm_path, strict=False, weights_only=False)
     pl_module.to(device).eval()
+
+    probe = load_probe(args.probe_path, device) if args.probe_path else None
+    if probe is not None:
+        probe.eval()
+        print(f"Loaded probe from {args.probe_path} ({probe.__class__.__name__})")
+        if CircuitDiscovererCLT is None:
+            raise RuntimeError("CircuitDiscovererCLT is required for probe-based attribution but could not be imported.")
+        discoverer = CircuitDiscovererCLT(device, ckpt_path=args.clt_ckpt, esm_weights_path=args.esm_path)
+    else:
+        discoverer = None
     
     # 5. Run Inference & Cache Activations
     replacement_model = LocalCLTReplacementModel(pl_module, device, base_prompt=cropped_sequences[0])
@@ -419,6 +499,28 @@ def main():
     diff_scores = [[] for _ in range(num_seqs - 1)] 
     
     num_layers = len(all_acts_numpy_cache[0])
+    attr_scores = {}
+    per_sequence_attr = []
+    if probe is not None:
+        print("Computing attribution scores for probe-based node selection...")
+        global_attr = compute_attribution(
+            discoverer, probe, raw_sequences,
+            batch_size=8,
+            sequential=True,
+            freeze_attention=True
+        )
+        for layer_idx, scores in global_attr.items():
+            for latent_id, score in enumerate(scores):
+                attr_scores[(layer_idx, latent_id)] = float(score)
+
+        for seq in raw_sequences:
+            seq_attr = compute_attribution(
+                discoverer, probe, [seq],
+                batch_size=1,
+                sequential=True,
+                freeze_attention=True
+            )
+            per_sequence_attr.append(seq_attr)
     
     for layer_idx in range(num_layers):
         circuit_latents = circuit_nodes_map.get(str(layer_idx), set())
@@ -458,18 +560,29 @@ def main():
                 # Store Single Score
                 max_val, disp, peak = stats
                 if max_val > 0:
-                    single_scores[s_i].append({
-                        'layer': layer_idx, 'latent': latent_id, 
-                        'score': max_val, 'in_circuit': in_circuit, 
+                    item = {
+                        'layer': layer_idx, 'latent': latent_id,
+                        'score': max_val, 'in_circuit': in_circuit,
                         'trace': disp, 'peak_idx': peak
-                    })
+                    }
+                    if probe is not None:
+                        item['attr_score'] = attr_scores.get((layer_idx, latent_id), 0.0)
+                    single_scores[s_i].append(item)
 
             # Calculate Differentials (Seq 1 vs Others)
             wt_max, wt_disp, wt_peak = seq_stats[0]
+            # Differential analysis is constrained to nodes present in circuit_json.
+            if not in_circuit:
+                continue
             
             for s_i in range(1, num_seqs):
                 curr_max, curr_disp, curr_peak = seq_stats[s_i]
-                diff_val = abs(wt_max - curr_max)
+                if probe is not None and per_sequence_attr:
+                    wt_attr = per_sequence_attr[0].get(layer_idx, np.zeros(dim))[latent_id] if layer_idx in per_sequence_attr[0] else 0.0
+                    curr_attr = per_sequence_attr[s_i].get(layer_idx, np.zeros(dim))[latent_id] if layer_idx in per_sequence_attr[s_i] else 0.0
+                    diff_val = abs(float(wt_attr) - float(curr_attr))
+                else:
+                    diff_val = abs(wt_max - curr_max)
                 
                 diff_scores[s_i - 1].append({
                     'layer': layer_idx, 'latent': latent_id, 'diff': diff_val, 'in_circuit': in_circuit,
@@ -481,7 +594,7 @@ def main():
     def select_top_nodes_generic(score_list, score_key, target_per_layer, top_k_global=20):
         selected = []
         seen = set()
-        score_list.sort(key=lambda x: x[score_key], reverse=True)
+        score_list.sort(key=lambda x: x.get(score_key, x.get('score', 0.0)), reverse=True)
         
         # Top Global
         for item in score_list[:top_k_global]:
@@ -508,8 +621,9 @@ def main():
 
     # Collect interesting nodes from ALL single analyses
     final_single_nodes = []
+    single_key = 'attr_score' if probe is not None else 'score'
     for i in range(num_seqs):
-        nodes = select_top_nodes_generic(single_scores[i], 'score', TARGET_PER_LAYER_SINGLE, top_k_global=10)
+        nodes = select_top_nodes_generic(single_scores[i], single_key, TARGET_PER_LAYER_SINGLE, top_k_global=10)
         final_single_nodes.append(nodes)
         
     # Collect interesting nodes from ALL differentials

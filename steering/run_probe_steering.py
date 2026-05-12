@@ -26,7 +26,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Main Probe Steering Orchestration")
     parser.add_argument("--dms_dir", type=str, required=True, help="Directory containing DMS CSVs")
     parser.add_argument("--output_dir", type=str, default="one_time_gb1_results", help="Output directory")
-    parser.add_argument("--eval_models_dir", type=str, default="eval_models", help="Directory containing held-out eval CNNs")
+    parser.add_argument("--eval_models_dir", type=str, default="eval_models_35M", help="Directory containing held-out eval CNNs")
     parser.add_argument("--clt_ckpt", type=str, required=True, help="Path to CLT Checkpoint")
     parser.add_argument("--plt_ckpt", type=str, required=True, help="Path to PLT Checkpoint")
     parser.add_argument("--esm_weights", type=str, required=True, help="Path to ESM Weights")
@@ -253,7 +253,20 @@ def main():
     }
 
     print("Loading Shared ESMInference...")
-    inference = ESMInference(device, esm_weights_path=args.esm_weights)
+    esm_weights_path = args.esm_weights
+    # assuming the filename is of the form "esm2_t{num_layers}_{millions of params}M.pt"
+    esm_filename = os.path.basename(esm_weights_path)
+    num_layers = int(esm_filename.split("_")[1][1:])
+    d_model = 320 if "8M" in esm_filename else 480 if "35M" in esm_filename else None
+    if d_model is None:
+        raise ValueError(f"Could not infer d_model from ESM filename: {esm_filename}")
+
+    inference = ESMInference(
+        device,
+        esm_weights_path=esm_weights_path,
+        num_layers=num_layers,
+        d_model=d_model,
+    )
 
     single_sub_dir = os.path.join(args.dms_dir, "cv_folds_single_substitutions")
     if not os.path.exists(single_sub_dir): return
@@ -261,7 +274,6 @@ def main():
 
     for filename in tqdm(csv_files, desc="DMS Datasets"):
         dms_name = os.path.splitext(filename)[0]
-        if dms_name != "SPG1_STRSG_Olson_2014": continue
         try:
             df = pd.read_csv(os.path.join(single_sub_dir, filename))
             if df.empty: continue

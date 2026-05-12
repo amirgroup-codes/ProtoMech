@@ -10,7 +10,8 @@ DMS_NAME_FILTER="${1:-}"
 REPO_ROOT="$(dirname "$(pwd)")"
 DMS_DATA_DIR="$REPO_ROOT/function_circuit/DMS" 
 ESM_PATH="../models/esm2_t6_8M_UR50D.pt"
-EVAL_MODELS_DIR="eval_models"
+EVAL_MODELS_DIR="eval_models"  # Directory containing the trained CLT/BlockCLT models to evaluate (e.g., "eval_models_35M" or "eval_models_8M")
+MODEL_TAG="8M"
 FOLDS="0,1,2,3,4"
 SPLIT_TYPE="rand_multiples"
 SEED=42  # Match CLT base seed
@@ -46,9 +47,9 @@ cd "$(dirname "$0")"
 
 # Create log file (with dataset name if filtering)
 if [ -n "$DMS_NAME_FILTER" ]; then
-    LOG_FILE="caa_steering_log_${DMS_NAME_FILTER}.txt"
+    LOG_FILE="caa_steering_log_${MODEL_TAG}_${DMS_NAME_FILTER}.txt"
 else
-    LOG_FILE="caa_steering_log.txt"
+    LOG_FILE="caa_steering_log_${MODEL_TAG}.txt"
 fi
 echo "Logging to: $LOG_FILE"
 if [ -n "$DMS_NAME_FILTER" ]; then

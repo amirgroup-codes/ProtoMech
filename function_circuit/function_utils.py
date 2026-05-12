@@ -295,16 +295,13 @@ def evaluate_circuit(discoverer, probe, data, y, circuit_nodes, batch_size=8, cn
     """
     discoverer.pl_module.eval()
     probe.eval()
-    if not cnn:
-        is_cnn_probe = (probe.__class__.__name__ == "CNNProbe")
-    else:
-        is_cnn_probe = True
 
     preds_list = []
     total_squared_error = 0.0
     total_squared_norm = 0.0
     with torch.no_grad():
-        for i in range(0, len(y), batch_size):
+        pbar = tqdm(range(0, len(y), batch_size), desc="Evaluating Circuit", leave=False, disable=not tqdm.write)
+        for i in pbar:
             batch_seqs = data[i : i+batch_size]  
 
             # 1. Reconstruct
@@ -314,7 +311,7 @@ def evaluate_circuit(discoverer, probe, data, y, circuit_nodes, batch_size=8, cn
                 active_nodes=circuit_nodes, 
                 mean_pool=use_mean_pool,
                 **kwargs
-            )       
+            ).detach()
 
             # Probe Evaluation (Spearman)
             if probe is not None:
@@ -323,32 +320,40 @@ def evaluate_circuit(discoverer, probe, data, y, circuit_nodes, batch_size=8, cn
                 else:
                     probe_input = recon_emb
                 output = probe(probe_input)
-                preds_list.append(output.cpu().numpy().flatten())
+                preds_list.append(output)
 
 
-        # NMSE Evaluation
-        if gt_embeddings is not None:
-            if hasattr(gt_embeddings, '__getitem__'):
-                    batch_gt_np = gt_embeddings[i : i + batch_size]
-            else:
-                batch_gt_np = gt_embeddings[i : i + batch_size] # List
-            batch_gt = torch.as_tensor(batch_gt_np, device=recon_emb.device)
-            if recon_emb.ndim == 3 and batch_gt.ndim == 3:
-                if batch_gt.shape[1] == recon_emb.shape[1] - 2:
-                    recon_for_nmse = recon_emb[:, 1:-1, :]
+            # NMSE Evaluation
+            if gt_embeddings is not None:
+                if hasattr(gt_embeddings, '__getitem__'):
+                        batch_gt_np = gt_embeddings[i : i + batch_size]
+                else:
+                    batch_gt_np = gt_embeddings[i : i + batch_size] # List
+                batch_gt = torch.as_tensor(batch_gt_np, device=recon_emb.device).float().detach()
+                if recon_emb.ndim == 3 and batch_gt.ndim == 3:
+                    if batch_gt.shape[1] == recon_emb.shape[1] - 2:
+                        recon_for_nmse = recon_emb[:, 1:-1, :]
+                    else:
+                        recon_for_nmse = recon_emb
                 else:
                     recon_for_nmse = recon_emb
-            else:
-                recon_for_nmse = recon_emb
-            diff = recon_for_nmse - batch_gt
-            total_squared_error += (diff ** 2).sum().item()
-            total_squared_norm += (batch_gt ** 2).sum().item()
+                total_squared_error += torch.sum((recon_for_nmse - batch_gt)**2).item()
+                total_squared_norm += torch.sum(batch_gt**2).item()
+                del batch_gt
+            del recon_emb
+            if i % (batch_size * 10) == 0:
+                torch.cuda.empty_cache()
               
     results = {}
     if probe is not None and len(preds_list) > 0:
-        all_preds = np.concatenate(preds_list)
+        all_preds = torch.cat(preds_list).cpu().numpy().flatten()
         min_len = min(len(all_preds), len(y))
-        results['spearman'] = spearmanr(y[:min_len], all_preds[:min_len])[0]
+        preds_slice = all_preds[:min_len]
+        y_slice = y[:min_len]
+        if len(np.unique(preds_slice)) <= 1:
+            results['spearman'] = 0.0
+        else:
+            results['spearman'] = float(spearmanr(y_slice, preds_slice)[0])
     else:
         results['spearman'] = 0.0        
     if gt_embeddings is not None:
@@ -364,21 +369,25 @@ def evaluate_probe_direct(probe, dataset_or_embs, y, device, batch_size=64):
     """
     probe.eval()
     preds = []
+    total_steps = len(y) // batch_size + (1 if len(y) % batch_size != 0 else 0)
+    pbar = tqdm(total=total_steps, desc="Direct Probe Eval", leave=False)
     # All embeddings present in one dataset
     if isinstance(dataset_or_embs, Dataset):
-        # FIX: Ensure drop_last=False so we get predictions for EVERY sequence
         loader = DataLoader(
             dataset_or_embs, 
             batch_size=batch_size, 
             collate_fn=collate_fn, 
             shuffle=False,
-            drop_last=False 
+            drop_last=False,
+            num_workers=4,
+            pin_memory=True
         )
         with torch.no_grad():
             for b_emb, _ in loader:
                 b_emb = b_emb.to(device)
                 p = probe(b_emb)
-                preds.append(p.cpu().numpy().flatten())
+                preds.append(p.flatten())
+                pbar.update(1)
 
     # Chunk strategy
     else:
@@ -387,14 +396,23 @@ def evaluate_probe_direct(probe, dataset_or_embs, y, device, batch_size=64):
         with torch.no_grad():
             for i in range(0, N, batch_size):
                 if is_memmap:
-                    batch_data = dataset_or_embs[i : i+batch_size]
-                    b_emb = torch.from_numpy(batch_data).to(device)
+                    batch_data = dataset_or_embs[i : i+batch_size].copy()
+                    b_emb = torch.from_numpy(batch_data).to(device, non_blocking=True)
                 else:
                     batch_list = dataset_or_embs[i : i+batch_size]
                     b_emb = torch.stack([torch.as_tensor(e) for e in batch_list]).to(device)
                 p = probe(b_emb) 
-                preds.append(p.cpu().numpy().flatten())
+                preds.append(p.flatten())
+                pbar.update(1)
                 
-    preds = np.concatenate(preds)
+    if len(preds) > 0:
+        all_preds = torch.cat(preds).cpu().numpy().flatten()
+        min_len = min(len(all_preds), len(y))
+        preds_slice = all_preds[:min_len]
+        y_slice = y[:min_len]
+        if len(np.unique(preds_slice)) <= 1:
+            return 0.0
+        rho, _ = spearmanr(y_slice, preds_slice)
+        return float(rho) if not np.isnan(rho) else 0.0
     
-    return spearmanr(y, preds)[0]
+    return 0.0

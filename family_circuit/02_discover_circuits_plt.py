@@ -17,6 +17,7 @@ sys.path.append('..')
 from family_utils import get_data, train_probe, evaluate_circuit, split_data
 from circuit_utils.plt_circuit import CircuitDiscovererPLT
 from circuit_utils.circuit_utils import compute_attribution, rank_nodes, circuit_search
+import gc
 np.random.seed(42)
 torch.manual_seed(42)
 if torch.cuda.is_available():
@@ -53,6 +54,7 @@ def main():
     if not path.exists(): sys.exit(f"Data not found at {path}")
     data = np.load(path, allow_pickle=True)
     unique_ids, counts = np.unique(data["interpro_ids"], return_counts=True)
+    counts_dict = dict(zip(unique_ids, counts))
     if args.target:
         targets = [args.target]
     else:
@@ -60,7 +62,7 @@ def main():
         targets = unique_ids[sorted_indices]
     if args.limit: 
         targets = targets[:args.limit]
-    valid_targets = [t for t in targets if t != "NEGATIVE"]
+    valid_targets = [t for t in targets if t != "NEGATIVE" and counts_dict.get(t, 0) >= 6]
 
     print(f"Starting PLT discovery using source: {args.source}")
     for family in tqdm(valid_targets, desc="Scanning Families (PLT)", position=0):
@@ -74,11 +76,16 @@ def main():
         X_train, X_val, X_test, y_train, y_val, y_test, seq_train, seq_val, seq_test = split_data(X, y, seqs, args.test_size, args.val_limit)
                 
         # 2. Train probe
-        probe, scaler, clf = train_probe(X_train, y_train, device)
+        probe = train_probe(X_train, y_train, device)
 
         # 3. Check the max possible F1. Define a ceiling based on the performance of max_f1_val
-        clean_f1_val = f1_score(y_val, clf.predict(scaler.transform(X_val)))
-        max_f1_val = evaluate_circuit(discoverer, probe, seq_val, y_val, None, BATCH_SIZE, freeze_attention=freeze_attn, source=args.source)['f1']
+        probe.eval()
+        with torch.no_grad():
+            X_val_tensor = torch.as_tensor(X_val, device=device, dtype=torch.float32)
+            logits = probe(X_val_tensor).squeeze(-1) # (Batch, 1) -> (Batch,)
+            preds = (torch.sigmoid(logits) > 0.5).cpu().numpy().astype(int)
+        clean_f1_val = f1_score(y_val, preds)
+        max_f1_val = evaluate_circuit(discoverer, probe, seq_val, y_val, None, BATCH_SIZE, mean_pooled=True, freeze_attention=freeze_attn, source=args.source)['f1']
         standard_target = clean_f1_val * args.recovery_ratio
         if max_f1_val < standard_target:
             target_f1 = max_f1_val
@@ -107,10 +114,14 @@ def main():
         )
 
         # 6. Final Evaluation (Test Set)
-        clean_f1_test = f1_score(y_test, clf.predict(scaler.transform(X_test)))
-        max_metrics_test = evaluate_circuit(discoverer, probe, seq_test, y_test, None, BATCH_SIZE, gt_embeddings=X_test, freeze_attention=freeze_attn, source=args.source)
-        base_metrics_test = evaluate_circuit(discoverer, probe, seq_test, y_test, {}, BATCH_SIZE, gt_embeddings=X_test, freeze_attention=freeze_attn, source=args.source)
-        test_metrics = evaluate_circuit(discoverer, probe, seq_test, y_test, best_nodes, BATCH_SIZE, gt_embeddings=X_test, freeze_attention=freeze_attn, source=args.source)
+        with torch.no_grad():
+            X_test_tensor = torch.as_tensor(X_test, device=device, dtype=torch.float32)
+            logits = probe(X_test_tensor).squeeze(-1) # (Batch, 1) -> (Batch,)
+            preds = (torch.sigmoid(logits) > 0.5).cpu().numpy().astype(int)
+        clean_f1_test = f1_score(y_test, preds)
+        max_metrics_test = evaluate_circuit(discoverer, probe, seq_test, y_test, None, BATCH_SIZE, mean_pooled=True, gt_embeddings=X_test, freeze_attention=freeze_attn, source=args.source)
+        base_metrics_test = evaluate_circuit(discoverer, probe, seq_test, y_test, {}, BATCH_SIZE, mean_pooled=True, gt_embeddings=X_test, freeze_attention=freeze_attn, source=args.source)
+        test_metrics = evaluate_circuit(discoverer, probe, seq_test, y_test, best_nodes, BATCH_SIZE, mean_pooled=True, gt_embeddings=X_test, freeze_attention=freeze_attn, source=args.source)
         test_f1 = test_metrics['f1']
         test_nmse = test_metrics['nmse']
         recovered_ratio = 0.0
@@ -118,6 +129,10 @@ def main():
         if denom > 1e-6:
             recovered_ratio = (test_f1 - base_metrics_test['f1']) / denom
         tqdm.write(f"[{family}] n={n_total_pos} | Clean: {clean_f1_test:.2f} | Max: {max_metrics_test['f1']:.2f} | Recov F1: {test_f1:.2f} | Recov NMSE: {test_nmse:.4f} | Nodes: {best_k}")
+        discoverer.clear_cache()
+        gc.collect()
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
 
         # Save
         res = {

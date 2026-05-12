@@ -271,7 +271,7 @@ def main():
     ref_storage = load_dataset_reference(args.activations_pt)
 
     print("Loading Model...")
-    pl_module = CLTLightningModule.load_from_checkpoint(args.clt_ckpt, esm2_weight=args.esm_path, strict=False)
+    pl_module = CLTLightningModule.load_from_checkpoint(args.clt_ckpt, esm2_weight=args.esm_path, strict=False, weights_only=False)
     pl_module.to(device).eval()
     replacement_model = LocalCLTReplacementModel(pl_module, device, base_prompt=full_sequence)
     # replacement_model = FullCLTReplacementModel(pl_module, device)

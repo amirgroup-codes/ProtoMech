@@ -157,4 +157,4 @@ class PLTLightningModule(pl.LightningModule):
         return total_loss
 
     def configure_optimizers(self):
-        return torch.optim.Adam(self.parameters(), lr=self.args.lr, weight_decay=1e-5)
+        return torch.optim.AdamW(filter(lambda p: p.requires_grad, self.parameters()), lr=self.args.lr, weight_decay=1e-5)

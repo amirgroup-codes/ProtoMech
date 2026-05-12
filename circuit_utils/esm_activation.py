@@ -24,6 +24,13 @@ class ESM2ActivationCollector:
         self.target_layers = target_layers if target_layers else list(range(len(esm2_model.layers)))
         self.activations = {} 
         self.hooks = []
+        self.cache = {} # Storage for pre-computed activations
+
+    def clear_cache(self):
+        """Removes cached tensors to free up GPU memory."""
+        self.cache.clear()
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
 
     def _make_hook(self, key, scale=1.0, transpose=False, capture_input=False):
         """
@@ -45,10 +52,11 @@ class ESM2ActivationCollector:
             # (T, B, H) -> (B, T, H)
             if transpose:
                 data = data.transpose(0, 1)                
-            self.activations[key] = data.detach()
+            self.activations[key] = data.detach().to("cpu", dtype=torch.float32, non_blocking=True)
         return hook
 
     def register_hooks(self):
+        self.remove_hooks()
         # 1. Hook Embeddings (B, T, H)
         scale = self.model.embed_scale
         embed_hook = self.model.embed_tokens.register_forward_hook(
@@ -86,7 +94,7 @@ class ESM2ActivationCollector:
             )
             self.hooks.append(hook)
 
-    def collect(self, input_ids, attention_mask=None):
+    def collect(self, input_ids, cache_key=None):
         """
         input_ids: (B, T)
         Returns:
@@ -95,69 +103,69 @@ class ESM2ActivationCollector:
         x_mlp_stack_flat_SLH: (B*T, L, H) - MLP outputs
         x_clt_input_stack_flat_SLH: (B*T, L, H) - post-LN residual stream for CLT inference
         mask_S: (B*T,)
+        cache_key: Unique identifier for the batch (e.g., a hash of input_ids).
         """
-        self.activations = {} 
+        if cache_key is not None and cache_key in self.cache:
+            device = input_ids.device
+            return tuple(t.to(device, non_blocking=True) if torch.is_tensor(t) else t 
+                         for t in self.cache[cache_key])
+        
+        self.activations.clear()
         with torch.no_grad():
             self.model(tokens=input_ids, repr_layers=[])            
         if not self.activations:
             raise RuntimeError("Collector failed: No activations captured.")
+        if torch.cuda.is_available():
+            torch.cuda.synchronize()
+
+        B, T = input_ids.shape
+        device = input_ids.device
+        def get_flat_stack(keys, depth):
+            if not keys: return None
+            # Stack on CPU
+            stack_cpu = torch.stack([self.activations[k] for k in keys], dim=1) 
+            # (B, L, T, H) -> (B, T, L, H) -> (S, L, H)
+            # Move to GPU and cast back to float32 only for the specific batch being processed
+            return stack_cpu.permute(0, 2, 1, 3).reshape(B * T, depth, -1).to(device=device, dtype=torch.float32)
+        
         # 1. Main trajectory: embeddings + full layer outputs (integer keys)
-        filtered_activations = {
-            k: v for k, v in self.activations.items()
-            if not (
-                isinstance(k, str) and (
-                    k.startswith("mlp_input_")
-                    or k.startswith("mlp_")
-                    or k.startswith("clt_input_")
-                )
-            )
-        }
-        sorted_keys = sorted(filtered_activations.keys()) 
-        trajectory = [filtered_activations[k] for k in sorted_keys] # L+1 tensors, each one is (B, T, H)
-        x_stack_BLTH = torch.stack(trajectory, dim=1) 
-        B, L_plus_1, T, H = x_stack_BLTH.shape
-        x_stack_flat_SLH = x_stack_BLTH.permute(0, 2, 1, 3).reshape(B * T, L_plus_1, H)
+        traj_keys = sorted([k for k in self.activations.keys() if isinstance(k, int)])
+        x_stack_flat_SLH = get_flat_stack(traj_keys, len(traj_keys))
         
         # 2. MLP inputs (pre-LN residual stream, mlp_input_0, mlp_input_1, ...)
-        mlp_input_keys = sorted(
-            [k for k in self.activations.keys() if isinstance(k, str) and k.startswith("mlp_input_")],
-            key=lambda x: int(x.split("_")[2])
-        )
-        mlp_input_activations = [self.activations[k] for k in mlp_input_keys] # L tensors
-        # (B, T, H) -> (B, L, T, H)
-        x_mlp_input_stack_BLTH = torch.stack(mlp_input_activations, dim=1) 
-        x_mlp_input_stack_flat_SLH = x_mlp_input_stack_BLTH.permute(0, 2, 1, 3).reshape(B * T, len(mlp_input_keys), H)
+        mlp_in_keys = sorted([k for k in self.activations.keys() if "mlp_input_" in str(k)], 
+                             key=lambda x: int(str(x).split("_")[-1]))
+        x_mlp_input_stack_flat_SLH = get_flat_stack(mlp_in_keys, len(mlp_in_keys))
         
         # 3. MLP outputs (mlp_0, mlp_1, ...)
-        mlp_keys = sorted(
-            [k for k in self.activations.keys() if isinstance(k, str) and k.startswith("mlp_") and not k.startswith("mlp_input_")],
-            key=lambda x: int(x.split("_")[1])
-        )
-        mlp_activations = [self.activations[k] for k in mlp_keys] # L tensors
-        # (B, T, H) -> (B, L, T, H)
-        x_mlp_stack_BLTH = torch.stack(mlp_activations, dim=1)
-        x_mlp_stack_flat_SLH = x_mlp_stack_BLTH.permute(0, 2, 1, 3).reshape(B * T, len(mlp_keys), H)
+        mlp_keys = sorted([k for k in self.activations.keys() if "mlp_" in str(k) and "input" not in str(k)], 
+                          key=lambda x: int(str(x).split("_")[-1]))
+        x_mlp_stack_flat_SLH = get_flat_stack(mlp_keys, len(mlp_keys))
 
         # 4. CLT inputs (post-LN residual stream, clt_input_0, clt_input_1, ...)
-        clt_input_keys = sorted(
-            [k for k in self.activations.keys() if isinstance(k, str) and k.startswith("clt_input_")],
-            key=lambda x: int(x.split("_")[2])
-        )
-        clt_input_activations = [self.activations[k] for k in clt_input_keys]  # L tensors
-        x_clt_input_stack_BLTH = torch.stack(clt_input_activations, dim=1)
-        x_clt_input_stack_flat_SLH = x_clt_input_stack_BLTH.permute(0, 2, 1, 3).reshape(B * T, len(clt_input_keys), H)
+        clt_keys = sorted([k for k in self.activations.keys() if "clt_input_" in str(k)], 
+                          key=lambda x: int(str(x).split("_")[-1]))
+        x_clt_input_stack_flat_SLH = get_flat_stack(clt_keys, len(clt_keys))
 
         # 5. Mask
-        mask_BT = input_ids != self.alphabet.padding_idx
+        mask_BT = (input_ids != self.alphabet.padding_idx) & \
+                  (input_ids != self.alphabet.cls_idx) & \
+                  (input_ids != self.alphabet.eos_idx)
         mask_S = mask_BT.view(-1)
-        
-        return (
+
+        results = (
             x_stack_flat_SLH,
             x_mlp_input_stack_flat_SLH,
             x_mlp_stack_flat_SLH,
             x_clt_input_stack_flat_SLH,
             mask_S,
         )
+
+        if cache_key is not None:
+            self.cache[cache_key] = tuple(t.to("cpu", non_blocking=True) if torch.is_tensor(t) else t 
+                for t in results)
+            
+        return results
     
     def remove_hooks(self):
         for h in self.hooks: h.remove()
@@ -281,4 +289,4 @@ class ESMInference:
                 return final_output_BTH.cpu().numpy()
             else:
                 masked_emb = final_output_BTH * mask_BT1
-                return masked_emb[:, 1:-1, :].cpu().numpy()
+                return masked_emb.cpu().numpy()

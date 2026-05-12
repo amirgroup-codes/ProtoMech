@@ -13,6 +13,7 @@ ESM_PATH="../models/esm2_t6_8M_UR50D.pt"
 SUPP_VALUES="4 8 16"
 FOLDS="0,1,2,3,4"
 MAX_MUTATIONS="5"
+OUTPUT_BASE="probe_results_8M"
 
 echo "========================================"
 echo " [Setup] Configuration - PROBE STEERING"
@@ -29,12 +30,13 @@ for SUPP in $SUPP_VALUES; do
         echo " [Running] Probe Steering with SUPP=$SUPP, MAX_MUTATIONS=${MUT}"
         python run_probe_steering.py \
             --dms_dir "$DMS_DATA_DIR" \
-            --output_dir "gb1_results_mut5/supp${SUPP}" \
+            --output_dir "${OUTPUT_BASE}/supp${SUPP}" \
             --clt_ckpt "$CLT_PATH" \
             --plt_ckpt "$PLT_PATH" \
             --esm_weights "$ESM_PATH" \
             --circuit_base "$CIRCUIT_BASE" \
             --supp "$SUPP" \
+            --configs "CLT_sequential,CLT_sequential_no_frozen,PLT_no_frozen" \
             --folds "$FOLDS" \
             --max_mutations "$MUT" \
             --alpha_steps 25

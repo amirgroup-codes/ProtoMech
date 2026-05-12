@@ -44,7 +44,7 @@ print(f"Device: {device}")
 
 # Load model - latents_cache is populated automatically via compute_base_values
 print("Loading model and computing latents...")
-pl_module = CLTLightningModule.load_from_checkpoint(CLT_CKPT, esm2_weight=ESM_PATH, strict=False)
+pl_module = CLTLightningModule.load_from_checkpoint(CLT_CKPT, esm2_weight=ESM_PATH, strict=False, weights_only=False)
 pl_module.to(device).eval()
 replacement_model = LocalCLTReplacementModel(pl_module, device, base_prompt=args.sequence)
 

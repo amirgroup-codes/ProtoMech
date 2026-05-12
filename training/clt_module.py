@@ -61,7 +61,7 @@ class ESM2ActivationCollector:
             )
             self.hooks.append(hook)
 
-    def collect(self, input_ids, attention_mask=None):
+    def collect(self, input_ids):
         """
         input_ids: (B, T)
         Returns:
@@ -105,7 +105,7 @@ class ESM2ActivationCollector:
         self.hooks = []
 
 class CLTLightningModule(pl.LightningModule):
-    def __init__(self, args):
+    def __init__(self, args, esm2_weight=None):
         super().__init__()
         self.save_hyperparameters()
         self.args = args
@@ -134,7 +134,8 @@ class CLTLightningModule(pl.LightningModule):
             alphabet=self.alphabet,
             token_dropout=False
         )
-        self._load_esm_weights(args.esm2_weight)
+        esm_weights_path = esm2_weight if esm2_weight is not None else args.esm2_weight
+        self._load_esm_weights(esm_weights_path)
 
         # 4. Freeze ESM
         self.esm_model.eval()
@@ -232,7 +233,7 @@ class CLTLightningModule(pl.LightningModule):
         return total_loss
     
     def configure_optimizers(self):
-        return torch.optim.Adam(self.parameters(), lr=self.args.lr, weight_decay=1e-5)
+        return torch.optim.AdamW(filter(lambda p: p.requires_grad, self.parameters()), lr=self.args.lr, weight_decay=1e-5)
 
     def validation_step(self, batch, batch_idx):
         seqs = batch["Sequence"]

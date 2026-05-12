@@ -41,15 +41,18 @@ def get_esm_inference(esm_inference=None, esm_weights_path=None):
         return esm_inference
     if _esm_inference is None:
         weights = esm_weights_path or globals()['esm_weights_path']
+        esm_filename = os.path.basename(weights)
+        num_layers = int(esm_filename.split("_")[1][1:])
+        d_model = 320 if "8M" in esm_filename else 480 if "35M" in esm_filename else None
         print(f"Loading ESM model from {weights}...")
-        _esm_inference = ESMInference(device, weights)
+        _esm_inference = ESMInference(device, weights, num_layers=num_layers, d_model=d_model)
         print("ESM model loaded successfully.")
     else:
         # Model already loaded, just return it
         pass
     return _esm_inference
 
-def get_caa_vector(pos_seqs, neg_seqs, num_layers=6, batch_size=128):
+def get_caa_vector(pos_seqs, neg_seqs, num_layers=None, batch_size=128):
     '''
     Gets the steering vector using CAA method.
     pos_seqs: list of positive sequences (all same length)
@@ -60,6 +63,8 @@ def get_caa_vector(pos_seqs, neg_seqs, num_layers=6, batch_size=128):
         steering_vector: List length L, each entry (H,) numpy array (no CLS/EOS)
     '''
     esm_inference = get_esm_inference()
+    if num_layers is None:
+        num_layers = len(esm_inference.model.layers)
     print(f"Pos seqs: {len(pos_seqs)}, Neg seqs: {len(neg_seqs)}")
     # Process positive sequences in batches
     positive_vecs = []
@@ -92,37 +97,6 @@ def get_caa_vector(pos_seqs, neg_seqs, num_layers=6, batch_size=128):
 
     steering_vector_LH = positive_vecs_LH - negative_vecs_LH
     return steering_vector_LH
-
-# def steer_caa_sequence(wt_seq, alphas, steering_vector_TH, layer=3):
-#     '''
-#     Steers a sequence using the CAA steering vector and decodes to logits.
-#     '''
-#     esm_inference = get_esm_inference()
-#     B = len(alphas)
-#     wt_emb_1TH = esm_inference.get_embeddings([wt_seq], target_layer=layer, mean_pool=False, source="layer_output", keep_cls_eos=True)
-#     wt_emb_1TH = torch.tensor(wt_emb_1TH, device=device, dtype=torch.float32)
-#     token_norm_1T = torch.norm(wt_emb_1TH, dim=-1, keepdim=True)
-    
-#     alphas_B11 = torch.tensor(alphas, device=device, dtype=torch.float32).view(B, 1, 1)
-#     steering_1TH = torch.tensor(steering_vector_TH, device=device, dtype=torch.float32).unsqueeze(0)
-#     steered_emb_BTH = wt_emb_1TH + alphas_B11 * steering_1TH
-#     # re-normalize to the same norm as the token norm
-#     steered_emb_BTH = steered_emb_BTH / (torch.norm(steered_emb_BTH, dim=-1, keepdim=True) + 1e-10) * token_norm_1T
-    
-#     with torch.no_grad():
-#         # Unwrap DataParallel if needed
-#         model = esm_inference.model.module if isinstance(esm_inference.model, nn.DataParallel) else esm_inference.model
-        
-#         hidden_TBH = steered_emb_BTH.transpose(0, 1)
-        
-#         for layer_module in model.layers[layer+1:]:
-#             hidden_TBH, _ = layer_module(hidden_TBH, self_attn_padding_mask=None)
-        
-#         hidden_TBH = model.emb_layer_norm_after(hidden_TBH)
-#         hidden_BTH = hidden_TBH.transpose(0, 1)
-#         logits_BTV = model.lm_head(hidden_BTH)
-    
-#     return logits_BTV[:, 1:-1, :]
 
 def steer_caa_sequence(wt_seq, alphas, steering_vector_LH):
     """

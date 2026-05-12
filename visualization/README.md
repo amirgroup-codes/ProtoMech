@@ -8,7 +8,7 @@ This folder contains tools for **analyzing and visualizing CLT (Cross-Layer Tran
 
 ## Creating a Graph from a Family Circuit
 
-1. Download the families.tar.gz file from our [HuggingFace](https://huggingface.co/datasets/ktalreja/ProtoMechData).
+1. Download the families.tar.gz and families_35M.tar.gz files from our [HuggingFace](https://huggingface.co/datasets/ktalreja/ProtoMechData).
 2. Find the sequence you want to examine and its InterPro family (IPRXXXXXX). If you don't know what
 InterPro family your sequence is in, try the [InterPro Search](https://www.ebi.ac.uk/interpro/search/sequence/). Our data contains circuits for all the families in SwissProt. If you keep the `CIRCUIT_JSON` blank, it will use the top 10 activations at each layer for the given sequence.
 3. Find `create_family_graph.sh`. Choose the given family circuit json under `base/families/[MODEL_TYPE]/IPRXXXXXX.json`. We recommend using CLT_sequential for the model type, but all of the ones we tested are there. Substitute your sequence in the `SEQUENCE` variable and give an output folder name in `NAME`. Run the script, preferrably with a GPU so the edge weights get done quicker.
@@ -18,7 +18,7 @@ InterPro family your sequence is in, try the [InterPro Search](https://www.ebi.a
 
 ## Creating a Graph from a Function Circuit
 
-1. Download the functions.tar.gz file from our [HuggingFace](https://huggingface.co/datasets/ktalreja/ProtoMechData).
+1. Download the functions.tar.gz and functions_35M.tar.gz files from our [HuggingFace](https://huggingface.co/datasets/ktalreja/ProtoMechData).
 2. Find `create_function_graph.sh`. Substitute your sequences in the `SEQUENCE1`, `SEQUENCE2`, etc. variables and give an output folder name in `NAME`. Choose the function circuit you want to use (note that the pre-loaded circuits are for the 12 DMS assays we ran) in `CIRCUIT_JSON`, or else keep it blank and the circuit will default to the top 10 activations for `SEQUENCE1` at each layer. Enter the sequences you want for comparison, and run the script. You can use 2 or 3 sequences to do this. Run the script, preferrably with a GPU so the edge weights get done quicker.
 3. This will create a set of folders under `NAME` that contain the `activation_indices.json`, `seq.txt`, `top_activations.json`, `virtual_weights.json` for each sequence in `NAME/seq1`, `NAME/seq2`, etc. It will also contain files of the form `top_seq1.txt`, `top_seq2.txt`, etc. which contains the top-activating latents for the given sequences, along with other related proteins. It will also contain `analysis_differential{i}{j}.txt` that shows which nodes differ the most between sequences.
 
@@ -208,6 +208,8 @@ Edge list for graph visualization:
 
 ## Website scripts
 
-These scripts are used to facilitate running ProtoMech on [Google Colab](https://colab.research.google.com/drive/13QsDdwgKX-DWbH01qj8ZzlyY-T8MjQIx?usp=sharing).
+These scripts are used to facilitate running ProtoMech on [Google Colab](https://colab.research.google.com/github/amirgroup-codes/ProtoMech/blob/main/ProtoMech.ipynb).
 - `auto_discover_circuit_website.py`
 - `circuit_analysis_builder_website.py`
+
+The way we compute the top activations in the circuit has changed since running the original experiments. If a probe has been fed as an input to `circuit_analysis_builder_website.py`, the top latents will be determine based on gradient attribution rather than the raw latent activations (the original files created). If no probe has been fed in, the circuit will be determined using raw latent activations.

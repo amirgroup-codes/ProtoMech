@@ -20,12 +20,14 @@ from circuit_utils.circuit_utils import compute_attribution, rank_nodes, circuit
 from circuit_utils.esm_activation import ESMInference
 from circuit_utils.clt_circuit import CircuitDiscovererCLT
 from circuit_utils.plt_circuit import CircuitDiscovererPLT
+import gc
 np.random.seed(42)
 torch.manual_seed(42)
 if torch.cuda.is_available():
     torch.cuda.manual_seed_all(42)
 
 BATCH_SIZE = 128
+BATCH_SIZE_CIRCUIT = 64
 CNN_TOTAL_STEPS = 10000
 CNN_WARMUP = 100
 ESM_WEIGHTS = os.environ.get("ESM_WEIGHTS")
@@ -51,14 +53,12 @@ METHOD_CONFIGS = {
             "freeze_attention": True,   # Isolate MLP/PLT
             "source": "mlp_output"
         }
-    }
-}
-METHOD_CONFIGS = {
+    },
     "CLT_sequential": {
         "discoverer_cls": CircuitDiscovererCLT,
         "ckpt": CLT_CHECKPOINT,
         "flags": {
-            "sequential": True,        # Direct Mode
+            "sequential": True,        # Sequential Mode
             "freeze_attention": True,  # Standard assumption
             "source": "mlp_output"      # Targets MLP specifically
         }
@@ -107,11 +107,14 @@ def main():
     parser.add_argument("--step_size", type=int, default=32)
     parser.add_argument("--max_nodes", type=int, default=1000)
     parser.add_argument("--val_limit", type=int, default=128)
+    parser.add_argument("--layers", type=int, default=6)
+    parser.add_argument("--hidden_size", type=int, default=320)
+    parser.add_argument("--output_dir", type=str, default="functions")
     args = parser.parse_args()
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
     # 1. Initialize
-    inference = ESMInference(device, esm_weights_path=ESM_WEIGHTS)    
+    inference = ESMInference(device, esm_weights_path=ESM_WEIGHTS, num_layers=args.layers, d_model=args.hidden_size)    
     discoverers = {}
     for name, cfg in METHOD_CONFIGS.items():
         if cfg["ckpt"]:
@@ -122,7 +125,6 @@ def main():
     base_dir = Path(args.dms_root)
     cache_root = base_dir.parent / "embeddings_cache"
     subfolders = ["cv_folds_single_substitutions", "cv_folds_multiples_substitutions"]
-    # subfolders = ["cv_folds_multiples_substitutions"]
     
     for subfolder in subfolders:
         input_dir = base_dir / subfolder
@@ -131,18 +133,25 @@ def main():
         # Load files
         dtype = "single" if "single" in subfolder else "multiples"
         print(f"\n{'='*10} Processing {dtype} {'='*10}")        
-        probe_dir = Path(f"probe/{dtype}")
-        func_dirs = {name: Path(f"functions/{name}/{dtype}") for name in METHOD_CONFIGS}
+        if args.layers == 6:
+            probe_dir = Path(f"probe/{dtype}")
+        elif args.layers == 12:
+            probe_dir = Path(f"probe_35M/{dtype}")
+        else:
+            probe_dir = Path(f"probe_L{args.layers}/{dtype}")
+        func_dirs = {name: Path(f"{args.output_dir}/{name}/{dtype}") for name in METHOD_CONFIGS}
         for p in [probe_dir] + list(func_dirs.values()):
             p.mkdir(parents=True, exist_ok=True)
-        # csv_files = list(input_dir.glob("*.csv"))
         csv_files = [
             f for f in input_dir.glob("*.csv") 
         ]
-
+        
         for csv_file in tqdm(csv_files, desc=f"Datasets ({dtype})"):
             dms_name = csv_file.stem
             cache_key = f"{dms_name}_{dtype}"
+            gc.collect()
+            if torch.cuda.is_available():
+                torch.cuda.empty_cache()
             try:
                 df = pd.read_csv(csv_file)
                 seqs = df["mutated_sequence"].values
@@ -185,10 +194,11 @@ def main():
                 try:
                     master_embeddings = precompute_embeddings(
                         seqs, inference, cache_key, 
-                        target_layer=5, 
+                        target_layer=-1, 
                         indices=None,   
                         suffix="",      
-                        cache_dir=str(cache_root)
+                        cache_dir=str(cache_root),
+                        batch_size=BATCH_SIZE
                     )
                 except Exception as e:
                     print(f"Failed to create master embedding: {e}")
@@ -236,7 +246,7 @@ def main():
                             # 5.1. Compute Val Data 
                             val_embs = precompute_embeddings(
                                 seqs, inference, cache_key, indices=val_indices,
-                                suffix=f"val_fold{val_fold}", cache_dir=str(cache_root)
+                                suffix=f"val_fold{val_fold}", cache_dir=str(cache_root), batch_size=BATCH_SIZE
                             )
                             val_ds = EmbeddingDataset(val_embs, labels[val_indices])
 
@@ -253,7 +263,7 @@ def main():
                                 chunk_mask = (fold_vals == f_id)
                                 chunk_indices = np.where(chunk_mask)[0]
 
-                                chunk_fname = f"{cache_key}_train_chunk_fold{f_id}_L5_mlp_seq.dat"
+                                chunk_fname = f"{cache_key}_train_chunk_fold{f_id}_L{args.layers - 1}_mlp_seq.dat"
                                 chunk_path = cache_root / chunk_fname
                                 if chunk_path.exists():
                                     try:
@@ -265,7 +275,7 @@ def main():
                                 # 5.3. Compute temp chunk
                                 chunk_embs = precompute_embeddings(
                                     seqs, inference, cache_key, indices=chunk_indices,
-                                    suffix=f"train_chunk_fold{f_id}", cache_dir=str(cache_root)
+                                    suffix=f"train_chunk_fold{f_id}", cache_dir=str(cache_root), batch_size=BATCH_SIZE
                                 )
                                 chunk_ds = EmbeddingDataset(chunk_embs, labels[chunk_indices])
                                 
@@ -283,7 +293,7 @@ def main():
                                 # 5.5. Delete chunk immediately to save space
                                 del chunk_ds
                                 del chunk_embs
-                                chunk_path = cache_root / f"{cache_key}_train_chunk_fold{f_id}_L5_mlp_seq.dat"
+                                chunk_path = cache_root / f"{cache_key}_train_chunk_fold{f_id}_L{args.layers - 1}_mlp_seq.dat"
                                 if chunk_path.exists(): os.remove(chunk_path)
                                 if stopped: chunk_done = True
                                 
@@ -294,6 +304,12 @@ def main():
 
                     # 6. Circuit discovery
                     print(f"Starting discovery")
+                    # Limit size of test set in large DMS assays
+                    limit_datasets = ["CAPSD_AAV2S_Sinai_2021", "GRB2_HUMAN_Faure_2021", "HIS7_YEAST_Pokusaeva_2019", "SPG1_STRSG_Olson_2014", "YAP1_HUMAN_Araya_2012"]
+                    if dms_name in limit_datasets and args.layers > 6 and len(test_indices) > 1024:
+                        rng_eval = np.random.RandomState(42)
+                        test_indices = rng_eval.choice(test_indices, 1024, replace=False)
+                        tqdm.write(f"[{dms_name}] Limited test indices to 1024 (Model L{args.layers} > 6).")
                     if not use_chunking:
                         test_ds_wrap = EmbeddingDataset(master_embeddings, labels[test_indices], indices=test_indices)
                         val_ds_wrap  = EmbeddingDataset(master_embeddings, labels[val_indices], indices=val_indices)
@@ -301,29 +317,49 @@ def main():
                     else:
                         test_embs = precompute_embeddings(
                             seqs, inference, cache_key, indices=test_indices,
-                            suffix=f"test_fold{i}", cache_dir=str(cache_root)
+                            suffix=f"test_fold{i}", cache_dir=str(cache_root), batch_size=BATCH_SIZE
                         )
                         test_ds_wrap = EmbeddingDataset(test_embs, labels[test_indices]) # Already sliced 
                         # Re-compute Val (if deleted)
                         val_embs_search = precompute_embeddings(
                              seqs, inference, cache_key, indices=val_indices, 
-                             suffix=f"val_fold{val_fold}", cache_dir=str(cache_root)
+                             suffix=f"val_fold{val_fold}", cache_dir=str(cache_root), batch_size=BATCH_SIZE
                         )
                         val_ds_wrap = EmbeddingDataset(val_embs_search, labels[val_indices])
 
                     # 7. Compute clean and max possible spearman
-                    clean_spearman_val = evaluate_probe_direct(cnn_probe, val_ds_wrap, labels[val_indices], device)
+                    clean_spearman_val = evaluate_probe_direct(cnn_probe, val_ds_wrap, labels[val_indices], device, batch_size=BATCH_SIZE_CIRCUIT)
 
-                    # 8. Setup circuit search data by taking the high scoring sequences from the validation set
-                    y_val = labels[val_mask]
-                    median_score = np.median(y_val)
-                    top_indices = np.where(y_val >= median_score)[0]
+                    # 8. Setup subsets for Attribution and Greedy Search
+                    y_val_full = labels[val_mask]
+                    seq_val_full = seqs[val_mask]
+                    median_score = np.median(y_val_full)
+                    # 8.1. Prepare Attribution Set (Top performers to get strong gradient signal)
+                    top_indices = np.where(y_val_full >= median_score)[0]
+                    rng_attr = np.random.RandomState(42 + i)
                     if len(top_indices) > args.val_limit:
-                        rng = np.random.RandomState(42 + i)
-                        subset = rng.choice(top_indices, args.val_limit, replace=False)
-                        seq_attr = seqs[val_mask][subset]
+                        subset_attr = rng_attr.choice(top_indices, args.val_limit, replace=False)
                     else:
-                        seq_attr = seqs[val_mask][top_indices]
+                        subset_attr = top_indices
+                    seq_attr = seq_val_full[subset_attr]
+                    # 8.2. Prepare Search Set (Balanced for Spearman stability)
+                    # Sample half from high, half from low
+                    # Only downsample if we are in the heavy 12-layer/multiples scenario
+                    if args.layers == 12 and "multiples" in subfolder and len(y_val_full) > args.val_limit:
+                        hi_idx = np.where(y_val_full >= median_score)[0]
+                        lo_idx = np.where(y_val_full < median_score)[0]
+                        n_half = args.val_limit // 2
+                        rng_search = np.random.RandomState(43 + i)
+                        hi_sample = rng_search.choice(hi_idx, min(len(hi_idx), n_half), replace=False)
+                        lo_sample = rng_search.choice(lo_idx, min(len(lo_idx), n_half), replace=False)
+                        search_indices = np.concatenate([hi_sample, lo_sample])
+                        seq_search = seq_val_full[search_indices]
+                        y_search = y_val_full[search_indices]
+                        tqdm.write(f"Downsampled search set to {len(y_search)} sequences for speed.")
+                    else:
+                        # Use full validation set for singles or 6-layer runs
+                        seq_search = seq_val_full
+                        y_search = y_val_full
 
                     # 9. Run discovery on each method
                     for name, cfg in METHOD_CONFIGS.items():
@@ -337,7 +373,7 @@ def main():
                         flags = cfg["flags"]
 
                         # 9.1. Define ceiling 
-                        max_spearman_val = evaluate_circuit(disc, cnn_probe, seqs[val_mask], labels[val_mask], None, 8, cnn=True, **flags)['spearman']
+                        max_spearman_val = evaluate_circuit(disc, cnn_probe, seq_search, y_search, None, batch_size=BATCH_SIZE_CIRCUIT, cnn=True, **flags)['spearman']
                         standard_target = clean_spearman_val * args.recovery_ratio
                         if max_spearman_val < standard_target:
                             target_spearman = max_spearman_val
@@ -346,30 +382,41 @@ def main():
                             target_spearman = standard_target
 
                         # 9.2. Compute attribution
-                        global_attr = compute_attribution(disc, cnn_probe, seq_attr, batch_size=8, **flags)
+                        if torch.cuda.is_available():
+                            torch.cuda.empty_cache()
+                        global_attr = compute_attribution(disc, cnn_probe, seq_attr, batch_size=32, **flags)
                         ranking = rank_nodes(global_attr)
+                        disc.clear_cache()
+                        gc.collect()
 
                         # 9.3. Circuit selection
-                        eval_fn = lambda d, p, s, y_true, nodes, bs: evaluate_circuit(d, p, s, y_true, nodes, bs, cnn=True, **flags)['spearman']
+                        eval_fn = lambda d, p, s, y_true, nodes, bs: (evaluate_circuit(d, p, s, y_true, nodes, bs, cnn=True, **flags), d.clear_cache(), torch.cuda.empty_cache())[0]['spearman']
                         best_nodes, best_k, val_recovered_spearman = circuit_search(
                             disc,
                             cnn_probe,
                             ranking,
-                            seqs[val_mask],
-                            labels[val_mask],
+                            seq_search,
+                            y_search,
                             target_metric=target_spearman,
                             metric_fn=eval_fn,
                             step_size=args.step_size,
                             max_nodes=args.max_nodes,
+                            batch_size=BATCH_SIZE_CIRCUIT,
                             desc=f"[{expt_name}]",
                             **flags
                         )
 
                         # 9.4. Final Evaluation (Test Set)
-                        clean_spearman_test = evaluate_probe_direct(cnn_probe, test_ds_wrap, labels[test_indices], device)
-                        max_metrics_test = evaluate_circuit(disc, cnn_probe, seqs[test_indices], labels[test_indices], None, BATCH_SIZE, cnn=True, gt_embeddings=test_embs, **flags)
-                        base_metrics_test = evaluate_circuit(disc, cnn_probe, seqs[test_indices], labels[test_indices], {}, BATCH_SIZE, cnn=True, gt_embeddings=test_embs, **flags)
-                        test_metrics = evaluate_circuit(disc, cnn_probe, seqs[test_indices], labels[test_indices], best_nodes, BATCH_SIZE, cnn=True, gt_embeddings=test_embs, **flags)
+                        clean_spearman_test = evaluate_probe_direct(cnn_probe, test_ds_wrap, labels[test_indices], device, batch_size=BATCH_SIZE_CIRCUIT)
+                        max_metrics_test = evaluate_circuit(disc, cnn_probe, seqs[test_indices], labels[test_indices], None, BATCH_SIZE_CIRCUIT, cnn=True, gt_embeddings=test_embs, **flags)
+                        disc.clear_cache()
+                        gc.collect()
+                        base_metrics_test = evaluate_circuit(disc, cnn_probe, seqs[test_indices], labels[test_indices], {}, BATCH_SIZE_CIRCUIT, cnn=True, gt_embeddings=test_embs, **flags)
+                        disc.clear_cache()
+                        gc.collect()
+                        test_metrics = evaluate_circuit(disc, cnn_probe, seqs[test_indices], labels[test_indices], best_nodes, BATCH_SIZE_CIRCUIT, cnn=True, gt_embeddings=test_embs, **flags)
+                        disc.clear_cache()
+                        gc.collect()
                         test_spearman = test_metrics['spearman']
                         test_nmse = test_metrics['nmse']
                         recovered_ratio = 0.0
@@ -377,6 +424,8 @@ def main():
                         if denom > 1e-6:
                             recovered_ratio = (test_spearman - base_metrics_test['spearman']) / denom
                         tqdm.write(f"[{name} {dms_name} {expt_name} F{i}] n={len(train_indices)} | Clean: {clean_spearman_test:.3f} | Max: {max_metrics_test['spearman']:.3f} | Recov Spearman: {test_spearman:.3f} | Recov NMSE: {test_nmse:.3f} | Nodes: {best_k}")
+                        if torch.cuda.is_available():
+                            torch.cuda.empty_cache()
 
                         # Save
                         res = {
@@ -402,31 +451,27 @@ def main():
 
                     # Cleanup Chunk Temp Files
                     if use_chunking:
+                         layer_idx = args.layers - 1
                          # 1. Close Python Handles (Release memory)
-                         # We must delete these wrappers first so the OS knows the file isn't "busy"
                          if 'test_ds_wrap' in locals(): del test_ds_wrap
                          if 'val_ds_wrap' in locals(): del val_ds_wrap
-                         
                          # Check if the variables exist and are not None before deleting
                          if 'test_embs' in locals() and test_embs is not None: 
-                             del test_embs
+                            del test_embs
                          if 'val_embs_search' in locals() and val_embs_search is not None: 
-                             del val_embs_search
-                         
+                            del val_embs_search
+
                          # 2. Delete Files from Disk (Free storage)
-                         # Reconstruct the filenames used in Section 6
-                         
                          # Delete Test Chunk
-                         test_fname = f"{cache_key}_test_fold{i}_L5_mlp_seq.dat"
+                         test_fname = f"{cache_key}_test_fold{i}_L{layer_idx}_mlp_seq.dat"
                          test_path = cache_root / test_fname
                          if test_path.exists():
                              try:
                                  os.remove(test_path)
                              except OSError as e:
                                  print(f"Error deleting test chunk {test_fname}: {e}")
-
                          # Delete Validation Chunk (The one re-computed for search)
-                         val_fname = f"{cache_key}_val_fold{val_fold}_L5_mlp_seq.dat"
+                         val_fname = f"{cache_key}_val_fold{val_fold}_L{layer_idx}_mlp_seq.dat"
                          val_path = cache_root / val_fname
                          if val_path.exists():
                              try:
@@ -436,11 +481,12 @@ def main():
 
 
             if not use_chunking and master_embeddings is not None:
+                layer_idx = args.layers - 1
                 # 1. Close the memmap handle
                 del master_embeddings
-                
+
                 # 2. Delete the file
-                master_fname = f"{cache_key}_all_L5_mlp_seq.dat"
+                master_fname = f"{cache_key}_all_L{layer_idx}_mlp_seq.dat"
                 master_path = cache_root / master_fname
                 
                 if master_path.exists():

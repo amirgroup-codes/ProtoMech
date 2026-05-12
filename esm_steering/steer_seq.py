@@ -281,7 +281,11 @@ def main(args, eval_esm_model=None, eval_alphabet=None):
                 else:
                     # Load ESM model and tokenizer for eval scoring (fallback if not pre-loaded)
                     # Don't wrap in DataParallel here - get_layer_activations will handle it
-                    esm_model, alphabet = load_esm_model(args.esm_weights, device)
+                    weights = args.esm_weights
+                    esm_filename = os.path.basename(weights)
+                    num_layers = int(esm_filename.split("_")[1][1:])
+                    d_model = 320 if "8M" in esm_filename else 480 if "35M" in esm_filename else None
+                    esm_model, alphabet = load_esm_model(args.esm_weights, device, num_layers=num_layers, d_model=d_model)
                 if isinstance(esm_model, torch.nn.DataParallel):
                     esm_model = esm_model.module
                 tokenizer = ESMTokenizerWrapper(alphabet)

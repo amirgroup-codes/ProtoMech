@@ -52,26 +52,26 @@ class SequenceDataModule(pl_lightning.LightningDataModule):
         self.data_path = data_path
         self.batch_size = batch_size
         self.num_workers = num_workers if num_workers is not None else multiprocessing.cpu_count() - 1
+        base, ext = os.path.splitext(self.data_path)
+        if ext in [".a2m", ".fasta", ".fa"]:
+            self.real_data_path = base + ".parquet"
+            self.needs_conversion = True
+        else:
+            self.real_data_path = self.data_path
+            self.needs_conversion = False
 
     def prepare_data(self):
         """
         Checks if the input is .a2m or .fasta. If so, checks if a .parquet version exists.
         If not, converts it.
         """
-        base, ext = os.path.splitext(self.data_path)
-        if ext in [".a2m", ".fasta", ".fa"]:
-            parquet_path = base + ".parquet"
-            if not os.path.exists(parquet_path):
-                print(f"Conversion needed: {self.data_path} -> {parquet_path}")
+        if self.needs_conversion:
+            if not os.path.exists(self.real_data_path):
+                print(f"Conversion needed: {self.data_path} -> {self.real_data_path}")
                 data = parse_fasta(self.data_path)
                 df = pl.DataFrame(data)
-                df.write_parquet(parquet_path)
-                print(f"Saved {len(df)} sequences to {parquet_path}")
-            
-            # Update data_path to point to the parquet file for efficiency
-            self.real_data_path = parquet_path
-        else:
-            self.real_data_path = self.data_path
+                df.write_parquet(self.real_data_path)
+                print(f"Saved {len(df)} sequences to {self.real_data_path}")
 
     def setup(self, stage=None):
         df = pl.read_parquet(self.real_data_path)
@@ -102,7 +102,8 @@ class SequenceDataModule(pl_lightning.LightningDataModule):
             PolarsDataset(self.val_data),
             batch_size=self.batch_size,
             num_workers=self.num_workers,
-            pin_memory=True
+            pin_memory=True,
+            drop_last=True
         )
 
     def test_dataloader(self):

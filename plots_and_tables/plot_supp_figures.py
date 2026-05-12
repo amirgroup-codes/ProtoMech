@@ -18,15 +18,22 @@ import matplotlib.font_manager as fm
 from pathlib import Path
 
 # --- Configuration & Style ---
-FAMILY_DIR = "../family_circuit/families"
-FUNCTION_DIR = "../function_circuit/functions"
-PLOTS_DIR = "plots"
+# # ESM2-8M
+# FAMILY_DIR = "../family_circuit/families"
+# FUNCTION_DIR = "../function_circuit/functions"
+# PLOTS_DIR = "plots"
+# LAYERS = 6
+# ESM2-35M
+FAMILY_DIR = "../family_circuit/families_35M"
+FUNCTION_DIR = "../function_circuit/functions_35M"
+PLOTS_DIR = "plots_35M"
+LAYERS = 12
 
 # Thresholds
 MIN_CLEAN_SPEARMAN = 0.01 
 MIN_SEQUENCES = 50
-MIN_LOW_F1 = 0.1
-MAX_LOW_F1 = 0.5 
+MIN_LOW_F1 = 0.01
+MAX_LOW_F1 = 0.55
 
 # Style Setup
 font_path = '../circuit_utils/Helvetica.ttf'
@@ -63,6 +70,20 @@ ORDERED_METHODS = [
 ]
 COLORS = ['#1b75bb', '#af588a', '#f6921e', '#00A087', '#DC0000']
 COLOR_MAP = dict(zip(ORDERED_METHODS, COLORS))
+
+METHOD_MAP_FIG5 = {
+    "BlockCLT_sequential": "ProtoMech (windowed)",
+    "CLT_sequential": "ProtoMech (sequential)",
+    "PLT": "PLT (sequential)",
+}
+
+ORDERED_METHODS_FIG5 = [
+    "ProtoMech (sequential)",
+    "ProtoMech (windowed)", 
+    "PLT (sequential)"
+]
+COLORS_FIG5 = ['#af588a', '#7a5195', '#f6921e']
+COLOR_MAP_FIG5 = dict(zip(ORDERED_METHODS_FIG5, COLORS_FIG5))
 
 def load_family_data(data_dir=FAMILY_DIR, method_map=METHOD_MAP, min_seq=None, min_clean=None, max_clean=None):
     """
@@ -102,7 +123,7 @@ def load_family_data(data_dir=FAMILY_DIR, method_map=METHOD_MAP, min_seq=None, m
                 }
                 
                 nodes_dict = data.get("nodes", {})
-                for l in range(6): 
+                for l in range(LAYERS): 
                     layer_nodes = nodes_dict.get(str(l), [])
                     row[f"Layer {l+1}"] = len(layer_nodes)
                 
@@ -170,7 +191,7 @@ def load_function_data(data_dir=FUNCTION_DIR, method_map=METHOD_MAP, min_seq=Non
                 }
                 
                 nodes_dict = data.get("nodes", {})
-                for l in range(6): 
+                for l in range(LAYERS): 
                     layer_nodes = nodes_dict.get(str(l), [])
                     row[f"Layer {l+1}"] = len(layer_nodes)
                 
@@ -191,9 +212,17 @@ def load_function_data(data_dir=FUNCTION_DIR, method_map=METHOD_MAP, min_seq=Non
         
     return df.copy()
 
-def draw_grouped_bars(ax, df, metric_key="f1", show_legend=False, ylabel="Score", show_xticks=True, ylim=None, yticks=None):
-    """Standard grouped bar plot for performance metrics."""
+def draw_grouped_bars(ax, df, metric_key="f1", show_legend=False, ylabel="Score", show_xticks=True, ylim=None, yticks=None, methods=None, color_map=None, legend_include_esm2=True):
+    """Standard grouped bar plot for performance metrics.
+    
+    Args:
+        methods: optional list of method names to use for spacing/ordering. Defaults to ORDERED_METHODS.
+    """
     if df.empty: return
+    if methods is None:
+        methods = ORDERED_METHODS
+    if color_map is None:
+        color_map = COLOR_MAP
 
     group_col = "family" if "family" in df.columns else "unique_id"
     
@@ -215,8 +244,8 @@ def draw_grouped_bars(ax, df, metric_key="f1", show_legend=False, ylabel="Score"
     centers = [pos_original, group_1_center, group_2_center]
     x_lims = (-0.5, 2.5)
 
-    indices = np.arange(len(ORDERED_METHODS))
-    offsets = (indices - (len(ORDERED_METHODS)-1)/2) * (bar_width * 1.1)
+    indices = np.arange(len(methods))
+    offsets = (indices - (len(methods)-1)/2) * (bar_width * 1.1)
 
     # A. ESM2
     clean_lower_err = min(clean_mean, clean_std)
@@ -228,7 +257,7 @@ def draw_grouped_bars(ax, df, metric_key="f1", show_legend=False, ylabel="Score"
            capsize=2, error_kw={'linewidth': linewidth}, label='ESM2')
 
     # B. All Latents (Max)
-    for i, method in enumerate(ORDERED_METHODS):
+    for i, method in enumerate(methods):
         if method not in method_stats.index: continue
         mean_val = method_stats.loc[method, (col_max, 'mean')]
         std_val = method_stats.loc[method, (col_max, 'std')]
@@ -238,12 +267,12 @@ def draw_grouped_bars(ax, df, metric_key="f1", show_legend=False, ylabel="Score"
         yerr_asym = [[lower_err], [std_val]]
         
         ax.bar(group_1_center + offsets[i], mean_val, yerr=yerr_asym, 
-               width=bar_width, color=COLOR_MAP[method], 
+             width=bar_width, color=color_map[method], 
                edgecolor='black', linewidth=linewidth,
                capsize=2, error_kw={'linewidth': linewidth})
 
     # C. Circuit (Recovered)
-    for i, method in enumerate(ORDERED_METHODS):
+    for i, method in enumerate(methods):
         if method not in method_stats.index: continue
         mean_val = method_stats.loc[method, (col_rec, 'mean')]
         std_val = method_stats.loc[method, (col_rec, 'std')]
@@ -253,7 +282,7 @@ def draw_grouped_bars(ax, df, metric_key="f1", show_legend=False, ylabel="Score"
         yerr_asym = [[lower_err], [std_val]]
         
         ax.bar(group_2_center + offsets[i], mean_val, yerr=yerr_asym, 
-               width=bar_width, color=COLOR_MAP[method], 
+             width=bar_width, color=color_map[method], 
                edgecolor='black', linewidth=linewidth,
                capsize=2, error_kw={'linewidth': linewidth}, label=method)
 
@@ -280,10 +309,10 @@ def draw_grouped_bars(ax, df, metric_key="f1", show_legend=False, ylabel="Score"
         by_label = dict(zip(labels, handles))
         final_handles = []
         final_labels = []
-        if "ESM2" in by_label:
+        if legend_include_esm2 and "ESM2" in by_label:
             final_handles.append(by_label["ESM2"])
             final_labels.append("ESM2")
-        for m in ORDERED_METHODS:
+        for m in methods:
             if m in by_label:
                 final_handles.append(by_label[m])
                 final_labels.append(m)
@@ -292,10 +321,10 @@ def draw_grouped_bars(ax, df, metric_key="f1", show_legend=False, ylabel="Score"
 
 def plot_nodes_per_layer(ax, df, title_label="", show_legend=False, xaxis=None):
     """
-    Plots a grouped bar chart of Average Node Count per Layer (1-6).
+    Plots a grouped bar chart of Average Node Count per Layer (1-LAYERS).
     """
     print(f"\n--- {title_label} Node Statistics ---")
-    layer_indices = range(6) # Layers 1-6 (Index 0-5)
+    layer_indices = range(LAYERS) # Layers 1-LAYERS (Index 0-LAYERS-1)
     x = np.arange(len(layer_indices))
     num_methods = len(ORDERED_METHODS)
     total_width = 0.8
@@ -354,22 +383,27 @@ def plot_nodes_per_layer(ax, df, title_label="", show_legend=False, xaxis=None):
                   bbox_to_anchor=(0.5, 1.05), ncol=3, frameon=False)
 
 def make_fig1_performance(df_fam, df_func):
-    """2x1: Family F1 (Top) + Function Spearman (Bottom)"""
+    """2x1: Family F1 (Top) + Function Spearman (Bottom), excluding windowed"""
     fig_width = 183 * mm
-    fig_height = 120 * mm 
+    fig_height = 150 * mm 
     fig, axes = plt.subplots(2, 1, figsize=(fig_width, fig_height))
+    
+    # Filter out windowed for this plot
+    df_fam_filtered = df_fam[df_fam['Model'] != "ProtoMech (windowed)"].copy()
+    df_func_filtered = df_func[df_func['Model'] != "ProtoMech (windowed)"].copy() if df_func is not None else None
     
     print('---')
     print('Fig 1: Family F1 Score')
-    draw_grouped_bars(axes[0], df_fam, metric_key="f1", show_legend=True, 
+    draw_grouped_bars(axes[0], df_fam_filtered, metric_key="f1", show_legend=True, 
                       ylabel="Protein family F1 score",
                       ylim=(0, 1.2), yticks=[0, 0.5, 1.0])
     
     print('---')
     print('Fig 1: Function Spearman')
-    draw_grouped_bars(axes[1], df_func, metric_key="f1", show_legend=False, 
-                      ylabel="Function Spearman ρ",
-                      ylim=(0, 0.8), yticks=[0, 0.4, 0.8])
+    if df_func_filtered is not None and not df_func_filtered.empty:
+        draw_grouped_bars(axes[1], df_func_filtered, metric_key="f1", show_legend=False, 
+                          ylabel="Function Spearman ρ",
+                          ylim=(0, 0.8), yticks=[0, 0.4, 0.8])
     
     plt.tight_layout()
     plt.subplots_adjust(hspace=0.4) 
@@ -433,12 +467,14 @@ def make_fig3_splits(df_func):
 
 def make_fig4_low_f1(df_fam):
     """
-    Fig 4: Family F1, but ONLY for families where original ESM2 F1 < MAX_LOW_F1.
+    Fig 4: Family F1, but ONLY for families where original ESM2 F1 < MAX_LOW_F1 (excluding windowed).
     """
     fam_means = df_fam.groupby("family")["clean"].mean()
     low_fams = fam_means[fam_means < MAX_LOW_F1].index
 
     df_subset = df_fam[df_fam["family"].isin(low_fams)].copy()
+    # Filter out windowed for this plot
+    df_subset = df_subset[df_subset['Model'] != "ProtoMech (windowed)"].copy()
 
     if df_subset.empty:
         print(f"Warning: No families found with Original F1 < {MAX_LOW_F1}. Skipping Fig 4.")
@@ -462,6 +498,36 @@ def make_fig4_low_f1(df_fam):
     plt.savefig(f"{PLOTS_DIR}/supp_low_f1_performance.pdf")
     plt.close()
 
+def make_fig5_windowed():
+    """
+    Fig 5: Compare ProtoMech (sequential), ProtoMech (windowed), and PLT (sequential).
+    Includes ESM2 baseline performance.
+    """
+    df_fam_filtered = load_family_data(method_map=METHOD_MAP_FIG5, min_seq=MIN_SEQUENCES)
+    
+    if df_fam_filtered.empty:
+        print("Warning: No data found for windowed comparison. Skipping Fig 5.")
+        return
+    
+    fig_width = 183 * mm
+    fig_height = 60 * mm
+    fig, ax = plt.subplots(1, 1, figsize=(fig_width, fig_height))
+
+    print('---')
+    print('Fig 5: Windowed Performance Comparison')
+    
+    draw_grouped_bars(ax, df_fam_filtered, metric_key="f1", show_legend=True,
+                      ylabel="Protein family F1 score",
+                      ylim=(0, 1.2), 
+                      yticks=[0, 0.5, 1.0],
+                      methods=ORDERED_METHODS_FIG5,
+                      color_map=COLOR_MAP_FIG5,
+                      legend_include_esm2=False)
+
+    plt.tight_layout()
+    plt.savefig(f"{PLOTS_DIR}/supp_windowed_performance.pdf")
+    plt.close()
+
 def main():
     Path(PLOTS_DIR).mkdir(exist_ok=True)
     
@@ -479,10 +545,11 @@ def main():
 
     # Generate Figures
     make_fig1_performance(df_fam, df_func)
+    make_fig5_windowed()
     make_fig2_nodes(df_fam, df_func) 
     make_fig3_splits(df_func)
     
-    df_fam_low = load_family_data(min_clean=0.01, max_clean=0.5)
+    df_fam_low = load_family_data(min_clean=MIN_LOW_F1, max_clean=MAX_LOW_F1)
     print('Low F1 Family Data:')
     print(len(df_fam_low))
     make_fig4_low_f1(df_fam_low)

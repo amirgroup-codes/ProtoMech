@@ -4,11 +4,17 @@
 # MAIN.SH - Training Script for CLT
 # =================================================================
 
+export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+
 # 1. Define Paths
 REPO_ROOT="$(dirname "$(pwd)")"
 DATA_FILE="../data/training_sequences_5m.parquet"
 OUTPUT_DIR="../models"
-ESM_WEIGHTS="../models/esm2_t6_8M_UR50D.pt"
+
+# # ESM2-8M
+# ESM_WEIGHTS="../models/esm2_t6_8M_UR50D.pt"
+# ESM2-35M
+ESM_WEIGHTS="../models/esm2_t12_35M_UR50D.pt"
 
 # 2. Check Dependencies
 if [ ! -f "$ESM_WEIGHTS" ]; then
@@ -23,12 +29,23 @@ if [ ! -f "$DATA_FILE" ]; then
 fi
 
 # 3. Training Configuration
-NUM_LAYERS=6
-D_MODEL=320
-D_HIDDEN=3200
+# # ESM2-8M parameters
+# NUM_LAYERS=6
+# D_MODEL=320
+# D_HIDDEN=3200
+# BATCH_SIZE=16
+# EPOCHS=1
+# LR=2e-4
+# K=16
+
+# ESM2-35M parameters
+NUM_LAYERS=12
+D_MODEL=480
+D_HIDDEN=4800
 BATCH_SIZE=16
 EPOCHS=1
 LR=2e-4
+K=24
 
 echo "Starting training..."
 echo "Data: $DATA_FILE"
@@ -43,7 +60,9 @@ python run_clt.py \
     --d-hidden $D_HIDDEN \
     --batch-size $BATCH_SIZE \
     --lr $LR \
+    --k $K \
     --max-epochs $EPOCHS \
-    --wandb-project "ESM-CLT"
+    --num-devices 2 \
+    --wandb-project "ESM-CLT-35M"
 
 echo "Training complete."

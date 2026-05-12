@@ -13,7 +13,7 @@ sys.path.append(os.path.abspath("../training"))
 from clt_module import CLTLightningModule
 
 # --- Configuration ---
-CLT_CHECKPOINT = os.environ.get("CLT_CHECKPOINT", "../models/CLT_L6_D3200/checkpoints/last.ckpt") 
+CLT_CHECKPOINT = os.environ.get("CLT_CHECKPOINT", "../models/CLT_L12_D4800/checkpoints/last.ckpt") 
 PARQUET_PATH = os.environ.get("PARQUET_PATH", "../data/swissprot_full.parquet")
 OUTPUT_DIR = os.environ.get("OUTPUT_DIR", "visualizations")
 BATCH_SIZE = int(os.environ.get("BATCH_SIZE", 8))
@@ -174,7 +174,7 @@ def main():
 
     # 2. Load CLT Model
     print(f"Loading CLT from {CLT_CHECKPOINT}...")
-    model = CLTLightningModule.load_from_checkpoint(CLT_CHECKPOINT, strict=False)
+    model = CLTLightningModule.load_from_checkpoint(CLT_CHECKPOINT, strict=False, weights_only=False)
     model.to(device)
     model.eval()
     
@@ -204,7 +204,7 @@ def main():
             tracker.update(full_acts_list, max_acts_BLD, batch_items)
 
     # 5. Save
-    save_path = "top10_activations.pt"
+    save_path = "top10_activations_35M.pt"
     tracker.save(save_path)
     print("Done!")
 

@@ -10,11 +10,11 @@ This folder contains code for DMS (Deep Mutational Scanning) function-based circ
 - `DMS/`: DMS data with cross-validation folds (single and multiple substitutions)
 - `functions/`: Discovered circuits for different methods (CLT_direct, CLT_sequential, PLT, etc.)
 - `probe/`: Trained CNN probes for function prediction
-- `embeddings_cache/`: Cached ESM-2 embeddings for efficiency
+- `embeddings_cache/`: Cached ESM2 embeddings for efficiency
 
 To run the experiments from the paper, create the DMS folder and add a CSV of the DMS data. Multiple substitutions should go into `DMS/cv_folds_multiples_substitutions/` (available [here](https://marks.hms.harvard.edu/proteingym/ProteinGym_v1.3/cv_folds_multiples_substitutions.zip)). and single substitutions `DMS/cv_folds_singles_substitutions/` (available [here](https://marks.hms.harvard.edu/proteingym/ProteinGym_v1.3/cv_folds_singles_substitutions.zip)). 
 
-You can find the probes in `probe/`on the HuggingFace repository [here](https://huggingface.co/anonymous-hf-user/ProtoMechModels/tree/main/probe).
+You can find the probes for ESM2-8M in `probe/`on the HuggingFace repository [here](https://huggingface.co/ktalreja/ProtoMechModels/tree/main/probe) and probes for ESM2-35M in `probe_35M/`on the HuggingFace repository [here](https://huggingface.co/ktalreja/ProtoMechModels/tree/main/probe_35M).
 
 ## Usage
 
@@ -34,6 +34,6 @@ Run the complete circuit discovery pipeline:
 
 ## Output
 
-Generates circuit JSON files with node attributions, Spearman correlations, and NMSE scores for each DMS dataset and method combination. You can find the family data
-at: https://huggingface.co/datasets/anonymous-hf-user/ProtoMechData/blob/main/functions.tar.gz 
-(unzip first)
+Generates circuit JSON files with node attributions, Spearman correlations, and NMSE scores for each DMS dataset and method combination. You can find the function data for ESM2-8M
+at https://huggingface.co/datasets/ktalreja/ProtoMechData/blob/main/functions.tar.gz and function data for ESM2-35M at https://huggingface.co/datasets/ktalreja/ProtoMechData/blob/main/functions_35M.tar.gz
+(unzip first).
