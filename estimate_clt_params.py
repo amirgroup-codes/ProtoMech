@@ -49,16 +49,14 @@ def count_plt(L: int, H: int, D: int) -> dict:
     Total = LH + 2LD + LDH + LDH
     """
     enc_weight   = L * H * D
-    enc_bias     = L * D
     b_enc        = L * D
     b_pre        = L * H
     num_decoders = L
     decoders     = num_decoders * D * H
 
-    total = enc_weight + enc_bias + b_enc + b_pre + decoders
+    total = enc_weight + b_enc + b_pre + decoders
     return {
         "enc_weight":   enc_weight,
-        "enc_bias":     enc_bias,
         "b_enc":        b_enc,
         "b_pre":        b_pre,
         "num_decoders": num_decoders,
@@ -80,16 +78,14 @@ def count_clt(L: int, H: int, D: int) -> dict:
     Total = LH + 2LD + LDH + (L(L+1)/2)(DH)
     """
     enc_weight   = L * H * D
-    enc_bias     = L * D
     b_enc        = L * D
     b_pre        = L * H
     num_decoders = L * (L + 1) // 2
     decoders     = num_decoders * D * H
 
-    total = enc_weight + enc_bias + b_enc + b_pre + decoders
+    total = enc_weight + b_enc + b_pre + decoders
     return {
         "enc_weight":   enc_weight,
-        "enc_bias":     enc_bias,
         "b_enc":        b_enc,
         "b_pre":        b_pre,
         "num_decoders": num_decoders,
@@ -115,7 +111,6 @@ def count_block_clt(L: int, H: int, D: int, B: int) -> dict:
     Each decoder matrix has shape (D, H).
     """
     enc_weight = L * H * D
-    enc_bias   = L * D
     b_enc      = L * D
     b_pre      = L * H
 
@@ -126,10 +121,9 @@ def count_block_clt(L: int, H: int, D: int, B: int) -> dict:
 
     decoders = num_decoders * D * H
 
-    total = enc_weight + enc_bias + b_enc + b_pre + decoders
+    total = enc_weight + b_enc + b_pre + decoders
     return {
         "enc_weight":   enc_weight,
-        "enc_bias":     enc_bias,
         "b_enc":        b_enc,
         "b_pre":        b_pre,
         "num_decoders": num_decoders,
@@ -148,7 +142,6 @@ def print_breakdown(name: str, L: int, H: int, D: int, counts: dict, B: int = No
     print(f"  {'Component':<22} {'Params':>20}")
     print(f"  {'-'*44}")
     print(f"  {'Encoder weights':<22} {fmt(counts['enc_weight'])}")
-    print(f"  {'Encoder bias (Linear)':<22} {fmt(counts['enc_bias'])}")
     print(f"  {'b_enc':<22} {fmt(counts['b_enc'])}")
     print(f"  {'b_pre':<22} {fmt(counts['b_pre'])}")
     print(f"  {'Decoders':<22} {fmt(counts['decoders'])}")

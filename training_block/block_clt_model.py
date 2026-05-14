@@ -66,9 +66,8 @@ class BlockCrossLayerTranscoder(nn.Module):
         self.skip_ln = (num_layers == 12)
 
         # --- Encoders ---
-        self.encoders = nn.ModuleList([
-            nn.Linear(d_model, d_hidden) for _ in range(num_layers)
-        ])
+        # If you're training new models, you should initialzie nn.Linear with bias=False no matter how many layers. We add this if loop to preserve backwards compatibility.
+        self.encoders = nn.ModuleList([nn.Linear(d_model, d_hidden) for _ in range(num_layers)] if num_layers <= 12 else nn.ModuleList([nn.Linear(d_model, d_hidden, bias=False) for _ in range(num_layers)]))
         self.b_enc = nn.ParameterList([nn.Parameter(torch.zeros(d_hidden)) for _ in range(num_layers)])
         self.b_pre = nn.ParameterList([nn.Parameter(torch.zeros(d_model)) for _ in range(num_layers)])
 

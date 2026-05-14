@@ -38,9 +38,8 @@ class PerLayerTranscoder(nn.Module):
         # self.skip_ln = (num_layers == 12)
 
         # --- Encoders ---
-        self.encoders = nn.ModuleList([
-            nn.Linear(d_model, d_hidden) for _ in range(num_layers)
-        ])
+        # If you're training new replacement models, you should initialzie nn.Linear with bias=False no matter how many layers. We add this if loop to preserve backwards compatibility.
+        self.encoders = nn.ModuleList([nn.Linear(d_model, d_hidden) for _ in range(num_layers)] if num_layers <= 12 else nn.ModuleList([nn.Linear(d_model, d_hidden, bias=False) for _ in range(num_layers)]))
         
         # --- Decoders ---
         self.decoders = nn.ParameterList([
