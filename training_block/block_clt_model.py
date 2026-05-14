@@ -63,7 +63,7 @@ class BlockCrossLayerTranscoder(nn.Module):
         self.batch_size = batch_size
         self.dead_steps_threshold = dead_steps_threshold / batch_size
         self.block_size = block_size
-        self.skip_ln = (num_layers == 12)
+        self.skip_ln = (num_layers != 6)
 
         # --- Encoders ---
         # If you're training new models, you should initialzie nn.Linear with bias=False no matter how many layers. We add this if loop to preserve backwards compatibility.
